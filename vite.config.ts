@@ -8,6 +8,10 @@ const base = process.env.BASE_PATH || ciBase;
 export default defineConfig({
   base,
   plugins: [react()],
+  ssr: {
+    // react-helmet-async is published as CJS; bundling it avoids Node ESM named-export runtime errors.
+    noExternal: ['react-helmet-async']
+  },
   build: {
     sourcemap: true
   }
