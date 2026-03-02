@@ -1,0 +1,214 @@
+{
+  "localeLabel": "Eesti",
+  "nav": {
+    "home": "Avaleht",
+    "about": "Ettevõttest",
+    "services": "Teenused",
+    "gallery": "Tööde galerii",
+    "playground": "Konfiguraator",
+    "contact": "Kontakt",
+    "privacy": "Privaatsuspoliitika"
+  },
+  "cta": {
+    "callNow": "Helista",
+    "writeWhatsapp": "Kirjuta WhatsAppis",
+    "sendInquiry": "Saada päring"
+  },
+  "homepage": {
+    "heroTitle": "Monumendid ja matuseteenused lugupidava lähenemisega",
+    "heroLead": "Empire Granit aitab peredel valida monumendi, korraldada matused ja tellida lisateenuseid Tallinnas ning üle Eesti.",
+    "highlights": [
+      "Graniit- ja marmor-monumentide valmistamine",
+      "Täielik matusetseremoonia korraldus",
+      "Isikupärased projektid ja täpne paigaldus"
+    ]
+  },
+  "about": {
+    "heading": "Ettevõttest",
+    "body": [
+      "Tegutseme alates 2008. aastast ning ühendame kivimeistrikoja ja matuseteenuse.",
+      "Iga projekt arutatakse personaalselt: alates vormist kuni paigaldusajani.",
+      "Meie fookus on läbipaistev hind, perekonna toetamine ja toodete vastupidavus."
+    ]
+  },
+  "services": {
+    "heading": "Teenused",
+    "intro": "Pakume täistsüklit: konsultatsioonist paigalduse ja hoolduseni.",
+    "offers": [
+      {
+        "id": "monuments",
+        "title": "Monumendid",
+        "description": "Erinevate vormide projekteerimine, tootmine ja paigaldus.",
+        "features": [
+          "Graniit ja marmor",
+          "Portree- ja tekstigraveering",
+          "Paigaldus kalmistutel üle Eesti"
+        ]
+      },
+      {
+        "id": "funeral",
+        "title": "Matuste korraldus",
+        "description": "Matusetegevuste täielik koordineerimine.",
+        "features": [
+          "Dokumentide vormistamine",
+          "Transport ja tarvikud",
+          "Tseremoonia juhtimine"
+        ]
+      },
+      {
+        "id": "care",
+        "title": "Lisateenused",
+        "description": "Hooajaline hooldus, taastamine ja platsi korrastus.",
+        "features": [
+          "Puhastus ja graveeringu uuendus",
+          "Elementide vahetus",
+          "Haljastus ja piirdeaed"
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "Valminud tööd",
+    "intro": "Allpool on valik valminud projekte ja võimalikke lahendusi.",
+    "works": [
+      {
+        "id": "w1",
+        "title": "Klassikaline kahekohaline monument",
+        "image": "/images/work-1.svg",
+        "category": "Graniit",
+        "summary": "Poleeritud sammas graveeringu ja lillealusega."
+      },
+      {
+        "id": "w2",
+        "title": "Pere memoriaalkompleks",
+        "image": "/images/work-2.svg",
+        "category": "Kompleks",
+        "summary": "Plaat, alus ja dekoratiivsed detailid ühes tervikus."
+      },
+      {
+        "id": "w3",
+        "title": "Minimalistlik monument",
+        "image": "/images/work-3.svg",
+        "category": "Moodne",
+        "summary": "Lakooniline vorm rõhuga kirjatüübil."
+      }
+    ]
+  },
+  "playground": {
+    "heading": "Monumendi konfiguraator",
+    "intro": "Vali põhiparameetrid ja vaata, kuidas kontseptsioon muutub.",
+    "options": [
+      {
+        "id": "shape",
+        "label": "Vorm",
+        "values": ["Sirge", "Kaar", "Laine"]
+      },
+      {
+        "id": "material",
+        "label": "Materjal",
+        "values": ["Must graniit", "Hall graniit", "Marmor"]
+      },
+      {
+        "id": "finish",
+        "label": "Viimistlus",
+        "values": ["Poleeritud", "Matt", "Kombineeritud"]
+      }
+    ],
+    "presets": [
+      {
+        "id": "p1",
+        "name": "Klassika",
+        "values": {
+          "shape": "Sirge",
+          "material": "Must graniit",
+          "finish": "Poleeritud"
+        },
+        "note": "Traditsiooniline lahendus selge joonega."
+      },
+      {
+        "id": "p2",
+        "name": "Hele mälestus",
+        "values": {
+          "shape": "Kaar",
+          "material": "Hall graniit",
+          "finish": "Kombineeritud"
+        },
+        "note": "Pehmem vorm ja tasakaalustatud kontrast."
+      },
+      {
+        "id": "p3",
+        "name": "Modernne",
+        "values": {
+          "shape": "Laine",
+          "material": "Marmor",
+          "finish": "Matt"
+        },
+        "note": "Vaoshoitud kaasaegne kompositsioon."
+      }
+    ],
+    "previewTitle": "Eelvaade",
+    "interactionLabel": "Konfiguratsiooni valik"
+  },
+  "contact": {
+    "heading": "Kontakt ja päring",
+    "intro": "Võta ühendust sobiva kanali kaudu või saada päring vormi kaudu.",
+    "consentText": "Nõustun isikuandmete töötlemisega.",
+    "privacyNotice": "Vormi saatmisel kinnitad nõustumist privaatsuspoliitikaga.",
+    "formLabels": {
+      "name": "Nimi",
+      "phone": "Telefon",
+      "email": "E-post",
+      "serviceType": "Teenuse tüüp",
+      "message": "Sõnum",
+      "consent": "Nõusolek",
+      "submit": "Saada päring"
+    }
+  },
+  "privacy": {
+    "heading": "Privaatsuspoliitika",
+    "sections": [
+      {
+        "title": "Milliseid andmeid kogume",
+        "body": "Kogume ainult vormi sisestatud andmeid: nimi, kontakt ja päringu sisu."
+      },
+      {
+        "title": "Töötlemise eesmärk",
+        "body": "Andmeid kasutatakse ainult vastamiseks ja teenusepakkumise ettevalmistamiseks."
+      },
+      {
+        "title": "Säilitamine ja kaitse",
+        "body": "Piirame ligipääsu andmetele ega jaga neid kolmandatele osapooltele ilma seadusliku aluseta."
+      }
+    ]
+  },
+  "seo": {
+    "home": {
+      "title": "Empire Granit - monumendid ja matuseteenused",
+      "description": "Monumentide valmistamine, matuste korraldus ja lisateenused Eestis."
+    },
+    "about": {
+      "title": "Empire Granit ettevõttest",
+      "description": "Meie kogemus, tööpõhimõtted ja lähenemine."
+    },
+    "services": {
+      "title": "Teenused - Empire Granit",
+      "description": "Monumendid, matuseteenused ja lisatööd."
+    },
+    "gallery": {
+      "title": "Tööde galerii - Empire Granit",
+      "description": "Näited valminud monumentidest ja memoriaalkompleksidest."
+    },
+    "playground": {
+      "title": "Monumendi konfiguraator - Empire Granit",
+      "description": "Vali vorm, materjal ja viimistlus."
+    },
+    "contact": {
+      "title": "Kontakt - Empire Granit",
+      "description": "Telefon, e-post, WhatsApp, aadress ja päringuvorm."
+    },
+    "privacy": {
+      "title": "Privaatsuspoliitika - Empire Granit",
+      "description": "Kuidas töötleme ja kaitseme isikuandmeid."
+    }
+  }
+}

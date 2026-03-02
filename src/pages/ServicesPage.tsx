@@ -1,0 +1,30 @@
+import { getLocaleContent } from '../content';
+import type { Locale } from '../types';
+
+interface ServicesPageProps {
+  locale: Locale;
+}
+
+export function ServicesPage({ locale }: ServicesPageProps) {
+  const section = getLocaleContent(locale).services;
+
+  return (
+    <section className="content-panel">
+      <h1>{section.heading}</h1>
+      <p>{section.intro}</p>
+      <div className="card-grid">
+        {section.offers.map((offer) => (
+          <article key={offer.id} className="service-card">
+            <h2>{offer.title}</h2>
+            <p>{offer.description}</p>
+            <ul>
+              {offer.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
