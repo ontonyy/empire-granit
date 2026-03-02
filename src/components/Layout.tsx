@@ -27,9 +27,13 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
       <header className="site-header">
         <div className="brand-row">
           <Link className="brand" to={buildLocalizedPath(locale, 'home')}>
-            <span className="brand-mark" aria-hidden="true" />
+            <img
+              className="brand-logo"
+              src={`${import.meta.env.BASE_URL}images/logo-empire-granit.svg`}
+              alt={`${siteConfig.siteName} logo`}
+            />
             <span>
-              <strong>{siteConfig.siteName}</strong>
+              <strong className="sr-only">{siteConfig.siteName}</strong>
               <small>{siteConfig.contacts.address}</small>
             </span>
           </Link>
