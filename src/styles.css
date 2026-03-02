@@ -86,19 +86,16 @@ a {
 
 .brand {
   display: inline-flex;
-  gap: 0.75rem;
+  gap: 0.9rem;
   align-items: center;
   text-decoration: none;
 }
 
-.brand-mark {
-  display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background:
-    conic-gradient(from 210deg, rgba(115, 80, 54, 0.12), rgba(115, 80, 54, 0.82), rgba(115, 80, 54, 0.12));
-  border: 1px solid rgba(115, 80, 54, 0.55);
+.brand-logo {
+  width: min(46vw, 260px);
+  min-width: 170px;
+  height: auto;
+  display: block;
 }
 
 .brand strong {
@@ -109,7 +106,20 @@ a {
 }
 
 .brand small {
+  display: block;
   color: var(--muted);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .language-switcher {
@@ -385,5 +395,10 @@ select {
   .playground-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .brand-logo {
+    width: min(62vw, 230px);
+    min-width: 150px;
   }
 }
