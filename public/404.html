@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <script>
+      var parts = window.location.pathname.split('/').filter(Boolean);
+      var repo = parts.length > 0 ? '/' + parts[0] : '';
+      window.location.replace(repo + '/ru/');
+    </script>
+  </body>
+</html>

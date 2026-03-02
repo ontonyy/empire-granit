@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://user.github.io/empire-granit/sitemap.xml

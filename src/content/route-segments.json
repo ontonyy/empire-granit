@@ -1,0 +1,37 @@
+{
+  "home": {
+    "ru": "",
+    "et": "",
+    "en": ""
+  },
+  "about": {
+    "ru": "o-kompanii",
+    "et": "meist",
+    "en": "about"
+  },
+  "services": {
+    "ru": "uslugi",
+    "et": "teenused",
+    "en": "services"
+  },
+  "gallery": {
+    "ru": "galereya",
+    "et": "galerii",
+    "en": "gallery"
+  },
+  "playground": {
+    "ru": "konfigurator",
+    "et": "konfiguraator",
+    "en": "playground"
+  },
+  "contact": {
+    "ru": "kontakty",
+    "et": "kontakt",
+    "en": "contact"
+  },
+  "privacy": {
+    "ru": "politika-konfidentsialnosti",
+    "et": "privaatsuspoliitika",
+    "en": "privacy-policy"
+  }
+}

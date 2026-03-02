@@ -1,0 +1,214 @@
+{
+  "localeLabel": "English",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "playground": "Playground",
+    "contact": "Contact",
+    "privacy": "Privacy Policy"
+  },
+  "cta": {
+    "callNow": "Call now",
+    "writeWhatsapp": "Chat on WhatsApp",
+    "sendInquiry": "Send inquiry"
+  },
+  "homepage": {
+    "heroTitle": "Memorial monuments and funeral services with care",
+    "heroLead": "Empire Granit supports families with monument design, funeral organization, and related services in Tallinn and across Estonia.",
+    "highlights": [
+      "Granite and marble monument production",
+      "End-to-end funeral ceremony coordination",
+      "Custom designs with precise installation"
+    ]
+  },
+  "about": {
+    "heading": "About Company",
+    "body": [
+      "Since 2008, we have combined a stone workshop with compassionate funeral support.",
+      "Every project is discussed in detail, from monument form to installation timeline.",
+      "We focus on transparent pricing, respectful communication, and long-lasting craftsmanship."
+    ]
+  },
+  "services": {
+    "heading": "Services",
+    "intro": "We deliver a full cycle: consultation, production, installation, and care.",
+    "offers": [
+      {
+        "id": "monuments",
+        "title": "Monuments",
+        "description": "Design, production, and installation of monuments in multiple styles.",
+        "features": [
+          "Granite and marble options",
+          "Portrait and text engraving",
+          "Installation across Estonia"
+        ]
+      },
+      {
+        "id": "funeral",
+        "title": "Funeral Organization",
+        "description": "Comprehensive planning and coordination for funeral ceremonies.",
+        "features": [
+          "Document handling",
+          "Transport and ritual supplies",
+          "Ceremony management"
+        ]
+      },
+      {
+        "id": "care",
+        "title": "Additional Services",
+        "description": "Seasonal maintenance, restoration, and site improvement.",
+        "features": [
+          "Cleaning and engraving refresh",
+          "Element replacement",
+          "Flowerbed and fencing arrangements"
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "Work Gallery",
+    "intro": "A selection of completed projects and design directions.",
+    "works": [
+      {
+        "id": "w1",
+        "title": "Classic Double Monument",
+        "image": "/images/work-1.svg",
+        "category": "Granite",
+        "summary": "Polished stele with engraving and flower area."
+      },
+      {
+        "id": "w2",
+        "title": "Family Memorial Complex",
+        "image": "/images/work-2.svg",
+        "category": "Complex",
+        "summary": "Integrated plate, pedestal, and decorative elements."
+      },
+      {
+        "id": "w3",
+        "title": "Minimal Monument",
+        "image": "/images/work-3.svg",
+        "category": "Contemporary",
+        "summary": "Clean silhouette with typography-first composition."
+      }
+    ]
+  },
+  "playground": {
+    "heading": "Monument Playground",
+    "intro": "Choose key options to preview different monument concepts.",
+    "options": [
+      {
+        "id": "shape",
+        "label": "Shape",
+        "values": ["Straight", "Arch", "Wave"]
+      },
+      {
+        "id": "material",
+        "label": "Material",
+        "values": ["Black Granite", "Grey Granite", "Marble"]
+      },
+      {
+        "id": "finish",
+        "label": "Finish",
+        "values": ["Polished", "Matte", "Mixed"]
+      }
+    ],
+    "presets": [
+      {
+        "id": "p1",
+        "name": "Classic",
+        "values": {
+          "shape": "Straight",
+          "material": "Black Granite",
+          "finish": "Polished"
+        },
+        "note": "Traditional and formal appearance."
+      },
+      {
+        "id": "p2",
+        "name": "Soft Memory",
+        "values": {
+          "shape": "Arch",
+          "material": "Grey Granite",
+          "finish": "Mixed"
+        },
+        "note": "Balanced contrast with a gentle profile."
+      },
+      {
+        "id": "p3",
+        "name": "Modern",
+        "values": {
+          "shape": "Wave",
+          "material": "Marble",
+          "finish": "Matte"
+        },
+        "note": "Reserved modern form language."
+      }
+    ],
+    "previewTitle": "Preview",
+    "interactionLabel": "Configuration selection"
+  },
+  "contact": {
+    "heading": "Contact and Inquiry",
+    "intro": "Reach us by phone, email, WhatsApp, or send an inquiry form.",
+    "consentText": "I agree to personal data processing.",
+    "privacyNotice": "By sending the form you accept the privacy policy.",
+    "formLabels": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "serviceType": "Service type",
+      "message": "Message",
+      "consent": "Consent",
+      "submit": "Send inquiry"
+    }
+  },
+  "privacy": {
+    "heading": "Privacy Policy",
+    "sections": [
+      {
+        "title": "Data we collect",
+        "body": "We collect only the information you submit in the form: name, contact details, and request message."
+      },
+      {
+        "title": "Processing purpose",
+        "body": "Data is used solely for communication and service proposal preparation."
+      },
+      {
+        "title": "Storage and protection",
+        "body": "Access is limited and data is not shared with third parties without legal basis."
+      }
+    ]
+  },
+  "seo": {
+    "home": {
+      "title": "Empire Granit - monuments and funeral services",
+      "description": "Monument production, funeral organization, and related services in Estonia."
+    },
+    "about": {
+      "title": "About Empire Granit",
+      "description": "Our experience, process, and values."
+    },
+    "services": {
+      "title": "Services - Empire Granit",
+      "description": "Monuments, funeral arrangements, and supporting services."
+    },
+    "gallery": {
+      "title": "Work Gallery - Empire Granit",
+      "description": "Examples of completed monuments and memorial complexes."
+    },
+    "playground": {
+      "title": "Monument Playground - Empire Granit",
+      "description": "Preview monument options by shape, material, and finish."
+    },
+    "contact": {
+      "title": "Contact - Empire Granit",
+      "description": "Phone, email, WhatsApp, address, and inquiry form."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Empire Granit",
+      "description": "How personal data is processed and protected."
+    }
+  }
+}
