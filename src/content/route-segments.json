@@ -9,10 +9,10 @@
     "et": "meist",
     "en": "about"
   },
-  "services": {
-    "ru": "uslugi",
-    "et": "teenused",
-    "en": "services"
+  "pricing": {
+    "ru": "ceny",
+    "et": "hinnakiri",
+    "en": "pricing"
   },
   "gallery": {
     "ru": "galereya",

@@ -64,6 +64,8 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
   const location = useLocation();
   const [adminClicks, setAdminClicks] = useState(0);
   const [showAdminLink, setShowAdminLink] = useState(false);
+  const [isHeaderElevated, setIsHeaderElevated] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const clickResetTimeoutRef = useRef<number | null>(null);
   const revealTimeoutRef = useRef<number | null>(null);
   const logoPrimarySrc = `${import.meta.env.BASE_URL}images/logo.png`;
@@ -90,12 +92,70 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
   }, [location.hash, location.pathname]);
 
   useEffect(() => {
+    setMobileNavOpen(false);
+  }, [location.pathname, location.search, location.hash]);
+
+  useEffect(() => {
     trackEvent('page_view', {
       locale,
       routeKey,
       pathname: location.pathname
     });
   }, [locale, routeKey, location.pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsHeaderElevated(window.scrollY > 18);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll<HTMLElement>('.reveal-on-scroll'));
+    if (!elements.length) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.16,
+        rootMargin: '0px 0px -40px 0px'
+      }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [location.pathname]);
+
+  const mobileMenuLabel =
+    locale === 'ru'
+      ? 'Открыть меню'
+      : locale === 'et'
+        ? 'Ava menüü'
+        : 'Open menu';
+  const mobileCloseLabel =
+    locale === 'ru'
+      ? 'Закрыть меню'
+      : locale === 'et'
+        ? 'Sulge menüü'
+        : 'Close menu';
 
   useEffect(() => {
     return () => {
@@ -115,7 +175,7 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
       <a href="#main-content" className="skip-link">
         Skip to content
       </a>
-      <header className="site-header">
+      <header className={isHeaderElevated ? 'site-header is-elevated' : 'site-header'}>
         <div className="brand-row">
           <div className="brand-main">
             <Link className="brand" to={buildLocalizedPath(locale, 'home')}>
@@ -146,10 +206,26 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
           </div>
           <div className="header-controls">
             <LanguageSwitcher currentLocale={locale} routeKey={routeKey} />
+            <button
+              type="button"
+              className={mobileNavOpen ? 'mobile-nav-toggle active' : 'mobile-nav-toggle'}
+              aria-expanded={mobileNavOpen}
+              aria-controls="main-nav"
+              aria-label={mobileNavOpen ? mobileCloseLabel : mobileMenuLabel}
+              onClick={() => setMobileNavOpen((current) => !current)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
           </div>
         </div>
 
-        <nav className="main-nav" aria-label="Primary">
+        <nav
+          id="main-nav"
+          className={mobileNavOpen ? 'main-nav open' : 'main-nav'}
+          aria-label="Primary"
+        >
           {CORE_NAV_KEYS.map((navKey) => (
             <Link
               key={navKey}

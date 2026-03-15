@@ -105,7 +105,7 @@ export function FaqPage({ locale }: FaqPageProps) {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <section className="content-panel faq-page faq-page-upgraded">
+    <section className="content-panel faq-page faq-page-upgraded reveal-on-scroll is-visible">
       <span className="section-kicker">FAQ</span>
       <h1>{content.heading}</h1>
       <p>{content.intro}</p>

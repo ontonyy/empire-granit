@@ -3,7 +3,7 @@ export type Locale = 'ru' | 'et' | 'en';
 export type RouteKey =
   | 'home'
   | 'about'
-  | 'services'
+  | 'pricing'
   | 'gallery'
   | 'faq'
   | 'playground'
@@ -17,12 +17,27 @@ export interface ServiceOffer {
   features: string[];
 }
 
-export interface WorkExample {
+export interface GalleryCategory {
   id: string;
   title: string;
   image: string;
-  category: string;
   summary: string;
+  description: string;
+  advantages?: string[];
+  options?: string[];
+  features?: string[];
+  services?: string[];
+}
+
+export interface GalleryLabels {
+  viewDetails: string;
+  learnMore: string;
+  backToGallery: string;
+  advantages: string;
+  services: string;
+  ctaHeading: string;
+  ctaBody: string;
+  ctaButton: string;
 }
 
 export interface PlaygroundOption {
@@ -65,15 +80,31 @@ export interface LocaleContent {
     heading: string;
     body: string[];
   };
-  services: {
+  pricing: {
     heading: string;
     intro: string;
-    offers: ServiceOffer[];
+    tiers: Array<{
+      id: string;
+      name: string;
+      price: number;
+      bestFor: string;
+      features: string[];
+      highlighted?: boolean;
+    }>;
+    cta: string;
+    benefits: {
+      heading: string;
+      items: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
   };
   gallery: {
     heading: string;
     intro: string;
-    works: WorkExample[];
+    labels: GalleryLabels;
+    categories: GalleryCategory[];
   };
   playground: {
     heading: string;
@@ -91,8 +122,13 @@ export interface LocaleContent {
   contact: {
     heading: string;
     intro: string;
+    inquiryTitle?: string;
+    inquiryHint?: string;
     consentText: string;
     privacyNotice: string;
+    addressLabel: string;
+    directionsTitle: string;
+    directionsBody: string;
     formLabels: {
       name: string;
       phone: string;

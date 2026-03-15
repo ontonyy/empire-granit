@@ -7,7 +7,7 @@ export const LOCALES: Locale[] = ['ru', 'et', 'en'];
 export const ROUTE_KEYS: RouteKey[] = [
   'home',
   'about',
-  'services',
+  'pricing',
   'gallery',
   'faq',
   'playground',
