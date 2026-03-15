@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react';
 
 const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
 const ciBase = process.env.GITHUB_ACTIONS && repoName ? `/${repoName}/` : '/';
-const base = process.env.BASE_PATH || ciBase;
+const configuredBase = process.env.BASE_PATH || ciBase;
+const base = configuredBase.endsWith('/') ? configuredBase : `${configuredBase}/`;
 
 export default defineConfig({
   base,
