@@ -5,6 +5,7 @@
     "about": "About",
     "services": "Services",
     "gallery": "Gallery",
+    "faq": "FAQ",
     "playground": "Playground",
     "contact": "Contact",
     "privacy": "Privacy Policy"
@@ -16,7 +17,7 @@
   },
   "homepage": {
     "heroTitle": "Memorial monuments and funeral services with care",
-    "heroLead": "Empire Granit supports families with monument design, funeral organization, and related services in Tallinn and across Estonia.",
+    "heroLead": "Empire Granit supports families with monument design, funeral organization, and related services in Narva and across Estonia.",
     "highlights": [
       "Granite and marble monument production",
       "End-to-end funeral ceremony coordination",
@@ -197,6 +198,10 @@
     "gallery": {
       "title": "Work Gallery - Empire Granit",
       "description": "Examples of completed monuments and memorial complexes."
+    },
+    "faq": {
+      "title": "FAQ - Empire Granit",
+      "description": "Answers about timelines, required documents, installments, and Estonia-wide service coverage."
     },
     "playground": {
       "title": "Monument Playground - Empire Granit",

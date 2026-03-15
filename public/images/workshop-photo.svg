@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ddcfbe" />
+      <stop offset="100%" stop-color="#b9a58e" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)" />
+  <rect x="95" y="120" width="1010" height="430" rx="18" fill="#efe7db" stroke="#7f6249" stroke-width="5" />
+  <rect x="150" y="195" width="310" height="235" rx="12" fill="#5e4a3d" />
+  <rect x="500" y="170" width="565" height="260" rx="12" fill="#3f3028" />
+  <rect x="540" y="210" width="490" height="150" rx="8" fill="#6b5545" />
+  <rect x="170" y="460" width="860" height="54" rx="9" fill="#876c56" />
+  <text x="600" y="620" fill="#2c231d" text-anchor="middle" font-family="sans-serif" font-size="38" font-weight="700">Мастерская Empire Granit</text>
+</svg>

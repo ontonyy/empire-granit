@@ -5,6 +5,7 @@ export type RouteKey =
   | 'about'
   | 'services'
   | 'gallery'
+  | 'faq'
   | 'playground'
   | 'contact'
   | 'privacy';
