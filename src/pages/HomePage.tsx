@@ -56,10 +56,10 @@ function getHomeSections(locale: Locale): {
       heroLabel: 'EMPIRE GRANIT · НАРВА',
       secondaryCta: 'Наши услуги',
       featureCards: [
-        { icon: '24', title: 'На связи в любое время', body: 'Отвечаем быстро и спокойно, без лишней суеты.' },
-        { icon: 'DOC', title: 'Помогаем с документами', body: 'Подскажем, что нужно подготовить и как оформить заказ.' },
-        { icon: 'EST', title: 'Работаем по всей Эстонии', body: 'Консультация, изготовление и установка в удобном формате.' },
-        { icon: 'STN', title: 'Гранитные памятники на заказ', body: 'Подбираем форму, камень, гравировку и монтаж под ваш запрос.' }
+        { icon: '24/7', title: 'На связи в любое время', body: 'Отвечаем быстро и спокойно, без лишней суеты.' },
+        { icon: 'Док', title: 'Помогаем с документами', body: 'Подскажем, что нужно подготовить и как оформить заказ.' },
+        { icon: 'EE', title: 'Работаем по всей Эстонии', body: 'Консультация, изготовление и установка в удобном формате.' },
+        { icon: 'Камень', title: 'Гранитные памятники на заказ', body: 'Подбираем форму, камень, гравировку и монтаж под ваш запрос.' }
       ],
       trustLabel: 'ПОЧЕМУ НАС ВЫБИРАЮТ',
       trustMetrics: [
@@ -112,10 +112,10 @@ function getHomeSections(locale: Locale): {
       heroLabel: 'EMPIRE GRANIT · NARVA',
       secondaryCta: 'Meie teenused',
       featureCards: [
-        { icon: '24', title: 'Kättesaadavad igal ajal', body: 'Vastame kiiresti ja rahulikult, ilma liigse pingeta.' },
-        { icon: 'DOC', title: 'Aitame dokumentidega', body: 'Selgitame sammud ja aitame tellimuse korrektselt vormistada.' },
-        { icon: 'EST', title: 'Teenindame kogu Eestis', body: 'Nõustamine, valmistamine ja paigaldus sobivas vormis.' },
-        { icon: 'STN', title: 'Graniidist mälestusmärgid', body: 'Valime koos kuju, kivi, graveeringu ja paigalduse.' }
+        { icon: '24/7', title: 'Kättesaadavad igal ajal', body: 'Vastame kiiresti ja rahulikult, ilma liigse pingeta.' },
+        { icon: 'Abi', title: 'Aitame dokumentidega', body: 'Selgitame sammud ja aitame tellimuse korrektselt vormistada.' },
+        { icon: 'EE', title: 'Teenindame kogu Eestis', body: 'Nõustamine, valmistamine ja paigaldus sobivas vormis.' },
+        { icon: 'Kivi', title: 'Graniidist mälestusmärgid', body: 'Valime koos kuju, kivi, graveeringu ja paigalduse.' }
       ],
       trustLabel: 'MIKS MEID VALITAKSE',
       trustMetrics: [
@@ -167,10 +167,10 @@ function getHomeSections(locale: Locale): {
     heroLabel: 'EMPIRE GRANIT · NARVA',
     secondaryCta: 'Our services',
     featureCards: [
-      { icon: '24', title: 'Available whenever needed', body: 'We respond quickly and clearly, without making the process harder.' },
-      { icon: 'DOC', title: 'Guidance with paperwork', body: 'We explain what is needed and help structure the next steps.' },
-      { icon: 'EST', title: 'Serving all Estonia', body: 'Consultation, production and installation arranged across the country.' },
-      { icon: 'STN', title: 'Custom granite memorials', body: 'Shape, stone, engraving and installation tailored to the family.' }
+      { icon: '24/7', title: 'Available whenever needed', body: 'We respond quickly and clearly, without making the process harder.' },
+      { icon: 'Docs', title: 'Guidance with paperwork', body: 'We explain what is needed and help structure the next steps.' },
+      { icon: 'EE', title: 'Serving all Estonia', body: 'Consultation, production and installation arranged across the country.' },
+      { icon: 'Stone', title: 'Custom granite memorials', body: 'Shape, stone, engraving and installation tailored to the family.' }
     ],
     trustLabel: 'WHY FAMILIES CHOOSE US',
     trustMetrics: [
@@ -225,7 +225,7 @@ export function HomePage({ locale }: HomePageProps) {
 
   return (
     <>
-      <section className="hero-panel hero-panel-expanded">
+      <section className="hero-panel hero-panel-expanded reveal-on-scroll is-visible">
         <div className="hero-copy">
           <span className="eyebrow">{home.heroLabel}</span>
           <h1>{section.heroTitle}</h1>
@@ -256,7 +256,7 @@ export function HomePage({ locale }: HomePageProps) {
         </div>
       </section>
 
-      <section className="trust-bar-section" aria-label={home.trustLabel}>
+      <section className="trust-bar-section reveal-on-scroll" aria-label={home.trustLabel}>
         {home.trustMetrics.map((metric) => (
           <article key={metric.label} className="trust-bar-item">
             <strong>{metric.value}</strong>
@@ -265,7 +265,7 @@ export function HomePage({ locale }: HomePageProps) {
         ))}
       </section>
 
-      <section className="how-it-works">
+      <section className="how-it-works reveal-on-scroll">
         <span className="section-kicker">{home.processLabel}</span>
         <h2>{home.processTitle}</h2>
         <div className="steps-grid enhanced-steps-grid">
@@ -279,7 +279,7 @@ export function HomePage({ locale }: HomePageProps) {
         </div>
       </section>
 
-      <section className="services-showcase">
+      <section className="services-showcase reveal-on-scroll">
         <span className="section-kicker">{home.servicesLabel}</span>
         <h2>{home.servicesTitle}</h2>
         <div className="services-grid-home">
@@ -293,7 +293,7 @@ export function HomePage({ locale }: HomePageProps) {
         </div>
       </section>
 
-      <section className="trust-signals testimonials-section">
+      <section className="trust-signals testimonials-section reveal-on-scroll">
         <span className="section-kicker">{home.testimonialsLabel}</span>
         <h2>{home.testimonialsTitle}</h2>
         <div className="reviews-grid testimonial-grid">
@@ -310,7 +310,7 @@ export function HomePage({ locale }: HomePageProps) {
         </div>
       </section>
 
-      <section className="home-contact-banner">
+      <section className="home-contact-banner reveal-on-scroll">
         <div>
           <span className="section-kicker">{siteConfig.contacts.company}</span>
           <h2>{siteConfig.contacts.phoneDisplay}</h2>

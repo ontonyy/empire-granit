@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { getLocaleContent } from '../content';
 import { buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
@@ -35,33 +36,42 @@ function getOptionalPreviewCopy(locale: Locale) {
 
 export function GalleryPage({ locale }: GalleryPageProps) {
   const section = getLocaleContent(locale).gallery;
-  const previewCopy = getOptionalPreviewCopy(locale);
 
   return (
-    <section className="content-panel">
-      <h1>{section.heading}</h1>
-      <p>{section.intro}</p>
-      <div className="gallery-grid">
-        {section.works.map((work) => (
-          <article key={work.id} className="gallery-card">
-            <img src={work.image} alt={work.title} loading="lazy" />
-            <div>
-              <h2>{work.title}</h2>
-              <p className="badge">{work.category}</p>
-              <p>{work.summary}</p>
+    <section className="content-panel gallery-page">
+      <div className="section-header-centered">
+        <span className="section-kicker">{getLocaleContent(locale).nav.gallery}</span>
+        <h1>{section.heading}</h1>
+        <p className="intro-text">{section.intro}</p>
+      </div>
+
+      <div className="gallery-categories-grid">
+        {section.categories.map((category) => (
+          <article key={category.id} className="category-card">
+            <div className="category-image-wrapper">
+              <img src={category.image} alt={category.title} loading="lazy" />
+              <div className="category-overlay">
+                <Link 
+                  to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`} 
+                  className="hero-secondary"
+                >
+                  {section.labels.viewDetails}
+                </Link>
+              </div>
+            </div>
+            <div className="category-content">
+              <h2>{category.title}</h2>
+              <p>{category.summary}</p>
+              <Link 
+                to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`} 
+                className="text-link"
+              >
+                {section.labels.learnMore} →
+              </Link>
             </div>
           </article>
         ))}
       </div>
-
-      <section className="optional-preview">
-        <h2>{previewCopy.title}</h2>
-        <p>{previewCopy.body}</p>
-        <div className="optional-preview-actions">
-          <a href={buildLocalizedPath(locale, 'playground')}>{previewCopy.openPreview}</a>
-          <a href={buildLocalizedPath(locale, 'contact')}>{previewCopy.getConsultation}</a>
-        </div>
-      </section>
     </section>
   );
 }

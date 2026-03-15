@@ -3,7 +3,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "services": "Services",
+    "pricing": "Prices",
     "gallery": "Gallery",
     "faq": "FAQ",
     "playground": "Playground",
@@ -11,108 +11,216 @@
     "privacy": "Privacy Policy"
   },
   "cta": {
-    "callNow": "Call now",
-    "writeWhatsapp": "Chat on WhatsApp",
-    "sendInquiry": "Send inquiry"
+    "callNow": "Call 24/7",
+    "writeWhatsapp": "WhatsApp",
+    "sendInquiry": "Send Inquiry"
   },
   "homepage": {
-    "heroTitle": "Memorial monuments and funeral services with care",
-    "heroLead": "Empire Granit supports families with monument design, funeral organization, and related services in Narva and across Estonia.",
+    "heroTitle": "We shoulder the burden when you need it most.",
+    "heroLead": "Dignified farewells and compassionate support across Estonia.",
     "highlights": [
-      "Granite and marble monument production",
-      "End-to-end funeral ceremony coordination",
-      "Custom designs with precise installation"
-    ]
+      "Call us anytime (24/7)",
+      "We handle all documents",
+      "A respectful farewell"
+    ],
+    "trust": {
+      "experience": "15+ Years Experience",
+      "families": "1000+ Families Helped",
+      "guarantee": "No Hidden Fees Guarantee"
+    }
   },
   "about": {
-    "heading": "About Company",
+    "heading": "Our Heritage",
     "body": [
-      "Since 2008, we have combined a stone workshop with compassionate funeral support.",
-      "Every project is discussed in detail, from monument form to installation timeline.",
-      "We focus on transparent pricing, respectful communication, and long-lasting craftsmanship."
+      "Since 2008, we have combined masterful stone craftsmanship with compassionate support.",
+      "We guide you through every step—from dignified ceremonies to lasting memorials.",
+      "Transparent pricing. Respectful care. Enduring quality."
     ]
   },
-  "services": {
-    "heading": "Services",
-    "intro": "We deliver a full cycle: consultation, production, installation, and care.",
-    "offers": [
+  "pricing": {
+    "heading": "Transparent Pricing Packages",
+    "intro": "Clear, upfront costs with no hidden fees.",
+    "tiers": [
+      {
+        "id": "set",
+        "name": "Essential Setup",
+        "price": 350,
+        "bestFor": "Just to properly set and arrange the memorial site.",
+        "features": [
+          "Monument alignment",
+          "Site clearing",
+          "Basic flower arrangement"
+        ]
+      },
+      {
+        "id": "shoveling",
+        "name": "Burial Assistance",
+        "price": 500,
+        "bestFor": "Includes failing and professional shoveling.",
+        "features": [
+          "Grave preparation",
+          "Earth moving",
+          "Site stabilization"
+        ]
+      },
+      {
+        "id": "ceremony",
+        "name": "Full Ceremonial Event",
+        "price": 650,
+        "bestFor": "With a master of ceremonies to coordinate everything.",
+        "features": [
+          "Professional announcer",
+          "Music coordination",
+          "Full event management",
+          "Guest guidance"
+        ]
+      }
+    ],
+    "cta": "Get a specific quote",
+    "benefits": {
+      "heading": "Our Capabilities & Assistance",
+      "items": [
+        {
+          "title": "Document Service",
+          "description": "We handle all burial permits and bureaucracy."
+        },
+        {
+          "title": "Floral Design",
+          "description": "Custom wreaths and site decoration services."
+        },
+        {
+          "title": "Maintenance",
+          "description": "Long-term care and cleaning for the memorial site."
+        },
+        {
+          "title": "Repatriation",
+          "description": "Assistance with transport across Estonia."
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "heading": "Our Work",
+    "intro": "Professional monument production and burial site improvement in Estonia.",
+    "labels": {
+      "viewDetails": "View Details",
+      "learnMore": "Learn More",
+      "backToGallery": "Back to Gallery",
+      "advantages": "Our Advantages",
+      "services": "Our Services",
+      "ctaHeading": "Interested in this solution?",
+      "ctaBody": "Contact us for a free consultation and sketch.",
+      "ctaButton": "Contact Us"
+    },
+    "categories": [
       {
         "id": "monuments",
         "title": "Monuments",
-        "description": "Design, production, and installation of monuments in multiple styles.",
-        "features": [
-          "Granite and marble options",
-          "Portrait and text engraving",
-          "Installation across Estonia"
+        "image": "/images/examples/gravestone.png",
+        "summary": "Your memory, embodied in granite. A wide range of models and an individual approach.",
+        "description": "Your memory, embodied in granite, will live forever. At Narva Rituaal, you can always choose a beautiful and durable monument that meets your preferences. In our showroom, we always have more than 100 monument models in stock. We work only with the best granite suppliers from India, Karelia, Finland, and Ukraine.",
+        "advantages": [
+          "Huge selection of monuments of any shape, color, and price",
+          "We fulfill orders of any complexity based on your sketches",
+          "Manufacturing of a monument in 2 days",
+          "Fair prices and individual approach, installments, warranty",
+          "Free sketch from our designer"
+        ],
+        "services": [
+          "Hand-made or computer-generated portrait",
+          "Photoceramics, photo on enamel, portraits on glass",
+          "Artistic design (fonts, drawings, epitaphs)",
+          "Bronze letters and symbols",
+          "Monument installation",
+          "Restoration of old monuments",
+          "Dismantling of old monuments",
+          "Free storage of the finished monument until installation"
         ]
       },
       {
-        "id": "funeral",
-        "title": "Funeral Organization",
-        "description": "Comprehensive planning and coordination for funeral ceremonies.",
-        "features": [
-          "Document handling",
-          "Transport and ritual supplies",
-          "Ceremony management"
+        "id": "framing",
+        "title": "Framing",
+        "image": "/images/examples/fence.png",
+        "summary": "Enclosures and architectural design of burial sites. A dignified and well-kept appearance.",
+        "description": "A fence at a grave is a crucial element of the architectural design of places where your loved ones find their final resting place. To give the burial site a worthy and well-kept appearance, you don't need to spend time and money traveling from company to company. Simply contact our granite workshop, and all your wishes will be fulfilled on time, with high quality, a guarantee, and a mandatory discount!",
+        "options": [
+          "Concrete framing - from 180 EUR",
+          "Framing with granite cladding - from 350 EUR",
+          "Framing with rubble stone finishing - from 300 EUR",
+          "Granite framing with pillars - from 800 EUR",
+          "Framing for urn burial"
+        ],
+        "services": [
+          "Free cemetery visit with our designer",
+          "Free sketch",
+          "Dismantling of old framing",
+          "Site planning",
+          "Casting of concrete framing",
+          "We fulfill orders at all cemeteries in Estonia"
         ]
       },
       {
-        "id": "care",
-        "title": "Additional Services",
-        "description": "Seasonal maintenance, restoration, and site improvement.",
+        "id": "exclusive",
+        "title": "Exclusive",
+        "image": "/images/examples/exclusive.png",
+        "summary": "Unique granite monuments and complexes, created in a single copy.",
+        "description": "Exclusive granite monuments and complexes are works created in a single copy. They reflect the individual characteristics of a person, their inner world, character, and Character. Elite monuments are an opportunity to pay special tribute, express love, and the pain of loss. Our designer will carefully discuss all your wishes and help in creating a unique project of any complexity.",
         "features": [
-          "Cleaning and engraving refresh",
-          "Element replacement",
-          "Flowerbed and fencing arrangements"
+          "Individual design with a designer",
+          "Excellent workmanship quality",
+          "Comprehensive approach",
+          "Fair prices for elite solutions"
         ]
-      }
-    ]
-  },
-  "gallery": {
-    "heading": "Work Gallery",
-    "intro": "A selection of completed projects and design directions.",
-    "works": [
-      {
-        "id": "w1",
-        "title": "Classic Double Monument",
-        "image": "/images/work-1.svg",
-        "category": "Granite",
-        "summary": "Polished stele with engraving and flower area."
       },
       {
-        "id": "w2",
-        "title": "Family Memorial Complex",
-        "image": "/images/work-2.svg",
-        "category": "Complex",
-        "summary": "Integrated plate, pedestal, and decorative elements."
-      },
-      {
-        "id": "w3",
-        "title": "Minimal Monument",
-        "image": "/images/work-3.svg",
-        "category": "Contemporary",
-        "summary": "Clean silhouette with typography-first composition."
+        "id": "landscaping",
+        "title": "Landscaping",
+        "image": "/images/examples/cemetry.png",
+        "summary": "Burial site maintenance and landscape design. An impeccable look for years to come.",
+        "description": "We want people coming to the grave of a loved one to focus on their feelings and emotions, not on household issues of caring for the grave. Narva Rituaal improves graves in such a way that they look impeccable even after years.",
+        "services": [
+          "Granite chips",
+          "Paving stones",
+          "Granite cladding",
+          "Artificial turf",
+          "Restoration of old burial sites",
+          "Restoration of monuments",
+          "Concrete reinforcing walls",
+          "Installation of benches, lamps, etc."
+        ]
       }
     ]
   },
   "playground": {
-    "heading": "Monument Playground",
-    "intro": "Choose key options to preview different monument concepts.",
+    "heading": "Monument Previews",
+    "intro": "Visualize material and shape combinations.",
     "options": [
       {
         "id": "shape",
         "label": "Shape",
-        "values": ["Straight", "Arch", "Wave"]
+        "values": [
+          "Straight",
+          "Arch",
+          "Wave"
+        ]
       },
       {
         "id": "material",
         "label": "Material",
-        "values": ["Black Granite", "Grey Granite", "Marble"]
+        "values": [
+          "Black Granite",
+          "Grey Granite",
+          "Marble"
+        ]
       },
       {
         "id": "finish",
         "label": "Finish",
-        "values": ["Polished", "Matte", "Mixed"]
+        "values": [
+          "Polished",
+          "Matte",
+          "Mixed"
+        ]
       }
     ],
     "presets": [
@@ -124,7 +232,7 @@
           "material": "Black Granite",
           "finish": "Polished"
         },
-        "note": "Traditional and formal appearance."
+        "note": "Timeless and formal."
       },
       {
         "id": "p2",
@@ -134,7 +242,7 @@
           "material": "Grey Granite",
           "finish": "Mixed"
         },
-        "note": "Balanced contrast with a gentle profile."
+        "note": "Gentle, balanced contrast."
       },
       {
         "id": "p3",
@@ -144,76 +252,81 @@
           "material": "Marble",
           "finish": "Matte"
         },
-        "note": "Reserved modern form language."
+        "note": "Clean, reserved aesthetics."
       }
     ],
     "previewTitle": "Preview",
-    "interactionLabel": "Configuration selection"
+    "interactionLabel": "Configuration"
   },
   "contact": {
-    "heading": "Contact and Inquiry",
-    "intro": "Reach us by phone, email, WhatsApp, or send an inquiry form.",
-    "consentText": "I agree to personal data processing.",
-    "privacyNotice": "By sending the form you accept the privacy policy.",
+    "heading": "Contact Us",
+    "intro": "We are available via Phone, Email, or WhatsApp.",
+    "inquiryTitle": "Send Inquiry",
+    "inquiryHint": "Ask a question or describe your needs.",
+    "consentText": "I agree to data processing.",
+    "privacyNotice": "By submitting, you accept our privacy policy.",
+    "addressLabel": "Our Location",
+    "directionsTitle": "How to find us",
+    "directionsBody": "We are located in Narva, Pähklimäe 2. You can find us near the city center, easily accessible by car or public transport. Free parking is available for visitors.",
     "formLabels": {
       "name": "Name",
       "phone": "Phone",
       "email": "Email",
-      "serviceType": "Service type",
-      "message": "Message",
+      "serviceType": "Service",
+      "message": "Message / Question",
       "consent": "Consent",
-      "submit": "Send inquiry"
+      "submit": "Send Inquiry"
     }
   },
   "privacy": {
     "heading": "Privacy Policy",
     "sections": [
       {
-        "title": "Data we collect",
-        "body": "We collect only the information you submit in the form: name, contact details, and request message."
+        "title": "Data Collection",
+        "body": "We only collect information submitted via our forms."
       },
       {
-        "title": "Processing purpose",
-        "body": "Data is used solely for communication and service proposal preparation."
+        "title": "Purpose",
+        "body": "Data is used strictly for communication and proposals."
       },
       {
-        "title": "Storage and protection",
-        "body": "Access is limited and data is not shared with third parties without legal basis."
+        "title": "Protection",
+        "body": "Access is limited and never shared with third parties."
       }
     ]
   },
   "seo": {
     "home": {
-      "title": "Empire Granit - monuments and funeral services",
-      "description": "Monument production, funeral organization, and related services in Estonia."
+      "title": "Empire Granit - Premium Monuments & Funeral Services",
+      "description": "Dignified monument production and funeral arrangements in Estonia."
     },
     "about": {
       "title": "About Empire Granit",
-      "description": "Our experience, process, and values."
+      "description": "Our heritage, craftsmanship, and values."
     },
-    "services": {
-      "title": "Services - Empire Granit",
-      "description": "Monuments, funeral arrangements, and supporting services."
+    "pricing": {
+      "title": "Prices - Empire Granit",
+      "description": "Detailed pricing for monument installation and burial assistance."
     },
     "gallery": {
-      "title": "Work Gallery - Empire Granit",
-      "description": "Examples of completed monuments and memorial complexes."
+      "title": "Gallery - Empire Granit",
+      "description": "Completed monuments and memorial complexes."
     },
     "faq": {
       "title": "FAQ - Empire Granit",
-      "description": "Answers about timelines, required documents, installments, and Estonia-wide service coverage."
+      "description": "Frequently asked questions about timelines and services."
     },
     "playground": {
-      "title": "Monument Playground - Empire Granit",
-      "description": "Preview monument options by shape, material, and finish."
+      "title": "Playground - Empire Granit",
+      "description": "Preview monument shapes, materials, and finishes."
     },
     "contact": {
       "title": "Contact - Empire Granit",
-      "description": "Phone, email, WhatsApp, address, and inquiry form."
+      "description": "Reach us via phone, email, or WhatsApp."
     },
     "privacy": {
       "title": "Privacy Policy - Empire Granit",
-      "description": "How personal data is processed and protected."
+      "description": "Data protection and privacy guidelines."
     }
   }
 }

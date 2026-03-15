@@ -32,7 +32,7 @@ export const siteConfig = {
     scriptSrc: 'https://plausible.io/js/script.js',
     domain: 'user.github.io'
   },
-  formEndpoint: 'https://formspree.io/f/your-form-id',
+  formEndpoint: 'https://formspree.io/f/mbdzkngq',
   admin: {
     password: 'empire2024'
   }

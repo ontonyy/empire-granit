@@ -83,7 +83,7 @@ export function ContactPage({ locale }: ContactPageProps) {
   const inquiryHint = section.inquiryHint || assist.inquiryHint;
 
   return (
-    <section className="content-panel contact-overhaul">
+    <section className="content-panel contact-overhaul reveal-on-scroll is-visible">
       <div className="contact-hero">
         <h1 className="cinzel-font">{section.heading}</h1>
         <p className="intro-text">{section.intro}</p>

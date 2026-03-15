@@ -12,6 +12,7 @@
     "lint:links": "node scripts/check-links.mjs"
   },
   "dependencies": {
+    "firebase": "^12.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
@@ -20,8 +21,8 @@
   "devDependencies": {
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
     "typescript": "^5.7.3",
-    "vite": "^6.1.0",
-    "@vitejs/plugin-react": "^4.3.4"
+    "vite": "^6.1.0"
   }
 }

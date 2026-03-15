@@ -3,116 +3,224 @@
   "nav": {
     "home": "Avaleht",
     "about": "Ettevõttest",
-    "services": "Teenused",
-    "gallery": "Tööde galerii",
+    "pricing": "Hinnakiri",
+    "gallery": "Galerii",
     "faq": "KKK",
     "playground": "Konfiguraator",
     "contact": "Kontakt",
-    "privacy": "Privaatsuspoliitika"
+    "privacy": "Privaatsus"
   },
   "cta": {
-    "callNow": "Helista",
-    "writeWhatsapp": "Kirjuta WhatsAppis",
+    "callNow": "Helista 24/7",
+    "writeWhatsapp": "WhatsApp",
     "sendInquiry": "Saada päring"
   },
   "homepage": {
-    "heroTitle": "Monumendid ja matuseteenused lugupidava lähenemisega",
-    "heroLead": "Empire Granit aitab peredel valida monumendi, korraldada matused ja tellida lisateenuseid Narvas ning üle Eesti.",
+    "heroTitle": "Kindlustunne raskel hetkel.",
+    "heroLead": "Väärikas hüvastijätt ja hooliv tugi üle Eesti.",
     "highlights": [
-      "Graniit- ja marmor-monumentide valmistamine",
-      "Täielik matusetseremoonia korraldus",
-      "Isikupärased projektid ja täpne paigaldus"
-    ]
+      "Helista meile igal ajal (24/7)",
+      "Meie vormistame dokumendid",
+      "Väärikas hüvastijätt"
+    ],
+    "trust": {
+      "experience": "15+ aastat kogemust",
+      "families": "1000+ peret on meid usaldanud",
+      "guarantee": "Ei mingeid varjatud tasusid"
+    }
   },
   "about": {
-    "heading": "Ettevõttest",
+    "heading": "Meie Lähenemine",
     "body": [
-      "Tegutseme alates 2008. aastast ning ühendame kivimeistrikoja ja matuseteenuse.",
-      "Iga projekt arutatakse personaalselt: alates vormist kuni paigaldusajani.",
-      "Meie fookus on läbipaistev hind, perekonna toetamine ja toodete vastupidavus."
+      "Alates 2008. aastast oleme ühendanud meistritasemel kivi töötlemise ja hooliva toe.",
+      "Juhatame teid läbi iga etapi – väärikast tseremooniast kestva mälestusmärgini.",
+      "Läbipaistvad hinnad. Lugupidav hoolitsus. Kindel kvaliteet."
     ]
   },
-  "services": {
-    "heading": "Teenused",
-    "intro": "Pakume täistsüklit: konsultatsioonist paigalduse ja hoolduseni.",
-    "offers": [
+  "pricing": {
+    "heading": "Läbipaistvad hinnapaketid",
+    "intro": "Selged ja varjatud tasudeta hinnad.",
+    "tiers": [
+      {
+        "id": "set",
+        "name": "Põhiabi",
+        "price": 350,
+        "bestFor": "Esmane abi mälestuspaiga paigaldamisel ja korrastamisel.",
+        "features": [
+          "Monumendi joondamine",
+          "Platsi puhastamine",
+          "Esmane haljastus"
+        ]
+      },
+      {
+        "id": "shoveling",
+        "name": "Matuseabi",
+        "price": 500,
+        "bestFor": "Haua ettevalmistamine (kaevamine) ja lükkamine ning mullatööd.",
+        "features": [
+          "Haua kaevamine",
+          "Mullatööd",
+          "Koha kindlustamine"
+        ]
+      },
+      {
+        "id": "ceremony",
+        "name": "Tseremoonia juhtimine",
+        "price": 650,
+        "bestFor": "Professionaalne matusejuht, teadustamine ja juhtimine.",
+        "features": [
+          "Professionaalne teadustaja",
+          "Muusika koordineerimine",
+          "Sündmuse juhtimine",
+          "Külaliste juhendamine"
+        ]
+      }
+    ],
+    "cta": "Küsi pakkumist",
+    "benefits": {
+      "heading": "Meie võimalused ja abi",
+      "items": [
+        {
+          "title": "Paberitööd",
+          "description": "Lubade vormistamine ja bürokraatia haldamine."
+        },
+        {
+          "title": "Lillekujundus",
+          "description": "Pärgade valmistamine ja haua kaunistamine."
+        },
+        {
+          "title": "Hooldusteenused",
+          "description": "Haua pikaajaline hooldus ja puhastus."
+        },
+        {
+          "title": "Transport",
+          "description": "Abi transpordiga üle terve Eesti."
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "heading": "Meie tööd",
+    "intro": "Professionaalne monumentide valmistamine ja hauatatside korrastamine Eestis.",
+    "labels": {
+      "viewDetails": "Vaata lähemalt",
+      "learnMore": "Loe edasi",
+      "backToGallery": "Tagasi galeriisse",
+      "advantages": "Meie eelised",
+      "services": "Meie teenused",
+      "ctaHeading": "Olete sellest lahendusest huvitatud?",
+      "ctaBody": "Võtke meiega ühendust tasuta konsultatsiooni ja kavandi saamiseks.",
+      "ctaButton": "Võta ühendust"
+    },
+    "categories": [
       {
         "id": "monuments",
         "title": "Monumendid",
-        "description": "Erinevate vormide projekteerimine, tootmine ja paigaldus.",
-        "features": [
-          "Graniit ja marmor",
-          "Portree- ja tekstigraveering",
-          "Paigaldus kalmistutel üle Eesti"
+        "image": "/images/examples/gravestone.png",
+        "summary": "Teie mälestus, vormitud graniiti. Lai valik mudeleid ja individuaalne lähenemine.",
+        "description": "Teie mälestus, vormitud graniiti, jääb kestma igaveseks. Narva Rituaali matusemajas saate alati valida kauni ja vastupidava monumendi, mis vastab teie eelistustele. Meie näidistesaalis on alati laos üle 100 monumendimudeli. Töötame ainult parimate graniiditarnijatega Indiast, Karjalast, Soomest ja Ukrainast.",
+        "advantages": [
+          "Tohutu valik mis tahes kuju, värvi ja hinnaga monumente",
+          "Täidame mis tahes keerukusega tellimusi teie visandite põhjal",
+          "Monumendi valmistamine 2 päevaga",
+          "Mõistlikud hinnad ja individuaalne lähenemine, järelmaks, garantii",
+          "Tasuta visand meie disainerilt"
+        ],
+        "services": [
+          "Käsitööna või arvutiga valminud portree",
+          "Fotokeraamika, foto emailil, portreed klaasil",
+          "Kunstiline kujundus (fondid, joonised, epitaafid)",
+          "Pronksist tähed ja sümbolid",
+          "Monumendi paigaldamine",
+          "Vanade monumentide restaureerimine",
+          "Vana monumendi demonteerimine",
+          "Valmis monumendi tasuta hoiustamine kuni paigaldamiseni"
         ]
       },
       {
-        "id": "funeral",
-        "title": "Matuste korraldus",
-        "description": "Matusetegevuste täielik koordineerimine.",
-        "features": [
-          "Dokumentide vormistamine",
-          "Transport ja tarvikud",
-          "Tseremoonia juhtimine"
+        "id": "framing",
+        "title": "Piirded",
+        "image": "/images/examples/fence.png",
+        "summary": "Hauaplatside piirded ja arhitektuurne kujundus. Väärikas ja hoolitsetud välimus.",
+        "description": "Hauapiire on oluline element matmispaiga arhitektuurses kujunduses, kus teie lähedased leiavad oma viimase puhkepaiga. Et anda matmispaigale väärikas ja hoolitsetud välimus, ei pea te kulutama aega ja raha ühelt ettevõttelt teisele rändamiseks. Lihtsalt pöörduge meie graniiditöökoja poole ja kõik teie soovid täidetakse õigeaegselt, kvaliteetselt, garantiiga ja kohustusliku soodustusega!",
+        "options": [
+          "Betoonpiire — alates 180 eurost",
+          "Graniitkattega piire — alates 350 eurost",
+          "Paekivi viimistlusega piire — alates 300 eurost",
+          "Postidega graniitpiire — alates 800 eurost",
+          "Piire urnimatuse jaoks"
+        ],
+        "services": [
+          "Tasuta kalmistukülastus koos meie disaineriga",
+          "Tasuta visand",
+          "Vana piirde demonteerimine",
+          "Platsi planeerimine",
+          "Betoonpiirde valamine",
+          "Täidame tellimusi kõigil Eesti kalmistutel"
         ]
       },
       {
-        "id": "care",
-        "title": "Lisateenused",
-        "description": "Hooajaline hooldus, taastamine ja platsi korrastus.",
+        "id": "exclusive",
+        "title": "Eksklusiiv",
+        "image": "/images/examples/exclusive.png",
+        "summary": "Ainulaadsed graniidist monumendid ja kompleksid, loodud üksikeksemplarina.",
+        "description": "Eksklusiivsed graniidist monumendid ja kompleksid on tööd, mis on loodud üksikeksemplarina. Need peegeldavad inimese individuaalseid omadusi, tema sisemaailma ja iseloomu. Eliitmonumendid on võimalus avaldada erilist austust, väljendada armastust ja kaotusvalu. Meie disainer arutab hoolikalt läbi kõik teie soovid ja aitab luua mis tahes keerukusega ainulaadse projekti.",
         "features": [
-          "Puhastus ja graveeringu uuendus",
-          "Elementide vahetus",
-          "Haljastus ja piirdeaed"
+          "Individuaalne projekteerimine koos disaineriga",
+          "Suurepärane töötluskvaliteet",
+          "Terviklik lähenemine",
+          "Mõistlikud hinnad eliitlahenduste jaoks"
         ]
-      }
-    ]
-  },
-  "gallery": {
-    "heading": "Valminud tööd",
-    "intro": "Allpool on valik valminud projekte ja võimalikke lahendusi.",
-    "works": [
-      {
-        "id": "w1",
-        "title": "Klassikaline kahekohaline monument",
-        "image": "/images/work-1.svg",
-        "category": "Graniit",
-        "summary": "Poleeritud sammas graveeringu ja lillealusega."
       },
       {
-        "id": "w2",
-        "title": "Pere memoriaalkompleks",
-        "image": "/images/work-2.svg",
-        "category": "Kompleks",
-        "summary": "Plaat, alus ja dekoratiivsed detailid ühes tervikus."
-      },
-      {
-        "id": "w3",
-        "title": "Minimalistlik monument",
-        "image": "/images/work-3.svg",
-        "category": "Moodne",
-        "summary": "Lakooniline vorm rõhuga kirjatüübil."
+        "id": "landscaping",
+        "title": "Haljastus ja hooldus",
+        "image": "/images/examples/cemetry.png",
+        "summary": "Matmispaikade hooldus ja maastikukujundus. Veatu välimus aastateks.",
+        "description": "Soovime, et lähedase hauale tulles keskenduksid inimesed oma tunnetele ja emotsioonidele, mitte haua hooldamisega seotud olmeküsimustele. Narva Rituaal korrastab haudu nii, et need näevad veatud välja ka aastate pärast.",
+        "services": [
+          "Graniitkillustik",
+          "Tänavakivid",
+          "Graniidist vooderdus",
+          "Kunstmuru",
+          "Vana matmispaiga taastamine",
+          "Monumentide restaureerimine",
+          "Betoonist tugiseinad",
+          "Pinkide, laternate jms paigaldamine"
+        ]
       }
     ]
   },
   "playground": {
-    "heading": "Monumendi konfiguraator",
-    "intro": "Vali põhiparameetrid ja vaata, kuidas kontseptsioon muutub.",
+    "heading": "Eelvaated",
+    "intro": "Katseta materjalide ja vormide kombinatsioone.",
     "options": [
       {
         "id": "shape",
         "label": "Vorm",
-        "values": ["Sirge", "Kaar", "Laine"]
+        "values": [
+          "Sirge",
+          "Kaar",
+          "Laine"
+        ]
       },
       {
         "id": "material",
         "label": "Materjal",
-        "values": ["Must graniit", "Hall graniit", "Marmor"]
+        "values": [
+          "Must Graniit",
+          "Hall Graniit",
+          "Marmor"
+        ]
       },
       {
         "id": "finish",
         "label": "Viimistlus",
-        "values": ["Poleeritud", "Matt", "Kombineeritud"]
+        "values": [
+          "Poleeritud",
+          "Matt",
+          "Kombineeritud"
+        ]
       }
     ],
     "presets": [
@@ -121,99 +229,104 @@
         "name": "Klassika",
         "values": {
           "shape": "Sirge",
-          "material": "Must graniit",
+          "material": "Must Graniit",
           "finish": "Poleeritud"
         },
-        "note": "Traditsiooniline lahendus selge joonega."
+        "note": "Ajatu ja soliidne."
       },
       {
         "id": "p2",
-        "name": "Hele mälestus",
+        "name": "Pehme Mälestus",
         "values": {
           "shape": "Kaar",
-          "material": "Hall graniit",
+          "material": "Hall Graniit",
           "finish": "Kombineeritud"
         },
-        "note": "Pehmem vorm ja tasakaalustatud kontrast."
+        "note": "Tasakaalustatud ja pehme."
       },
       {
         "id": "p3",
-        "name": "Modernne",
+        "name": "Moodne",
         "values": {
           "shape": "Laine",
           "material": "Marmor",
           "finish": "Matt"
         },
-        "note": "Vaoshoitud kaasaegne kompositsioon."
+        "note": "Puhas kaasaegne disain."
       }
     ],
     "previewTitle": "Eelvaade",
-    "interactionLabel": "Konfiguratsiooni valik"
+    "interactionLabel": "Konfiguratsioon"
   },
   "contact": {
-    "heading": "Kontakt ja päring",
-    "intro": "Võta ühendust sobiva kanali kaudu või saada päring vormi kaudu.",
-    "consentText": "Nõustun isikuandmete töötlemisega.",
-    "privacyNotice": "Vormi saatmisel kinnitad nõustumist privaatsuspoliitikaga.",
+    "heading": "Võta Ühendust",
+    "intro": "Oleme saadaval telefoni, e-posti või WhatsAppi teel.",
+    "inquiryTitle": "Saada päring",
+    "inquiryHint": "Esitage küsimus või kirjeldage oma soove.",
+    "consentText": "Nõustun andmetöötlusega.",
+    "privacyNotice": "Vormi saatmisega nõustute meie privaatsuspoliitikaga.",
+    "addressLabel": "Meie asukoht",
+    "directionsTitle": "Kuidas meid leida",
+    "directionsBody": "Asume Narvas, Pähklimäe 2. Meid on lihtne leida kesklinna lähedal, mugav ligipääs nii auto kui ka ühistranspordiga. Külastajatele tasuta parkimine.",
     "formLabels": {
       "name": "Nimi",
       "phone": "Telefon",
       "email": "E-post",
-      "serviceType": "Teenuse tüüp",
-      "message": "Sõnum",
+      "serviceType": "Teenus",
+      "message": "Sõnum / Küsimus",
       "consent": "Nõusolek",
-      "submit": "Saada päring"
+      "submit": "Saada Päring"
     }
   },
   "privacy": {
     "heading": "Privaatsuspoliitika",
     "sections": [
       {
-        "title": "Milliseid andmeid kogume",
-        "body": "Kogume ainult vormi sisestatud andmeid: nimi, kontakt ja päringu sisu."
+        "title": "Andmekogumine",
+        "body": "Kogume ainult vormide kaudu esitatud andmeid."
       },
       {
-        "title": "Töötlemise eesmärk",
-        "body": "Andmeid kasutatakse ainult vastamiseks ja teenusepakkumise ettevalmistamiseks."
+        "title": "Eesmärk",
+        "body": "Andmeid kasutatakse ainult suhtluseks ja pakkumiste tegemiseks."
       },
       {
-        "title": "Säilitamine ja kaitse",
-        "body": "Piirame ligipääsu andmetele ega jaga neid kolmandatele osapooltele ilma seadusliku aluseta."
+        "title": "Kaitse",
+        "body": "Juurdepääs on piiratud ja andmeid ei jagata kunagi kolmandatele osapooltele."
       }
     ]
   },
   "seo": {
     "home": {
-      "title": "Empire Granit - monumendid ja matuseteenused",
-      "description": "Monumentide valmistamine, matuste korraldus ja lisateenused Eestis."
+      "title": "Empire Granit - Premium Monumendid ja Matuseteenused",
+      "description": "Väärikas monumentide valmistamine ja matuste korraldamine Eestis."
     },
     "about": {
-      "title": "Empire Granit ettevõttest",
-      "description": "Meie kogemus, tööpõhimõtted ja lähenemine."
+      "title": "Empire Granit Ettevõttest",
+      "description": "Meie pärand, meisterlikkus ja väärtused."
     },
-    "services": {
-      "title": "Teenused - Empire Granit",
-      "description": "Monumendid, matuseteenused ja lisatööd."
+    "pricing": {
+      "title": "Hinnakiri - Empire Granit",
+      "description": "Üksikasjalikud hinnad matuseabi ja monumentide paigalduse kohta."
     },
     "gallery": {
-      "title": "Tööde galerii - Empire Granit",
-      "description": "Näited valminud monumentidest ja memoriaalkompleksidest."
+      "title": "Galerii - Empire Granit",
+      "description": "Valminud monumendid ja memoriaalkompleksid."
     },
     "faq": {
       "title": "KKK - Empire Granit",
-      "description": "Vastused küsimustele tähtaegade, dokumentide, järelmaksu ja Eesti-üleste tööde kohta."
+      "description": "Korduma kippuvad küsimused tähtaegade ja teenuste kohta."
     },
     "playground": {
-      "title": "Monumendi konfiguraator - Empire Granit",
-      "description": "Vali vorm, materjal ja viimistlus."
+      "title": "Konfiguraator - Empire Granit",
+      "description": "Vali monumendi vorm, materjal ja viimistlus."
     },
     "contact": {
       "title": "Kontakt - Empire Granit",
-      "description": "Telefon, e-post, WhatsApp, aadress ja päringuvorm."
+      "description": "Võta ühendust telefoni, e-posti või WhatsAppi kaudu."
     },
     "privacy": {
       "title": "Privaatsuspoliitika - Empire Granit",
-      "description": "Kuidas töötleme ja kaitseme isikuandmeid."
+      "description": "Andmekaitse ja privaatsuse põhimõtted."
     }
   }
 }

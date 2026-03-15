@@ -36,10 +36,10 @@ export function AdminGuard({ children }: AdminGuardProps) {
     <section className="admin-login-shell">
       <article className="admin-login-card">
         <span className="section-kicker">Empire Admin</span>
-        <h1>Secret Dashboard</h1>
+        <h1>Вход в админ-панель</h1>
         <p>
-          Enter the admin password to view traffic, click activity, form submissions, and gallery
-          behavior stored in this browser.
+          Введите пароль, чтобы открыть статистику сайта: просмотры, клики, отправки форм,
+          действия в галерее и интерес к ценам.
         </p>
 
         <form
@@ -54,18 +54,18 @@ export function AdminGuard({ children }: AdminGuardProps) {
               return;
             }
 
-            setError('Incorrect password.');
+            setError('Неверный пароль.');
           }}
         >
           <input
             type="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-            placeholder="Enter password"
+            placeholder="Введите пароль"
             autoComplete="current-password"
             required
           />
-          <button type="submit">Open dashboard</button>
+          <button type="submit">Открыть панель</button>
         </form>
 
         {error ? <p className="admin-login-error">{error}</p> : null}
