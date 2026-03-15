@@ -9,6 +9,28 @@ const content: Record<Locale, LocaleContent> = {
   en: en as LocaleContent
 };
 
+function withBaseUrl(path: string): string {
+  if (!path.startsWith('/')) {
+    return path;
+  }
+
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base.replace(/\/$/, '')}${path}`;
+}
+
+function normalizeLocaleContent(localeContent: LocaleContent): LocaleContent {
+  return {
+    ...localeContent,
+    gallery: {
+      ...localeContent.gallery,
+      categories: localeContent.gallery.categories.map((category) => ({
+        ...category,
+        image: withBaseUrl(category.image)
+      }))
+    }
+  };
+}
+
 export function getLocaleContent(locale: Locale): LocaleContent {
-  return content[locale];
+  return normalizeLocaleContent(content[locale]);
 }
