@@ -5,6 +5,7 @@
     "about": "Ettevõttest",
     "services": "Teenused",
     "gallery": "Tööde galerii",
+    "faq": "KKK",
     "playground": "Konfiguraator",
     "contact": "Kontakt",
     "privacy": "Privaatsuspoliitika"
@@ -16,7 +17,7 @@
   },
   "homepage": {
     "heroTitle": "Monumendid ja matuseteenused lugupidava lähenemisega",
-    "heroLead": "Empire Granit aitab peredel valida monumendi, korraldada matused ja tellida lisateenuseid Tallinnas ning üle Eesti.",
+    "heroLead": "Empire Granit aitab peredel valida monumendi, korraldada matused ja tellida lisateenuseid Narvas ning üle Eesti.",
     "highlights": [
       "Graniit- ja marmor-monumentide valmistamine",
       "Täielik matusetseremoonia korraldus",
@@ -197,6 +198,10 @@
     "gallery": {
       "title": "Tööde galerii - Empire Granit",
       "description": "Näited valminud monumentidest ja memoriaalkompleksidest."
+    },
+    "faq": {
+      "title": "KKK - Empire Granit",
+      "description": "Vastused küsimustele tähtaegade, dokumentide, järelmaksu ja Eesti-üleste tööde kohta."
     },
     "playground": {
       "title": "Monumendi konfiguraator - Empire Granit",

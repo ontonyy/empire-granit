@@ -9,6 +9,7 @@ export const ROUTE_KEYS: RouteKey[] = [
   'about',
   'services',
   'gallery',
+  'faq',
   'playground',
   'contact',
   'privacy'
