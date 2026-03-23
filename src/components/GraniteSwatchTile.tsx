@@ -13,13 +13,19 @@ const GRANITE_TEXTURE_IMAGE_BY_KEY: Record<string, string> = {
   'violet-granite': '/images/granite-textures/purple.png'
 };
 
+function withBaseUrl(path: string): string {
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base.replace(/\/$/, '')}${path}`;
+}
+
 interface GraniteSwatchTileProps {
   swatch: GraniteSwatch;
   className?: string;
 }
 
 export function getGraniteTextureImage(swatch: GraniteSwatch): string | undefined {
-  return GRANITE_TEXTURE_IMAGE_BY_KEY[swatch.textureKey];
+  const path = GRANITE_TEXTURE_IMAGE_BY_KEY[swatch.textureKey];
+  return path ? withBaseUrl(path) : undefined;
 }
 
 export function GraniteSwatchTile({ swatch, className = '' }: GraniteSwatchTileProps) {
