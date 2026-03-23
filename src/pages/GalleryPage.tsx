@@ -55,31 +55,28 @@ function GranitePreview({
 
   return (
     <div className="granite-preview-panel" aria-label={title}>
-      <div className="granite-preview-featured">
-        {selectedSwatch ? <GraniteSwatchTile swatch={selectedSwatch} className="granite-swatch-featured" /> : null}
+      {selectedImage ? <img src={selectedImage} alt={selectedSwatch?.name} className="granite-preview-hero" /> : null}
+
+      <div className="granite-preview-footer">
         <div className="granite-preview-featured-copy">
           <strong>{selectedSwatch?.name}</strong>
           <span>{title}</span>
         </div>
-      </div>
 
-      <div className="granite-preview-selector">
-        <div className="granite-preview-selector-grid">
+        <div className="granite-preview-selector-strip">
           {enrichedSwatches.map((swatch) => (
             <button
               key={swatch.id}
               type="button"
-              className={swatch.id === selectedSwatch?.id ? 'granite-picker active' : 'granite-picker'}
+              className={swatch.id === selectedSwatch?.id ? 'granite-picker compact active' : 'granite-picker compact'}
               onClick={() => setSelectedId(swatch.id)}
               aria-pressed={swatch.id === selectedSwatch?.id}
+              title={swatch.name}
             >
               <GraniteSwatchTile swatch={swatch} />
-              <span>{swatch.name}</span>
             </button>
           ))}
         </div>
-
-        {selectedImage ? <img src={selectedImage} alt={selectedSwatch?.name} className="granite-preview-zoom" /> : null}
       </div>
     </div>
   );
