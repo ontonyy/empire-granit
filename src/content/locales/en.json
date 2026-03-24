@@ -4,20 +4,20 @@
     "home": "Home",
     "about": "About",
     "pricing": "Prices",
-    "gallery": "Gallery",
+    "gallery": "Catalog",
     "faq": "FAQ",
     "playground": "Playground",
     "contact": "Contact",
     "privacy": "Privacy Policy"
   },
   "cta": {
-    "callNow": "Call 24/7",
+    "callNow": "Contact Us",
     "writeWhatsapp": "WhatsApp",
-    "sendInquiry": "Send Inquiry"
+    "sendInquiry": "Leave Request"
   },
   "homepage": {
     "heroTitle": "We shoulder the burden when you need it most.",
-    "heroLead": "Dignified farewells and compassionate support across Estonia.",
+    "heroLead": "Granite product manufacturing and installation across Estonia.",
     "highlights": [
       "Call us anytime (24/7)",
       "We handle all documents",
@@ -100,95 +100,222 @@
     }
   },
   "gallery": {
-    "heading": "Our Work",
-    "intro": "Professional monument production and burial site improvement in Estonia.",
+    "heading": "Catalog",
+    "intro": "A single catalog for monuments, framing, memorial landscaping, and related accessories. Open a category to view examples, materials, and the first electronic catalog entries.",
     "labels": {
-      "viewDetails": "View Details",
-      "learnMore": "Learn More",
-      "backToGallery": "Back to Gallery",
-      "advantages": "Our Advantages",
-      "services": "Our Services",
-      "ctaHeading": "Interested in this solution?",
-      "ctaBody": "Contact us for a free consultation and sketch.",
-      "ctaButton": "Contact Us"
+      "viewDetails": "View Category",
+      "learnMore": "Open Catalog",
+      "backToGallery": "Back to Catalog",
+      "advantages": "What We Offer",
+      "services": "Popular Solutions",
+      "ctaHeading": "Need help with the catalog?",
+      "ctaBody": "Contact us and we will help you choose the right product, material, and finishing direction.",
+      "ctaButton": "Contact Us",
+      "electronicCatalogTitle": "Electronic Catalog",
+      "electronicCatalogIntro": "Use this section to move between product categories and preview the first building blocks of the future electronic catalog.",
+      "electronicCatalogStatusTitle": "The electronic catalog is currently in development.",
+      "electronicCatalogStatusBody": "Ready-made solutions and product variants will appear here soon.",
+      "catalogCategoriesTitle": "Catalog Categories",
+      "openCatalog": "Open Catalog",
+      "readyWorksTitle": "Completed Works",
+      "readyWorksBody": "Below is a carousel of completed works and arrangement examples to help clients understand style, finish, and layout direction.",
+      "granitePaletteTitle": "Granite Colors & Textures",
+      "topCategoriesTitle": "Catalog Categories"
     },
     "categories": [
       {
         "id": "monuments",
         "title": "Monuments",
         "image": "/images/examples/gravestone.png",
-        "summary": "Your memory, embodied in granite. A wide range of models and an individual approach.",
-        "description": "Your memory, embodied in granite, will live forever. At Narva Rituaal, you can always choose a beautiful and durable monument that meets your preferences. In our showroom, we always have more than 100 monument models in stock. We work only with the best granite suppliers from India, Karelia, Finland, and Ukraine.",
+        "summary": "Monuments in different shapes, sizes, and finishing options.",
+        "description": "We help families choose a monument that fits the budget, the style of the memorial site, and personal wishes. Below you can review granite colors and move into the electronic catalog.",
+        "previewMode": "granite",
+        "graniteSwatches": [
+          { "id": "en-mon-grey", "name": "Grey", "textureKey": "grey-granite" },
+          { "id": "en-mon-red", "name": "Red", "textureKey": "red-granite" },
+          { "id": "en-mon-black", "name": "Black", "textureKey": "black-granite" },
+          { "id": "en-mon-green", "name": "Green", "textureKey": "green-granite" },
+          { "id": "en-mon-white", "name": "White", "textureKey": "white-granite" },
+          { "id": "en-mon-brown", "name": "Brown", "textureKey": "brown-granite" },
+          { "id": "en-mon-blue", "name": "Blue", "textureKey": "blue-granite" },
+          { "id": "en-mon-violet", "name": "Violet", "textureKey": "violet-granite" }
+        ],
+        "electronicCatalogFeaturedIds": ["monuments", "decorative-elements"],
         "advantages": [
-          "Huge selection of monuments of any shape, color, and price",
-          "We fulfill orders of any complexity based on your sketches",
-          "Manufacturing of a monument in 2 days",
-          "Fair prices and individual approach, installments, warranty",
-          "Free sketch from our designer"
+          "Different monument shapes and sizes for custom orders",
+          "Granite color and texture selection to match the site style",
+          "Text, portrait, and decorative engraving options",
+          "Support with sketching, approval, and installation"
         ],
         "services": [
-          "Hand-made or computer-generated portrait",
-          "Photoceramics, photo on enamel, portraits on glass",
-          "Artistic design (fonts, drawings, epitaphs)",
-          "Bronze letters and symbols",
-          "Monument installation",
-          "Restoration of old monuments",
-          "Dismantling of old monuments",
-          "Free storage of the finished monument until installation"
+          "Single monuments",
+          "Double monuments",
+          "Family memorials",
+          "Portraits and inscriptions",
+          "Photo enamel",
+          "Delivery and installation"
         ]
       },
       {
         "id": "framing",
         "title": "Framing",
         "image": "/images/examples/fence.png",
-        "summary": "Enclosures and architectural design of burial sites. A dignified and well-kept appearance.",
-        "description": "A fence at a grave is a crucial element of the architectural design of places where your loved ones find their final resting place. To give the burial site a worthy and well-kept appearance, you don't need to spend time and money traveling from company to company. Simply contact our granite workshop, and all your wishes will be fulfilled on time, with high quality, a guarantee, and a mandatory discount!",
+        "summary": "Framing solutions for a neat and complete memorial site.",
+        "description": "Framing helps give the memorial area a finished look. We offer different layouts, materials, and finishes, and the electronic catalog below connects this page to related product categories.",
+        "previewMode": "granite",
+        "graniteSwatches": [
+          { "id": "en-frame-grey", "name": "Silver Grey", "textureKey": "grey-granite" },
+          { "id": "en-frame-red", "name": "Maple Red", "textureKey": "red-granite" },
+          { "id": "en-frame-black", "name": "Deep Black", "textureKey": "black-granite" },
+          { "id": "en-frame-green", "name": "Olive Green", "textureKey": "green-granite" },
+          { "id": "en-frame-white", "name": "Polar White", "textureKey": "white-granite" },
+          { "id": "en-frame-brown", "name": "Brown Baltic", "textureKey": "brown-granite" },
+          { "id": "en-frame-blue", "name": "Blue Pearl", "textureKey": "blue-granite" },
+          { "id": "en-frame-violet", "name": "Aurora", "textureKey": "violet-granite" }
+        ],
+        "electronicCatalogFeaturedIds": ["framing", "fences"],
         "options": [
-          "Concrete framing - from 180 EUR",
-          "Framing with granite cladding - from 350 EUR",
-          "Framing with rubble stone finishing - from 300 EUR",
-          "Granite framing with pillars - from 800 EUR",
-          "Framing for urn burial"
+          "Concrete base",
+          "Granite elements",
+          "Mixed finishing",
+          "Posts and decorative inserts"
         ],
         "services": [
-          "Free cemetery visit with our designer",
-          "Free sketch",
-          "Dismantling of old framing",
-          "Site planning",
-          "Casting of concrete framing",
-          "We fulfill orders at all cemeteries in Estonia"
+          "On-site measuring",
+          "Base preparation",
+          "Framing installation",
+          "Shape and color approval",
+          "Restoration of existing arrangements",
+          "Available across Estonia"
         ]
       },
       {
         "id": "exclusive",
         "title": "Exclusive",
         "image": "/images/examples/exclusive.png",
-        "summary": "Unique granite monuments and complexes, created in a single copy.",
-        "description": "Exclusive granite monuments and complexes are works created in a single copy. They reflect the individual characteristics of a person, their inner world, character, and Character. Elite monuments are an opportunity to pay special tribute, express love, and the pain of loss. Our designer will carefully discuss all your wishes and help in creating a unique project of any complexity.",
+        "summary": "Custom memorial projects and one-off compositions.",
+        "description": "For unique requests we create individual compositions, choose materials together, and develop the final visual direction step by step. The electronic catalog below links to decorative and supporting products.",
+        "electronicCatalogFeaturedIds": ["monuments", "decorative-elements", "tables"],
         "features": [
-          "Individual design with a designer",
-          "Excellent workmanship quality",
-          "Comprehensive approach",
-          "Fair prices for elite solutions"
+          "Individual design work",
+          "Unusual forms and material combinations",
+          "A complete approach to site composition",
+          "Decorative details and exclusive finishing"
         ]
       },
       {
         "id": "landscaping",
         "title": "Landscaping",
         "image": "/images/examples/cemetry.png",
-        "summary": "Burial site maintenance and landscape design. An impeccable look for years to come.",
-        "description": "We want people coming to the grave of a loved one to focus on their feelings and emotions, not on household issues of caring for the grave. Narva Rituaal improves graves in such a way that they look impeccable even after years.",
+        "summary": "Tiles, gravel, benches, fences, and other site-improvement solutions.",
+        "description": "We help complete memorial areas as a full system, from surface materials to benches, tables, and fences. The electronic catalog at the bottom lets visitors move into nearby product categories.",
+        "electronicCatalogFeaturedIds": ["benches", "tables", "fences"],
         "services": [
-          "Granite chips",
-          "Paving stones",
-          "Granite cladding",
-          "Artificial turf",
-          "Restoration of old burial sites",
-          "Restoration of monuments",
-          "Concrete reinforcing walls",
-          "Installation of benches, lamps, etc."
+          "Tiles and curbs",
+          "Gravel and sand",
+          "Artificial grass",
+          "Benches and tables",
+          "Fences and decorative elements",
+          "General installation and site refresh"
         ]
       }
+    ],
+    "catalogCategories": [
+      {
+        "id": "monuments",
+        "title": "Monuments",
+        "summary": "Core monument models and custom directions.",
+        "description": "Examples of monument shapes, proportions, and finishing directions. At the moment this section shows the first building blocks of the future electronic catalog.",
+        "image": "/images/examples/gravestone.png",
+        "graniteSwatches": [
+          { "id": "en-cat-mon-grey", "name": "Grey", "textureKey": "grey-granite" },
+          { "id": "en-cat-mon-red", "name": "Red", "textureKey": "red-granite" },
+          { "id": "en-cat-mon-black", "name": "Black", "textureKey": "black-granite" },
+          { "id": "en-cat-mon-green", "name": "Green", "textureKey": "green-granite" },
+          { "id": "en-cat-mon-white", "name": "White", "textureKey": "white-granite" },
+          { "id": "en-cat-mon-brown", "name": "Brown", "textureKey": "brown-granite" }
+        ],
+        "productCards": [
+          { "id": "en-prod-mon-1", "title": "Straight Monument", "image": "/images/examples/gravestone.png", "price": "from 450 €" },
+          { "id": "en-prod-mon-2", "title": "Family Memorial", "image": "/images/work-1.svg", "price": "from 980 €" },
+          { "id": "en-prod-mon-3", "title": "Arched Monument", "image": "/images/work-2.svg", "price": "from 720 €" }
+        ]
+      },
+      {
+        "id": "framing",
+        "title": "Framing",
+        "summary": "Framing and site-boundary solutions.",
+        "description": "Examples of framing layouts in granite and combined materials for different memorial site formats.",
+        "image": "/images/examples/fence.png",
+        "graniteSwatches": [
+          { "id": "en-cat-frame-grey", "name": "Silver Grey", "textureKey": "grey-granite" },
+          { "id": "en-cat-frame-black", "name": "Deep Black", "textureKey": "black-granite" },
+          { "id": "en-cat-frame-red", "name": "Maple Red", "textureKey": "red-granite" },
+          { "id": "en-cat-frame-white", "name": "Polar White", "textureKey": "white-granite" },
+          { "id": "en-cat-frame-green", "name": "Olive Green", "textureKey": "green-granite" },
+          { "id": "en-cat-frame-brown", "name": "Brown Baltic", "textureKey": "brown-granite" }
+        ],
+        "productCards": [
+          { "id": "en-prod-frame-1", "title": "Classic Framing", "image": "/images/examples/fence.png", "price": "from 350 €" },
+          { "id": "en-prod-frame-2", "title": "Framing with Posts", "image": "/images/work-3.svg", "price": "from 800 €" },
+          { "id": "en-prod-frame-3", "title": "Mixed Framing", "image": "/images/examples/cemetry.png", "price": "from 560 €" }
+        ]
+      },
+      {
+        "id": "benches",
+        "title": "Benches",
+        "summary": "Benches for memorial areas.",
+        "description": "A bench category for memorial spaces. Ready-made sets and more product variants will be added here later.",
+        "image": "/images/work-1.svg",
+        "productCards": [
+          { "id": "en-prod-bench-1", "title": "Bench with Metal Base", "image": "/images/work-1.svg", "price": "from 180 €" },
+          { "id": "en-prod-bench-2", "title": "Bench with Stone Supports", "image": "/images/examples/candles.png", "price": "from 260 €" },
+          { "id": "en-prod-bench-3", "title": "Bench Set", "image": "/images/examples/cemetry.png", "price": "from 420 €" }
+        ]
+      },
+      {
+        "id": "tables",
+        "title": "Tables",
+        "summary": "Tables and small memorial sets.",
+        "description": "A selection of tables for memorial area arrangement in different sizes and styles.",
+        "image": "/images/work-2.svg",
+        "productCards": [
+          { "id": "en-prod-table-1", "title": "Compact Table", "image": "/images/work-2.svg", "price": "from 210 €" },
+          { "id": "en-prod-table-2", "title": "Table with Bench", "image": "/images/work-3.svg", "price": "from 380 €" },
+          { "id": "en-prod-table-3", "title": "Granite Table", "image": "/images/examples/exclusive.png", "price": "from 540 €" }
+        ]
+      },
+      {
+        "id": "fences",
+        "title": "Fences",
+        "summary": "Fence options and protective site borders.",
+        "description": "A section with examples of fence solutions and visual boundaries for the memorial site.",
+        "image": "/images/examples/fence.png",
+        "productCards": [
+          { "id": "en-prod-fence-1", "title": "Metal Fence", "image": "/images/examples/fence.png", "price": "from 240 €" },
+          { "id": "en-prod-fence-2", "title": "Fence with Decorative Posts", "image": "/images/work-3.svg", "price": "from 410 €" },
+          { "id": "en-prod-fence-3", "title": "Mixed Fence Solution", "image": "/images/examples/cemetry.png", "price": "from 520 €" }
+        ]
+      },
+      {
+        "id": "decorative-elements",
+        "title": "Decorative Elements",
+        "summary": "Vases, candle holders, flower beds, and accent details.",
+        "description": "An additional category for the design elements that complete a monument and the surrounding memorial area.",
+        "image": "/images/examples/candles.png",
+        "productCards": [
+          { "id": "en-prod-decor-1", "title": "Granite Vase", "image": "/images/examples/candles.png", "price": "from 95 €" },
+          { "id": "en-prod-decor-2", "title": "Flower Bed", "image": "/images/examples/exclusive.png", "price": "from 160 €" },
+          { "id": "en-prod-decor-3", "title": "Candle Holder", "image": "/images/work-2.svg", "price": "from 75 €" }
+        ]
+      }
+    ],
+    "readyWorks": [
+      { "id": "en-work-1", "title": "Completed monument with site improvement", "image": "/images/work-1.svg" },
+      { "id": "en-work-2", "title": "Memorial set with tiles and fence", "image": "/images/work-2.svg" },
+      { "id": "en-work-3", "title": "Clean memorial arrangement example", "image": "/images/work-3.svg" },
+      { "id": "en-work-4", "title": "Exclusive composition example", "image": "/images/examples/exclusive.png" },
+      { "id": "en-work-5", "title": "Landscaped memorial site", "image": "/images/examples/cemetry.png" }
     ]
   },
   "playground": {
@@ -309,8 +436,8 @@
       "description": "Detailed pricing for monument installation and burial assistance."
     },
     "gallery": {
-      "title": "Gallery - Empire Granit",
-      "description": "Completed monuments and memorial complexes."
+      "title": "Catalog - Empire Granit",
+      "description": "A catalog of monuments, framing, and supporting memorial products."
     },
     "faq": {
       "title": "FAQ - Empire Granit",

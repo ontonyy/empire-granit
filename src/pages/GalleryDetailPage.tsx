@@ -62,23 +62,28 @@ function GranitePalette({
         <h2>{title}</h2>
       </div>
       <div className="catalog-granite-layout">
-        <div className="catalog-granite-grid">
-          {enrichedSwatches.map((swatch) => (
-            <button
-              key={swatch.id}
-              type="button"
-              className={swatch.id === selectedSwatch?.id ? 'catalog-granite-item active' : 'catalog-granite-item'}
-              onClick={() => setSelectedId(swatch.id)}
-              aria-pressed={swatch.id === selectedSwatch?.id}
-            >
-              <GraniteSwatchTile swatch={swatch} />
-              <span>{swatch.name}</span>
-            </button>
-          ))}
-        </div>
-        <div className="catalog-granite-focus">
+        <div className="catalog-granite-focus-card">
           {selectedImage ? <img src={selectedImage} alt={selectedSwatch?.name} className="granite-focus-image" /> : null}
-          <strong>{selectedSwatch?.name}</strong>
+          <div className="catalog-granite-focus-copy">
+            <span className="section-kicker">{title}</span>
+            <strong>{selectedSwatch?.name}</strong>
+          </div>
+        </div>
+        <div className="catalog-granite-grid-card">
+          <div className="catalog-granite-grid">
+            {enrichedSwatches.map((swatch) => (
+              <button
+                key={swatch.id}
+                type="button"
+                className={swatch.id === selectedSwatch?.id ? 'catalog-granite-item active' : 'catalog-granite-item'}
+                onClick={() => setSelectedId(swatch.id)}
+                aria-pressed={swatch.id === selectedSwatch?.id}
+              >
+                <GraniteSwatchTile swatch={swatch} className="granite-swatch-thumb" />
+                <span>{swatch.name}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -271,15 +276,13 @@ export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps
           <p className="intro-text">{category.description}</p>
         </div>
         <div className="gallery-detail-visual">
-          {category.graniteSwatches?.length ? (
-            <div className="detail-granite-hero">
-              <GranitePalette swatches={category.graniteSwatches} title={labels.granitePaletteTitle} locale={locale} />
-            </div>
-          ) : (
-            <img src={category.image} alt={category.title} className="detail-hero-image" />
-          )}
+          <img src={category.image} alt={category.title} className="detail-hero-image" />
         </div>
       </div>
+
+      {category.graniteSwatches?.length ? (
+        <GranitePalette swatches={category.graniteSwatches} title={labels.granitePaletteTitle} locale={locale} />
+      ) : null}
 
       <div className="gallery-detail-grid">
         {(category.advantages || category.features) && (
