@@ -1866,47 +1866,25 @@ select:focus {
 
 .catalog-card-granite-preview {
   height: 100%;
-  padding: 1rem;
+  padding: 0.9rem;
   background: linear-gradient(180deg, #f5f0e7 0%, #efe7da 100%);
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
-}
-
-.catalog-card-granite-copy {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .catalog-card-granite-label {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-dark);
-}
-
-.catalog-card-granite-copy strong {
-  font-size: 1rem;
-  color: var(--text-main);
-}
-
-.catalog-card-granite-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
-  gap: 0.9rem;
-  align-items: stretch;
-  min-height: 0;
-  flex: 1;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .catalog-card-granite-swatches {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.55rem;
-  align-content: start;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.45rem;
 }
 
 .catalog-card-swatch {
@@ -1929,11 +1907,14 @@ select:focus {
 }
 
 .catalog-card-swatch-media {
-  min-height: 46px;
-  border-radius: 14px;
+  min-height: 38px;
+  border-radius: 12px;
 }
 
 .catalog-card-granite-focus {
+  position: relative;
+  flex: 1;
+  min-height: 188px;
   border-radius: 22px;
   overflow: hidden;
   border: 1px solid rgba(166, 138, 100, 0.14);
@@ -1945,6 +1926,27 @@ select:focus {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.catalog-card-granite-badge {
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(18, 16, 13, 0.14) 0%, rgba(18, 16, 13, 0.72) 100%);
+  backdrop-filter: blur(6px);
+}
+
+.catalog-card-granite-badge strong {
+  font-size: 1.05rem;
+  color: #fff;
+  line-height: 1.1;
 }
 
 .catalog-granite-item {
@@ -2535,12 +2537,12 @@ select:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .catalog-card-granite-layout {
-    grid-template-columns: 1fr;
-  }
-
   .catalog-card-granite-focus {
     min-height: 140px;
+  }
+
+  .catalog-card-granite-swatches {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .cta-banner-mini {

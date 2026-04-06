@@ -26,30 +26,27 @@ function GraniteCategoryPreview({
 
   return (
     <div className="catalog-card-granite-preview" aria-label={paletteTitle}>
-      <div className="catalog-card-granite-copy">
-        <span className="catalog-card-granite-label">{paletteTitle}</span>
-        <strong>{selectedSwatch?.name}</strong>
+      <div className="catalog-card-granite-focus">
+        {selectedImage ? <img src={selectedImage} alt={selectedSwatch?.name} loading="lazy" /> : null}
+        <div className="catalog-card-granite-badge">
+          <span className="catalog-card-granite-label">{paletteTitle}</span>
+          <strong>{selectedSwatch?.name}</strong>
+        </div>
       </div>
 
-      <div className="catalog-card-granite-layout">
-        <div className="catalog-card-granite-swatches">
-          {swatches.map((swatch) => (
-            <button
-              key={swatch.id}
-              type="button"
-              className={swatch.id === selectedSwatch?.id ? 'catalog-card-swatch active' : 'catalog-card-swatch'}
-              onClick={() => setSelectedId(swatch.id)}
-              aria-pressed={swatch.id === selectedSwatch?.id}
-              title={swatch.name}
-            >
-              <GraniteSwatchTile swatch={swatch} className="catalog-card-swatch-media" />
-            </button>
-          ))}
-        </div>
-
-        <div className="catalog-card-granite-focus">
-          {selectedImage ? <img src={selectedImage} alt={selectedSwatch?.name} loading="lazy" /> : null}
-        </div>
+      <div className="catalog-card-granite-swatches">
+        {swatches.map((swatch) => (
+          <button
+            key={swatch.id}
+            type="button"
+            className={swatch.id === selectedSwatch?.id ? 'catalog-card-swatch active' : 'catalog-card-swatch'}
+            onClick={() => setSelectedId(swatch.id)}
+            aria-pressed={swatch.id === selectedSwatch?.id}
+            title={swatch.name}
+          >
+            <GraniteSwatchTile swatch={swatch} className="catalog-card-swatch-media" />
+          </button>
+        ))}
       </div>
     </div>
   );
