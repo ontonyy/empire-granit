@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { GraniteSwatchTile, getGraniteTextureImage } from '../components/GraniteSwatchTile';
 import { getLocaleContent } from '../content';
 import { buildLocalizedPath } from '../routing';
-import type { Locale } from '../types';
+import type { GalleryCategory, GraniteSwatch, Locale } from '../types';
 
 interface GalleryPageProps {
   locale: Locale;
@@ -9,6 +11,62 @@ interface GalleryPageProps {
 
 function buildCatalogSubcategoryPath(locale: Locale, subcategoryId: string) {
   return `${buildLocalizedPath(locale, 'gallery')}/catalog/${subcategoryId}`;
+}
+
+function GraniteCategoryPreview({
+  swatches,
+  paletteTitle
+}: {
+  swatches: GraniteSwatch[];
+  paletteTitle: string;
+}) {
+  const [selectedId, setSelectedId] = useState(swatches[0]?.id);
+  const selectedSwatch = swatches.find((swatch) => swatch.id === selectedId) || swatches[0];
+  const selectedImage = selectedSwatch ? getGraniteTextureImage(selectedSwatch) : undefined;
+
+  return (
+    <div className="catalog-card-granite-preview" aria-label={paletteTitle}>
+      <div className="catalog-card-granite-copy">
+        <span className="catalog-card-granite-label">{paletteTitle}</span>
+        <strong>{selectedSwatch?.name}</strong>
+      </div>
+
+      <div className="catalog-card-granite-layout">
+        <div className="catalog-card-granite-swatches">
+          {swatches.map((swatch) => (
+            <button
+              key={swatch.id}
+              type="button"
+              className={swatch.id === selectedSwatch?.id ? 'catalog-card-swatch active' : 'catalog-card-swatch'}
+              onClick={() => setSelectedId(swatch.id)}
+              aria-pressed={swatch.id === selectedSwatch?.id}
+              title={swatch.name}
+            >
+              <GraniteSwatchTile swatch={swatch} className="catalog-card-swatch-media" />
+            </button>
+          ))}
+        </div>
+
+        <div className="catalog-card-granite-focus">
+          {selectedImage ? <img src={selectedImage} alt={selectedSwatch?.name} loading="lazy" /> : null}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CategoryMedia({
+  category,
+  paletteTitle
+}: {
+  category: GalleryCategory;
+  paletteTitle: string;
+}) {
+  if (category.previewMode === 'granite' && category.graniteSwatches?.length) {
+    return <GraniteCategoryPreview swatches={category.graniteSwatches} paletteTitle={paletteTitle} />;
+  }
+
+  return <img src={category.image} alt={category.title} loading="lazy" />;
 }
 
 export function GalleryPage({ locale }: GalleryPageProps) {
@@ -26,7 +84,7 @@ export function GalleryPage({ locale }: GalleryPageProps) {
         {section.categories.map((category) => (
           <article key={category.id} className="category-card">
             <div className="category-image-wrapper">
-              <img src={category.image} alt={category.title} loading="lazy" />
+              <CategoryMedia category={category} paletteTitle={section.labels.granitePaletteTitle} />
               <div className="category-overlay">
                 <Link to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`} className="hero-secondary">
                   {section.labels.viewDetails}
