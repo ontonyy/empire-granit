@@ -10,58 +10,24 @@ export type RouteKey =
   | 'contact'
   | 'privacy';
 
-export interface ServiceOffer {
-  id: string;
-  title: string;
-  description: string;
-  features: string[];
-}
+export type {
+  GalleryCategory,
+  GraniteSwatch,
+  CatalogProductCard,
+  CatalogSubcategory,
+  GalleryLabels
+} from './types/gallery';
+export type { PlaygroundOption } from './types/playground';
+export type { SeoMeta } from './types/seo';
+export type { ContactInfo, ServiceOffer } from './types/contact';
 
-export interface GalleryCategory {
-  id: string;
-  title: string;
-  image: string;
-  summary: string;
-  description: string;
-  advantages?: string[];
-  options?: string[];
-  features?: string[];
-  services?: string[];
-}
-
-export interface GalleryLabels {
-  viewDetails: string;
-  learnMore: string;
-  backToGallery: string;
-  advantages: string;
-  services: string;
-  ctaHeading: string;
-  ctaBody: string;
-  ctaButton: string;
-}
-
-export interface PlaygroundOption {
-  id: string;
-  label: string;
-  values: string[];
-}
-
-export interface ContactInfo {
-  company: string;
-  phoneDisplay: string;
-  phoneLink: string;
-  email: string;
-  whatsapp: string;
-  address: string;
-  mapEmbedUrl: string;
-}
-
-export interface SeoMeta {
-  title: string;
-  description: string;
-  ogTitle?: string;
-  ogDescription?: string;
-}
+import type {
+  GalleryCategory,
+  GalleryLabels,
+  CatalogSubcategory
+} from './types/gallery';
+import type { PlaygroundOption } from './types/playground';
+import type { SeoMeta } from './types/seo';
 
 export interface LocaleContent {
   localeLabel: string;
@@ -105,6 +71,12 @@ export interface LocaleContent {
     intro: string;
     labels: GalleryLabels;
     categories: GalleryCategory[];
+    catalogCategories: CatalogSubcategory[];
+    readyWorks: Array<{
+      id: string;
+      title: string;
+      image: string;
+    }>;
   };
   playground: {
     heading: string;
