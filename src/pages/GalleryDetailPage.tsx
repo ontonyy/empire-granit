@@ -1,9 +1,15 @@
 import { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getLocaleContent } from '../content';
 import { trackEvent } from '../lib/analytics';
 import { buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
+import { CatalogSubcategoryPage } from './catalog/CatalogSubcategoryPage';
+import { ElectronicCatalogSection } from './catalog/ElectronicCatalogSection';
+import { GranitePalette } from './catalog/GranitePalette';
+import { GalleryDetailCta } from './gallery/GalleryDetailCta';
+import { GalleryDetailHero } from './gallery/GalleryDetailHero';
+import { GalleryDetailSections } from './gallery/GalleryDetailSections';
 
 interface GalleryDetailPageProps {
   locale: Locale;
@@ -12,10 +18,23 @@ interface GalleryDetailPageProps {
 
 export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps) {
   const content = getLocaleContent(locale);
-  const category = content.gallery.categories.find((c) => c.id === categoryId);
   const labels = content.gallery.labels;
+  const subcatalogId = categoryId?.startsWith('catalog/') ? categoryId.replace(/^catalog\//, '') : undefined;
+  const catalogCategory = subcatalogId
+    ? content.gallery.catalogCategories.find((item) => item.id === subcatalogId)
+    : undefined;
+  const category = !subcatalogId ? content.gallery.categories.find((c) => c.id === categoryId) : undefined;
 
   useEffect(() => {
+    if (catalogCategory) {
+      trackEvent('gallery_category_view', {
+        locale,
+        category: `catalog:${catalogCategory.id}`,
+        title: catalogCategory.title
+      });
+      return;
+    }
+
     if (!category) {
       return;
     }
@@ -25,7 +44,18 @@ export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps
       category: category.id,
       title: category.title
     });
-  }, [category, locale]);
+  }, [catalogCategory, category, locale]);
+
+  if (catalogCategory) {
+    return (
+      <CatalogSubcategoryPage
+        locale={locale}
+        labels={labels}
+        category={catalogCategory}
+        catalogCategories={content.gallery.catalogCategories}
+      />
+    );
+  }
 
   if (!category) {
     return (
@@ -37,64 +67,32 @@ export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps
     );
   }
 
+  const featuredCategories = content.gallery.catalogCategories.filter((item) =>
+    category.electronicCatalogFeaturedIds?.includes(item.id)
+  );
+
   return (
     <article className="content-panel gallery-detail">
       <nav className="breadcrumb">
         <Link to={buildLocalizedPath(locale, 'gallery')}>← {labels.backToGallery}</Link>
       </nav>
 
-      <div className="gallery-detail-hero">
-        <div className="gallery-detail-copy">
-          <span className="section-kicker">{category.title}</span>
-          <h1>{category.title}</h1>
-          <p className="intro-text">{category.description}</p>
-        </div>
-        <div className="gallery-detail-visual">
-          <img src={category.image} alt={category.title} className="detail-hero-image" />
-        </div>
-      </div>
+      <GalleryDetailHero category={category} />
 
-      <div className="gallery-detail-grid">
-        {(category.advantages || category.features) && (
-          <section className="detail-section advantages-section">
-            <h2 className="cinzel-font">{labels.advantages}</h2>
-            <ul className="highlight-list-vertical">
-              {(category.advantages || category.features || []).map((item, idx) => (
-                <li key={idx} className="highlight-item">
-                  <span className="bullet">✦</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
+      {category.graniteSwatches?.length ? (
+        <GranitePalette swatches={category.graniteSwatches} title={labels.granitePaletteTitle} locale={locale} />
+      ) : null}
 
-        {(category.services || category.options) && (
-          <section className="detail-section services-section">
-            <h2 className="cinzel-font">{labels.services}</h2>
-            <div className="services-mini-grid">
-              {(category.services || category.options || []).map((service, idx) => (
-                <div key={idx} className="service-mini-card">
-                  <div className="service-dot"></div>
-                  <p>{service}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-      </div>
+      <GalleryDetailSections category={category} labels={labels} />
 
-      <section className="detail-cta">
-        <div className="cta-banner-mini">
-          <h3>{labels.ctaHeading}</h3>
-          <p>{labels.ctaBody}</p>
-          <div className="cta-group">
-            <Link to={buildLocalizedPath(locale, 'contact')} className="hero-primary">
-              {labels.ctaButton}
-            </Link>
-          </div>
-        </div>
-      </section>
+      <GalleryDetailCta locale={locale} labels={labels} />
+
+      <ElectronicCatalogSection
+        locale={locale}
+        labels={labels}
+        catalogCategories={content.gallery.catalogCategories}
+        featuredCategories={featuredCategories.length ? featuredCategories : content.gallery.catalogCategories.slice(0, 3)}
+      />
     </article>
   );
 }
