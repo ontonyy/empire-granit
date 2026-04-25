@@ -1,0 +1,117 @@
+name: Release
+
+on:
+  push:
+    branches: [master, main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine previous tag
+        id: prev
+        run: |
+          prev=$(git tag --sort=-v:refname | grep -E '^v?[0-9]+\.[0-9]+\.[0-9]+$' | head -n1 || true)
+          echo "tag=${prev}" >> "$GITHUB_OUTPUT"
+          if [ -z "$prev" ]; then
+            echo "version=0.0.0" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=${prev#v}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Skip if no new commits
+        id: gate
+        run: |
+          prev="${{ steps.prev.outputs.tag }}"
+          if [ -n "$prev" ] && [ "$(git rev-list -n1 "$prev")" = "$(git rev-parse HEAD)" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Detect bump from PR labels
+        if: steps.gate.outputs.skip == 'false'
+        id: bump
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sha="${{ github.sha }}"
+          labels=$(gh pr list --state merged --search "$sha" --json labels --jq '.[0].labels[].name' || true)
+          if echo "$labels" | grep -q '^release:major$'; then
+            bump=major
+          elif echo "$labels" | grep -q '^release:minor$'; then
+            bump=minor
+          else
+            bump=patch
+          fi
+          echo "bump=$bump" >> "$GITHUB_OUTPUT"
+
+      - name: Compute next version
+        if: steps.gate.outputs.skip == 'false'
+        id: next
+        run: |
+          IFS=. read -r major minor patch <<< "${{ steps.prev.outputs.version }}"
+          if [ -z "${{ steps.prev.outputs.tag }}" ]; then
+            next="0.1.0"
+          else
+            case "${{ steps.bump.outputs.bump }}" in
+              major) next="$((major+1)).0.0" ;;
+              minor) next="${major}.$((minor+1)).0" ;;
+              patch) next="${major}.${minor}.$((patch+1))" ;;
+            esac
+          fi
+          echo "version=$next" >> "$GITHUB_OUTPUT"
+          echo "tag=v$next" >> "$GITHUB_OUTPUT"
+
+      - name: Extract ticket ids from commits
+        if: steps.gate.outputs.skip == 'false'
+        id: tickets
+        run: |
+          prev="${{ steps.prev.outputs.tag }}"
+          range="${prev:+$prev..}HEAD"
+          ids=$(git log --pretty=%s "$range" | grep -oE '[A-Z]{2,}-[0-9]+' | sort -u | paste -sd, -)
+          echo "ids=$ids" >> "$GITHUB_OUTPUT"
+
+      - name: Create annotated tag
+        if: steps.gate.outputs.skip == 'false'
+        env:
+          TAG: ${{ steps.next.outputs.tag }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$TAG" -m "Release $TAG"
+          git push origin "$TAG"
+
+      - name: Create GitHub Release
+        if: steps.gate.outputs.skip == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.next.outputs.tag }}
+          VERSION: ${{ steps.next.outputs.version }}
+          IDS: ${{ steps.tickets.outputs.ids }}
+          PREV: ${{ steps.prev.outputs.tag }}
+        run: |
+          if [ -n "$IDS" ]; then
+            name="$VERSION - $IDS"
+          else
+            name="$VERSION"
+          fi
+          args=(release create "$TAG" --title "$name" --generate-notes)
+          if [ -n "$PREV" ]; then
+            args+=(--notes-start-tag "$PREV")
+          fi
+          gh "${args[@]}"
