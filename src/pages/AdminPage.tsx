@@ -1,81 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AdminGuard, clearAdminSession } from '../components/AdminGuard';
-import {
-  getAnalyticsSummary,
-  type AdminEventFilter,
-  type AnalyticsSummary
-} from '../lib/analytics';
+import type { AdminEventFilter } from '../lib/analytics';
 import type { Locale } from '../types';
+import { FILTER_LABELS, getEventLabel } from './admin/copy';
+import { useAnalyticsSummary } from './admin/use-analytics-summary';
 
 interface AdminPageProps {
   locale: Locale;
 }
 
-const EMPTY_SUMMARY: AnalyticsSummary = {
-  totalPageViews: 0,
-  callClicks: 0,
-  whatsappClicks: 0,
-  formSubmissions: 0,
-  galleryCategories: [],
-  pricePackages: [],
-  filteredEvents: {
-    all: [],
-    forms: [],
-    gallery: [],
-    pricing: []
-  },
-  recentEvents: []
-};
-
-const FILTER_LABELS: Record<AdminEventFilter, string> = {
-  all: 'Все действия',
-  forms: 'Отправка форм',
-  gallery: 'Галерея',
-  pricing: 'Цены'
-};
-
-const EVENT_LABELS: Record<string, string> = {
-  page_view: 'Просмотр страницы',
-  phone_click: 'Клик по телефону',
-  whatsapp_click: 'Клик по WhatsApp',
-  contact_form_submit: 'Отправка основной формы',
-  callback_request_submit: 'Запрос обратного звонка',
-  gallery_category_view: 'Просмотр категории галереи',
-  pricing_page_view: 'Просмотр страницы цен',
-  pricing_package_view: 'Просмотр пакета',
-  pricing_package_select: 'Выбор пакета',
-  playground_interaction: 'Действие в предпросмотре'
-};
-
-function getEventLabel(eventName: string): string {
-  return EVENT_LABELS[eventName] || eventName;
-}
-
 export function AdminPage({ locale }: AdminPageProps) {
-  const [summary, setSummary] = useState<AnalyticsSummary>(EMPTY_SUMMARY);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState('');
+  const { summary, isLoading, error, reload } = useAnalyticsSummary();
   const [activeFilter, setActiveFilter] = useState<AdminEventFilter>('all');
-
-  const loadSummary = async () => {
-    setIsLoading(true);
-    setError('');
-
-    try {
-      const nextSummary = await getAnalyticsSummary();
-      setSummary(nextSummary);
-    } catch (loadError) {
-      console.error(loadError);
-      setError('Не удалось загрузить данные аналитики из Firestore.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    void loadSummary();
-  }, []);
 
   return (
     <AdminGuard>
@@ -91,7 +28,7 @@ export function AdminPage({ locale }: AdminPageProps) {
           </div>
 
           <div className="admin-page-actions">
-            <button type="button" className="hero-secondary" onClick={() => void loadSummary()}>
+            <button type="button" className="hero-secondary" onClick={() => void reload()}>
               Обновить
             </button>
             <Link className="hero-secondary" to={`/${locale}/`}>
