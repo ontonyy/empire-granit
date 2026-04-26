@@ -13,15 +13,15 @@
   "cta": {
     "callNow": "Võta ühendust",
     "writeWhatsapp": "WhatsApp",
-    "sendInquiry": "Jäta taotlus"
+    "sendInquiry": "Saada päring"
   },
   "homepage": {
     "heroTitle": "Kindlustunne raskel hetkel.",
     "heroLead": "Graniittoodete valmistamine ja paigaldus kogu Eestis",
     "highlights": [
-      "Eritellimusel monumendid ja piirded",
-      "Paigaldus ja korrastamine üle Eesti",
-      "Graveerimine, fotoemail ja restaureerimine"
+      "Usaldusväärne tugi",
+      "Otsime kõik dokumendid",
+      "Väärikas ärasaatmine"
     ],
     "heroLabel": "EMPIRE GRANIT · NARVA",
     "secondaryCta": "Meie teenused",
@@ -34,13 +34,13 @@
       {
         "icon": "Valik",
         "title": "Lai tootevalik",
-        "body": "Monumendid ja piirded, vaasid, pingid, lillealad, fotoemail ja portreegraveeringud."
+        "body": "Monumendid ja piirded, vaasid, pingid, lillealad, fotokeraamika ja portreegraveeringud."
       },
       { "icon": "EE", "title": "Teenindame kogu Eestis", "body": "Nõustamine, valmistamine ja paigaldus sobivas vormis." },
       {
         "icon": "Teenused",
         "title": "Mitmekülgsed teenused",
-        "body": "Uute toodete valmistamine, olemasolevate uuendamine ja restaureerimine, mälestusplatside kujundamine. Paigaldus."
+        "body": "Uute toodete valmistamine, olemasolevate uuendamine ja restaureerimine, mälestusplatside kujundamine, paigaldus."
       }
     ],
     "trustLabel": "MIKS MEID VALITAKSE",
@@ -49,14 +49,14 @@
       { "value": "Üle 500", "label": "täidetud tellimuse" }
     ],
     "processLabel": "KUIDAS SEE TOIMIB",
-    "processTitle": "Tee esimesest kõnest valmis tooteni",
+    "processTitle": "Alates esimesest kontaktist valmis tooteni",
     "processSteps": [
-      { "title": "Võtate meiega ühendust", "body": "Pakume kujundusvõimalusi ja arvestame kõigi teie soovidega." },
+      { "title": "01 — Võtke meiega ühendust", "body": "Pakume kujundusvõimalusi ja arvestame kõigi teie soovidega." },
       {
-        "title": "Projekti kooskõlastamine",
-        "body": "Materjali, kuju, graveeringu ja fotoemaili valik. Lõpliku hinna ja tähtaegade kooskõlastamine."
+        "title": "02 — Projekti kooskõlastamine",
+        "body": "Materjali, kuju, graveeringu ja fotokeraamika valik. Lõpliku hinna ja tähtaegade kooskõlastamine."
       },
-      { "title": "Tellimuse täitmine", "body": "Toote valmistamine ja paigaldus kokkulepitud tähtajaks." }
+      { "title": "03 — Tellimuse täitmine", "body": "Valmistamine ja paigaldus kokkulepitud tähtaegadel." }
     ],
     "servicesLabel": "MIDA ME TEEME",
     "servicesTitle": "Empire Granit põhiteenused",
@@ -67,7 +67,7 @@
       },
       {
         "title": "Graveeringud ja portreed",
-        "body": "Kirjatüüpide ja dekoratiivsete elementide valik, portreede retušeerimine, fotoemail, piltide graveerimine."
+        "body": "Kirjatüüpide ja dekoratiivsete elementide valik, portreede retušeerimine, fotokeraamika, piltide graveerimine."
       },
       {
         "title": "Monumentide paigaldus",
@@ -129,284 +129,100 @@
     ]
   },
   "pricing": {
-    "heading": "Läbipaistvad hinnapaketid",
-    "intro": "Selged ja varjatud tasudeta hinnad.",
+    "heading": "Hinnanguline maksumus",
+    "intro": "Lõplik hind kooskõlastatakse kliendiga ja sõltub tööde mahust, materjalidest ning paigalduse keerukusest.",
     "tiers": [
       {
-        "id": "set",
-        "name": "Põhiabi",
-        "price": 350,
-        "bestFor": "Esmane abi mälestuspaiga paigaldamisel ja korrastamisel.",
+        "id": "single",
+        "name": "Üksikmonument",
+        "price": "400 EUR",
+        "bestFor": "Üksikmonument portree ja teksti graveeringuga.",
+        "note": "Suurus 70×60 cm, paksus 10 cm.",
         "features": [
-          "Monumendi joondamine",
-          "Platsi puhastamine",
-          "Esmane haljastus"
+          "Valmistamine",
+          "Transport",
+          "Platsi ettevalmistus",
+          "Paigaldus"
         ]
       },
       {
-        "id": "shoveling",
-        "name": "Matuseabi",
-        "price": 500,
-        "bestFor": "Haua ettevalmistamine (kaevamine) ja lükkamine ning mullatööd.",
+        "id": "fence",
+        "name": "Kahekohaline piire",
+        "price": "1200 EUR",
+        "bestFor": "Betoonpiire 2×2 m “Probuzhdenie” graniidist, paksus 20 cm, sissepääsuga.",
+        "note": "Kallakul asuvate matmispaikade puhul võib vajalik olla tugimüür. Soovi korral lisaks liivaga täitmine.",
         "features": [
-          "Haua kaevamine",
-          "Mullatööd",
-          "Koha kindlustamine"
+          "Valmistamine",
+          "Platsi ettevalmistus (betoonvundamendi valamine)",
+          "Paigaldus"
         ]
       },
       {
-        "id": "ceremony",
-        "name": "Tseremoonia juhtimine",
-        "price": 650,
-        "bestFor": "Professionaalne matusejuht, teadustamine ja juhtimine.",
+        "id": "labor",
+        "name": "Paigaldustööd",
+        "price": "alates 100 EUR",
+        "bestFor": "Platsi ettevalmistus paigalduseks, vana piirde eemaldamine ja prahi utiliseerimine.",
         "features": [
-          "Professionaalne teadustaja",
-          "Muusika koordineerimine",
-          "Sündmuse juhtimine",
-          "Külaliste juhendamine"
+          "Platsi ettevalmistus",
+          "Vana piirde eemaldamine",
+          "Prahi utiliseerimine"
         ]
       }
     ],
-    "cta": "Küsi pakkumist",
+    "cta": "Küsi konkreetset pakkumist",
     "benefits": {
-      "heading": "Meie võimalused ja abi",
+      "heading": "Lisateenused",
       "items": [
         {
-          "title": "Paberitööd",
-          "description": "Lubade vormistamine ja bürokraatia haldamine."
+          "title": "Dokumentatsioon",
+          "description": "Abi vajaliku asjaajamise ja paberitega."
         },
         {
-          "title": "Lillekujundus",
-          "description": "Pärgade valmistamine ja haua kaunistamine."
+          "title": "Lilleseaded",
+          "description": "Kaunistamine lillede ja dekoratiivelementidega."
         },
         {
-          "title": "Hooldusteenused",
-          "description": "Haua pikaajaline hooldus ja puhastus."
+          "title": "Hooldus",
+          "description": "Monumendi puhastamine ja tähtede või portree värvi taastamine."
         },
         {
           "title": "Transport",
-          "description": "Abi transpordiga üle terve Eesti."
+          "description": "Kohaletoimetamine paigalduskohta."
         }
       ]
     }
   },
   "gallery": {
     "heading": "Kataloog",
-    "intro": "Ühtne kataloog monumentidele, piiretele, haljastusele ja seotud toodetele. Ava sobiv kategooria, et vaadata näiteid, materjale ja elektroonilise kataloogi esimesi kirjeid.",
+    "intro": "Ühtne kataloog monumentidele, piiretele, haljastusele ja seotud toodetele. Ava sobiv kategooria võimaluste vaatamiseks.",
     "labels": {
       "viewDetails": "Vaata kategooriat",
-      "learnMore": "Ava kataloog",
-      "backToGallery": "Tagasi kataloogi",
-      "advantages": "Mida pakume",
-      "services": "Populaarsed lahendused",
-      "ctaHeading": "Kas vajate kataloogi konsultatsiooni?",
-      "ctaBody": "Võtke meiega ühendust ja aitame valida sobiva toote, materjali ja kujunduslahenduse.",
-      "ctaButton": "Võta ühendust",
-      "electronicCatalogTitle": "Elektrooniline kataloog",
-      "electronicCatalogIntro": "Siit saab liikuda toodete kategooriate vahel ja vaadata tulevase elektroonilise kataloogi esimesi näidiseid.",
-      "electronicCatalogStatusTitle": "Elektrooniline kataloog on arenduses.",
-      "electronicCatalogStatusBody": "Varsti ilmuvad siia valmislahendused ja tootevariandid.",
-      "catalogCategoriesTitle": "Kataloogi kategooriad",
-      "openCatalog": "Ava kataloog",
-      "readyWorksTitle": "Valminud tööd",
-      "readyWorksBody": "Allpool on fotod valminud töödest ja kujundusnäidetest, mis aitavad stiili ja teostust paremini ette kujutada.",
-      "granitePaletteTitle": "Graniidi värvid ja tekstuurid",
-      "topCategoriesTitle": "Kataloogi kategooriad"
+      "electronicCatalog": "Elektrooniline kataloog",
+      "statusTitle": "Elektrooniline kataloog on arenduses.",
+      "statusBody": "Varsti ilmuvad siia valmislahendused ja tootevariandid.",
+      "readyWorks": "Valminud tööd"
     },
     "categories": [
       {
         "id": "monuments",
         "title": "Monumendid",
-        "image": "/images/examples/monument.png",
-        "summary": "Monumendid eri kuju, mõõdu ja viimistlusvõimalustega.",
-        "description": "Aitame valida monumendi vastavalt eelarvele, platsi stiilile ja pere soovidele. Allpool saab vaadata graniidi värve ning liikuda elektroonilisse kataloogi.",
-        "previewMode": "granite",
-        "graniteSwatches": [
-          { "id": "et-mon-grey", "name": "Hall", "textureKey": "grey-granite" },
-          { "id": "et-mon-red", "name": "Punane", "textureKey": "red-granite" },
-          { "id": "et-mon-black", "name": "Must", "textureKey": "black-granite" },
-          { "id": "et-mon-green", "name": "Roheline", "textureKey": "green-granite" },
-          { "id": "et-mon-white", "name": "Valge", "textureKey": "white-granite" },
-          { "id": "et-mon-brown", "name": "Pruun", "textureKey": "brown-granite" },
-          { "id": "et-mon-blue", "name": "Sinine", "textureKey": "blue-granite" },
-          { "id": "et-mon-violet", "name": "Lilla", "textureKey": "violet-granite" }
-        ],
-        "electronicCatalogFeaturedIds": ["monuments", "decorative-elements"],
-        "advantages": [
-          "Erineva kuju ja suurusega monumendid individuaalse tellimuse järgi",
-          "Graniidi värvi ja tekstuuri valik platsi üldise stiili järgi",
-          "Teksti, portreede ja dekoratiivsete detailide graveerimine",
-          "Abi eskiisi, kooskõlastuse ja paigaldusega"
-        ],
-        "services": [
-          "Üksikmonumendid",
-          "Kahekordsed monumendid",
-          "Perekompleksid",
-          "Portreed ja tekstid",
-          "Fotoemail",
-          "Transport ja paigaldus"
-        ]
+        "description": "Monumendid eri stiilides ja teostuses."
       },
       {
         "id": "framing",
         "title": "Piirded",
-        "image": "/images/examples/framing.png",
-        "summary": "Piirdelahendused hoolitsetud ja tervikliku platsi jaoks.",
-        "description": "Piirded aitavad anda hauaplatsile lõpetatud ja korrastatud ilme. Pakume erinevaid konstruktsioone, materjale ja viimistlusi ning all olev elektrooniline kataloog viib edasi seotud toodeteni.",
-        "previewMode": "granite",
-        "graniteSwatches": [
-          { "id": "et-frame-grey", "name": "Hall", "textureKey": "grey-granite" },
-          { "id": "et-frame-red", "name": "Punane", "textureKey": "red-granite" },
-          { "id": "et-frame-black", "name": "Must", "textureKey": "black-granite" },
-          { "id": "et-frame-green", "name": "Roheline", "textureKey": "green-granite" },
-          { "id": "et-frame-white", "name": "Valge", "textureKey": "white-granite" },
-          { "id": "et-frame-brown", "name": "Pruun", "textureKey": "brown-granite" },
-          { "id": "et-frame-blue", "name": "Sinine", "textureKey": "blue-granite" },
-          { "id": "et-frame-violet", "name": "Lilla", "textureKey": "violet-granite" }
-        ],
-        "electronicCatalogFeaturedIds": ["framing", "fences"],
-        "options": [
-          "Betoonalus",
-          "Graniitelemendid",
-          "Kombineeritud viimistlus",
-          "Postid ja dekoratiivsed lisad"
-        ],
-        "services": [
-          "Mõõtmine kohapeal",
-          "Aluse ettevalmistus",
-          "Piirde paigaldus",
-          "Kuju ja värvi kooskõlastus",
-          "Olemasoleva lahenduse uuendamine",
-          "Teenindame kogu Eestis"
-        ]
+        "description": "Graniidist ja betoonist platsi piirded."
       },
       {
         "id": "exclusive",
         "title": "Eksklusiiv",
-        "image": "/images/examples/exclusive.png",
-        "summary": "Individuaalsed projektid ja erilahendusega mälestuskompleksid.",
-        "description": "Keerukamate ja ainulaadsete projektide puhul loome personaalsed kompositsioonid, valime materjalid ja töötame lõpliku ilme välja koos perega. Allpool saab liikuda dekoratiivsete elementide ja lisatoodete juurde.",
-        "electronicCatalogFeaturedIds": ["monuments", "decorative-elements", "tables"],
-        "features": [
-          "Individuaalne projekteerimine",
-          "Ebatavalised vormid ja materjalide kooslused",
-          "Terviklik lähenemine platsi kujundamisele",
-          "Dekoratiivsed elemendid ja eksklusiivsed detailid"
-        ]
+        "description": "Individuaalprojektid ja ainulaadsed kompositsioonid."
       },
       {
         "id": "landscaping",
-        "title": "Haljastus ja hooldus",
-        "image": "/images/examples/cemetry.png",
-        "summary": "Plaadid, killustik, pingid, aiad ja muud platsilahendused.",
-        "description": "Aitame kujundada mälestusala terviklahendusena: alates kattematerjalidest kuni pinkide, laudade ja piireteni. Lehe allosas olev elektrooniline kataloog viib seotud kategooriatesse.",
-        "electronicCatalogFeaturedIds": ["benches", "tables", "fences"],
-        "services": [
-          "Plaadid ja äärekivid",
-          "Killustik ja liiv",
-          "Kunstmuru",
-          "Pingid ja lauad",
-          "Piirded ja dekoratiivsed elemendid",
-          "Üldine paigaldus ja platsi uuendamine"
-        ]
+        "title": "Haljastus",
+        "description": "Plaadid, aiad ja muud täiendavad lahendused."
       }
-    ],
-    "catalogCategories": [
-      {
-        "id": "monuments",
-        "title": "Monumendid",
-        "summary": "Põhivariandid ja individuaalsed monumendilahendused.",
-        "description": "Näited monumentide kujudest, proportsioonidest ja viimistlusvõimalustest. Praegu on siin tulevase elektroonilise kataloogi esimene alus.",
-        "image": "/images/examples/gravestone.png",
-        "graniteSwatches": [
-          { "id": "et-cat-mon-grey", "name": "Hall", "textureKey": "grey-granite" },
-          { "id": "et-cat-mon-red", "name": "Punane", "textureKey": "red-granite" },
-          { "id": "et-cat-mon-black", "name": "Must", "textureKey": "black-granite" },
-          { "id": "et-cat-mon-green", "name": "Roheline", "textureKey": "green-granite" },
-          { "id": "et-cat-mon-white", "name": "Valge", "textureKey": "white-granite" },
-          { "id": "et-cat-mon-brown", "name": "Pruun", "textureKey": "brown-granite" }
-        ],
-        "productCards": [
-          { "id": "et-prod-mon-1", "title": "Sirge monument", "image": "/images/examples/gravestone.png", "price": "alates 450 €" },
-          { "id": "et-prod-mon-2", "title": "Pere monument", "image": "/images/work-1.svg", "price": "alates 980 €" },
-          { "id": "et-prod-mon-3", "title": "Kaarega monument", "image": "/images/work-2.svg", "price": "alates 720 €" }
-        ]
-      },
-      {
-        "id": "framing",
-        "title": "Piirded",
-        "summary": "Piirded ja platsi piiritlemise lahendused.",
-        "description": "Näited hauaplatsi kujundamiseks graniidist ja kombineeritud elementidega eri tüüpi platsidele.",
-        "image": "/images/examples/fence.png",
-        "graniteSwatches": [
-          { "id": "et-cat-frame-grey", "name": "Hall", "textureKey": "grey-granite" },
-          { "id": "et-cat-frame-black", "name": "Must", "textureKey": "black-granite" },
-          { "id": "et-cat-frame-red", "name": "Punane", "textureKey": "red-granite" },
-          { "id": "et-cat-frame-white", "name": "Valge", "textureKey": "white-granite" },
-          { "id": "et-cat-frame-green", "name": "Roheline", "textureKey": "green-granite" },
-          { "id": "et-cat-frame-brown", "name": "Pruun", "textureKey": "brown-granite" }
-        ],
-        "productCards": [
-          { "id": "et-prod-frame-1", "title": "Klassikaline piire", "image": "/images/examples/fence.png", "price": "alates 350 €" },
-          { "id": "et-prod-frame-2", "title": "Postidega piire", "image": "/images/work-3.svg", "price": "alates 800 €" },
-          { "id": "et-prod-frame-3", "title": "Kombineeritud piire", "image": "/images/examples/cemetry.png", "price": "alates 560 €" }
-        ]
-      },
-      {
-        "id": "benches",
-        "title": "Pingid",
-        "summary": "Pingid mälestusala jaoks.",
-        "description": "Pingikataloog mälestusala jaoks. Tulevikus lisanduvad siia valmiskomplektid ja erinevad teostusvariandid.",
-        "image": "/images/work-1.svg",
-        "productCards": [
-          { "id": "et-prod-bench-1", "title": "Metallalusega pink", "image": "/images/work-1.svg", "price": "alates 180 €" },
-          { "id": "et-prod-bench-2", "title": "Kivijalgadega pink", "image": "/images/examples/candles.png", "price": "alates 260 €" },
-          { "id": "et-prod-bench-3", "title": "Pink komplektina", "image": "/images/examples/cemetry.png", "price": "alates 420 €" }
-        ]
-      },
-      {
-        "id": "tables",
-        "title": "Lauad",
-        "summary": "Lauad ja komplektid mälestusalale.",
-        "description": "Erineva suuruse ja otstarbega laudade valik platsi kujundamiseks.",
-        "image": "/images/work-2.svg",
-        "productCards": [
-          { "id": "et-prod-table-1", "title": "Kompaktne laud", "image": "/images/work-2.svg", "price": "alates 210 €" },
-          { "id": "et-prod-table-2", "title": "Laud pingiga", "image": "/images/work-3.svg", "price": "alates 380 €" },
-          { "id": "et-prod-table-3", "title": "Graniidist laud", "image": "/images/examples/exclusive.png", "price": "alates 540 €" }
-        ]
-      },
-      {
-        "id": "fences",
-        "title": "Aiad",
-        "summary": "Aiad ja platsi kaitsvad lisalahendused.",
-        "description": "Näited aedadest ja hauaplatsi piiritlemise lahendustest.",
-        "image": "/images/examples/fence.png",
-        "productCards": [
-          { "id": "et-prod-fence-1", "title": "Metallaed", "image": "/images/examples/fence.png", "price": "alates 240 €" },
-          { "id": "et-prod-fence-2", "title": "Dekoratiivpostidega aed", "image": "/images/work-3.svg", "price": "alates 410 €" },
-          { "id": "et-prod-fence-3", "title": "Kombineeritud aed", "image": "/images/examples/cemetry.png", "price": "alates 520 €" }
-        ]
-      },
-      {
-        "id": "decorative-elements",
-        "title": "Dekoratiivsed elemendid",
-        "summary": "Vaasid, küünlahoidjad, lillealad ja dekoratiivsed detailid.",
-        "description": "Lisakujunduse kategooria elementidega, mis täiendavad monumenti ja kogu platsi kujundust.",
-        "image": "/images/examples/candles.png",
-        "productCards": [
-          { "id": "et-prod-decor-1", "title": "Graniitvaas", "image": "/images/examples/candles.png", "price": "alates 95 €" },
-          { "id": "et-prod-decor-2", "title": "Lilleala", "image": "/images/examples/exclusive.png", "price": "alates 160 €" },
-          { "id": "et-prod-decor-3", "title": "Küünlahoidja", "image": "/images/work-2.svg", "price": "alates 75 €" }
-        ]
-      }
-    ],
-    "readyWorks": [
-      { "id": "et-work-1", "title": "Valmis monument koos platsi korrastusega", "image": "/images/work-1.svg" },
-      { "id": "et-work-2", "title": "Kompleks plaadistuse ja aiaga", "image": "/images/work-2.svg" },
-      { "id": "et-work-3", "title": "Hoolikalt kujundatud memoriaal", "image": "/images/work-3.svg" },
-      { "id": "et-work-4", "title": "Eksklusiivse lahenduse näide", "image": "/images/examples/exclusive.png" },
-      { "id": "et-work-5", "title": "Haljastatud plats", "image": "/images/examples/cemetry.png" }
     ]
   },
   "playground": {
