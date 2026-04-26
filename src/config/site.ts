@@ -2,7 +2,7 @@ import type { ContactInfo } from '../types';
 
 export const siteConfig = {
   siteName: 'Empire Granit',
-  defaultSiteUrl: 'https://user.github.io/empire-granit',
+  defaultSiteUrl: 'https://empire-granit.ee',
   contacts: {
     company: 'Empire Granit',
     phoneDisplay: '+372 5811 6373',
@@ -17,7 +17,7 @@ export const siteConfig = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Empire Granit',
-    image: 'https://user.github.io/empire-granit/images/hero.jpg',
+    image: 'https://empire-granit.ee/images/logo.png',
     telephone: '+37258116373',
     email: 'ms.pamyatnik@mail.ru',
     address: {
@@ -30,15 +30,16 @@ export const siteConfig = {
   analytics: {
     provider: 'plausible' as 'plausible' | 'umami' | 'none',
     scriptSrc: 'https://plausible.io/js/script.js',
-    domain: 'user.github.io'
+    domain: import.meta.env.VITE_ANALYTICS_DOMAIN || 'empire-granit.ee'
   },
   formEndpoint: 'https://formspree.io/f/mbdzkngq',
   admin: {
-    password: 'empire2024'
+    password: import.meta.env.VITE_ADMIN_PASSWORD || 'empire2024'
   }
 };
 
 export function getSiteUrl(): string {
   const fromEnv = import.meta.env.VITE_SITE_URL as string | undefined;
-  return (fromEnv || siteConfig.defaultSiteUrl).replace(/\/$/, '');
+  // Fallback to production domain if no env variable is set
+  return (fromEnv || 'https://empire-granit.ee').replace(/\/$/, '');
 }

@@ -26,6 +26,18 @@ function normalizeLocaleContent(localeContent: LocaleContent): LocaleContent {
       categories: localeContent.gallery.categories.map((category) => ({
         ...category,
         image: withBaseUrl(category.image)
+      })),
+      catalogCategories: localeContent.gallery.catalogCategories.map((category) => ({
+        ...category,
+        image: withBaseUrl(category.image),
+        productCards: category.productCards.map((product) => ({
+          ...product,
+          image: withBaseUrl(product.image)
+        }))
+      })),
+      readyWorks: localeContent.gallery.readyWorks.map((item) => ({
+        ...item,
+        image: withBaseUrl(item.image)
       }))
     }
   };

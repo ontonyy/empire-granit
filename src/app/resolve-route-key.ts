@@ -1,16 +1,5 @@
-import { getRouteSegment } from '../routing';
+import { getRouteSegment, ROUTE_KEYS } from '../routing';
 import type { Locale, RouteKey } from '../types';
-
-const ORDERED_ROUTE_KEYS: RouteKey[] = [
-  'home',
-  'about',
-  'pricing',
-  'gallery',
-  'faq',
-  'playground',
-  'contact',
-  'privacy'
-];
 
 export function resolveRouteKey(
   locale: Locale,
@@ -20,7 +9,7 @@ export function resolveRouteKey(
   const mainSegment = pieces[0] || '';
   const subPath = pieces.slice(1).join('/');
 
-  for (const routeKey of ORDERED_ROUTE_KEYS) {
+  for (const routeKey of ROUTE_KEYS) {
     if (getRouteSegment(locale, routeKey) === mainSegment) {
       return { routeKey, subPath };
     }

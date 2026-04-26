@@ -11,6 +11,8 @@ export interface ContactAssistCopy {
   inquiryHint: string;
   inquiryButton: string;
   packageInterestTemplate: string;
+  formSuccess: string;
+  formError: string;
 }
 
 export function getContactAssistContent(locale: Locale): ContactAssistCopy {
@@ -25,7 +27,9 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
       inquiryTitle: 'Задать вопрос',
       inquiryHint: 'Оставьте сообщение или задайте вопрос.',
       inquiryButton: 'Отправить',
-      packageInterestTemplate: 'Здравствуйте! Я заинтересован в пакете "{name}". Пожалуйста, расскажите подробнее.'
+      packageInterestTemplate: 'Здравствуйте! Я заинтересован в пакете "{name}". Пожалуйста, расскажите подробнее.',
+      formSuccess: 'Спасибо! Ваше сообщение отправлено.',
+      formError: 'Произошла ошибка. Пожалуйста, попробуйте позже.'
     };
   }
 
@@ -40,7 +44,9 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
       inquiryTitle: 'Saada päring',
       inquiryHint: 'Esitage küsimus või kirjeldage oma soove.',
       inquiryButton: 'Saada',
-      packageInterestTemplate: 'Tere! Olen huvitatud "{name}" paketist. Palun saata täpsemat infot.'
+      packageInterestTemplate: 'Tere! Olen huvitatud "{name}" paketist. Palun saata täpsemat infot.',
+      formSuccess: 'Aitäh! Teie teade on saadetud.',
+      formError: 'Tekkis viga. Palun proovige hiljem uuesti.'
     };
   }
 
@@ -54,6 +60,8 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
     inquiryTitle: 'Send Inquiry',
     inquiryHint: 'Have a specific question or request?',
     inquiryButton: 'Send Message',
-    packageInterestTemplate: 'Hello! I am interested in the "{name}" package. Please provide more details.'
+    packageInterestTemplate: 'Hello! I am interested in the "{name}" package. Please provide more details.',
+    formSuccess: 'Thank you! Your message has been sent.',
+    formError: 'An error occurred. Please try again later.'
   };
 }

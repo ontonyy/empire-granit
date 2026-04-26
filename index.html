@@ -8,6 +8,21 @@
     <title>Empire Granit</title>
   </head>
   <body>
+    <script>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        var redirect = params.get('p');
+        if (redirect) {
+          // Remove 'p' from the search params
+          params.delete('p');
+          var search = params.toString();
+          var newUrl = window.location.pathname + redirect + (search ? '?' + search : '') + window.location.hash;
+          // Clean up multiple slashes
+          newUrl = newUrl.replace(/\/+/g, '/');
+          window.history.replaceState(null, null, newUrl);
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

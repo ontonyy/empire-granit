@@ -11,7 +11,15 @@ function collectPaths(value, prefix = '') {
     if (value.length === 0) {
       return [`${prefix}[]`];
     }
-    return collectPaths(value[0], `${prefix}[]`);
+    // Collect paths from ALL items in the array to ensure schema consistency
+    const allPaths = new Set();
+    for (const item of value) {
+      const itemPaths = collectPaths(item, `${prefix}[]`);
+      for (const p of itemPaths) {
+        allPaths.add(p);
+      }
+    }
+    return Array.from(allPaths);
   }
 
   if (!isObject(value)) {

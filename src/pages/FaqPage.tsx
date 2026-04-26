@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getFaqContent } from '../content/extra/faq';
+import { getLocaleContent } from '../content';
 import { buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
 
@@ -9,7 +9,7 @@ interface FaqPageProps {
 }
 
 export function FaqPage({ locale }: FaqPageProps) {
-  const content = getFaqContent(locale);
+  const content = getLocaleContent(locale).faq;
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (

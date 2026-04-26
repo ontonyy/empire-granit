@@ -1,4 +1,4 @@
-import { getPrivacyContent } from '../content/extra/privacy';
+import { getLocaleContent } from '../content';
 import type { Locale } from '../types';
 
 interface PrivacyPageProps {
@@ -6,7 +6,7 @@ interface PrivacyPageProps {
 }
 
 export function PrivacyPage({ locale }: PrivacyPageProps) {
-  const content = getPrivacyContent(locale);
+  const content = getLocaleContent(locale).privacy;
 
   return (
     <section className="content-panel privacy-page-upgraded">

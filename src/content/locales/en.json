@@ -23,11 +23,88 @@
       "We handle all documents",
       "A respectful farewell"
     ],
-    "trust": {
-      "experience": "15+ Years Experience",
-      "families": "1000+ Families Helped",
-      "guarantee": "No Hidden Fees Guarantee"
-    }
+    "heroLabel": "EMPIRE GRANIT · NARVA",
+    "secondaryCta": "Our services",
+    "featureCards": [
+      {
+        "icon": "Support",
+        "title": "Fast customer support",
+        "body": "During working hours you can contact us by phone. At other times, leave a message through the website form."
+      },
+      {
+        "icon": "Range",
+        "title": "Wide product range",
+        "body": "Monuments and borders, vases, benches, flower beds, photo enamel, and portrait engraving."
+      },
+      { "icon": "EE", "title": "Serving all Estonia", "body": "Consultation, production and installation arranged across the country." },
+      {
+        "icon": "Services",
+        "title": "Variety of services",
+        "body": "Production of new items, renewal and restoration of existing ones, memorial site arrangement. Installation."
+      }
+    ],
+    "trustLabel": "WHY FAMILIES CHOOSE US",
+    "trustMetrics": [
+      { "value": "10+", "label": "years of experience" },
+      { "value": "500+", "label": "completed orders" }
+    ],
+    "processLabel": "HOW IT WORKS",
+    "processTitle": "From the first call to the finished product",
+    "processSteps": [
+      { "title": "You contact us", "body": "We suggest design options and take all your wishes into account." },
+      {
+        "title": "Project approval",
+        "body": "Selection of material, shape, engraving, and photo enamel. Final price and lead time approval."
+      },
+      { "title": "Order fulfillment", "body": "Production of the item and installation within the agreed timeframe." }
+    ],
+    "servicesLabel": "WHAT WE OFFER",
+    "servicesTitle": "Core Empire Granit services",
+    "services": [
+      {
+        "title": "Monument and border manufacturing",
+        "body": "Production of memorial products in various shapes and sizes with individual design."
+      },
+      {
+        "title": "Engraving and portraits",
+        "body": "Selection of fonts and decorative elements, portrait retouching, photo enamel, and image engraving."
+      },
+      {
+        "title": "Monument installation",
+        "body": "Professional installation in line with all technical requirements."
+      },
+      {
+        "title": "Site improvement",
+        "body": "Tile laying, gravel, sand, artificial grass, and memorial area arrangement."
+      },
+      {
+        "title": "Restoration and care",
+        "body": "Cleaning dirt, retouching portraits and letters, restoring the monument appearance."
+      },
+      {
+        "title": "Flower area design",
+        "body": "Vases, flower beds, candle holders, benches, and other decorative elements."
+      }
+    ],
+    "testimonialsLabel": "TESTIMONIALS",
+    "testimonialsTitle": "We value feedback from our clients",
+    "testimonials": [
+      {
+        "quote": "Everything was explained calmly, the monument was selected without pressure, and the process felt clear.",
+        "author": "Irina S.",
+        "meta": "Narva"
+      },
+      {
+        "quote": "The timing was kept, installation was neat, and the final result matched what we were promised.",
+        "author": "Aleksandr P.",
+        "meta": "Jõhvi"
+      },
+      {
+        "quote": "Thank you for the flexible approach. We agreed on manufacturing and delivery only, and decided to handle the installation ourselves. Everything was done with quality and on time.",
+        "author": "Marina K.",
+        "meta": "Haapsalu"
+      }
+    ]
   },
   "about": {
     "heading": "Our Heritage",
@@ -35,6 +112,20 @@
       "Since 2008, we have combined masterful stone craftsmanship with compassionate support.",
       "We guide you through every step—from dignified ceremonies to lasting memorials.",
       "Transparent pricing. Respectful care. Enduring quality."
+    ],
+    "kicker": "EMPIRE GRANIT",
+    "title": "About the Company",
+    "lead": "We combine calm guidance, precise stone craftsmanship, and a clear process for families who want a dignified result without unnecessary stress.",
+    "points": [
+      "We work with granite memorials, installation, and full memorial site improvement.",
+      "Options are explained clearly so families can choose with confidence and within budget.",
+      "The process is kept understandable from the first conversation to final installation."
+    ],
+    "metrics": [
+      { "value": "15+", "label": "years of experience" },
+      { "value": "1000+", "label": "families have trusted us" },
+      { "value": "1 day", "label": "for reply and quotation" },
+      { "value": "3 languages", "label": "russian, eesti, english" }
     ]
   },
   "pricing": {
@@ -126,7 +217,7 @@
       {
         "id": "monuments",
         "title": "Monuments",
-        "image": "/images/examples/gravestone.png",
+        "image": "/images/examples/monument.png",
         "summary": "Monuments in different shapes, sizes, and finishing options.",
         "description": "We help families choose a monument that fits the budget, the style of the memorial site, and personal wishes. Below you can review granite colors and move into the electronic catalog.",
         "previewMode": "granite",
@@ -159,7 +250,7 @@
       {
         "id": "framing",
         "title": "Framing",
-        "image": "/images/examples/fence.png",
+        "image": "/images/examples/framing.png",
         "summary": "Framing solutions for a neat and complete memorial site.",
         "description": "Framing helps give the memorial area a finished look. We offer different layouts, materials, and finishes, and the electronic catalog below connects this page to related product categories.",
         "previewMode": "granite",
@@ -419,6 +510,45 @@
       {
         "title": "Protection",
         "body": "Access is limited and never shared with third parties."
+      }
+    ],
+    "kicker": "PRIVACY POLICY",
+    "intro": "We only collect the information required to communicate with you and prepare a proposal. We do not ask for unnecessary personal data.",
+    "cards": [
+      {
+        "title": "Data Collection",
+        "body": "We only collect information submitted via our forms."
+      },
+      {
+        "title": "Purpose",
+        "body": "Data is used strictly for communication and proposals."
+      },
+      {
+        "title": "Protection",
+        "body": "Access is limited and never shared with third parties."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "intro": "Answers to the most common questions families ask before ordering.",
+    "contactCta": "Did not find your answer? Send inquiry",
+    "items": [
+      {
+        "question": "How long does production take?",
+        "answer": "Usually 2 to 6 weeks depending on complexity, season, and selected material."
+      },
+      {
+        "question": "What documents are required?",
+        "answer": "For the initial consultation, basic information is enough. For cemetery installation we help clarify required documents for the specific location."
+      },
+      {
+        "question": "Is installment payment available?",
+        "answer": "Yes, installment plans are available for some orders. Final terms are agreed individually during quotation."
+      },
+      {
+        "question": "Do you work across all Estonia?",
+        "answer": "Yes, we accept and complete orders across Estonia."
       }
     ]
   },

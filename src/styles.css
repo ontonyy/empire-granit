@@ -1864,91 +1864,6 @@ select:focus {
   transform: scale(1.08);
 }
 
-.catalog-card-granite-preview {
-  height: 100%;
-  padding: 0.9rem;
-  background: linear-gradient(180deg, #f5f0e7 0%, #efe7da 100%);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.catalog-card-granite-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.catalog-card-granite-swatches {
-  display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 0.45rem;
-}
-
-.catalog-card-swatch {
-  appearance: none;
-  padding: 0;
-  border: 2px solid transparent;
-  border-radius: 16px;
-  background: transparent;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.catalog-card-swatch:hover {
-  transform: translateY(-2px);
-}
-
-.catalog-card-swatch.active {
-  border-color: rgba(166, 138, 100, 0.88);
-  box-shadow: 0 10px 24px rgba(49, 38, 28, 0.14);
-}
-
-.catalog-card-swatch-media {
-  min-height: 38px;
-  border-radius: 12px;
-}
-
-.catalog-card-granite-focus {
-  position: relative;
-  flex: 1;
-  min-height: 188px;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid rgba(166, 138, 100, 0.14);
-  background: rgba(255, 255, 255, 0.66);
-  box-shadow: 0 10px 24px rgba(49, 38, 28, 0.08);
-}
-
-.catalog-card-granite-focus img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.catalog-card-granite-badge {
-  position: absolute;
-  left: 0.85rem;
-  right: 0.85rem;
-  bottom: 0.85rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 0.9rem;
-  padding: 0.8rem 0.95rem;
-  border-radius: 16px;
-  background: linear-gradient(180deg, rgba(18, 16, 13, 0.14) 0%, rgba(18, 16, 13, 0.72) 100%);
-  backdrop-filter: blur(6px);
-}
-
-.catalog-card-granite-badge strong {
-  font-size: 1.05rem;
-  color: #fff;
-  line-height: 1.1;
-}
-
 .catalog-granite-item {
   appearance: none;
   width: 100%;
@@ -2537,14 +2452,6 @@ select:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .catalog-card-granite-focus {
-    min-height: 140px;
-  }
-
-  .catalog-card-granite-swatches {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .cta-banner-mini {
     padding: 2.5rem 1.5rem;
   }
@@ -2556,4 +2463,47 @@ select:focus {
   .electronic-catalog-section {
     padding: 1.5rem;
   }
+}
+
+/* Form Feedback States */
+.form-feedback {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.form-feedback.success h3,
+.form-feedback.success p {
+  color: #2e7d32;
+  margin: 0;
+}
+
+.form-error-text {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.form-error-text-small {
+  color: #d32f2f;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.success-state {
+  border: 1px solid #c8e6c9;
+  background-color: #f1f8e9;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
 }

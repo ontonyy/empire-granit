@@ -28,13 +28,19 @@ export function PricingTierCard({ tier, ctaLabel, isSelected, onSelect, onPurcha
               marginTop: '1.5rem'
             }}
           >
-            {tier.price}€
+            {typeof tier.price === 'number' ? `${tier.price}€` : tier.price}
           </div>
         </div>
 
         <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', minHeight: '3rem', fontSize: '1rem' }}>
           {tier.bestFor}
         </p>
+
+        {tier.note && (
+          <p style={{ color: 'var(--text-accent)', marginBottom: '1rem', fontSize: '0.9rem', fontStyle: 'italic' }}>
+            {tier.note}
+          </p>
+        )}
 
         <ul className="tier-features" style={{ listStyle: 'none', padding: 0, margin: '2rem 0' }}>
           {tier.features.map((feature) => (
