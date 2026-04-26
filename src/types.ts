@@ -41,10 +41,29 @@ export interface LocaleContent {
     heroTitle: string;
     heroLead: string;
     highlights: string[];
+    heroLabel: string;
+    secondaryCta: string;
+    featureCards: Array<{ icon: string; title: string; body: string }>;
+    trustLabel: string;
+    trustMetrics: Array<{ value: string; label: string }>;
+    processLabel: string;
+    processTitle: string;
+    processSteps: Array<{ title: string; body: string }>;
+    servicesLabel: string;
+    servicesTitle: string;
+    services: Array<{ title: string; body: string }>;
+    testimonialsLabel: string;
+    testimonialsTitle: string;
+    testimonials: Array<{ quote: string; author: string; meta: string }>;
   };
   about: {
     heading: string;
     body: string[];
+    kicker: string;
+    title: string;
+    lead: string;
+    points: string[];
+    metrics: Array<{ value: string; label: string }>;
   };
   pricing: {
     heading: string;
@@ -52,10 +71,11 @@ export interface LocaleContent {
     tiers: Array<{
       id: string;
       name: string;
-      price: number;
+      price: number | string;
       bestFor: string;
       features: string[];
       highlighted?: boolean;
+      note?: string;
     }>;
     cta: string;
     benefits: {
@@ -114,6 +134,15 @@ export interface LocaleContent {
   privacy: {
     heading: string;
     sections: Array<{ title: string; body: string }>;
+    kicker: string;
+    intro: string;
+    cards: Array<{ title: string; body: string }>;
+  };
+  faq: {
+    heading: string;
+    intro: string;
+    contactCta: string;
+    items: Array<{ question: string; answer: string }>;
   };
   seo: Record<RouteKey, SeoMeta>;
 }

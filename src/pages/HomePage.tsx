@@ -6,7 +6,6 @@ import { ProcessSection } from './home/ProcessSection';
 import { ServicesSection } from './home/ServicesSection';
 import { TestimonialsSection } from './home/TestimonialsSection';
 import { TrustBarSection } from './home/TrustBarSection';
-import { getHomeSections } from './home/sections';
 
 interface HomePageProps {
   locale: Locale;
@@ -14,16 +13,15 @@ interface HomePageProps {
 
 export function HomePage({ locale }: HomePageProps) {
   const content = getLocaleContent(locale);
-  const section = content.homepage;
-  const home = getHomeSections(locale);
+  const home = content.homepage;
 
   return (
     <>
       <HeroSection
         locale={locale}
         heroLabel={home.heroLabel}
-        heroTitle={section.heroTitle}
-        heroLead={section.heroLead}
+        heroTitle={home.heroTitle}
+        heroLead={home.heroLead}
         primaryCta={content.cta.sendInquiry}
         secondaryCta={home.secondaryCta}
         featureCards={home.featureCards}

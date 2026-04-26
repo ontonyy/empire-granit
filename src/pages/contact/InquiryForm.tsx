@@ -22,6 +22,7 @@ export const InquiryForm = forwardRef<HTMLDivElement, InquiryFormProps>(function
 ) {
   const location = useLocation();
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -39,28 +40,67 @@ export const InquiryForm = forwardRef<HTMLDivElement, InquiryFormProps>(function
     }
   }, [location.search, assist.packageInterestTemplate, ref]);
 
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus('loading');
+    trackEvent('contact_form_submit', { locale, source: 'contact-page' });
+
+    const formData = new FormData(event.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch(siteConfig.formEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setMessage('');
+        (event.target as HTMLFormElement).reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('[form-submit-failed]', error);
+      setStatus('error');
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <article className="contact-card inquiry-full success-state" ref={ref}>
+        <div className="form-feedback success">
+          <h3>{assist.formSuccess}</h3>
+          <button type="button" className="btn-secondary" onClick={() => setStatus('idle')}>
+            {labels.submit}
+          </button>
+        </div>
+      </article>
+    );
+  }
+
   return (
     <article className="contact-card inquiry-full" ref={ref}>
       <h3>{title}</h3>
       <p className="hint-text">{hint}</p>
 
-      <form
-        className="inquiry-form-premium"
-        action={siteConfig.formEndpoint}
-        method="POST"
-        onSubmit={() => trackEvent('contact_form_submit', { locale, source: 'contact-page' })}
-      >
+      <form className="inquiry-form-premium" onSubmit={handleSubmit}>
         <input type="hidden" name="locale" value={locale} />
         <input type="hidden" name="serviceType" value="general_inquiry" />
 
         <div className="form-row">
           <div className="field">
             <label>{labels.name}</label>
-            <input type="text" name="name" required />
+            <input type="text" name="name" required disabled={status === 'loading'} />
           </div>
           <div className="field">
             <label>{labels.email}</label>
-            <input type="email" name="email" required />
+            <input type="email" name="email" required disabled={status === 'loading'} />
           </div>
         </div>
 
@@ -72,12 +112,19 @@ export const InquiryForm = forwardRef<HTMLDivElement, InquiryFormProps>(function
             required
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            disabled={status === 'loading'}
           ></textarea>
         </div>
 
-        <button type="submit" className="btn-primary full-width-glow">
-          {labels.submit}
+        <button
+          type="submit"
+          className="btn-primary full-width-glow"
+          disabled={status === 'loading'}
+        >
+          {status === 'loading' ? '...' : labels.submit}
         </button>
+
+        {status === 'error' && <p className="form-error-text">{assist.formError}</p>}
       </form>
       <p className="privacy-fine-print">{privacyNotice}</p>
     </article>
