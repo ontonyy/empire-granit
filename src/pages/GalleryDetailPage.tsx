@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Breadcrumb } from '../components/ui';
 import { getLocaleContent } from '../content';
 import { trackEvent } from '../lib/analytics';
 import { buildLocalizedPath } from '../routing';
@@ -72,11 +73,14 @@ export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps
 
   return (
     <article className="content-panel gallery-detail">
-      <nav className="breadcrumb">
-        <Link to={buildLocalizedPath(locale, 'gallery')}>← {labels.backToGallery}</Link>
-      </nav>
+      <Breadcrumb
+        items={[
+          { label: content.gallery.heading, to: buildLocalizedPath(locale, 'gallery') },
+          { label: category.title }
+        ]}
+      />
 
-      <GalleryDetailHero category={category} />
+      <GalleryDetailHero category={category} eyebrow={content.gallery.heading} />
 
       {category.graniteSwatches?.length ? (
         <GranitePalette swatches={category.graniteSwatches} title={labels.granitePaletteTitle} locale={locale} />

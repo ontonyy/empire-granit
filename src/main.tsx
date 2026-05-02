@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { App } from './App';
 import './styles.css';
+import './styles/tokens.css';
 
 function getBasename(): string | undefined {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
