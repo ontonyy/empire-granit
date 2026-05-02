@@ -48,6 +48,18 @@ export function GalleryPage({ locale }: GalleryPageProps) {
         ))}
       </div>
 
+      <section className="catalog-navigation-block catalog-navigation-block-spaced reveal-on-scroll">
+        <h2>{section.labels.catalogCategoriesTitle}</h2>
+        <div className="catalog-nav-grid">
+          {section.catalogCategories.map((category) => (
+            <Link key={category.id} to={buildCatalogSubcategoryPath(locale, category.id)} className="catalog-nav-card">
+              <span>{category.title}</span>
+              <small>{category.summary}</small>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className="catalog-ready-works reveal-on-scroll">
         <div className="catalog-ready-works-header">
           <span className="section-kicker">{section.labels.readyWorksTitle}</span>

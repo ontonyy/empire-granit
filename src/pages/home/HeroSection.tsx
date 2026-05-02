@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { buildLocalizedPath } from '../../routing';
-import { siteConfig } from '../../config/site';
 import type { Locale } from '../../types';
 import type { HeroFeature } from './sections';
 
@@ -28,7 +27,7 @@ export function HeroSection({
       <div className="hero-copy">
         <span className="eyebrow">{heroLabel}</span>
         <h1>{heroTitle}</h1>
-        <p className="hero-lead">{heroLead}</p>
+        {heroLead ? <p className="hero-lead">{heroLead}</p> : null}
 
         <div className="hero-actions">
           <Link className="hero-primary" to={buildLocalizedPath(locale, 'contact')}>
@@ -38,9 +37,6 @@ export function HeroSection({
             {secondaryCta}
           </Link>
         </div>
-        <a className="hero-phone-link" href={siteConfig.contacts.phoneLink}>
-          {siteConfig.contacts.phoneDisplay}
-        </a>
       </div>
 
       <div className="hero-feature-stack">

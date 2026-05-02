@@ -14,6 +14,7 @@ interface SiteHeaderProps {
   nav: Record<RouteKey, string>;
   logoPrimarySrc: string;
   logoFallbackSrc: string;
+  hidePhoneLink?: boolean;
 }
 
 export function SiteHeader({
@@ -22,7 +23,8 @@ export function SiteHeader({
   ui,
   nav,
   logoPrimarySrc,
-  logoFallbackSrc
+  logoFallbackSrc,
+  hidePhoneLink = false
 }: SiteHeaderProps) {
   const [isHeaderElevated, setIsHeaderElevated] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -70,14 +72,16 @@ export function SiteHeader({
               <strong className="sr-only">{siteConfig.siteName}</strong>
             </span>
           </Link>
-          <a
-            className="brand-emergency-link"
-            href={siteConfig.contacts.phoneLink}
-            onClick={() => trackEvent('phone_click', { locale, source: 'header-emergency' })}
-          >
-            {ui.emergencyPrefix ? <span className="brand-emergency-prefix">{ui.emergencyPrefix}</span> : null}
-            <span className="brand-emergency-value">{siteConfig.contacts.phoneDisplay}</span>
-          </a>
+          {!hidePhoneLink ? (
+            <a
+              className="brand-emergency-link"
+              href={siteConfig.contacts.phoneLink}
+              onClick={() => trackEvent('phone_click', { locale, source: 'header-emergency' })}
+            >
+              {ui.emergencyPrefix ? <span className="brand-emergency-prefix">{ui.emergencyPrefix}</span> : null}
+              <span className="brand-emergency-value">{siteConfig.contacts.phoneDisplay}</span>
+            </a>
+          ) : null}
         </div>
         <div className="header-controls">
           <LanguageSwitcher currentLocale={locale} routeKey={routeKey} />

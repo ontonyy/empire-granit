@@ -1,18 +1,12 @@
-import { Link } from 'react-router-dom';
-import { buildCatalogSubcategoryPath } from '../../routing';
-import type { CatalogSubcategory, GalleryLabels, Locale } from '../../types';
+import type { CatalogSubcategory, GalleryLabels } from '../../types';
 
 interface ElectronicCatalogSectionProps {
-  locale: Locale;
   labels: GalleryLabels;
-  catalogCategories: CatalogSubcategory[];
   featuredCategories: CatalogSubcategory[];
 }
 
 export function ElectronicCatalogSection({
-  locale,
   labels,
-  catalogCategories,
   featuredCategories
 }: ElectronicCatalogSectionProps) {
   return (
@@ -40,18 +34,6 @@ export function ElectronicCatalogSection({
             </article>
           ))
         )}
-      </div>
-
-      <div className="catalog-navigation-block">
-        <h3>{labels.catalogCategoriesTitle}</h3>
-        <div className="catalog-nav-grid">
-          {catalogCategories.map((category) => (
-            <Link key={category.id} to={buildCatalogSubcategoryPath(locale, category.id)} className="catalog-nav-card">
-              <span>{category.title}</span>
-              <small>{category.summary}</small>
-            </Link>
-          ))}
-        </div>
       </div>
     </section>
   );

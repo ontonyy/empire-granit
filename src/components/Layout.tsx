@@ -26,6 +26,7 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
   const logoPrimarySrc = `${import.meta.env.BASE_URL}images/logo.png`;
   const logoFallbackSrc = `${import.meta.env.BASE_URL}images/logo.png`;
   const mapLink = `${buildLocalizedPath(locale, 'contact')}#map`;
+  const isHomePage = routeKey === 'home';
 
   useScrollToHash(location.hash, location.pathname);
   usePageView(locale, routeKey, location.pathname);
@@ -45,21 +46,31 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
         nav={content.nav}
         logoPrimarySrc={logoPrimarySrc}
         logoFallbackSrc={logoFallbackSrc}
+        hidePhoneLink={isHomePage}
       />
 
       <main id="main-content" className="main-content">
         {children}
       </main>
 
-      <SiteFooter locale={locale} ui={ui} nav={content.nav} logoSrc={logoPrimarySrc} mapLink={mapLink} />
+      <SiteFooter
+        locale={locale}
+        ui={ui}
+        nav={content.nav}
+        logoSrc={logoPrimarySrc}
+        mapLink={mapLink}
+        hidePhoneLink={isHomePage}
+      />
 
-      <a
-        className="floating-call"
-        href={siteConfig.contacts.phoneLink}
-        onClick={() => trackEvent('phone_click', { locale, source: 'floating' })}
-      >
-        {content.cta.callNow}
-      </a>
+      {!isHomePage ? (
+        <a
+          className="floating-call"
+          href={siteConfig.contacts.phoneLink}
+          onClick={() => trackEvent('phone_click', { locale, source: 'floating' })}
+        >
+          {content.cta.callNow}
+        </a>
+      ) : null}
     </div>
   );
 }

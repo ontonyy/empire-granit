@@ -37,7 +37,7 @@ describe('LocaleRouteResolver', () => {
     );
 
     // Use a unique string from HomePage to verify it rendered.
-    expect(screen.getByText(/Памятники, установка и благоустройство мест захоронения/i)).toBeDefined();
+    expect(screen.getByText(/Уверенность в трудную минуту/i)).toBeDefined();
   });
 
   it('should render AboutPage for /en/about', () => {

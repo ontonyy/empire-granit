@@ -9,10 +9,9 @@ interface CatalogPreviewSectionProps {
   lead: string;
   items: Array<{ title: string; body: string }>;
   ctaLabel: string;
-  requestCtaLabel: string;
 }
 
-export function CatalogPreviewSection({ locale, label, title, lead, items, ctaLabel, requestCtaLabel }: CatalogPreviewSectionProps) {
+export function CatalogPreviewSection({ locale, label, title, lead, items, ctaLabel }: CatalogPreviewSectionProps) {
   return (
     <section className="home-catalog-preview reveal-on-scroll">
       <div className="home-section-heading">
@@ -22,7 +21,7 @@ export function CatalogPreviewSection({ locale, label, title, lead, items, ctaLa
       </div>
 
       <div className="home-catalog-layout">
-        <img src="/images/examples/monument.png" alt="" loading="lazy" />
+        <img src="/images/examples/gravestone.png" alt="" loading="lazy" />
         <div className="home-catalog-list">
           {items.map((item) => (
             <article key={item.title}>
@@ -31,10 +30,7 @@ export function CatalogPreviewSection({ locale, label, title, lead, items, ctaLa
             </article>
           ))}
           <div className="home-catalog-actions">
-            <Link className="hero-primary" to={buildLocalizedPath(locale, 'contact')}>
-              {requestCtaLabel}
-            </Link>
-            <Link className="hero-secondary" to={buildLocalizedPath(locale, 'gallery')}>
+            <Link className="hero-primary" to={buildLocalizedPath(locale, 'gallery')}>
               {ctaLabel}
             </Link>
           </div>

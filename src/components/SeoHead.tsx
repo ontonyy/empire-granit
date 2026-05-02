@@ -16,6 +16,12 @@ export function SeoHead({ locale, routeKey }: SeoHeadProps) {
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
   const canonicalPath = buildLocalizedPath(locale, routeKey);
   const canonical = `${siteUrl}${basePath}${canonicalPath}`;
+  const localBusiness =
+    routeKey === 'home'
+      ? Object.fromEntries(
+          Object.entries(siteConfig.localBusiness).filter(([key]) => key !== 'telephone')
+        )
+      : siteConfig.localBusiness;
 
   return (
     <Helmet htmlAttributes={{ lang: locale }}>
@@ -34,7 +40,7 @@ export function SeoHead({ locale, routeKey }: SeoHeadProps) {
       })}
       <script type="application/ld+json">
         {JSON.stringify({
-          ...siteConfig.localBusiness,
+          ...localBusiness,
           url: canonical,
           inLanguage: locale
         })}
