@@ -52,9 +52,33 @@ export interface LocaleContent {
     servicesLabel: string;
     servicesTitle: string;
     services: Array<{ title: string; body: string }>;
+    catalogLabel: string;
+    catalogTitle: string;
+    catalogLead: string;
+    catalogItems: Array<{ title: string; body: string }>;
+    catalogCta: string;
+    optionsLabel: string;
+    optionsTitle: string;
+    optionsLead: string;
+    options: Array<{ title: string; body: string }>;
+    pricingLabel: string;
+    pricingTitle: string;
+    pricingLead: string;
+    pricingItems: Array<{ label: string; value: string }>;
+    areaLabel: string;
+    areaTitle: string;
+    areaLead: string;
+    areaItems: string[];
+    faqLabel: string;
+    faqTitle: string;
+    faqItems: Array<{ question: string; answer: string }>;
     testimonialsLabel: string;
     testimonialsTitle: string;
     testimonials: Array<{ quote: string; author: string; meta: string }>;
+    careLabel: string;
+    careTitle: string;
+    careLead: string;
+    careItems: Array<{ title: string; body: string }>;
   };
   about: {
     heading: string;
@@ -68,6 +92,8 @@ export interface LocaleContent {
   pricing: {
     heading: string;
     intro: string;
+    includedLabel: string;
+    affectsLabel: string;
     tiers: Array<{
       id: string;
       name: string;
@@ -114,6 +140,8 @@ export interface LocaleContent {
   contact: {
     heading: string;
     intro: string;
+    intentTitle: string;
+    intentItems: string[];
     inquiryTitle?: string;
     inquiryHint?: string;
     consentText: string;

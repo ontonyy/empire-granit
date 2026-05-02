@@ -9,7 +9,11 @@ const content: Record<Locale, LocaleContent> = {
   en: en as LocaleContent
 };
 
-function withBaseUrl(path: string): string {
+function withBaseUrl(path?: string): string | undefined {
+  if (!path) {
+    return path;
+  }
+
   if (!path.startsWith('/')) {
     return path;
   }
@@ -27,15 +31,15 @@ function normalizeLocaleContent(localeContent: LocaleContent): LocaleContent {
         ...category,
         image: withBaseUrl(category.image)
       })),
-      catalogCategories: localeContent.gallery.catalogCategories.map((category) => ({
+      catalogCategories: (localeContent.gallery.catalogCategories ?? []).map((category) => ({
         ...category,
         image: withBaseUrl(category.image),
-        productCards: category.productCards.map((product) => ({
+        productCards: (category.productCards ?? []).map((product) => ({
           ...product,
           image: withBaseUrl(product.image)
         }))
       })),
-      readyWorks: localeContent.gallery.readyWorks.map((item) => ({
+      readyWorks: (localeContent.gallery.readyWorks ?? []).map((item) => ({
         ...item,
         image: withBaseUrl(item.image)
       }))

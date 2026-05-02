@@ -2,8 +2,10 @@ import type { Locale } from '../../types';
 
 export interface ContactAssistCopy {
   detailsTitle: string;
+  intentTitle: string;
   detailsPhone: string;
   detailsEmail: string;
+  whatsappLabel: string;
   callbackTitle: string;
   callbackHint: string;
   callbackButton: string;
@@ -19,9 +21,11 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
   if (locale === 'ru') {
     return {
       detailsTitle: 'Свяжитесь с нами',
+      intentTitle: 'Что можно отправить',
       detailsPhone: 'Телефон',
       detailsEmail: 'E-mail',
-      callbackTitle: 'Круглосуточный звонок',
+      whatsappLabel: 'Написать в WhatsApp',
+      callbackTitle: 'Обратный звонок',
       callbackHint: 'Оставьте номер, и мы перезвоним вам.',
       callbackButton: 'Жду звонка',
       inquiryTitle: 'Задать вопрос',
@@ -36,12 +40,14 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
   if (locale === 'et') {
     return {
       detailsTitle: 'Võta ühendust',
+      intentTitle: 'Mida saab saata',
       detailsPhone: 'Telefon',
       detailsEmail: 'E-post',
+      whatsappLabel: 'Kirjuta WhatsAppis',
       callbackTitle: 'Tagasihelistamine',
       callbackHint: 'Jätke oma number ja me helistame teile.',
       callbackButton: 'Telli kõne',
-      inquiryTitle: 'Saada päring',
+      inquiryTitle: 'Jäta päring',
       inquiryHint: 'Esitage küsimus või kirjeldage oma soove.',
       inquiryButton: 'Saada',
       packageInterestTemplate: 'Tere! Olen huvitatud "{name}" paketist. Palun saata täpsemat infot.',
@@ -52,12 +58,14 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
 
   return {
     detailsTitle: 'Get in Touch',
+    intentTitle: 'What to send',
     detailsPhone: 'Phone',
     detailsEmail: 'E-mail',
+    whatsappLabel: 'Write on WhatsApp',
     callbackTitle: 'Request a Callback',
     callbackHint: 'Leave your details and we will reach out.',
-    callbackButton: 'Submit Request',
-    inquiryTitle: 'Send Inquiry',
+    callbackButton: 'Leave a Request',
+    inquiryTitle: 'Leave a Request',
     inquiryHint: 'Have a specific question or request?',
     inquiryButton: 'Send Message',
     packageInterestTemplate: 'Hello! I am interested in the "{name}" package. Please provide more details.',

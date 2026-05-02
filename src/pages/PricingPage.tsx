@@ -39,6 +39,8 @@ export function PricingPage({ locale }: PricingPageProps) {
             key={tier.id}
             tier={tier}
             ctaLabel={section.cta}
+            includedLabel={section.includedLabel}
+            affectsLabel={section.affectsLabel}
             isSelected={selectedTierId === tier.id}
             onSelect={() => {
               setSelectedTierId(tier.id);

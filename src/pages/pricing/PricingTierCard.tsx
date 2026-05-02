@@ -5,12 +5,22 @@ type Tier = LocaleContent['pricing']['tiers'][number];
 interface PricingTierCardProps {
   tier: Tier;
   ctaLabel: string;
+  includedLabel: string;
+  affectsLabel: string;
   isSelected: boolean;
   onSelect: () => void;
   onPurchase: () => void;
 }
 
-export function PricingTierCard({ tier, ctaLabel, isSelected, onSelect, onPurchase }: PricingTierCardProps) {
+export function PricingTierCard({
+  tier,
+  ctaLabel,
+  includedLabel,
+  affectsLabel,
+  isSelected,
+  onSelect,
+  onPurchase
+}: PricingTierCardProps) {
   return (
     <article
       className={`service-card interactive-card ${isSelected ? 'selected-card' : ''}`}
@@ -36,13 +46,8 @@ export function PricingTierCard({ tier, ctaLabel, isSelected, onSelect, onPurcha
           {tier.bestFor}
         </p>
 
-        {tier.note && (
-          <p style={{ color: 'var(--text-accent)', marginBottom: '1rem', fontSize: '0.9rem', fontStyle: 'italic' }}>
-            {tier.note}
-          </p>
-        )}
-
-        <ul className="tier-features" style={{ listStyle: 'none', padding: 0, margin: '2rem 0' }}>
+        <h3 className="pricing-card-subtitle">{includedLabel}</h3>
+        <ul className="tier-features" style={{ listStyle: 'none', padding: 0, margin: '0.75rem 0 1.5rem' }}>
           {tier.features.map((feature) => (
             <li key={feature} style={{ marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ color: 'var(--accent)' }}>✓</span>
@@ -50,6 +55,13 @@ export function PricingTierCard({ tier, ctaLabel, isSelected, onSelect, onPurcha
             </li>
           ))}
         </ul>
+
+        {tier.note && (
+          <>
+            <h3 className="pricing-card-subtitle">{affectsLabel}</h3>
+            <p className="pricing-card-note">{tier.note}</p>
+          </>
+        )}
 
         <button
           className={isSelected ? 'btn-primary' : 'btn-secondary'}

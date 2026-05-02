@@ -13,61 +13,101 @@
   "cta": {
     "callNow": "Contact Us",
     "writeWhatsapp": "WhatsApp",
-    "sendInquiry": "Send Inquiry"
+    "sendInquiry": "Get an Estimate"
   },
   "homepage": {
-    "heroTitle": "Confidence in Difficult Times",
-    "heroLead": "Manufacturing of granite products and installation across Estonia",
+    "heroTitle": "Monuments, installation, and memorial site care in Narva and across Estonia",
+    "heroLead": "We help choose the monument shape, granite, engraving, border, and site arrangement. Scope, timing, and a clear estimate are agreed before work starts.",
     "highlights": [
-      "Reliable support",
-      "We handle all documents",
-      "A respectful farewell"
+      "Monuments and borders",
+      "Installation and site work",
+      "Engraving and restoration"
     ],
     "heroLabel": "EMPIRE GRANIT · NARVA",
-    "secondaryCta": "Our services",
+    "secondaryCta": "View catalog",
     "featureCards": [
       {
-        "icon": "Support",
-        "title": "Fast customer support",
-        "body": "You can contact us by phone during working hours. Outside working hours, please leave a message via the website form."
+        "icon": "01",
+        "title": "Monuments for the family need",
+        "body": "Single, double, and custom monuments with the right shape, size, and granite selection."
       },
       {
-        "icon": "Range",
-        "title": "Wide range of products",
-        "body": "Monuments and borders, vases, benches, flower beds, photo ceramics, and portrait engraving."
+        "icon": "02",
+        "title": "Installation and site setup",
+        "body": "Foundation preparation, installation, borders, tiles, gravel, sand, and additional details."
       },
-      { "icon": "EE", "title": "Serving all Estonia", "body": "Consultation, production and installation arranged across the country." },
       {
-        "icon": "Services",
-        "title": "Variety of services",
-        "body": "Production of new items, renovation and restoration of existing ones, memorial site design, installation."
+        "icon": "03",
+        "title": "Engraving and portraits",
+        "body": "Text, portraits, photo enamel, decorative elements, and careful renewal of existing lettering."
+      },
+      {
+        "icon": "EE",
+        "title": "Narva and all Estonia",
+        "body": "Consultation, production, delivery, and installation planned around the specific cemetery site."
       }
     ],
     "trustLabel": "WHY FAMILIES CHOOSE US",
     "trustMetrics": [
-      { "value": "10+", "label": "years of experience" },
-      { "value": "More than 500", "label": "completed orders" }
+      {
+        "value": "10+",
+        "label": "years with granite"
+      },
+      {
+        "value": "500+",
+        "label": "completed orders"
+      },
+      {
+        "value": "3",
+        "label": "consultation languages"
+      },
+      {
+        "value": "EE",
+        "label": "installation in Estonia"
+      },
+      {
+        "value": "Narva",
+        "label": "Pähklimäe 2, Narva"
+      }
     ],
     "processLabel": "HOW IT WORKS",
-    "processTitle": "From first contact to finished product",
+    "processTitle": "Clear path from consultation to completion photo",
     "processSteps": [
-      { "title": "01 — Contact us", "body": "We will suggest design options and take into account all your preferences." },
       {
-        "title": "02 — Project approval",
-        "body": "Selection of material, shape, engraving, and photo ceramics. Agreement on final price and deadlines."
+        "title": "01 — Consultation",
+        "body": "We clarify wishes, cemetery, timing, plot size, and the work package needed."
       },
-      { "title": "03 — Order execution", "body": "Manufacturing and installation within agreed timelines." }
+      {
+        "title": "02 — Design and material",
+        "body": "We choose monument shape, granite, border, engraving, portrait, and arrangement details."
+      },
+      {
+        "title": "03 — Price approval",
+        "body": "The work scope, timing, and price are confirmed before production starts."
+      },
+      {
+        "title": "04 — Production",
+        "body": "We prepare the product, engraving, and additional details according to the approved option."
+      },
+      {
+        "title": "05 — Installation and photo",
+        "body": "We prepare the place, install the monument, and can send a photo of the completed work."
+      }
     ],
     "servicesLabel": "WHAT WE OFFER",
-    "servicesTitle": "Core Empire Granit services",
+    "servicesTitle": "Monument, installation, and site work in one process",
     "services": [
       {
-        "title": "Monument and border production",
-        "body": "Manufacturing of memorial products in various shapes and sizes with custom design."
+        "title": "Monuments",
+        "body": "Single, double, and custom monuments with the right shape, size, and granite selection."
+      },
+      {
+        "title": "Borders",
+        "body": "Granite and concrete memorial borders with foundation preparation and careful installation."
       },
       {
         "title": "Engraving and portraits",
-        "body": "Selection of fonts and decorative elements, portrait retouching, photo ceramics, image engraving."
+        "body": "Selection of fonts and decorative elements, portrait retouching, photo enamel, image engraving."
       },
       {
         "title": "Monument installation",
@@ -78,12 +118,12 @@
         "body": "Tile laying, gravel, sand, artificial grass, and memorial area arrangement."
       },
       {
-        "title": "Restoration and maintenance",
-        "body": "Cleaning, repainting of portraits and lettering, restoration of monument appearance."
+        "title": "Restoration",
+        "body": "Cleaning dirt and deposits, repainting portraits and letters, restoring the monument's appearance."
       },
       {
-        "title": "Floral arrangement",
-        "body": "Vases, flower beds, candle holders, benches, and other decorative elements."
+        "title": "Site care",
+        "body": "We help renew ground covering, flower zones, and individual memorial site elements."
       }
     ],
     "testimonialsLabel": "TESTIMONIALS",
@@ -104,124 +144,603 @@
         "author": "Marina K.",
         "meta": "Haapsalu"
       }
+    ],
+    "catalogLabel": "CATALOG AND GALLERY",
+    "catalogTitle": "View shapes, materials, and completed work",
+    "catalogLead": "The catalog helps compare monument styles, borders, site arrangement options, and decorative elements.",
+    "catalogItems": [
+      {
+        "title": "Monuments",
+        "body": "Classic and shaped forms, single and family solutions, different granite colors."
+      },
+      {
+        "title": "Borders and site work",
+        "body": "Granite and concrete borders, tiles, gravel, sand, and artificial grass."
+      },
+      {
+        "title": "Design details",
+        "body": "Portraits, photo enamel, vases, benches, tables, candle holders, and decorative elements."
+      }
+    ],
+    "catalogCta": "Request a similar option",
+    "optionsLabel": "MATERIALS AND OPTIONS",
+    "optionsTitle": "Stone, engraving, and details for the specific site",
+    "optionsLead": "You can choose a calm classic solution or a more individual memorial set without unnecessary extras.",
+    "options": [
+      {
+        "title": "Stone and materials",
+        "body": "We select granite color and texture, thickness, shape, and compatibility with the border."
+      },
+      {
+        "title": "Engraving and portrait",
+        "body": "Text, dates, type style, portrait, photo enamel, and decorative details are agreed before production."
+      },
+      {
+        "title": "Vases, benches, and flower zones",
+        "body": "Practical additions include vases, benches, tables, candle holders, and a flower zone."
+      }
+    ],
+    "pricingLabel": "CLEAR PRICING",
+    "pricingTitle": "Price guidance before detailed quotation",
+    "pricingLead": "The price depends on size, granite, engraving complexity, foundation preparation, and cemetery distance. The pricing page lists starting points.",
+    "pricingItems": [
+      {
+        "label": "Single monument",
+        "value": "from 400 €"
+      },
+      {
+        "label": "Double border",
+        "value": "from 1200 €"
+      },
+      {
+        "label": "Installation work",
+        "value": "from 100 €"
+      }
+    ],
+    "areaLabel": "SERVICE AREA",
+    "areaTitle": "Based in Narva, orders across Estonia",
+    "areaLead": "We coordinate work for the specific cemetery: access, plot preparation, delivery, installation, and any local requirements.",
+    "areaItems": [
+      "Narva and Ida-Viru County",
+      "Tallinn, Tartu, Jõhvi, and other cities",
+      "Delivery and installation by agreement"
+    ],
+    "careLabel": "QUALITY AND CARE",
+    "careTitle": "Careful installation and clear care guidance",
+    "careLead": "We avoid unverified promises: we explain how the work will be done, which materials fit, and how to preserve the monument's appearance.",
+    "careItems": [
+      {
+        "title": "Agreement before work",
+        "body": "Dimensions, materials, engraving, installation, and additional elements are confirmed before the order starts."
+      },
+      {
+        "title": "Installation by site conditions",
+        "body": "We consider cemetery access, plot condition, foundation, and requirements of the specific location."
+      },
+      {
+        "title": "Care after installation",
+        "body": "We explain how to clean the monument and when to renew lettering, portraits, or site covering."
+      }
+    ],
+    "faqLabel": "FAQ",
+    "faqTitle": "Common questions before ordering",
+    "faqItems": [
+      {
+        "question": "Can we start with an estimated price?",
+        "answer": "Yes. We first give a guide price, then refine it after size, granite, engraving, and installation are chosen."
+      },
+      {
+        "question": "Can we order only the monument without installation?",
+        "answer": "Yes. Production and delivery can be arranged separately if you plan to handle installation yourself."
+      },
+      {
+        "question": "Do you restore old monuments?",
+        "answer": "Yes. We clean, repaint letters and portraits, and restore the monument appearance."
+      }
     ]
   },
   "about": {
     "heading": "Our Heritage",
     "body": [
-      "Since 2008, we have combined masterful stone craftsmanship with compassionate support.",
-      "We guide you through every step—from dignified ceremonies to lasting memorials.",
-      "Transparent pricing. Respectful care. Enduring quality."
+      "We work calmly and concretely: first we clarify the site, wishes, material, inscription, and budget.",
+      "We explain what is included, what affects price, and which work should be agreed before production.",
+      "Consultation is available in Russian, Estonian, and English; requests can be sent by phone, email, WhatsApp, or form."
     ],
     "kicker": "EMPIRE GRANIT",
     "title": "About the Company",
-    "lead": "We combine calm guidance, precise stone craftsmanship, and a clear process for families who want a dignified result without unnecessary stress.",
+    "lead": "Empire Granit works in Narva at Pähklimäe 2 and helps families with monuments, installation, engraving, borders, and memorial site work across Estonia.",
     "points": [
-      "We work with granite memorials, installation, and full memorial site improvement.",
-      "Options are explained clearly so families can choose with confidence and within budget.",
-      "The process is kept understandable from the first conversation to final installation."
+      "Office and contact point: Pähklimäe 2, Narva.",
+      "We work with monuments, installation, borders, engraving, restoration, and care.",
+      "Remote requests are possible: site photo, dimensions, inscription, and an example of the desired solution.",
+      "Materials, timing, price, and scope are agreed before the order starts."
     ],
     "metrics": [
-      { "value": "15+", "label": "years of experience" },
-      { "value": "1000+", "label": "families have trusted us" },
-      { "value": "1 day", "label": "for reply and quotation" },
-      { "value": "3 languages", "label": "russian, eesti, english" }
+      {
+        "value": "Narva",
+        "label": "Pähklimäe 2"
+      },
+      {
+        "value": "EE",
+        "label": "work across Estonia"
+      },
+      {
+        "value": "3 languages",
+        "label": "русский, eesti, english"
+      },
+      {
+        "value": "10+",
+        "label": "years with granite"
+      }
     ]
   },
   "pricing": {
-    "heading": "Estimated Pricing",
-    "intro": "The final price is agreed with the client and depends on the scope of work, materials used, and installation complexity.",
+    "heading": "Prices for monuments and work",
+    "intro": "Below are guide prices for core services. Final cost depends on granite, size, engraving, site condition, distance, and season. Exact calculation follows a short consultation.",
+    "includedLabel": "Included",
+    "affectsLabel": "Affects final cost",
     "tiers": [
       {
-        "id": "single",
-        "name": "Single Monument",
-        "price": "400 EUR",
-        "bestFor": "Single monument with engraved portrait and text.",
-        "note": "Size 70×60 cm, thickness 10 cm.",
+        "id": "monuments",
+        "name": "Monuments",
+        "price": "from 400 €",
+        "bestFor": "Single, double, and custom granite monuments.",
         "features": [
-          "Manufacturing",
-          "Transportation",
-          "Site preparation",
-          "Installation"
-        ]
+          "Shape and size selection",
+          "Granite selection",
+          "Basic inscription and design approval"
+        ],
+        "note": "Cost changes with size, thickness, granite color, shape complexity, portrait, decor, and delivery."
       },
       {
-        "id": "fence",
-        "name": "Double Plot Fence",
-        "price": "1200 EUR",
-        "bestFor": "Concrete fence 2×2 m made of “Probuzhdenie” granite, thickness 20 cm, with entrance.",
-        "note": "A retaining wall may be required for elevated burial sites. Optional sand filling available upon request.",
+        "id": "installation",
+        "name": "Installation",
+        "price": "from 100 €",
+        "bestFor": "Installation of a monument or separate elements at the cemetery.",
         "features": [
-          "Manufacturing",
-          "Site preparation (concrete foundation pouring)",
-          "Installation"
-        ]
+          "Site condition check on location or by photo",
+          "Foundation preparation within agreed scope",
+          "Product installation"
+        ],
+        "note": "Cost depends on access, removal of old elements, foundation condition, distance, and seasonal conditions."
       },
       {
-        "id": "labor",
-        "name": "Installation Services",
-        "price": "from 100 EUR",
-        "bestFor": "Site preparation for installation, removal of old fences, and waste disposal.",
+        "id": "framing",
+        "name": "Borders",
+        "price": "from 700 €",
+        "bestFor": "Granite and concrete borders for single and family plots.",
         "features": [
-          "Site preparation for installation",
-          "Removal of old fences",
-          "Waste disposal"
-        ]
+          "Sizing for the plot",
+          "Element production",
+          "Foundation preparation and installation by agreement"
+        ],
+        "note": "Final cost depends on plot size, material, thickness, entrance, corners, filling, and need for retaining support."
+      },
+      {
+        "id": "engraving",
+        "name": "Engraving",
+        "price": "by calculation",
+        "bestFor": "Names, dates, decorative elements, and images on the monument.",
+        "features": [
+          "Text preparation",
+          "Font and placement approval",
+          "Engraving by approved layout"
+        ],
+        "note": "Cost depends on text volume, font complexity, image, language, stone condition, and retouching need."
+      },
+      {
+        "id": "photo-enamel",
+        "name": "Photo enamel and portrait",
+        "price": "by calculation",
+        "bestFor": "Portrait, photo enamel, or image preparation for the monument.",
+        "features": [
+          "Photo intake",
+          "Image preparation",
+          "Option approval before production"
+        ],
+        "note": "Cost depends on source photo quality, size, technique, retouching, and production timeline."
+      },
+      {
+        "id": "landscaping",
+        "name": "Site improvement",
+        "price": "by calculation",
+        "bestFor": "Tiles, gravel, sand, artificial grass, and memorial site arrangement.",
+        "features": [
+          "Work scope agreement",
+          "Material selection",
+          "Work on site"
+        ],
+        "note": "Cost depends on area, covering material, foundation preparation, waste removal, and access."
+      },
+      {
+        "id": "restoration",
+        "name": "Restoration",
+        "price": "by calculation",
+        "bestFor": "Renewal of an old monument, lettering, portrait, or separate elements.",
+        "features": [
+          "Condition assessment",
+          "Cleaning and renewal by agreement",
+          "Care recommendations"
+        ],
+        "note": "Cost depends on stone condition, dirt, lettering volume, portrait, fixings, and ability to work on site."
+      },
+      {
+        "id": "care",
+        "name": "Site care",
+        "price": "by calculation",
+        "bestFor": "Keeping the plot and individual elements neat.",
+        "features": [
+          "Discussion of needed work",
+          "Renewal of covering or flower zone",
+          "Small separate works by agreement"
+        ],
+        "note": "Cost depends on scope, frequency, materials, distance, and site condition."
       }
     ],
-    "cta": "Get a specific quote",
+    "cta": "Get an estimate",
     "benefits": {
-      "heading": "Additional Services",
+      "heading": "How to get an exact price",
       "items": [
         {
-          "title": "Documentation",
-          "description": "Assistance with required paperwork."
+          "title": "Photos and dimensions",
+          "description": "Send a site photo, approximate dimensions, and the type of work needed."
         },
         {
-          "title": "Floristry",
-          "description": "Decoration with flowers and decorative elements."
+          "title": "Material and design",
+          "description": "We clarify granite, engraving, portrait, border, and additional elements."
         },
         {
-          "title": "Maintenance",
-          "description": "Cleaning the monument and restoring paint on letters and portrait."
+          "title": "Site conditions",
+          "description": "We account for cemetery, access, foundation preparation, removal, and season."
         },
         {
-          "title": "Transportation",
-          "description": "Delivery to installation site."
+          "title": "Written guide price",
+          "description": "After details are clear, we provide a calm estimate without unverified promises."
         }
       ]
     }
   },
   "gallery": {
     "heading": "Catalog",
-    "intro": "A single catalog for monuments, borders, landscaping, and related products. Open a category to view options.",
+    "intro": "The catalog helps choose monument shape, borders, site work, and additional details. Open a category, review options, and request a similar solution.",
     "labels": {
       "viewDetails": "View Category",
-      "electronicCatalog": "Electronic Catalog",
-      "statusTitle": "The electronic catalog is currently under development.",
-      "statusBody": "Ready-made solutions and product options will appear here soon.",
-      "readyWorks": "Completed Works"
+      "learnMore": "Learn more",
+      "backToGallery": "Back to catalog",
+      "advantages": "Advantages",
+      "services": "Work options",
+      "ctaHeading": "Need advice on a product?",
+      "ctaBody": "Leave a request and we will help with material, shape, timing, and estimated price.",
+      "ctaButton": "Leave a Request",
+      "electronicCatalogTitle": "Electronic Catalog",
+      "electronicCatalogIntro": "A section for ready-made product options, categories, and estimated prices.",
+      "electronicCatalogStatusTitle": "The electronic catalog is currently under development.",
+      "electronicCatalogStatusBody": "Ready-made solutions and product options will appear here soon.",
+      "catalogCategoriesTitle": "Catalog Categories",
+      "openCatalog": "Open catalog",
+      "readyWorksTitle": "Completed Works",
+      "readyWorksBody": "Examples based on available visual materials. Verified real-work photos should be added separately when available.",
+      "granitePaletteTitle": "Granite Colors and Textures",
+      "topCategoriesTitle": "Categories",
+      "requestSimilar": "Request a similar option"
     },
     "categories": [
       {
         "id": "monuments",
         "title": "Monuments",
-        "description": "Monuments in various styles and executions."
+        "image": "/images/examples/monument.png",
+        "summary": "Single, double, and custom solutions",
+        "description": "Monument shapes with granite, engraving, portrait, and extra detail selection for the budget and site.",
+        "previewMode": "granite",
+        "graniteSwatches": [
+          {
+            "id": "en-grey",
+            "name": "Grey granite",
+            "textureKey": "grey-granite"
+          },
+          {
+            "id": "en-black",
+            "name": "Black granite",
+            "textureKey": "black-granite"
+          },
+          {
+            "id": "en-red",
+            "name": "Red granite",
+            "textureKey": "red-granite"
+          },
+          {
+            "id": "en-green",
+            "name": "Green granite",
+            "textureKey": "green-granite"
+          }
+        ],
+        "electronicCatalogFeaturedIds": [
+          "monuments",
+          "benches",
+          "decor"
+        ],
+        "advantages": [
+          "Different shapes and sizes",
+          "Text and portrait engraving",
+          "Granite selection for budget"
+        ],
+        "services": [
+          "Single monuments",
+          "Double monuments",
+          "Portraits and photo enamel",
+          "Decorative elements"
+        ]
       },
       {
         "id": "framing",
         "title": "Borders",
-        "description": "Granite and concrete site borders."
+        "image": "/images/examples/framing.png",
+        "summary": "Granite and concrete site solutions",
+        "description": "Borders help define the plot cleanly and prepare the foundation for further site work.",
+        "previewMode": "granite",
+        "graniteSwatches": [
+          {
+            "id": "en-frame-grey",
+            "name": "Grey granite",
+            "textureKey": "grey-granite"
+          },
+          {
+            "id": "en-frame-black",
+            "name": "Black granite",
+            "textureKey": "black-granite"
+          },
+          {
+            "id": "en-frame-white",
+            "name": "Light granite",
+            "textureKey": "white-granite"
+          },
+          {
+            "id": "en-frame-brown",
+            "name": "Brown granite",
+            "textureKey": "brown-granite"
+          }
+        ],
+        "electronicCatalogFeaturedIds": [
+          "framing",
+          "fences",
+          "tables"
+        ],
+        "advantages": [
+          "Sized to the plot",
+          "Granite and concrete options",
+          "Foundation preparation"
+        ],
+        "services": [
+          "Site borders",
+          "Concrete foundation pouring",
+          "Installation",
+          "Optional filling"
+        ]
       },
       {
         "id": "exclusive",
-        "title": "Exclusive",
-        "description": "Custom projects and unique compositions."
+        "title": "Custom solutions",
+        "image": "/images/examples/exclusive.png",
+        "summary": "Non-standard shapes and memorial sets",
+        "description": "Custom projects with selected shape, material, decor, and scope without exaggerated promises.",
+        "electronicCatalogFeaturedIds": [
+          "decor",
+          "monuments",
+          "tables"
+        ],
+        "advantages": [
+          "Individual project",
+          "Complex shapes",
+          "Material combinations"
+        ],
+        "services": [
+          "Design",
+          "Manufacturing",
+          "Decoration",
+          "Installation"
+        ]
       },
       {
         "id": "landscaping",
-        "title": "Landscaping",
-        "description": "Tiles, fences, and additional solutions."
+        "title": "Site improvement",
+        "image": "/images/examples/cemetry.png",
+        "summary": "Tiles, gravel, flower zone, and care",
+        "description": "Site arrangement work: covering, filling, artificial grass, benches, tables, and care elements.",
+        "electronicCatalogFeaturedIds": [
+          "benches",
+          "tables",
+          "fences"
+        ],
+        "advantages": [
+          "Complete site layout",
+          "Practical materials",
+          "Neat installation"
+        ],
+        "services": [
+          "Tile laying",
+          "Fences",
+          "Benches and tables",
+          "Decorative elements"
+        ]
+      }
+    ],
+    "catalogCategories": [
+      {
+        "id": "monuments",
+        "title": "Monuments",
+        "summary": "Single and family monuments",
+        "description": "Monument options with different shapes, granite, engraving, and portraits.",
+        "image": "/images/examples/monument.png",
+        "graniteSwatches": [
+          {
+            "id": "en-cat-grey",
+            "name": "Grey granite",
+            "textureKey": "grey-granite"
+          },
+          {
+            "id": "en-cat-black",
+            "name": "Black granite",
+            "textureKey": "black-granite"
+          },
+          {
+            "id": "en-cat-red",
+            "name": "Red granite",
+            "textureKey": "red-granite"
+          }
+        ],
+        "productCards": [
+          {
+            "id": "en-monument-1",
+            "title": "Classic monument",
+            "image": "/images/examples/monument.png",
+            "price": "from 400 €"
+          },
+          {
+            "id": "en-monument-2",
+            "title": "Shaped monument",
+            "image": "/images/examples/tombstone.png",
+            "price": "from 520 €"
+          },
+          {
+            "id": "en-monument-3",
+            "title": "Monument with portrait",
+            "image": "/images/examples/gravestone.png",
+            "price": "from 650 €"
+          }
+        ]
+      },
+      {
+        "id": "framing",
+        "title": "Borders",
+        "summary": "Granite and concrete borders",
+        "description": "Site borders with foundation preparation and installation.",
+        "image": "/images/examples/framing.png",
+        "productCards": [
+          {
+            "id": "en-framing-1",
+            "title": "Granite border",
+            "image": "/images/examples/framing.png",
+            "price": "from 700 €"
+          },
+          {
+            "id": "en-framing-2",
+            "title": "Double plot border",
+            "image": "/images/examples/fence_with_entrance.png",
+            "price": "from 1200 €"
+          },
+          {
+            "id": "en-framing-3",
+            "title": "Set with entrance",
+            "image": "/images/examples/cemetry.png",
+            "price": "by request"
+          }
+        ]
+      },
+      {
+        "id": "benches",
+        "title": "Benches",
+        "summary": "Benches for memorial areas",
+        "description": "Stone and combined-material benches for site arrangement.",
+        "image": "/images/examples/granite_bench.png",
+        "productCards": [
+          {
+            "id": "en-bench-1",
+            "title": "Granite bench",
+            "image": "/images/examples/granite_bench.png",
+            "price": "from 180 €"
+          },
+          {
+            "id": "en-bench-2",
+            "title": "Bench with supports",
+            "image": "/images/examples/bench.png",
+            "price": "from 240 €"
+          }
+        ]
+      },
+      {
+        "id": "tables",
+        "title": "Tables",
+        "summary": "Tables and stone plates",
+        "description": "Tables and additional stone elements for the memorial area.",
+        "image": "/images/examples/memorial_table.png",
+        "productCards": [
+          {
+            "id": "en-table-1",
+            "title": "Memorial table",
+            "image": "/images/examples/memorial_table.png",
+            "price": "from 160 €"
+          },
+          {
+            "id": "en-table-2",
+            "title": "Stone plate",
+            "image": "/images/examples/stone_plate.png",
+            "price": "from 120 €"
+          }
+        ]
+      },
+      {
+        "id": "fences",
+        "title": "Fences",
+        "summary": "Fences and enclosures",
+        "description": "Fences for neat arrangement and protection of the memorial site.",
+        "image": "/images/examples/granite_fence.png",
+        "productCards": [
+          {
+            "id": "en-fence-1",
+            "title": "Granite fence",
+            "image": "/images/examples/granite_fence.png",
+            "price": "from 480 €"
+          },
+          {
+            "id": "en-fence-2",
+            "title": "Fence with entrance",
+            "image": "/images/examples/fence_with_entrance.png",
+            "price": "by request"
+          }
+        ]
+      },
+      {
+        "id": "decor",
+        "title": "Decorative Elements",
+        "summary": "Vases, candle holders, and decor",
+        "description": "Decorative elements for a complete memorial site layout.",
+        "image": "/images/examples/candles.png",
+        "productCards": [
+          {
+            "id": "en-decor-1",
+            "title": "Granite vase",
+            "image": "/images/examples/candles.png",
+            "price": "from 90 €"
+          },
+          {
+            "id": "en-decor-2",
+            "title": "Candle holder",
+            "image": "/images/examples/candles.png",
+            "price": "from 45 €"
+          }
+        ]
+      }
+    ],
+    "readyWorks": [
+      {
+        "id": "en-work-1",
+        "title": "Completed memorial area",
+        "image": "/images/examples/cemetry.png"
+      },
+      {
+        "id": "en-work-2",
+        "title": "Monument with border",
+        "image": "/images/examples/gravestone.png"
+      },
+      {
+        "id": "en-work-3",
+        "title": "Granite border",
+        "image": "/images/examples/framing.png"
+      },
+      {
+        "id": "en-work-4",
+        "title": "Plot fence",
+        "image": "/images/examples/fence_with_entrance.png"
       }
     ]
   },
@@ -293,10 +812,10 @@
     "interactionLabel": "Configuration"
   },
   "contact": {
-    "heading": "Contact Us",
-    "intro": "We are available via Phone, Email, or WhatsApp.",
-    "inquiryTitle": "Send Inquiry",
-    "inquiryHint": "Ask a question or describe your needs.",
+    "heading": "Request an estimate or consultation",
+    "intro": "Call, write on WhatsApp, or send a request with a site photo, monument idea, and inscription. We answer practically and suggest the next step.",
+    "inquiryTitle": "Send a photo, idea, or question",
+    "inquiryHint": "Describe the monument, site, city, needed work, and engraving details in the message.",
     "consentText": "I agree to data processing.",
     "privacyNotice": "By submitting, you accept our privacy policy.",
     "addressLabel": "Our Location",
@@ -309,8 +828,13 @@
       "serviceType": "Service",
       "message": "Message / Question",
       "consent": "Consent",
-      "submit": "Send Inquiry"
-    }
+      "submit": "Leave a Request"
+    },
+    "intentItems": [
+      "Estimate for monument, installation, or border",
+      "Site photo and example of desired option",
+      "Inscription text, portrait, or engraving question"
+    ]
   },
   "privacy": {
     "heading": "Privacy Policy",
@@ -346,40 +870,72 @@
     ]
   },
   "faq": {
-    "heading": "Frequently Asked Questions",
-    "intro": "Answers to the most common questions families ask before ordering.",
-    "contactCta": "Did not find your answer? Send inquiry",
+    "heading": "FAQ",
+    "intro": "Practical answers before ordering a monument, installation, engraving, or site work.",
+    "contactCta": "Did not find your answer? Get an estimate",
     "items": [
       {
+        "question": "When can a monument be installed after a funeral?",
+        "answer": "Timing depends on cemetery rules, ground condition, and season. Often families wait for ground settlement; exact timing should be checked for the specific site."
+      },
+      {
         "question": "How long does production take?",
-        "answer": "Usually 2 to 6 weeks depending on complexity, season, and selected material."
+        "answer": "Usually 2 to 6 weeks, depending on material, shape complexity, engraving, portrait, and seasonal workload."
       },
       {
-        "question": "What documents are required?",
-        "answer": "For the initial consultation, basic information is enough. For cemetery installation we help clarify required documents for the specific location."
+        "question": "What affects the price?",
+        "answer": "Size, thickness and color of granite, shape complexity, engraving, portrait, border, foundation preparation, distance, and cemetery conditions."
       },
       {
-        "question": "Is installment payment available?",
-        "answer": "Yes, installment plans are available for some orders. Final terms are agreed individually during quotation."
+        "question": "What is included in installation?",
+        "answer": "Scope depends on the order. We usually discuss site preparation, foundation, product installation, and any extra work needed."
       },
       {
-        "question": "Do you work across all Estonia?",
-        "answer": "Yes, we accept and complete orders across Estonia."
+        "question": "Can I order remotely?",
+        "answer": "Yes. Send site photos, dimensions, wishes, inscription text, and portrait photo. Details can be agreed by phone or in writing."
+      },
+      {
+        "question": "Which materials should I choose?",
+        "answer": "Granite is commonly chosen for monuments because it is durable and calm in appearance. Color, thickness, and texture are selected by budget, style, and site."
+      },
+      {
+        "question": "Are cemetery permits needed?",
+        "answer": "Some cemeteries have rules for installation, dimensions, and work timing. We can help clarify what is needed for the specific location."
+      },
+      {
+        "question": "Do you work across Estonia?",
+        "answer": "Yes, orders, delivery, and installation are possible across Estonia by agreement. Conditions depend on distance and access."
+      },
+      {
+        "question": "Can an old monument be restored?",
+        "answer": "Yes. Cleaning, lettering renewal, portrait renewal, individual elements, and general appearance can often be improved. First we assess the condition by photo or on site."
+      },
+      {
+        "question": "Is there a guarantee for installation or work?",
+        "answer": "We are responsible for the agreed scope and explain conditions before the order starts. Specific terms depend on work type, material, and foundation condition."
+      },
+      {
+        "question": "How should a monument be maintained?",
+        "answer": "Use gentle cleaning without aggressive chemicals. For lettering, portrait, or site covering renewal, ask for separate guidance."
+      },
+      {
+        "question": "How do I send a photo or inscription for engraving?",
+        "answer": "Send the photo and text through the form, email, or messenger. Before production we approve spelling, font, and placement."
       }
     ]
   },
   "seo": {
     "home": {
-      "title": "Empire Granit - Premium Monuments & Funeral Services",
-      "description": "Dignified monument production and funeral arrangements in Estonia."
+      "title": "Empire Granit - granite monuments with installation",
+      "description": "Monument production, engraving, borders, restoration, and installation across Estonia."
     },
     "about": {
       "title": "About Empire Granit",
       "description": "Our heritage, craftsmanship, and values."
     },
     "pricing": {
-      "title": "Prices - Empire Granit",
-      "description": "Detailed pricing for monument installation and burial assistance."
+      "title": "Monument and installation prices - Empire Granit",
+      "description": "Starting prices for monuments, borders, installation, and memorial site arrangement."
     },
     "gallery": {
       "title": "Catalog - Empire Granit",

@@ -49,6 +49,9 @@ export function CatalogSubcategoryPage({
               <div className="catalog-product-copy">
                 <strong>{product.title}</strong>
                 <span>{product.price}</span>
+                <Link to={buildLocalizedPath(locale, 'contact')} className="catalog-product-request">
+                  {labels.requestSimilar}
+                </Link>
               </div>
             </article>
           ))}

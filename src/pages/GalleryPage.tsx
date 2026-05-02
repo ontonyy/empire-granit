@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { GraniteSwatchTile } from '../components/GraniteSwatchTile';
 import { getLocaleContent } from '../content';
 import { buildCatalogSubcategoryPath, buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
@@ -20,23 +21,30 @@ export function GalleryPage({ locale }: GalleryPageProps) {
 
       <div className="gallery-categories-grid">
         {section.categories.map((category) => (
-          <article key={category.id} className="category-card">
+          <Link key={category.id} to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`} className="category-card">
             <div className="category-image-wrapper">
-              <img src={category.image} alt={category.title} loading="lazy" />
-              <div className="category-overlay">
-                <Link to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`} className="hero-secondary">
-                  {section.labels.viewDetails}
-                </Link>
+              <div className="category-visual-stage">
+                <img src={category.image} alt={category.title} loading="lazy" />
               </div>
+              {category.graniteSwatches?.length ? (
+                <div className="category-granite-preview" aria-label={category.title}>
+                  {category.graniteSwatches.slice(0, 6).map((swatch) => (
+                    <GraniteSwatchTile key={swatch.id} swatch={swatch} className="category-granite-tile" />
+                  ))}
+                </div>
+              ) : null}
             </div>
             <div className="category-content">
               <h2>{category.title}</h2>
               <p>{category.summary}</p>
-              <Link to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`} className="text-link">
+              <span className="text-link">
                 {section.labels.learnMore} →
-              </Link>
+              </span>
+              <span className="category-request-link">
+                {section.labels.requestSimilar}
+              </span>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
 
@@ -48,15 +56,16 @@ export function GalleryPage({ locale }: GalleryPageProps) {
         </div>
         <div className="ready-works-carousel" role="region" aria-label={section.labels.readyWorksTitle}>
           {section.readyWorks.map((work) => (
-            <article key={work.id} className="ready-work-card">
+            <Link key={work.id} to={buildCatalogSubcategoryPath(locale, 'monuments')} className="ready-work-card">
               <img src={work.image} alt={work.title} loading="lazy" />
               <div className="ready-work-copy">
                 <strong>{work.title}</strong>
-                <Link to={buildCatalogSubcategoryPath(locale, 'monuments')} className="text-link">
+                <span className="text-link">
                   {section.labels.openCatalog} →
-                </Link>
+                </span>
+                <span className="ready-work-request">{section.labels.requestSimilar}</span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

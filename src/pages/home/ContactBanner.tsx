@@ -5,11 +5,10 @@ import type { Locale } from '../../types';
 
 interface ContactBannerProps {
   locale: Locale;
-  callNowLabel: string;
   sendInquiryLabel: string;
 }
 
-export function ContactBanner({ locale, callNowLabel, sendInquiryLabel }: ContactBannerProps) {
+export function ContactBanner({ locale, sendInquiryLabel }: ContactBannerProps) {
   return (
     <section className="home-contact-banner reveal-on-scroll">
       <div>
@@ -18,10 +17,7 @@ export function ContactBanner({ locale, callNowLabel, sendInquiryLabel }: Contac
         <p>{siteConfig.contacts.address}</p>
       </div>
       <div className="home-contact-actions">
-        <a className="hero-primary" href={siteConfig.contacts.phoneLink}>
-          {callNowLabel}
-        </a>
-        <Link className="hero-secondary" to={buildLocalizedPath(locale, 'contact')}>
+        <Link className="hero-primary" to={buildLocalizedPath(locale, 'contact')}>
           {sendInquiryLabel}
         </Link>
       </div>
