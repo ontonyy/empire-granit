@@ -36,9 +36,8 @@ describe('LocaleRouteResolver', () => {
       </HelmetProvider>
     );
 
-    // Use a unique string from HomePage to verify it rendered
-    // "Уверенность в трудную минуту." is the heroTitle for RU
-    expect(screen.getByText(/Уверенность в трудную минуту/i)).toBeDefined();
+    // Use a unique string from HomePage to verify it rendered.
+    expect(screen.getByText(/Памятники, установка и благоустройство мест захоронения/i)).toBeDefined();
   });
 
   it('should render AboutPage for /en/about', () => {

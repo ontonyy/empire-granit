@@ -51,6 +51,7 @@ export interface GalleryLabels {
   electronicCatalogStatusBody: string;
   catalogCategoriesTitle: string;
   openCatalog: string;
+  requestSimilar: string;
   readyWorksTitle: string;
   readyWorksBody: string;
   granitePaletteTitle: string;

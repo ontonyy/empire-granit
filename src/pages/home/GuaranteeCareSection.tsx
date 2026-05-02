@@ -1,0 +1,28 @@
+import type { CareItem } from './sections';
+
+interface GuaranteeCareSectionProps {
+  label: string;
+  title: string;
+  lead: string;
+  items: CareItem[];
+}
+
+export function GuaranteeCareSection({ label, title, lead, items }: GuaranteeCareSectionProps) {
+  return (
+    <section className="home-care-section reveal-on-scroll">
+      <div>
+        <span className="section-kicker">{label}</span>
+        <h2>{title}</h2>
+        <p>{lead}</p>
+      </div>
+      <div className="home-care-list">
+        {items.map((item) => (
+          <article key={item.title} className="home-care-item">
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}

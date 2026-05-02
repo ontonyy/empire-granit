@@ -32,6 +32,14 @@ export function ContactPage({ locale }: ContactPageProps) {
           <div className="contact-grid-top">
             <article className="contact-card details-compact">
               <div className="contact-method">
+                <p className="eyebrow">{assist.intentTitle}</p>
+                <ul className="contact-intent-list">
+                  {section.intentItems.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="contact-method">
                 <p className="eyebrow">{assist.detailsEmail}</p>
                 <a href={`mailto:${siteConfig.contacts.email}`} className="contact-link-premium">
                   {siteConfig.contacts.email}
@@ -41,6 +49,12 @@ export function ContactPage({ locale }: ContactPageProps) {
                 <p className="eyebrow">{assist.detailsPhone}</p>
                 <a href={siteConfig.contacts.phoneLink} className="contact-link-premium phone-highlight">
                   {siteConfig.contacts.phoneDisplay}
+                </a>
+              </div>
+              <div className="contact-method">
+                <p className="eyebrow">WhatsApp</p>
+                <a href={siteConfig.contacts.whatsapp} className="contact-link-premium">
+                  {assist.whatsappLabel}
                 </a>
               </div>
             </article>
