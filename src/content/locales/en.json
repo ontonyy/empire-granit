@@ -16,8 +16,8 @@
     "sendInquiry": "Get an Estimate"
   },
   "homepage": {
-    "heroTitle": "Monuments, installation, and memorial site care in Narva and across Estonia",
-    "heroLead": "We help choose the monument shape, granite, engraving, border, and site arrangement. Scope, timing, and a clear estimate are agreed before work starts.",
+    "heroTitle": "Confidence in Difficult Times",
+    "heroLead": "",
     "highlights": [
       "Monuments and borders",
       "Installation and site work",
@@ -27,24 +27,24 @@
     "secondaryCta": "View catalog",
     "featureCards": [
       {
-        "icon": "01",
-        "title": "Monuments for the family need",
-        "body": "Single, double, and custom monuments with the right shape, size, and granite selection."
+        "icon": "Support",
+        "title": "Fast customer support",
+        "body": "During working hours you can contact us by phone. At other times, leave a message through the website form."
       },
       {
-        "icon": "02",
-        "title": "Installation and site setup",
-        "body": "Foundation preparation, installation, borders, tiles, gravel, sand, and additional details."
-      },
-      {
-        "icon": "03",
-        "title": "Engraving and portraits",
-        "body": "Text, portraits, photo enamel, decorative elements, and careful renewal of existing lettering."
+        "icon": "Range",
+        "title": "Wide product range",
+        "body": "Monuments and borders, vases, benches, flower beds, photo enamel, and portrait engraving."
       },
       {
         "icon": "EE",
-        "title": "Narva and all Estonia",
-        "body": "Consultation, production, delivery, and installation planned around the specific cemetery site."
+        "title": "Serving all Estonia",
+        "body": "Consultation, production and installation arranged across the country."
+      },
+      {
+        "icon": "Services",
+        "title": "Variety of services",
+        "body": "Production of new items, renewal and restoration of existing ones, memorial site arrangement. Installation."
       }
     ],
     "trustLabel": "WHY FAMILIES CHOOSE US",
@@ -63,7 +63,7 @@
       },
       {
         "value": "EE",
-        "label": "installation in Estonia"
+        "label": "installation in Ida-Virumaa"
       },
       {
         "value": "Narva",
@@ -95,35 +95,35 @@
       }
     ],
     "servicesLabel": "WHAT WE OFFER",
-    "servicesTitle": "Monument, installation, and site work in one process",
+    "servicesTitle": "Core services",
     "services": [
       {
         "title": "Monuments",
-        "body": "Single, double, and custom monuments with the right shape, size, and granite selection."
+        "body": "Granite forms for one person, two people, or a custom family design."
       },
       {
         "title": "Borders",
-        "body": "Granite and concrete memorial borders with foundation preparation and careful installation."
+        "body": "Clean site borders in granite or concrete, prepared for stable installation."
       },
       {
         "title": "Engraving and portraits",
-        "body": "Selection of fonts and decorative elements, portrait retouching, photo enamel, image engraving."
+        "body": "Names, dates, portraits, photo enamel, symbols, and small details."
       },
       {
         "title": "Monument installation",
-        "body": "Professional installation in compliance with all technical requirements."
+        "body": "Careful setting of the monument and elements on a prepared base."
       },
       {
         "title": "Site improvement",
-        "body": "Tile laying, gravel, sand, artificial grass, and memorial area arrangement."
+        "body": "Tiles, gravel, sand, artificial grass, and a neat finished area."
       },
       {
         "title": "Restoration",
-        "body": "Cleaning dirt and deposits, repainting portraits and letters, restoring the monument's appearance."
+        "body": "Cleaning, renewed letters, refreshed portraits, and a cleaner look."
       },
       {
         "title": "Site care",
-        "body": "We help renew ground covering, flower zones, and individual memorial site elements."
+        "body": "Covering, flower zones, and individual details renewed when needed."
       }
     ],
     "testimonialsLabel": "TESTIMONIALS",

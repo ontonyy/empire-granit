@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { buildCatalogSubcategoryPath, buildLocalizedPath } from '../../routing';
+import { buildLocalizedPath } from '../../routing';
 import type { CatalogSubcategory, GalleryLabels, Locale } from '../../types';
 import { GranitePalette } from './GranitePalette';
 
@@ -7,14 +7,12 @@ interface CatalogSubcategoryPageProps {
   locale: Locale;
   labels: GalleryLabels;
   category: CatalogSubcategory;
-  catalogCategories: CatalogSubcategory[];
 }
 
 export function CatalogSubcategoryPage({
   locale,
   labels,
-  category,
-  catalogCategories
+  category
 }: CatalogSubcategoryPageProps) {
   return (
     <article className="content-panel gallery-detail">
@@ -54,18 +52,6 @@ export function CatalogSubcategoryPage({
                 </Link>
               </div>
             </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="catalog-navigation-block catalog-navigation-block-spaced">
-        <h2>{labels.catalogCategoriesTitle}</h2>
-        <div className="catalog-nav-grid">
-          {catalogCategories.map((item) => (
-            <Link key={item.id} to={buildCatalogSubcategoryPath(locale, item.id)} className="catalog-nav-card">
-              <span>{item.title}</span>
-              <small>{item.summary}</small>
-            </Link>
           ))}
         </div>
       </section>

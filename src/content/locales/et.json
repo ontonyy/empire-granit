@@ -16,8 +16,8 @@
     "sendInquiry": "Küsi hinnangut"
   },
   "homepage": {
-    "heroTitle": "Monumendid, paigaldus ja hauaplatsi korrastus Narvas ja üle Eesti",
-    "heroLead": "Aitame valida monumendi kuju, graniidi, graveeringu, piirde ja platsi kujunduse. Enne töö algust lepime kokku mahu, tähtaja ja selge hinnangu.",
+    "heroTitle": "Kindlustunne raskel hetkel.",
+    "heroLead": "",
     "highlights": [
       "Monumendid ja piirded",
       "Paigaldus ja korrastus",
@@ -27,24 +27,24 @@
     "secondaryCta": "Vaata kataloogi",
     "featureCards": [
       {
-        "icon": "01",
-        "title": "Monument pere vajaduse järgi",
-        "body": "Üksik-, topelt- ja eritellimusel monumendid sobiva kuju, mõõdu ja graniidiga."
+        "icon": "Kontakt",
+        "title": "Kiire klienditugi",
+        "body": "Tööajal saab meiega ühendust telefoni teel. Muul ajal jätke sõnum veebilehe vormi kaudu."
       },
       {
-        "icon": "02",
-        "title": "Paigaldus ja platsi kujundus",
-        "body": "Aluse ettevalmistus, paigaldus, piirded, plaadid, killustik, liiv ja lisadetailid."
-      },
-      {
-        "icon": "03",
-        "title": "Graveering ja portreed",
-        "body": "Tekst, portree, fotoemail, dekoratiivsed elemendid ja olemasolevate kirjade uuendamine."
+        "icon": "Valik",
+        "title": "Lai tootevalik",
+        "body": "Monumendid ja piirded, vaasid, pingid, lillealad, fotoemail ja portreegraveeringud."
       },
       {
         "icon": "EE",
-        "title": "Narva ja kogu Eesti",
-        "body": "Nõustamine, valmistamine, transport ja paigaldus konkreetse töökoha järgi."
+        "title": "Teenindame kogu Eestis",
+        "body": "Nõustamine, valmistamine ja paigaldus sobivas vormis."
+      },
+      {
+        "icon": "Teenused",
+        "title": "Mitmekülgsed teenused",
+        "body": "Uute toodete valmistamine, olemasolevate uuendamine ja restaureerimine, mälestusplatside kujundamine. Paigaldus."
       }
     ],
     "trustLabel": "MIKS MEID VALITAKSE",
@@ -63,7 +63,7 @@
       },
       {
         "value": "EE",
-        "label": "paigaldus üle Eesti"
+        "label": "paigaldus Ida-Virumaal"
       },
       {
         "value": "Narva",
@@ -95,35 +95,35 @@
       }
     ],
     "servicesLabel": "MIDA ME TEEME",
-    "servicesTitle": "Monument, paigaldus ja plats ühes protsessis",
+    "servicesTitle": "Põhiteenused",
     "services": [
       {
         "title": "Monumendid",
-        "body": "Üksik-, topelt- ja erilahendusega monumendid sobiva kuju, mõõdu ja graniidiga."
+        "body": "Graniitvormid ühele, kahele või pere erilahenduseks."
       },
       {
         "title": "Piirded",
-        "body": "Graniit- ja betoonpiirded koos aluse ettevalmistuse ja korrektse paigaldusega."
+        "body": "Korrektsed graniit- või betoonpiirded koos aluse ettevalmistusega."
       },
       {
         "title": "Graveeringud ja portreed",
-        "body": "Kirjatüüpide ja dekoratiivsete elementide valik, portreede retušeerimine, fotoemail, piltide graveerimine."
+        "body": "Nimed, kuupäevad, portreed, fotoemail, sümbolid ja väikesed detailid."
       },
       {
         "title": "Monumentide paigaldus",
-        "body": "Professionaalne paigaldus kõiki tehnilisi nõudeid järgides."
+        "body": "Monumendi ja elementide hoolikas paigaldus ettevalmistatud alusele."
       },
       {
         "title": "Platsi korrastamine",
-        "body": "Plaatide paigaldus, killustik, liiv, kunstmuru ja mälestusala kujundamine."
+        "body": "Plaadid, killustik, liiv, kunstmuru ja korras lõpptulemus."
       },
       {
         "title": "Restaureerimine",
-        "body": "Mustuse eemaldamine, portreede ja tähtede värvi uuendamine, monumendi välimuse taastamine."
+        "body": "Puhastus, kirjade ja portreede uuendamine ning värskem välimus."
       },
       {
         "title": "Hauaplatsi hooldus",
-        "body": "Aitame uuendada katet, lilleala ja üksikuid mälestusplatsi elemente."
+        "body": "Katte, lilleala ja üksikute detailide uuendamine, kui plats vajab värskendust."
       }
     ],
     "testimonialsLabel": "TAGASISIDE",

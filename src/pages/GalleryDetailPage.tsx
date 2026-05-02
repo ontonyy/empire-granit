@@ -52,7 +52,6 @@ export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps
         locale={locale}
         labels={labels}
         category={catalogCategory}
-        catalogCategories={content.gallery.catalogCategories}
       />
     );
   }
@@ -88,9 +87,7 @@ export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps
       <GalleryDetailCta locale={locale} labels={labels} />
 
       <ElectronicCatalogSection
-        locale={locale}
         labels={labels}
-        catalogCategories={content.gallery.catalogCategories}
         featuredCategories={featuredCategories.length ? featuredCategories : content.gallery.catalogCategories.slice(0, 3)}
       />
     </article>

@@ -11,9 +11,10 @@ interface SiteFooterProps {
   nav: Record<RouteKey, string>;
   logoSrc: string;
   mapLink: string;
+  hidePhoneLink?: boolean;
 }
 
-export function SiteFooter({ locale, ui, nav, logoSrc, mapLink }: SiteFooterProps) {
+export function SiteFooter({ locale, ui, nav, logoSrc, mapLink, hidePhoneLink = false }: SiteFooterProps) {
   const [adminClicks, setAdminClicks] = useState(0);
   const [showAdminLink, setShowAdminLink] = useState(false);
   const clickResetTimeoutRef = useRef<number | null>(null);
@@ -55,10 +56,12 @@ export function SiteFooter({ locale, ui, nav, logoSrc, mapLink }: SiteFooterProp
         <section className="footer-column">
           <h3>{ui.footerContacts}</h3>
           <div className="footer-contact-list">
-            <p>
-              <span>{ui.footerSupport}</span>
-              <a href={siteConfig.contacts.phoneLink}>{siteConfig.contacts.phoneDisplay}</a>
-            </p>
+            {!hidePhoneLink ? (
+              <p>
+                <span>{ui.footerSupport}</span>
+                <a href={siteConfig.contacts.phoneLink}>{siteConfig.contacts.phoneDisplay}</a>
+              </p>
+            ) : null}
             <p>
               <span>E-mail</span>
               <a href={`mailto:${siteConfig.contacts.email}`}>{siteConfig.contacts.email}</a>
