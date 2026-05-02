@@ -32,10 +32,26 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Compute Pages base path
+        id: pages_meta
+        run: |
+          owner="${{ github.repository_owner }}"
+          repo="${{ github.event.repository.name }}"
+          owner_lc="$(echo "$owner" | tr '[:upper:]' '[:lower:]')"
+          repo_lc="$(echo "$repo" | tr '[:upper:]' '[:lower:]')"
+          if [ "$repo_lc" = "${owner_lc}.github.io" ]; then
+            # User / organization page → served at https://<owner>.github.io/
+            echo "base=/" >> "$GITHUB_OUTPUT"
+            echo "site_url=https://${owner_lc}.github.io" >> "$GITHUB_OUTPUT"
+          else
+            echo "base=/${repo}/" >> "$GITHUB_OUTPUT"
+            echo "site_url=https://${owner_lc}.github.io/${repo}" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build site
         env:
-          SITE_URL: ${{ format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
-          BASE_PATH: ${{ format('/{0}/', github.event.repository.name) }}
+          SITE_URL: ${{ steps.pages_meta.outputs.site_url }}
+          BASE_PATH: ${{ steps.pages_meta.outputs.base }}
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: npm run build
