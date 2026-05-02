@@ -60,6 +60,47 @@ Multilingual funeral home website built with React + TypeScript + Vite, with sta
 - `scripts/generate-seo-assets.mjs`: sitemap + robots generation
 - `scripts/prerender.mjs`: pre-render localized routes into static HTML
 - `.github/workflows/deploy.yml`: Pages CI/CD
+- `src/styles/tokens.css`: Design tokens + primitive base classes
+- `src/components/ui/`: Reusable design-system primitives
+
+## Design System
+
+Editorial, respectful, calm — references Aesop, MUJI, Salvatori. Tokens are the
+single source of truth; components must reference tokens via `var(--token-name)`
+rather than hex literals.
+
+### Tokens (`src/styles/tokens.css`)
+
+- **Surfaces**: `--bg-primary`, `--bg-surface`, `--bg-surface-warm`
+- **Text**: `--text-primary`, `--text-secondary`, `--text-muted`
+- **Accents**: `--accent-bronze`, `--accent-stone`
+- **Borders**: `--border-subtle`, `--border-strong`
+- **CTA**: `--cta-dark` (warm dark stone, not pure black)
+- **Spacing scale (8px base)**: `--space-1`..`--space-8`
+- **Radii**: `--radius-sm` (8), `--radius-md` (12), `--radius-lg` (24)
+- **Type**: `--font-display` (Cinzel), `--font-body` (Inter), fluid `--fs-h1`/`--fs-h2`/`--fs-h3` via `clamp()`
+- **Eyebrow rules**: small caps, bronze accent, `letter-spacing: 0.15em`, `0.75rem`
+
+### Primitives (`src/components/ui/`)
+
+| Primitive | Purpose |
+|-----------|---------|
+| `<DisplayHeading level={1\|2\|3}>` | Display serif headings (sentence case, no small-caps) |
+| `<Eyebrow>` | Small-caps tracked label above a heading |
+| `<Card to=… imageSrc imageAlt title description cta>` | Catalog card — interactive variant when `to`/`href` is passed |
+| `<Button variant="primary" \| "ghost" as="button" \| "router-link" \| "a">` | Discriminated-union button |
+| `<SwatchGrid swatches selectedId onSelect>` | Granite swatch picker |
+| `<Breadcrumb items separator>` | `Catalog / Borders`-style trail with `aria-current` on the leaf |
+
+Compose page sections from these primitives. Do not hardcode colors, sizes, or
+border radii in component-level CSS — extend `tokens.css` instead.
+
+### Accessibility
+
+- Semantic landmarks (`<main>`, `<nav>`, `<article>`, `<section>`).
+- Focus-visible outline: `2px solid var(--accent-bronze)`, offset `2px`.
+- Color contrast verified against WCAG AA on the warm cream palette.
+- Breadcrumb leaf carries `aria-current="page"`.
 
 ## Setup
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { GraniteSwatchTile } from '../components/GraniteSwatchTile';
+import { Card, DisplayHeading, Eyebrow } from '../components/ui';
 import { getLocaleContent } from '../content';
 import { buildCatalogSubcategoryPath, buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
@@ -10,46 +10,33 @@ interface GalleryPageProps {
 
 export function GalleryPage({ locale }: GalleryPageProps) {
   const section = getLocaleContent(locale).gallery;
+  const navLabel = getLocaleContent(locale).nav.gallery;
 
   return (
-    <section className="content-panel gallery-page">
-      <div className="section-header-centered">
-        <span className="section-kicker">{getLocaleContent(locale).nav.gallery}</span>
-        <h1>{section.heading}</h1>
-        <p className="intro-text">{section.intro}</p>
-      </div>
+    <main className="content-panel gallery-page catalog-grid-page">
+      <header className="catalog-grid-header">
+        <Eyebrow>{navLabel}</Eyebrow>
+        <DisplayHeading level={1}>{section.heading}</DisplayHeading>
+        <p className="catalog-grid-intro">{section.intro}</p>
+      </header>
 
-      <div className="gallery-categories-grid">
+      <section aria-label={section.heading} className="catalog-grid">
         {section.categories.map((category) => (
-          <Link key={category.id} to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`} className="category-card">
-            <div className="category-image-wrapper">
-              <div className="category-visual-stage">
-                <img src={category.image} alt={category.title} loading="lazy" />
-              </div>
-              {category.graniteSwatches?.length ? (
-                <div className="category-granite-preview" aria-label={category.title}>
-                  {category.graniteSwatches.slice(0, 6).map((swatch) => (
-                    <GraniteSwatchTile key={swatch.id} swatch={swatch} className="category-granite-tile" />
-                  ))}
-                </div>
-              ) : null}
-            </div>
-            <div className="category-content">
-              <h2>{category.title}</h2>
-              <p>{category.summary}</p>
-              <span className="text-link">
-                {section.labels.learnMore} →
-              </span>
-              <span className="category-request-link">
-                {section.labels.requestSimilar}
-              </span>
-            </div>
-          </Link>
+          <Card
+            key={category.id}
+            to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`}
+            imageSrc={category.image}
+            imageAlt={category.title}
+            title={category.title}
+            description={category.summary}
+            cta={section.labels.learnMore}
+          />
         ))}
-      </div>
+      </section>
 
-      <section className="catalog-navigation-block catalog-navigation-block-spaced reveal-on-scroll">
-        <h2>{section.labels.catalogCategoriesTitle}</h2>
+      <section className="catalog-navigation-block reveal-on-scroll">
+        <Eyebrow>{section.labels.catalogCategoriesTitle}</Eyebrow>
+        <DisplayHeading level={2}>{section.labels.catalogCategoriesTitle}</DisplayHeading>
         <div className="catalog-nav-grid">
           {section.catalogCategories.map((category) => (
             <Link key={category.id} to={buildCatalogSubcategoryPath(locale, category.id)} className="catalog-nav-card">
@@ -61,26 +48,24 @@ export function GalleryPage({ locale }: GalleryPageProps) {
       </section>
 
       <section className="catalog-ready-works reveal-on-scroll">
-        <div className="catalog-ready-works-header">
-          <span className="section-kicker">{section.labels.readyWorksTitle}</span>
-          <h2>{section.labels.readyWorksTitle}</h2>
+        <header className="catalog-ready-works-header">
+          <Eyebrow>{section.labels.readyWorksTitle}</Eyebrow>
+          <DisplayHeading level={2}>{section.labels.readyWorksTitle}</DisplayHeading>
           <p>{section.labels.readyWorksBody}</p>
-        </div>
+        </header>
         <div className="ready-works-carousel" role="region" aria-label={section.labels.readyWorksTitle}>
           {section.readyWorks.map((work) => (
             <Link key={work.id} to={buildCatalogSubcategoryPath(locale, 'monuments')} className="ready-work-card">
               <img src={work.image} alt={work.title} loading="lazy" />
               <div className="ready-work-copy">
                 <strong>{work.title}</strong>
-                <span className="text-link">
-                  {section.labels.openCatalog} →
-                </span>
+                <span className="text-link">{section.labels.openCatalog} →</span>
                 <span className="ready-work-request">{section.labels.requestSimilar}</span>
               </div>
             </Link>
           ))}
         </div>
       </section>
-    </section>
+    </main>
   );
 }
