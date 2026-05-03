@@ -237,6 +237,29 @@ h5,
   letter-spacing: 0.02em;
 }
 
+.brand-emergency-icon {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 767px) {
+  .brand-emergency-link {
+    padding: 0.6rem;
+    border-radius: 50%;
+    gap: 0;
+  }
+
+  .brand-emergency-prefix,
+  .brand-emergency-value {
+    display: none;
+  }
+
+  .brand-emergency-icon {
+    display: block;
+  }
+}
+
 /* Navigation */
 .main-nav {
   margin-top: 1.5rem;
@@ -304,9 +327,9 @@ h5,
   transition: var(--transition);
 }
 
-.nav-link:hover {
+.nav-link:not(.active):hover {
   color: var(--text-main);
-  background: rgba(0, 0, 0, 0.02);
+  background: var(--bg-surface-warm);
 }
 
 .nav-link.active {
@@ -339,7 +362,9 @@ h5,
 .lang-link.active {
   background: var(--surface-strong);
   color: var(--text-main);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--accent-bronze);
+  padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Buttons */
@@ -2010,10 +2035,6 @@ select:focus {
 
   h1 {
     font-size: 2.5rem;
-  }
-
-  .brand-emergency-link {
-    display: none;
   }
 
   .header-controls {
