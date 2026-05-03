@@ -293,18 +293,6 @@
         "note": "Hinda mõjutavad mõõt, paksus, graniidi toon, kuju keerukus, portree, dekoor ja transport."
       },
       {
-        "id": "installation",
-        "name": "Paigaldus",
-        "price": "alates 100 €",
-        "bestFor": "Monumendi või eraldi elementide paigaldus kalmistul.",
-        "features": [
-          "Tingimuste hindamine kohapeal või foto järgi",
-          "Aluse ettevalmistus kokkulepitud töö piires",
-          "Toote paigaldus"
-        ],
-        "note": "Hinda mõjutavad ligipääs, vanade elementide demontaaž, aluse seisukord, kaugus ja hooajalised tingimused."
-      },
-      {
         "id": "framing",
         "name": "Piirded",
         "price": "alates 700 €",
@@ -315,6 +303,18 @@
           "Aluse ettevalmistus ja paigaldus kokkuleppel"
         ],
         "note": "Lõpphind sõltub platsi suurusest, materjalist, paksusest, sissepääsust, nurkadest, täitest ja tugiseina vajadusest."
+      },
+      {
+        "id": "installation",
+        "name": "Paigaldus",
+        "price": "alates 100 €",
+        "bestFor": "Monumendi või eraldi elementide paigaldus kalmistul.",
+        "features": [
+          "Tingimuste hindamine kohapeal või foto järgi",
+          "Aluse ettevalmistus kokkulepitud töö piires",
+          "Toote paigaldus"
+        ],
+        "note": "Hinda mõjutavad ligipääs, vanade elementide demontaaž, aluse seisukord, kaugus ja hooajalised tingimused."
       },
       {
         "id": "engraving",
