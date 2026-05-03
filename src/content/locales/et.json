@@ -27,22 +27,22 @@
     "secondaryCta": "Vaata kataloogi",
     "featureCards": [
       {
-        "icon": "Kontakt",
+        "icon": "support",
         "title": "Kiire klienditugi",
         "body": "Tööajal saab meiega ühendust telefoni teel. Muul ajal jätke sõnum veebilehe vormi kaudu."
       },
       {
-        "icon": "Valik",
+        "icon": "range",
         "title": "Lai tootevalik",
         "body": "Monumendid ja piirded, vaasid, pingid, lillealad, fotoemail ja portreegraveeringud."
       },
       {
-        "icon": "EE",
+        "icon": "estonia",
         "title": "Teenindame kogu Eestis",
         "body": "Nõustamine, valmistamine ja paigaldus sobivas vormis."
       },
       {
-        "icon": "Teenused",
+        "icon": "variety",
         "title": "Mitmekülgsed teenused",
         "body": "Uute toodete valmistamine, olemasolevate uuendamine ja restaureerimine, mälestusplatside kujundamine. Paigaldus."
       }
