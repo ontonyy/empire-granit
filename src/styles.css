@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
   /* Premium Serene Palette */
@@ -89,7 +89,7 @@ h3,
 h4,
 h5,
 .brand strong {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   font-weight: 500;
   color: var(--text-main);
   line-height: 1.2;
@@ -509,7 +509,7 @@ h3 {
 
 .hero-phone-link {
   color: var(--accent-dark);
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   font-size: 1.25rem;
   font-weight: 600;
   text-decoration: none;
@@ -735,7 +735,7 @@ h3 {
 
 .trust-bar-item strong {
   display: block;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   font-size: 1.8rem;
   font-weight: 500;
   color: #eadfcf;
@@ -763,7 +763,7 @@ h3 {
 .step-index {
   display: inline-block;
   margin-bottom: 1rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   font-size: 2.7rem;
   line-height: 1;
   color: rgba(166, 138, 100, 0.42);
@@ -814,7 +814,7 @@ h3 {
   display: inline-block;
   margin-bottom: auto;
   color: #d9b879;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   font-size: 1.85rem;
   line-height: 1;
 }
@@ -952,7 +952,7 @@ h3 {
 
 .home-price-item strong {
   display: block;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   color: #eadfcf;
   font-size: 1.65rem;
   font-weight: 500;
@@ -1068,7 +1068,7 @@ h3 {
 
 .quote-mark {
   display: inline-block;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   font-size: 3rem;
   line-height: 1;
   color: rgba(166, 138, 100, 0.5);
@@ -1183,7 +1183,7 @@ h3 {
 
 .about-metric-card strong {
   display: block;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   font-size: 1.75rem;
   color: #f3e7d7;
 }
@@ -1846,7 +1846,7 @@ select:focus {
 .admin-stat-card strong {
   display: block;
   margin-top: 0.35rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
   font-size: 2rem;
   color: var(--text-main);
 }
@@ -2349,7 +2349,7 @@ select:focus {
 .category-content h2 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
 }
 
 .category-content p {
@@ -2771,7 +2771,7 @@ select:focus {
 .cta-banner-mini h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', 'Playfair Display', serif;
 }
 
 .cta-banner-mini p {

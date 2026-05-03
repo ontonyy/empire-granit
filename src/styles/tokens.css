@@ -61,7 +61,7 @@
   --section-pad: clamp(48px, 8vw, 96px);
 
   /* Typography */
-  --font-display: 'Cinzel', 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-display: 'Cinzel', 'Playfair Display', 'Cormorant Garamond', serif;
   --font-body: 'Inter', 'Söhne', 'Manrope', system-ui, sans-serif;
 
   --fs-eyebrow: 0.75rem;
