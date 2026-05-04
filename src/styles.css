@@ -1286,7 +1286,8 @@ h3 {
 }
 
 .faq-accordion {
-  margin-top: 2rem;
+  margin: 2rem auto 0;
+  max-width: 56rem;
   display: grid;
   gap: 0.85rem;
 }
@@ -1302,7 +1303,12 @@ h3 {
   background: transparent;
   color: var(--text-main);
   box-shadow: none;
-  text-align: left;
+  text-align: center;
+}
+
+.faq-question-btn > span:first-child {
+  flex: 1;
+  text-align: center;
 }
 
 .faq-question-btn:hover {
@@ -1331,9 +1337,10 @@ h3 {
 }
 
 .faq-answer {
-  margin-top: 1rem;
+  margin: 1rem auto 0;
   color: var(--text-muted);
   max-width: 46rem;
+  text-align: center;
 }
 
 .service-card h2 {
