@@ -20,18 +20,23 @@ export function GalleryPage({ locale }: GalleryPageProps) {
         <p className="catalog-grid-intro">{section.intro}</p>
       </header>
 
-      <section aria-label={section.heading} className="catalog-grid">
-        {section.categories.map((category) => (
-          <Card
-            key={category.id}
-            to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`}
-            imageSrc={category.image}
-            imageAlt={category.title}
-            title={category.title}
-            description={category.summary}
-            cta={section.labels.learnMore}
-          />
-        ))}
+      <section aria-label={section.labels.topCategoriesTitle} className="catalog-grid-section reveal-on-scroll">
+        <header className="catalog-grid-section-header">
+          <Eyebrow>{section.labels.topCategoriesTitle}</Eyebrow>
+        </header>
+        <div className="catalog-grid">
+          {section.categories.map((category) => (
+            <Card
+              key={category.id}
+              to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`}
+              imageSrc={category.image}
+              imageAlt={category.title}
+              title={category.title}
+              description={category.summary}
+              cta={section.labels.learnMore}
+            />
+          ))}
+        </div>
       </section>
 
       <section className="catalog-navigation-block reveal-on-scroll">
@@ -40,8 +45,13 @@ export function GalleryPage({ locale }: GalleryPageProps) {
         <div className="catalog-nav-grid">
           {section.catalogCategories.map((category) => (
             <Link key={category.id} to={buildCatalogSubcategoryPath(locale, category.id)} className="catalog-nav-card">
-              <span>{category.title}</span>
-              <small>{category.summary}</small>
+              <span className="catalog-nav-thumb" aria-hidden="true">
+                <img src={category.image} alt="" loading="lazy" />
+              </span>
+              <span className="catalog-nav-copy">
+                <span className="catalog-nav-title">{category.title}</span>
+                <small>{category.summary}</small>
+              </span>
             </Link>
           ))}
         </div>
@@ -60,7 +70,6 @@ export function GalleryPage({ locale }: GalleryPageProps) {
               <div className="ready-work-copy">
                 <strong>{work.title}</strong>
                 <span className="text-link">{section.labels.openCatalog} →</span>
-                <span className="ready-work-request">{section.labels.requestSimilar}</span>
               </div>
             </Link>
           ))}
