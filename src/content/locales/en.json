@@ -27,22 +27,22 @@
     "secondaryCta": "View catalog",
     "featureCards": [
       {
-        "icon": "Support",
+        "icon": "support",
         "title": "Fast customer support",
         "body": "During working hours you can contact us by phone. At other times, leave a message through the website form."
       },
       {
-        "icon": "Range",
+        "icon": "range",
         "title": "Wide product range",
         "body": "Monuments and borders, vases, benches, flower beds, photo enamel, and portrait engraving."
       },
       {
-        "icon": "EE",
+        "icon": "estonia",
         "title": "Serving all Estonia",
         "body": "Consultation, production and installation arranged across the country."
       },
       {
-        "icon": "Services",
+        "icon": "variety",
         "title": "Variety of services",
         "body": "Production of new items, renewal and restoration of existing ones, memorial site arrangement. Installation."
       }
