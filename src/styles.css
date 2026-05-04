@@ -1456,11 +1456,10 @@ select:focus {
   align-items: start;
 }
 
-.contact-grid-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.contact-forms-column {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  margin-bottom: 2rem;
 }
 
 .contact-card {
@@ -1494,20 +1493,6 @@ select:focus {
   color: var(--accent);
 }
 
-.callback-form-clean {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.callback-form-clean input {
-  padding: 0.75rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  font-size: 0.9rem;
-}
-
 .inquiry-form-premium {
   margin-top: 2rem;
 }
@@ -1519,19 +1504,73 @@ select:focus {
   margin-bottom: 1.5rem;
 }
 
-.full-width-glow {
-  width: 100%;
-  padding: 1.25rem;
-  font-size: 1.1rem;
-  background: var(--text-main);
-  color: white;
-  margin-top: 1rem;
+.inquiry-form-premium .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
 }
 
-.full-width-glow:hover {
-  background: black;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.inquiry-form-premium label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.inquiry-form-premium .optional-tag {
+  font-weight: 400;
+  color: var(--text-muted);
+  opacity: 0.7;
+  margin-left: 0.25rem;
+}
+
+.inquiry-form-premium input,
+.inquiry-form-premium textarea {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: white;
+  transition: var(--transition);
+}
+
+.inquiry-form-premium input:focus,
+.inquiry-form-premium textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(166, 138, 100, 0.15);
+}
+
+.inquiry-form-premium input[aria-invalid='true'],
+.inquiry-form-premium textarea[aria-invalid='true'] {
+  border-color: #c0392b;
+}
+
+.field-error {
+  font-size: 0.8rem;
+  color: #c0392b;
+  margin: 0;
+}
+
+.progressive-fields {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.progressive-fields.is-visible {
+  max-height: 600px;
+  opacity: 1;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 1.1rem;
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
 }
 
 .map-frame-container {
@@ -1600,7 +1639,7 @@ select:focus {
 }
 
 @media (max-width: 600px) {
-  .contact-grid-top {
+  .form-row {
     grid-template-columns: 1fr;
   }
 }
