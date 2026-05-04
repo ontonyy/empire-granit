@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Card, DisplayHeading, Eyebrow } from '../components/ui';
+import { Card, DisplayHeading } from '../components/ui';
 import { getLocaleContent } from '../content';
 import { buildCatalogSubcategoryPath, buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
@@ -10,19 +10,17 @@ interface GalleryPageProps {
 
 export function GalleryPage({ locale }: GalleryPageProps) {
   const section = getLocaleContent(locale).gallery;
-  const navLabel = getLocaleContent(locale).nav.gallery;
 
   return (
     <main className="content-panel gallery-page catalog-grid-page">
       <header className="catalog-grid-header">
-        <Eyebrow>{navLabel}</Eyebrow>
         <DisplayHeading level={1}>{section.heading}</DisplayHeading>
         <p className="catalog-grid-intro">{section.intro}</p>
       </header>
 
       <section aria-label={section.labels.topCategoriesTitle} className="catalog-grid-section reveal-on-scroll">
         <header className="catalog-grid-section-header">
-          <Eyebrow>{section.labels.topCategoriesTitle}</Eyebrow>
+          <DisplayHeading level={2}>{section.labels.topCategoriesTitle}</DisplayHeading>
         </header>
         <div className="catalog-grid">
           {section.categories.map((category) => (
@@ -39,9 +37,10 @@ export function GalleryPage({ locale }: GalleryPageProps) {
         </div>
       </section>
 
-      <section className="catalog-navigation-block reveal-on-scroll">
-        <Eyebrow>{section.labels.catalogCategoriesTitle}</Eyebrow>
-        <DisplayHeading level={2}>{section.labels.catalogCategoriesTitle}</DisplayHeading>
+      <section className="catalog-grid-section reveal-on-scroll">
+        <header className="catalog-grid-section-header">
+          <DisplayHeading level={2}>{section.labels.catalogCategoriesTitle}</DisplayHeading>
+        </header>
         <div className="catalog-nav-grid">
           {section.catalogCategories.map((category) => (
             <Link key={category.id} to={buildCatalogSubcategoryPath(locale, category.id)} className="catalog-nav-card">
@@ -57,9 +56,8 @@ export function GalleryPage({ locale }: GalleryPageProps) {
         </div>
       </section>
 
-      <section className="catalog-ready-works reveal-on-scroll">
-        <header className="catalog-ready-works-header">
-          <Eyebrow>{section.labels.readyWorksTitle}</Eyebrow>
+      <section className="catalog-grid-section catalog-ready-works reveal-on-scroll">
+        <header className="catalog-grid-section-header">
           <DisplayHeading level={2}>{section.labels.readyWorksTitle}</DisplayHeading>
           <p>{section.labels.readyWorksBody}</p>
         </header>
