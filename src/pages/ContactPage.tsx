@@ -49,12 +49,6 @@ export function ContactPage({ locale }: ContactPageProps) {
                 {siteConfig.contacts.phoneDisplay}
               </a>
             </div>
-            <div className="contact-method">
-              <p className="eyebrow">WhatsApp</p>
-              <a href={siteConfig.contacts.whatsapp} className="contact-link-premium">
-                {assist.whatsappLabel}
-              </a>
-            </div>
           </article>
 
           <ContactForm
