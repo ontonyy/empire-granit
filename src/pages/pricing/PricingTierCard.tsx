@@ -50,7 +50,7 @@ export function PricingTierCard({
         <ul className="tier-features" style={{ listStyle: 'none', padding: 0, margin: '0.75rem 0 1.5rem' }}>
           {tier.features.map((feature) => (
             <li key={feature} style={{ marginBottom: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{ color: 'var(--accent)' }}>✓</span>
+              <span style={{ color: 'var(--accent-bronze)' }} aria-hidden="true">✓</span>
               {feature}
             </li>
           ))}
