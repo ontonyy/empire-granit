@@ -28,10 +28,10 @@ export function PricingPage({ locale }: PricingPageProps) {
 
   return (
     <section className="content-panel">
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h1 className="cinzel-font" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{section.heading}</h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>{section.intro}</p>
-      </div>
+      <header className="page-hero">
+        <h1 className="cinzel-font">{section.heading}</h1>
+        <p>{section.intro}</p>
+      </header>
 
       <div className="card-grid">
         {section.tiers.map((tier) => (

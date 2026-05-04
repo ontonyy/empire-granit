@@ -13,9 +13,9 @@ export function GalleryPage({ locale }: GalleryPageProps) {
 
   return (
     <main className="content-panel gallery-page catalog-grid-page">
-      <header className="catalog-grid-header">
+      <header className="page-hero">
         <DisplayHeading level={1}>{section.heading}</DisplayHeading>
-        <p className="catalog-grid-intro">{section.intro}</p>
+        <p>{section.intro}</p>
       </header>
 
       <section aria-label={section.labels.topCategoriesTitle} className="catalog-grid-section reveal-on-scroll">
