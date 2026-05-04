@@ -2,8 +2,7 @@ import { useRef } from 'react';
 import { getLocaleContent } from '../content';
 import { siteConfig } from '../config/site';
 import type { Locale } from '../types';
-import { CallbackForm } from './contact/CallbackForm';
-import { InquiryForm } from './contact/InquiryForm';
+import { ContactForm } from './contact/ContactForm';
 import { getContactAssistContent } from './contact/copy';
 
 interface ContactPageProps {
@@ -14,11 +13,11 @@ export function ContactPage({ locale }: ContactPageProps) {
   const content = getLocaleContent(locale);
   const section = content.contact;
   const assist = getContactAssistContent(locale);
-  const inquiryFormRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
 
   const labels = section.formLabels;
   const inquiryTitle = section.inquiryTitle || assist.inquiryTitle;
-  const inquiryHint = section.inquiryHint || assist.inquiryHint;
+  const inquiryHint = assist.inquiryHint;
 
   return (
     <section className="content-panel contact-overhaul reveal-on-scroll is-visible">
@@ -29,41 +28,37 @@ export function ContactPage({ locale }: ContactPageProps) {
 
       <div className="contact-main-grid">
         <div className="contact-forms-column">
-          <div className="contact-grid-top">
-            <article className="contact-card details-compact">
-              <div className="contact-method">
-                <p className="eyebrow">{assist.intentTitle}</p>
-                <ul className="contact-intent-list">
-                  {section.intentItems.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="contact-method">
-                <p className="eyebrow">{assist.detailsEmail}</p>
-                <a href={`mailto:${siteConfig.contacts.email}`} className="contact-link-premium">
-                  {siteConfig.contacts.email}
-                </a>
-              </div>
-              <div className="contact-method">
-                <p className="eyebrow">{assist.detailsPhone}</p>
-                <a href={siteConfig.contacts.phoneLink} className="contact-link-premium phone-highlight">
-                  {siteConfig.contacts.phoneDisplay}
-                </a>
-              </div>
-              <div className="contact-method">
-                <p className="eyebrow">WhatsApp</p>
-                <a href={siteConfig.contacts.whatsapp} className="contact-link-premium">
-                  {assist.whatsappLabel}
-                </a>
-              </div>
-            </article>
+          <article className="contact-card details-compact">
+            <div className="contact-method">
+              <p className="eyebrow">{assist.intentTitle}</p>
+              <ul className="contact-intent-list">
+                {section.intentItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="contact-method">
+              <p className="eyebrow">{assist.detailsEmail}</p>
+              <a href={`mailto:${siteConfig.contacts.email}`} className="contact-link-premium">
+                {siteConfig.contacts.email}
+              </a>
+            </div>
+            <div className="contact-method">
+              <p className="eyebrow">{assist.detailsPhone}</p>
+              <a href={siteConfig.contacts.phoneLink} className="contact-link-premium phone-highlight">
+                {siteConfig.contacts.phoneDisplay}
+              </a>
+            </div>
+            <div className="contact-method">
+              <p className="eyebrow">WhatsApp</p>
+              <a href={siteConfig.contacts.whatsapp} className="contact-link-premium">
+                {assist.whatsappLabel}
+              </a>
+            </div>
+          </article>
 
-            <CallbackForm locale={locale} labels={labels} assist={assist} />
-          </div>
-
-          <InquiryForm
-            ref={inquiryFormRef}
+          <ContactForm
+            ref={formRef}
             locale={locale}
             labels={labels}
             assist={assist}
