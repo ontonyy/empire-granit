@@ -6,15 +6,18 @@ export interface ContactAssistCopy {
   detailsPhone: string;
   detailsEmail: string;
   whatsappLabel: string;
-  callbackTitle: string;
-  callbackHint: string;
-  callbackButton: string;
   inquiryTitle: string;
   inquiryHint: string;
-  inquiryButton: string;
   packageInterestTemplate: string;
+  optionalLabel: string;
+  formLoading: string;
   formSuccess: string;
   formError: string;
+  formRateLimit: string;
+  sendAnother: string;
+  errorNameRequired: string;
+  errorPhoneInvalid: string;
+  errorEmailInvalid: string;
 }
 
 export function getContactAssistContent(locale: Locale): ContactAssistCopy {
@@ -25,15 +28,18 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
       detailsPhone: 'Телефон',
       detailsEmail: 'E-mail',
       whatsappLabel: 'Написать в WhatsApp',
-      callbackTitle: 'Обратный звонок',
-      callbackHint: 'Оставьте номер, и мы перезвоним вам.',
-      callbackButton: 'Жду звонка',
-      inquiryTitle: 'Задать вопрос',
-      inquiryHint: 'Оставьте сообщение или задайте вопрос.',
-      inquiryButton: 'Отправить',
+      inquiryTitle: 'Оставить заявку',
+      inquiryHint: 'Укажите имя и телефон — этого достаточно. При желании добавьте e-mail и сообщение.',
       packageInterestTemplate: 'Здравствуйте! Я заинтересован в пакете "{name}". Пожалуйста, расскажите подробнее.',
+      optionalLabel: '(необязательно)',
+      formLoading: 'Отправка…',
       formSuccess: 'Спасибо! Ваше сообщение отправлено.',
-      formError: 'Произошла ошибка. Пожалуйста, попробуйте позже.'
+      formError: 'Произошла ошибка. Пожалуйста, попробуйте позже.',
+      formRateLimit: 'Слишком много заявок. Попробуйте через несколько минут.',
+      sendAnother: 'Отправить ещё одну',
+      errorNameRequired: 'Укажите имя.',
+      errorPhoneInvalid: 'Введите корректный телефон.',
+      errorEmailInvalid: 'Проверьте e-mail.'
     };
   }
 
@@ -44,15 +50,18 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
       detailsPhone: 'Telefon',
       detailsEmail: 'E-post',
       whatsappLabel: 'Kirjuta WhatsAppis',
-      callbackTitle: 'Tagasihelistamine',
-      callbackHint: 'Jätke oma number ja me helistame teile.',
-      callbackButton: 'Telli kõne',
       inquiryTitle: 'Jäta päring',
-      inquiryHint: 'Esitage küsimus või kirjeldage oma soove.',
-      inquiryButton: 'Saada',
+      inquiryHint: 'Piisab nimest ja telefoninumbrist. Soovi korral lisa e-post ja sõnum.',
       packageInterestTemplate: 'Tere! Olen huvitatud "{name}" paketist. Palun saata täpsemat infot.',
+      optionalLabel: '(valikuline)',
+      formLoading: 'Saadan…',
       formSuccess: 'Aitäh! Teie teade on saadetud.',
-      formError: 'Tekkis viga. Palun proovige hiljem uuesti.'
+      formError: 'Tekkis viga. Palun proovige hiljem uuesti.',
+      formRateLimit: 'Liiga palju päringuid. Palun proovi paari minuti pärast.',
+      sendAnother: 'Saada uus',
+      errorNameRequired: 'Sisestage nimi.',
+      errorPhoneInvalid: 'Sisestage korrektne telefon.',
+      errorEmailInvalid: 'Kontrollige e-posti aadressi.'
     };
   }
 
@@ -62,14 +71,17 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
     detailsPhone: 'Phone',
     detailsEmail: 'E-mail',
     whatsappLabel: 'Write on WhatsApp',
-    callbackTitle: 'Request a Callback',
-    callbackHint: 'Leave your details and we will reach out.',
-    callbackButton: 'Leave a Request',
     inquiryTitle: 'Leave a Request',
-    inquiryHint: 'Have a specific question or request?',
-    inquiryButton: 'Send Message',
+    inquiryHint: 'Name and phone are enough. Add email and a message if you want.',
     packageInterestTemplate: 'Hello! I am interested in the "{name}" package. Please provide more details.',
+    optionalLabel: '(optional)',
+    formLoading: 'Sending…',
     formSuccess: 'Thank you! Your message has been sent.',
-    formError: 'An error occurred. Please try again later.'
+    formError: 'An error occurred. Please try again later.',
+    formRateLimit: 'Too many requests. Please try again in a few minutes.',
+    sendAnother: 'Send another',
+    errorNameRequired: 'Please enter your name.',
+    errorPhoneInvalid: 'Please enter a valid phone number.',
+    errorEmailInvalid: 'Please check the email address.'
   };
 }
