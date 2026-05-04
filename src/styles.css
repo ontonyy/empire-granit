@@ -1283,6 +1283,7 @@ h3 {
 
 .faq-page-upgraded {
   max-width: 940px;
+  margin-inline: auto;
 }
 
 .faq-accordion {
@@ -2819,7 +2820,7 @@ select:focus {
 .catalog-grid-page {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
   padding-block: 0;
 }
 
@@ -2834,7 +2835,9 @@ select:focus {
 }
 
 .page-hero h1 {
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 }
 
 .page-hero p {
