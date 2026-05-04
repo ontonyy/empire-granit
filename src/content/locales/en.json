@@ -293,18 +293,6 @@
         "note": "Cost changes with size, thickness, granite color, shape complexity, portrait, decor, and delivery."
       },
       {
-        "id": "installation",
-        "name": "Installation",
-        "price": "from 100 €",
-        "bestFor": "Installation of a monument or separate elements at the cemetery.",
-        "features": [
-          "Site condition check on location or by photo",
-          "Foundation preparation within agreed scope",
-          "Product installation"
-        ],
-        "note": "Cost depends on access, removal of old elements, foundation condition, distance, and seasonal conditions."
-      },
-      {
         "id": "framing",
         "name": "Borders",
         "price": "from 700 €",
@@ -315,6 +303,18 @@
           "Foundation preparation and installation by agreement"
         ],
         "note": "Final cost depends on plot size, material, thickness, entrance, corners, filling, and need for retaining support."
+      },
+      {
+        "id": "installation",
+        "name": "Installation",
+        "price": "from 100 €",
+        "bestFor": "Installation of a monument or separate elements at the cemetery.",
+        "features": [
+          "Site condition check on location or by photo",
+          "Foundation preparation within agreed scope",
+          "Product installation"
+        ],
+        "note": "Cost depends on access, removal of old elements, foundation condition, distance, and seasonal conditions."
       },
       {
         "id": "engraving",
