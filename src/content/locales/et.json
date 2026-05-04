@@ -840,32 +840,48 @@
     "heading": "Privaatsuspoliitika",
     "sections": [
       {
-        "title": "Andmekogumine",
-        "body": "Kogume ainult vormide kaudu esitatud andmeid."
+        "title": "Mida me kogume",
+        "body": "Tagasihelistamise vorm: nimi ja telefoninumber. Päringuvorm: nimi, e-posti aadress ja sõnumi tekst. Mõlemad vormid salvestavad ka valitud lehekeele ja vormi tüübi. Muid isikuandmeid me ei küsi."
       },
       {
-        "title": "Eesmärk",
-        "body": "Andmeid kasutatakse ainult suhtluseks ja pakkumiste tegemiseks."
+        "title": "Kuhu teie andmed liiguvad",
+        "body": "Vormi sisu jõuab meie meeskonnani teenuse Formspree (formspree.io) kaudu — see on kolmandast osapoolest töötleja, kes edastab sõnumid meile. Anonüümsed kasutussündmused (lehekülastused, vormide saatmised) salvestatakse Google Firebase'i (Firestore), et saaksime saiti parendada. Külastusstatistikat mõõdame teenusega Plausible Analytics, mis ei kasuta küpsiseid ega kogu isikuandmeid."
       },
       {
-        "title": "Kaitse",
-        "body": "Juurdepääs on piiratud ja andmeid ei jagata kunagi kolmandatele osapooltele."
+        "title": "Miks me andmeid kasutame",
+        "body": "Ainult selleks, et vastata teie päringule, koostada pakkumine, leppida kokku paigaldus ja parendada veebisaiti. Me ei loo reklaamiprofiile ega müü andmeid kolmandatele osapooltele."
+      },
+      {
+        "title": "Säilitamine",
+        "body": "Vormi andmeid ja analüütika sündmusi säilitame 12 kuud ning seejärel kustutame, välja arvatud juhul, kui aktiivne tellimus või seadusest tulenev kohustus nõuab pikemat säilitamist."
+      },
+      {
+        "title": "Teie õigused ja kontakt",
+        "body": "Teil on igal ajal õigus oma andmetega tutvuda, neid parandada või kustutada lasta või nõusolek tagasi võtta — selleks kirjutage aadressile ms.pamyatnik@mail.ru. Vastame 30 päeva jooksul."
       }
     ],
-    "kicker": "PRIVACY POLICY",
-    "intro": "Kogume ainult neid andmeid, mis on vajalikud kliendiga suhtlemiseks ja pakkumise koostamiseks. Ülearuseid andmeid me ei küsi.",
+    "kicker": "PRIVAATSUSPOLIITIKA",
+    "intro": "Kogume ainult neid andmeid, mis on vajalikud teie päringule vastamiseks ja pakkumise koostamiseks. Allpool on täpselt kirjas, mida salvestame, kuhu andmed liiguvad, kui kaua neid hoiame ja kuidas meiega andmete asjus ühendust võtta.",
     "cards": [
       {
-        "title": "Andmete kogumine",
-        "body": "Kogume ainult selle teabe, mille te ise vormide kaudu meile saadate."
+        "title": "Mida me kogume",
+        "body": "Tagasihelistamise vorm: nimi ja telefoninumber. Päringuvorm: nimi, e-posti aadress ja sõnumi tekst. Mõlemad vormid salvestavad ka valitud lehekeele ja vormi tüübi. Muid isikuandmeid me ei küsi."
       },
       {
-        "title": "Eesmärk",
-        "body": "Andmeid kasutatakse ainult teiega suhtlemiseks, päringule vastamiseks ja pakkumise ettevalmistamiseks."
+        "title": "Kuhu teie andmed liiguvad",
+        "body": "Vormi sisu jõuab meie meeskonnani teenuse Formspree (formspree.io) kaudu — see on kolmandast osapoolest töötleja, kes edastab sõnumid meile. Anonüümsed kasutussündmused (lehekülastused, vormide saatmised) salvestatakse Google Firebase'i (Firestore), et saaksime saiti parendada. Külastusstatistikat mõõdame teenusega Plausible Analytics, mis ei kasuta küpsiseid ega kogu isikuandmeid."
       },
       {
-        "title": "Kaitse",
-        "body": "Ligipääs andmetele on piiratud ning me ei jaga neid kolmandate osapooltega."
+        "title": "Miks me andmeid kasutame",
+        "body": "Ainult selleks, et vastata teie päringule, koostada pakkumine, leppida kokku paigaldus ja parendada veebisaiti. Me ei loo reklaamiprofiile ega müü andmeid kolmandatele osapooltele."
+      },
+      {
+        "title": "Säilitamine",
+        "body": "Vormi andmeid ja analüütika sündmusi säilitame 12 kuud ning seejärel kustutame, välja arvatud juhul, kui aktiivne tellimus või seadusest tulenev kohustus nõuab pikemat säilitamist."
+      },
+      {
+        "title": "Teie õigused ja kontakt",
+        "body": "Teil on igal ajal õigus oma andmetega tutvuda, neid parandada või kustutada lasta või nõusolek tagasi võtta — selleks kirjutage aadressile ms.pamyatnik@mail.ru. Vastame 30 päeva jooksul."
       }
     ]
   },

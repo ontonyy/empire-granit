@@ -840,32 +840,48 @@
     "heading": "Privacy Policy",
     "sections": [
       {
-        "title": "Data Collection",
-        "body": "We only collect information submitted via our forms."
+        "title": "What we collect",
+        "body": "Callback form: name and phone number. Inquiry form: name, email, and message text. Both forms also record the chosen site language and the form type. We do not request other personal data."
       },
       {
-        "title": "Purpose",
-        "body": "Data is used strictly for communication and proposals."
+        "title": "Where your data goes",
+        "body": "Form submissions are delivered to our team through Formspree (formspree.io), a third-party processor that forwards messages to us. Anonymous usage events (page views, form submissions) are stored in Google Firebase (Firestore) so we can improve the site. Traffic statistics are measured with Plausible Analytics, which is cookieless and collects no personal identifiers."
       },
       {
-        "title": "Protection",
-        "body": "Access is limited and never shared with third parties."
+        "title": "Why we use it",
+        "body": "Solely to reply to your request, prepare a proposal, agree on installation, and improve the website. We do not run advertising profiles and do not sell data to third parties."
+      },
+      {
+        "title": "Retention",
+        "body": "Form submissions and analytics events are kept for 12 months and then deleted, unless an active order or legal obligation requires longer storage."
+      },
+      {
+        "title": "Your rights and contact",
+        "body": "You can request access to, correction of, or deletion of your data, or withdraw consent, at any time by writing to ms.pamyatnik@mail.ru. We respond within 30 days."
       }
     ],
     "kicker": "PRIVACY POLICY",
-    "intro": "We only collect the information required to communicate with you and prepare a proposal. We do not ask for unnecessary personal data.",
+    "intro": "We collect only the information required to reply to your request and prepare a proposal. Below is exactly what is stored, where it goes, how long we keep it, and how to reach us about your data.",
     "cards": [
       {
-        "title": "Data Collection",
-        "body": "We only collect information submitted via our forms."
+        "title": "What we collect",
+        "body": "Callback form: name and phone number. Inquiry form: name, email, and message text. Both forms also record the chosen site language and the form type. We do not request other personal data."
       },
       {
-        "title": "Purpose",
-        "body": "Data is used strictly for communication and proposals."
+        "title": "Where your data goes",
+        "body": "Form submissions are delivered to our team through Formspree (formspree.io), a third-party processor that forwards messages to us. Anonymous usage events (page views, form submissions) are stored in Google Firebase (Firestore) so we can improve the site. Traffic statistics are measured with Plausible Analytics, which is cookieless and collects no personal identifiers."
       },
       {
-        "title": "Protection",
-        "body": "Access is limited and never shared with third parties."
+        "title": "Why we use it",
+        "body": "Solely to reply to your request, prepare a proposal, agree on installation, and improve the website. We do not run advertising profiles and do not sell data to third parties."
+      },
+      {
+        "title": "Retention",
+        "body": "Form submissions and analytics events are kept for 12 months and then deleted, unless an active order or legal obligation requires longer storage."
+      },
+      {
+        "title": "Your rights and contact",
+        "body": "You can request access to, correction of, or deletion of your data, or withdraw consent, at any time by writing to ms.pamyatnik@mail.ru. We respond within 30 days."
       }
     ]
   },
