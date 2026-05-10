@@ -21,7 +21,7 @@ export function CatalogPreviewSection({ locale, label, title, lead, items, ctaLa
       </div>
 
       <div className="home-catalog-layout">
-        <img src="/images/examples/gravestone.png" alt="" loading="lazy" />
+        <img src={`${import.meta.env.BASE_URL}images/examples/gravestone.png`} alt="" loading="lazy" />
         <div className="home-catalog-list">
           {items.map((item) => (
             <article key={item.title}>
