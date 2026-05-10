@@ -5,3 +5,7 @@ dist-ssr
 .DS_Store
 coverage
 *.log
+
+# claude code worktrees + cache
+.claude/
+.ai/
