@@ -63,7 +63,7 @@
       },
       {
         "value": "EE",
-        "label": "installation in Ida-Virumaa"
+        "label": "Installation in all regions"
       },
       {
         "value": "Narva",
@@ -111,7 +111,7 @@
       },
       {
         "title": "Monument installation",
-        "body": "Careful setting of the monument and elements on a prepared base."
+        "body": "Monument and elements installed on a prepared base."
       },
       {
         "title": "Site improvement",
@@ -123,7 +123,7 @@
       },
       {
         "title": "Site care",
-        "body": "Covering, flower zones, and individual details renewed when needed."
+        "body": "Covering, flower area, site cleaning."
       }
     ],
     "testimonialsLabel": "TESTIMONIALS",
@@ -502,7 +502,6 @@
         ],
         "electronicCatalogFeaturedIds": [
           "framing",
-          "fences",
           "tables"
         ],
         "advantages": [
@@ -548,8 +547,7 @@
         "description": "Site arrangement work: covering, filling, artificial grass, benches, tables, and care elements.",
         "electronicCatalogFeaturedIds": [
           "benches",
-          "tables",
-          "fences"
+          "tables"
         ],
         "advantages": [
           "Complete site layout",
@@ -679,27 +677,6 @@
         ]
       },
       {
-        "id": "fences",
-        "title": "Fences",
-        "summary": "Fences and enclosures",
-        "description": "Fences for neat arrangement and protection of the memorial site.",
-        "image": "/images/examples/granite_fence.png",
-        "productCards": [
-          {
-            "id": "en-fence-1",
-            "title": "Granite fence",
-            "image": "/images/examples/granite_fence.png",
-            "price": "from 480 €"
-          },
-          {
-            "id": "en-fence-2",
-            "title": "Fence with entrance",
-            "image": "/images/examples/fence_with_entrance.png",
-            "price": "by request"
-          }
-        ]
-      },
-      {
         "id": "decor",
         "title": "Decorative Elements",
         "summary": "Vases, candle holders, and decor",
@@ -813,7 +790,7 @@
   },
   "contact": {
     "heading": "Request an estimate or consultation",
-    "intro": "Call, write on WhatsApp, or send a request with a site photo, monument idea, and inscription. We answer practically and suggest the next step.",
+    "intro": "You can contact us by phone during working hours, leave a request on the site, or send an email.",
     "inquiryTitle": "Send a photo, idea, or question",
     "inquiryHint": "Describe the monument, site, city, needed work, and engraving details in the message.",
     "consentText": "I agree to data processing.",
@@ -831,7 +808,7 @@
       "submit": "Leave a Request"
     },
     "intentItems": [
-      "Estimate for monument, installation, or border",
+      "Sizes for monument, installation, or border",
       "Site photo and example of desired option",
       "Inscription text, portrait, or engraving question"
     ]

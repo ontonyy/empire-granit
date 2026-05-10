@@ -63,7 +63,7 @@
       },
       {
         "value": "EE",
-        "label": "paigaldus Ida-Virumaal"
+        "label": "Paigaldus kõigis piirkondades"
       },
       {
         "value": "Narva",
@@ -111,7 +111,7 @@
       },
       {
         "title": "Monumentide paigaldus",
-        "body": "Monumendi ja elementide hoolikas paigaldus ettevalmistatud alusele."
+        "body": "Monumendi ja elementide paigaldus ettevalmistatud alusele."
       },
       {
         "title": "Platsi korrastamine",
@@ -123,7 +123,7 @@
       },
       {
         "title": "Hauaplatsi hooldus",
-        "body": "Katte, lilleala ja üksikute detailide uuendamine, kui plats vajab värskendust."
+        "body": "Kate, lilleala, platsi puhastus."
       }
     ],
     "testimonialsLabel": "TAGASISIDE",
@@ -502,7 +502,6 @@
         ],
         "electronicCatalogFeaturedIds": [
           "framing",
-          "fences",
           "tables"
         ],
         "advantages": [
@@ -548,8 +547,7 @@
         "description": "Platsi kujundustööd: kate, täide, kunstmuru, pingid, lauad ja hoolduselemendid.",
         "electronicCatalogFeaturedIds": [
           "benches",
-          "tables",
-          "fences"
+          "tables"
         ],
         "advantages": [
           "Terviklik platsi kujundus",
@@ -679,27 +677,6 @@
         ]
       },
       {
-        "id": "fences",
-        "title": "Aiad",
-        "summary": "Aiad ja piirdeelemendid",
-        "description": "Aiad mälestusplatsi korrektseks kujunduseks ja kaitseks.",
-        "image": "/images/examples/granite_fence.png",
-        "productCards": [
-          {
-            "id": "et-fence-1",
-            "title": "Graniidist aed",
-            "image": "/images/examples/granite_fence.png",
-            "price": "alates 480 €"
-          },
-          {
-            "id": "et-fence-2",
-            "title": "Sissepääsuga aed",
-            "image": "/images/examples/fence_with_entrance.png",
-            "price": "päringu alusel"
-          }
-        ]
-      },
-      {
         "id": "decor",
         "title": "Dekoratiivsed elemendid",
         "summary": "Vaasid, küünlahoidjad ja dekoor",
@@ -813,7 +790,7 @@
   },
   "contact": {
     "heading": "Küsi hinnangut või nõu",
-    "intro": "Helistage, kirjutage WhatsAppis või saatke päring platsi foto, monumendi idee ja pealiskirjaga. Vastame konkreetselt ja pakume järgmise sammu.",
+    "intro": "Meiega saab ühendust võtta telefoni teel tööajal, jätta päring veebilehel või saata e-kiri.",
     "inquiryTitle": "Saada foto, idee või küsimus",
     "inquiryHint": "Kirjeldage monumenti, platsi, linna, soovitud töid ja graveeringu infot sõnumis.",
     "consentText": "Nõustun andmetöötlusega.",
@@ -831,7 +808,7 @@
       "submit": "Jäta päring"
     },
     "intentItems": [
-      "Monumendi, paigalduse või piirde hinnang",
+      "Monumendi, paigalduse või piirde mõõdud",
       "Platsi foto ja soovitud lahenduse näide",
       "Pealiskirja tekst, portree või graveeringu küsimus"
     ]
