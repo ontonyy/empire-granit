@@ -28,12 +28,10 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [files, setFiles] = useState<File[]>([]);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [fieldError, setFieldError] = useState<{ name?: string; phone?: string; email?: string }>({});
-
-  const expanded =
-    name.trim().length >= 2 || phone.trim().length > 0 || email.length > 0 || message.length > 0;
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -65,13 +63,15 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
     setErrorMsg('');
     trackEvent('contact_form_submit', { locale, source: 'contact-page' });
 
+    const attachments = files.map((f) => ({ name: f.name, size: f.size, type: f.type }));
     const payload = {
       locale,
       serviceType: 'general_inquiry',
       name: name.trim(),
       phone: phone.trim(),
       email: email.trim(),
-      message: message.trim()
+      message: message.trim(),
+      attachments
     };
 
     try {
@@ -87,6 +87,7 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
         setPhone('');
         setEmail('');
         setMessage('');
+        setFiles([]);
         setFieldError({});
       } else if (response.status === 429) {
         setStatus('error');
@@ -160,39 +161,59 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
           </div>
         </div>
 
-        <div className={`progressive-fields ${expanded ? 'is-visible' : ''}`} aria-hidden={!expanded}>
-          <div className="field">
-            <label htmlFor="cf-email">
-              {labels.email} <span className="optional-tag">{assist.optionalLabel}</span>
-            </label>
-            <input
-              id="cf-email"
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              disabled={loading}
-              autoComplete="email"
-              tabIndex={expanded ? 0 : -1}
-              aria-invalid={!!fieldError.email}
-            />
-            {fieldError.email && <p className="field-error">{fieldError.email}</p>}
-          </div>
+        <div className="field">
+          <label htmlFor="cf-message">
+            {labels.message} <span className="optional-tag">{assist.optionalLabel}</span>
+          </label>
+          <textarea
+            id="cf-message"
+            name="message"
+            rows={4}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            disabled={loading}
+          />
+        </div>
 
-          <div className="field">
-            <label htmlFor="cf-message">
-              {labels.message} <span className="optional-tag">{assist.optionalLabel}</span>
-            </label>
-            <textarea
-              id="cf-message"
-              name="message"
-              rows={4}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              disabled={loading}
-              tabIndex={expanded ? 0 : -1}
-            />
-          </div>
+        <div className="field">
+          <label htmlFor="cf-email">
+            {labels.email} <span className="optional-tag">{assist.optionalLabel}</span>
+          </label>
+          <input
+            id="cf-email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={loading}
+            autoComplete="email"
+            aria-invalid={!!fieldError.email}
+          />
+          {fieldError.email && <p className="field-error">{fieldError.email}</p>}
+        </div>
+
+        <div className="field">
+          <label htmlFor="cf-files">
+            {assist.fileLabel} <span className="optional-tag">{assist.optionalLabel}</span>
+          </label>
+          <input
+            id="cf-files"
+            type="file"
+            name="files"
+            accept="image/*"
+            multiple
+            className="file-input"
+            disabled={loading}
+            onChange={(e) => setFiles(e.target.files ? Array.from(e.target.files) : [])}
+          />
+          <p className="field-help">{assist.fileHelper}</p>
+          {files.length > 0 && (
+            <ul className="file-list">
+              {files.map((f) => (
+                <li key={f.name}>{f.name}</li>
+              ))}
+            </ul>
+          )}
         </div>
 
         <button type="submit" className="btn-primary contact-submit" disabled={loading}>

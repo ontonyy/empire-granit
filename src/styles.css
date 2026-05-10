@@ -1597,16 +1597,30 @@ select:focus {
   margin: 0;
 }
 
-.progressive-fields {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
+.inquiry-form-premium .file-input {
+  padding: 0.65rem 0.75rem;
+  background: white;
+  cursor: pointer;
 }
 
-.progressive-fields.is-visible {
-  max-height: 600px;
-  opacity: 1;
+.inquiry-form-premium .field-help {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0;
+  line-height: 1.4;
+}
+
+.inquiry-form-premium .file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.inquiry-form-premium .file-list li {
+  padding: 0.15rem 0;
+  word-break: break-all;
 }
 
 .contact-submit {

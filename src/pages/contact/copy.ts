@@ -18,6 +18,8 @@ export interface ContactAssistCopy {
   errorNameRequired: string;
   errorPhoneInvalid: string;
   errorEmailInvalid: string;
+  fileLabel: string;
+  fileHelper: string;
 }
 
 export function getContactAssistContent(locale: Locale): ContactAssistCopy {
@@ -39,7 +41,9 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
       sendAnother: 'Отправить ещё одну',
       errorNameRequired: 'Укажите имя.',
       errorPhoneInvalid: 'Введите корректный телефон.',
-      errorEmailInvalid: 'Проверьте e-mail.'
+      errorEmailInvalid: 'Проверьте e-mail.',
+      fileLabel: 'Фото участка',
+      fileHelper: 'Можно выбрать фото участка или примера. Если отправка файлов недоступна, укажите детали в сообщении или отправьте фото по e-mail.'
     };
   }
 
@@ -61,7 +65,9 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
       sendAnother: 'Saada uus',
       errorNameRequired: 'Sisestage nimi.',
       errorPhoneInvalid: 'Sisestage korrektne telefon.',
-      errorEmailInvalid: 'Kontrollige e-posti aadressi.'
+      errorEmailInvalid: 'Kontrollige e-posti aadressi.',
+      fileLabel: 'Platsi fotod',
+      fileHelper: 'Võite valida platsi või näidise foto. Kui failide saatmine ei ole saadaval, lisage detailid sõnumisse või saatke foto e-postiga.'
     };
   }
 
@@ -82,6 +88,8 @@ export function getContactAssistContent(locale: Locale): ContactAssistCopy {
     sendAnother: 'Send another',
     errorNameRequired: 'Please enter your name.',
     errorPhoneInvalid: 'Please enter a valid phone number.',
-    errorEmailInvalid: 'Please check the email address.'
+    errorEmailInvalid: 'Please check the email address.',
+    fileLabel: 'Site photos',
+    fileHelper: 'You can choose site or reference photos. If file upload is unavailable, add details in the message or send photos by email.'
   };
 }
