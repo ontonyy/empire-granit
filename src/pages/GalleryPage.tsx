@@ -26,7 +26,7 @@ export function GalleryPage({ locale }: GalleryPageProps) {
           {section.categories.map((category) => (
             <Card
               key={category.id}
-              to={`${buildLocalizedPath(locale, 'gallery')}/${category.id}`}
+              to={`${buildLocalizedPath(locale, 'memorials')}/${category.id}`}
               imageSrc={category.image}
               imageAlt={category.title}
               title={category.title}

@@ -15,9 +15,12 @@
 
 :root {
   /* Surfaces */
-  --bg-primary: #FAF7F2;
+  --surface-sand: #F4EFE6;
+  --surface-graphite: #2A2520;
+  --surface-offwhite: #FAF7F2;
+  --bg-primary: var(--surface-offwhite);
   --bg-surface: #FFFFFF;
-  --bg-surface-warm: #F4EFE6;
+  --bg-surface-warm: var(--surface-sand);
 
   /* Text */
   --text-primary: #1A1A1A;
@@ -30,6 +33,7 @@
   --accent-stone: #A8AFA3;
 
   /* Borders */
+  --rule-hairline: 1px solid #E8E2D5;
   --border-subtle: #E8E2D5;
   --border-strong: #C9BFAB;
 
@@ -61,8 +65,8 @@
   --section-pad: clamp(48px, 8vw, 96px);
 
   /* Typography */
-  --font-display: 'Cinzel', 'Playfair Display', 'Cormorant Garamond', serif;
-  --font-body: 'Inter', 'Söhne', 'Manrope', system-ui, sans-serif;
+  --font-display: 'Cinzel', 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', 'Söhne', 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   --fs-eyebrow: 0.75rem;
   --fs-body: 1rem;
@@ -78,12 +82,164 @@
   /* Effects */
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
   --shadow-lift: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --motion-quiet-duration: 260ms;
+  --motion-quiet-easing: cubic-bezier(0.2, 0, 0, 1);
+  --motion-quiet: var(--motion-quiet-duration) var(--motion-quiet-easing);
   --motion-fast: 200ms cubic-bezier(0.2, 0, 0, 1);
   --motion-base: 320ms cubic-bezier(0.2, 0, 0, 1);
 
   /* Focus */
-  --focus-ring: 2px solid var(--accent-bronze);
+  --focus-ring-bronze: 2px solid var(--accent-bronze);
+  --focus-ring: var(--focus-ring-bronze);
   --focus-offset: 2px;
+  /* Legacy color compatibility: keeps older CSS token-only while sections migrate. */
+  --legacy-color-132-132-132-034: rgba(132, 132, 132, 0.34);
+  --legacy-color-166-138-100-012: rgba(166, 138, 100, 0.12);
+  --legacy-color-166-138-100-014: rgba(166, 138, 100, 0.14);
+  --legacy-color-166-138-100-015: rgba(166, 138, 100, 0.15);
+  --legacy-color-166-138-100-016: rgba(166, 138, 100, 0.16);
+  --legacy-color-166-138-100-018: rgba(166, 138, 100, 0.18);
+  --legacy-color-166-138-100-022: rgba(166, 138, 100, 0.22);
+  --legacy-color-166-138-100-024: rgba(166, 138, 100, 0.24);
+  --legacy-color-166-138-100-028: rgba(166, 138, 100, 0.28);
+  --legacy-color-166-138-100-042: rgba(166, 138, 100, 0.42);
+  --legacy-color-205-183-218-034: rgba(205, 183, 218, 0.34);
+  --legacy-color-217-184-121-016: rgba(217, 184, 121, 0.16);
+  --legacy-color-242-188-130-038: rgba(242, 188, 130, 0.38);
+  --legacy-color-255-214-198-072: rgba(255, 214, 198, 0.72);
+  --legacy-color-255-255-255-006: rgba(255, 255, 255, 0.06);
+  --legacy-color-255-255-255-007: rgba(255, 255, 255, 0.07);
+  --legacy-color-255-255-255-008: rgba(255, 255, 255, 0.08);
+  --legacy-color-255-255-255-012: rgba(255, 255, 255, 0.12);
+  --legacy-color-255-255-255-014: rgba(255, 255, 255, 0.14);
+  --legacy-color-255-255-255-018: rgba(255, 255, 255, 0.18);
+  --legacy-color-255-255-255-024: rgba(255, 255, 255, 0.24);
+  --legacy-color-255-255-255-032: rgba(255, 255, 255, 0.32);
+  --legacy-color-255-255-255-035: rgba(255, 255, 255, 0.35);
+  --legacy-color-255-255-255-058: rgba(255, 255, 255, 0.58);
+  --legacy-color-255-255-255-065: rgba(255, 255, 255, 0.65);
+  --legacy-color-255-255-255-072: rgba(255, 255, 255, 0.72);
+  --legacy-color-255-255-255-076: rgba(255, 255, 255, 0.76);
+  --legacy-color-255-255-255-078: rgba(255, 255, 255, 0.78);
+  --legacy-color-255-255-255-082: rgba(255, 255, 255, 0.82);
+  --legacy-color-255-255-255-084: rgba(255, 255, 255, 0.84);
+  --legacy-color-255-255-255-085: rgba(255, 255, 255, 0.85);
+  --legacy-color-255-255-255-088: rgba(255, 255, 255, 0.88);
+  --legacy-color-255-255-255-092: rgba(255, 255, 255, 0.92);
+  --legacy-color-106-106-106-03: rgba(106, 106, 106, 0.3);
+  --legacy-color-130-102-68-018: rgba(130, 102, 68, 0.18);
+  --legacy-color-130-102-68-038: rgba(130, 102, 68, 0.38);
+  --legacy-color-166-138-100-01: rgba(166, 138, 100, 0.1);
+  --legacy-color-166-138-100-02: rgba(166, 138, 100, 0.2);
+  --legacy-color-166-138-100-04: rgba(166, 138, 100, 0.4);
+  --legacy-color-166-138-100-05: rgba(166, 138, 100, 0.5);
+  --legacy-color-180-198-222-03: rgba(180, 198, 222, 0.3);
+  --legacy-color-191-216-196-03: rgba(191, 216, 196, 0.3);
+  --legacy-color-217-184-121-06: rgba(217, 184, 121, 0.6);
+  --legacy-color-255-255-255-02: rgba(255, 255, 255, 0.2);
+  --legacy-color-255-255-255-04: rgba(255, 255, 255, 0.4);
+  --legacy-color-255-255-255-09: rgba(255, 255, 255, 0.9);
+  --legacy-color-48-66-106-042: rgba(48, 66, 106, 0.42);
+  --legacy-color-77-60-110-038: rgba(77, 60, 110, 0.38);
+  --legacy-color-22-45-25-038: rgba(22, 45, 25, 0.38);
+  --legacy-color-29-24-19-006: rgba(29, 24, 19, 0.06);
+  --legacy-color-29-24-19-008: rgba(29, 24, 19, 0.08);
+  --legacy-color-29-24-19-012: rgba(29, 24, 19, 0.12);
+  --legacy-color-29-24-19-014: rgba(29, 24, 19, 0.14);
+  --legacy-color-29-24-19-024: rgba(29, 24, 19, 0.24);
+  --legacy-color-34-28-21-012: rgba(34, 28, 21, 0.12);
+  --legacy-color-49-38-28-006: rgba(49, 38, 28, 0.06);
+  --legacy-color-49-38-28-008: rgba(49, 38, 28, 0.08);
+  --legacy-color-52-30-17-038: rgba(52, 30, 17, 0.38);
+  --legacy-color-57-45-33-005: rgba(57, 45, 33, 0.05);
+  --legacy-color-65-52-39-004: rgba(65, 52, 39, 0.04);
+  --legacy-color-65-52-39-005: rgba(65, 52, 39, 0.05);
+  --legacy-color-65-52-39-008: rgba(65, 52, 39, 0.08);
+  --legacy-color-79-20-11-054: rgba(79, 20, 11, 0.54);
+  --legacy-color-86-86-86-066: rgba(86, 86, 86, 0.66);
+  --legacy-color-87-87-87-042: rgba(87, 87, 87, 0.42);
+  --legacy-color-29-24-19-01: rgba(29, 24, 19, 0.1);
+  --legacy-color-29-24-19-02: rgba(29, 24, 19, 0.2);
+  --legacy-color-44-44-44-01: rgba(44, 44, 44, 0.1);
+  --legacy-color-46-46-46-07: rgba(46, 46, 46, 0.7);
+  --legacy-color-38-8-4-042: rgba(38, 8, 4, 0.42);
+  --legacy-color-0-0-0-003: rgba(0, 0, 0, 0.03);
+  --legacy-color-0-0-0-004: rgba(0, 0, 0, 0.04);
+  --legacy-color-0-0-0-008: rgba(0, 0, 0, 0.08);
+  --legacy-color-0-0-0-015: rgba(0, 0, 0, 0.15);
+  --legacy-color-0-0-0-028: rgba(0, 0, 0, 0.28);
+  --legacy-color-0d0d0f: #0d0d0f;
+  --legacy-color-13271a: #13271a;
+  --legacy-color-1a1a1a: #1a1a1a;
+  --legacy-color-252b40: #252b40;
+  --legacy-color-25d366: #25D366;
+  --legacy-color-2a2a2d: #2a2a2d;
+  --legacy-color-2c2c2c: #2C2C2C;
+  --legacy-color-2d241d: #2d241d;
+  --legacy-color-2e7d32: #2e7d32;
+  --legacy-color-2f1f16: #2f1f16;
+  --legacy-color-2f2722: #2f2722;
+  --legacy-color-342a22: #342a22;
+  --legacy-color-44566d: #44566d;
+  --legacy-color-47372c: #47372c;
+  --legacy-color-49382c: #49382c;
+  --legacy-color-4c6d57: #4c6d57;
+  --legacy-color-4d433a: #4d433a;
+  --legacy-color-4d466a: #4d466a;
+  --legacy-color-5b2a1f: #5b2a1f;
+  --legacy-color-6b6b6b: #6B6B6B;
+  --legacy-color-6c4a36: #6c4a36;
+  --legacy-color-6d5337: #6d5337;
+  --legacy-color-7770a2: #7770a2;
+  --legacy-color-826644: #826644;
+  --legacy-color-8c3f3f: #8c3f3f;
+  --legacy-color-a6462c: #a6462c;
+  --legacy-color-a68a64: #A68A64;
+  --legacy-color-b2b2b2: #b2b2b2;
+  --legacy-color-b58f5b: #b58f5b;
+  --legacy-color-bcac95: #bcac95;
+  --legacy-color-c0392b: #c0392b;
+  --legacy-color-c7a36f: #c7a36f;
+  --legacy-color-c8e6c9: #c8e6c9;
+  --legacy-color-cdbca6: #cdbca6;
+  --legacy-color-cfb48f: #cfb48f;
+  --legacy-color-d32f2f: #d32f2f;
+  --legacy-color-d8caba: #d8caba;
+  --legacy-color-d8d8d8: #d8d8d8;
+  --legacy-color-d9b879: #d9b879;
+  --legacy-color-dadada: #dadada;
+  --legacy-color-e6d6bd: #e6d6bd;
+  --legacy-color-eadfcf: #eadfcf;
+  --legacy-color-ebe1d2: #ebe1d2;
+  --legacy-color-ece4d9: #ece4d9;
+  --legacy-color-efe7dc: #efe7dc;
+  --legacy-color-efe8de: #efe8de;
+  --legacy-color-f0e4d2: #f0e4d2;
+  --legacy-color-f0ede8: #F0EDE8;
+  --legacy-color-f1ebe3: #f1ebe3;
+  --legacy-color-f1f8e9: #f1f8e9;
+  --legacy-color-f2ebe1: #f2ebe1;
+  --legacy-color-f2f2f2: #f2f2f2;
+  --legacy-color-f3e7d7: #f3e7d7;
+  --legacy-color-f3ecdf: #f3ecdf;
+  --legacy-color-f3ede4: #f3ede4;
+  --legacy-color-f4ede3: #f4ede3;
+  --legacy-color-f5efe6: #f5efe6;
+  --legacy-color-f5efe7: #f5efe7;
+  --legacy-color-f7f2eb: #f7f2eb;
+  --legacy-color-f7f3ec: #f7f3ec;
+  --legacy-color-f7f3ed: #f7f3ed;
+  --legacy-color-f8f4ee: #f8f4ee;
+  --legacy-color-faf7f2: #faf7f2;
+  --legacy-color-fafafa: #FAFAFA;
+  --legacy-color-fbf7f1: #fbf7f1;
+  --legacy-color-fbf8f3: #fbf8f3;
+  --legacy-color-fbfbfb: #fbfbfb;
+  --legacy-color-fcfaf7: #fcfaf7;
+  --legacy-color-fdfbf7: #fdfbf7;
+  --legacy-color-fffaf2: #fffaf2;
+  --legacy-color-white: #ffffff;
+
 }
 
 /* Primitives — base classes consumed by ui/* components and refactored sections */
@@ -118,7 +274,8 @@
   color: var(--text-primary);
   line-height: 1.15;
   font-weight: 500;
-  font-variant-caps: normal;
+  font-variant-caps: small-caps;
+  font-feature-settings: "smcp" 1;
   text-transform: none;
   letter-spacing: 0;
 }
@@ -558,4 +715,3 @@
   margin: 0 auto var(--space-3);
   line-height: 1.6;
 }
-

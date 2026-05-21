@@ -23,7 +23,7 @@ export function PricingBenefits({ benefits }: PricingBenefitsProps) {
                 gap: '0.5rem'
               }}
             >
-              <span aria-hidden="true">✓</span>
+              <span className="checkmark" aria-hidden="true">✓</span>
               {item.title}
             </h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>{item.description}</p>

@@ -16,7 +16,7 @@ export function CatalogSubcategoryPage({ locale, labels, category }: CatalogSubc
     <article className="content-panel gallery-detail">
       <Breadcrumb
         items={[
-          { label: catalogRoot, to: buildLocalizedPath(locale, 'gallery') },
+          { label: catalogRoot, to: buildLocalizedPath(locale, 'memorials') },
           { label: category.title }
         ]}
       />

@@ -8,7 +8,12 @@ export const ROUTE_KEYS: RouteKey[] = [
   'home',
   'about',
   'pricing',
-  'gallery',
+  'memorials',
+  'materials',
+  'portfolio',
+  'process',
+  'preview',
+  'restorationInstallation',
   'faq',
   'playground',
   'contact',
@@ -25,5 +30,5 @@ export function getRouteSegment(locale: Locale, routeKey: RouteKey): string {
 }
 
 export function buildCatalogSubcategoryPath(locale: Locale, subcategoryId: string): string {
-  return `${buildLocalizedPath(locale, 'gallery')}/catalog/${subcategoryId}`;
+  return `${buildLocalizedPath(locale, 'memorials')}/catalog/${subcategoryId}`;
 }

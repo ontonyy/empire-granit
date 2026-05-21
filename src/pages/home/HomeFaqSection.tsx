@@ -18,7 +18,7 @@ export function HomeFaqSection({ locale, label, title, items, ctaLabel }: HomeFa
         <h2>{title}</h2>
       </div>
       <div className="home-faq-grid">
-        {items.map((item) => (
+        {items.slice(0, 3).map((item) => (
           <article key={item.question}>
             <h3>{item.question}</h3>
             <p>{item.answer}</p>
@@ -31,4 +31,3 @@ export function HomeFaqSection({ locale, label, title, items, ctaLabel }: HomeFa
     </section>
   );
 }
-

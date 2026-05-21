@@ -4,7 +4,12 @@ export type RouteKey =
   | 'home'
   | 'about'
   | 'pricing'
-  | 'gallery'
+  | 'memorials'
+  | 'materials'
+  | 'portfolio'
+  | 'process'
+  | 'preview'
+  | 'restorationInstallation'
   | 'faq'
   | 'playground'
   | 'contact'
@@ -37,6 +42,23 @@ export interface LocaleContent {
     writeWhatsapp: string;
     sendInquiry: string;
   };
+  layout: {
+    emergencyPrefix: string;
+    footerIntro: string;
+    footerNavigation: string;
+    footerContacts: string;
+    footerAddress: string;
+    footerHours: string;
+    footerHoursValue: string;
+    footerSupport: string;
+    aboutAndPrivacy: string;
+    mobileMenuOpen: string;
+    mobileMenuClose: string;
+    call: string;
+    primaryNavigation: string;
+    languageSwitcher: string;
+    locationMap: string;
+  };
   homepage: {
     heroTitle: string;
     heroLead: string;
@@ -61,6 +83,11 @@ export interface LocaleContent {
     optionsTitle: string;
     optionsLead: string;
     options: Array<{ title: string; body: string }>;
+    configuratorLabel: string;
+    configuratorTitle: string;
+    configuratorLead: string;
+    configuratorItems: Array<{ title: string; body: string }>;
+    configuratorCta: string;
     pricingLabel: string;
     pricingTitle: string;
     pricingLead: string;
@@ -87,11 +114,24 @@ export interface LocaleContent {
     title: string;
     lead: string;
     points: string[];
-    metrics: Array<{ value: string; label: string }>;
+    photoAlt: string;
+    area: {
+      kicker: string;
+      title: string;
+      body: string;
+      points: string[];
+    };
+    contact: {
+      title: string;
+      body: string;
+      primary: string;
+      secondary: string;
+    };
   };
   pricing: {
     heading: string;
     intro: string;
+    bottomNote: string;
     includedLabel: string;
     affectsLabel: string;
     tiers: Array<{
@@ -123,6 +163,71 @@ export interface LocaleContent {
       title: string;
       image: string;
     }>;
+  };
+  portfolio: {
+    heading: string;
+    intro: string;
+    labels: {
+      eyebrow: string;
+      cta: string;
+    };
+    items: Array<{
+      id: string;
+      title: string;
+      summary: string;
+      location: string;
+      image: string;
+    }>;
+  };
+  process: {
+    eyebrow: string;
+    heading: string;
+    intro: string;
+    ctaTitle: string;
+    ctaBody: string;
+    ctaLabel: string;
+    steps: Array<{
+      title: string;
+      image: string;
+      paragraphs: string[];
+    }>;
+  };
+  preview: {
+    eyebrow: string;
+    heading: string;
+    intro: string;
+    sampleName: string;
+    sampleDates: string;
+    stepper: string[];
+    groups: {
+      shape: string;
+      stone: string;
+      finish: string;
+      engraving: string;
+      addons: string;
+    };
+    labels: {
+      preview: string;
+      selected: string;
+      polished: string;
+      name: string;
+      dates: string;
+    };
+    finishOptions: Array<{ id: 'polished' | 'honed' | 'flamed'; label: string }>;
+    letteringOptions: Array<{ id: 'serif' | 'sans' | 'script' | 'caps'; label: string }>;
+    addonOptions: {
+      vase: string;
+      photo: string;
+      ornament: string;
+      candle: string;
+      border: string;
+    };
+    save: {
+      title: string;
+      body: string;
+      action: string;
+      consult: string;
+    };
   };
   playground: {
     heading: string;
@@ -157,6 +262,32 @@ export interface LocaleContent {
       message: string;
       consent: string;
       submit: string;
+    };
+    assist: {
+      detailsTitle: string;
+      intentTitle: string;
+      detailsPhone: string;
+      detailsEmail: string;
+      whatsappLabel: string;
+      inquiryTitle: string;
+      inquiryHint: string;
+      packageInterestTemplate: string;
+      designInterestTemplate: string;
+      optionalLabel: string;
+      formLoading: string;
+      formSuccess: string;
+      formError: string;
+      formRateLimit: string;
+      sendAnother: string;
+      modeMessage: string;
+      modeCallback: string;
+      callbackTitle: string;
+      callbackHint: string;
+      errorNameRequired: string;
+      errorPhoneInvalid: string;
+      errorEmailInvalid: string;
+      fileLabel: string;
+      fileHelper: string;
     };
   };
   privacy: {
