@@ -3,12 +3,16 @@ import { Layout } from '../components/Layout';
 import { AboutPage } from '../pages/AboutPage';
 import { ContactPage } from '../pages/ContactPage';
 import { FaqPage } from '../pages/FaqPage';
-import { GalleryDetailPage } from '../pages/GalleryDetailPage';
-import { GalleryPage } from '../pages/GalleryPage';
 import { HomePage } from '../pages/HomePage';
+import { MaterialsPage } from '../pages/MaterialsPage';
+import { MemorialsPage } from '../pages/MemorialsPage';
 import { PlaygroundPage } from '../pages/PlaygroundPage';
+import { PortfolioPage } from '../pages/PortfolioPage';
+import { PreviewPage } from '../pages/PreviewPage';
 import { PricingPage } from '../pages/PricingPage';
 import { PrivacyPage } from '../pages/PrivacyPage';
+import { ProcessPage } from '../pages/ProcessPage';
+import { RestorationInstallationPage } from '../pages/RestorationInstallationPage';
 import { LOCALES, buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
 import { resolveRouteKey } from './resolve-route-key';
@@ -33,13 +37,12 @@ export function LocaleRouteResolver() {
       {routeKey === 'home' ? <HomePage locale={locale} /> : null}
       {routeKey === 'about' ? <AboutPage locale={locale} /> : null}
       {routeKey === 'pricing' ? <PricingPage locale={locale} /> : null}
-      {routeKey === 'gallery' ? (
-        subPath ? (
-          <GalleryDetailPage locale={locale} categoryId={subPath} />
-        ) : (
-          <GalleryPage locale={locale} />
-        )
-      ) : null}
+      {routeKey === 'memorials' ? <MemorialsPage locale={locale} categoryId={subPath} /> : null}
+      {routeKey === 'materials' ? <MaterialsPage locale={locale} /> : null}
+      {routeKey === 'portfolio' ? <PortfolioPage locale={locale} /> : null}
+      {routeKey === 'process' ? <ProcessPage locale={locale} /> : null}
+      {routeKey === 'preview' ? <PreviewPage locale={locale} /> : null}
+      {routeKey === 'restorationInstallation' ? <RestorationInstallationPage locale={locale} /> : null}
       {routeKey === 'faq' ? <FaqPage locale={locale} /> : null}
       {routeKey === 'playground' ? <PlaygroundPage locale={locale} /> : null}
       {routeKey === 'contact' ? <ContactPage locale={locale} /> : null}

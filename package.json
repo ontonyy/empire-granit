@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "generate:seo": "node scripts/generate-seo-assets.mjs",
     "validate:content": "node scripts/validate-content.mjs",
+    "lint": "tsc --noEmit",
     "lint:links": "node scripts/check-links.mjs",
     "test": "vitest run"
   },

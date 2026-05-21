@@ -8,12 +8,12 @@ interface ServiceAreaSectionProps {
 export function ServiceAreaSection({ label, title, lead, items }: ServiceAreaSectionProps) {
   return (
     <section className="home-service-area reveal-on-scroll">
-      <div>
+      <div className="home-service-area-copy">
         <span className="section-kicker">{label}</span>
         <h2>{title}</h2>
         <p>{lead}</p>
       </div>
-      <ul>
+      <ul aria-label={title}>
         {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
@@ -21,4 +21,3 @@ export function ServiceAreaSection({ label, title, lead, items }: ServiceAreaSec
     </section>
   );
 }
-

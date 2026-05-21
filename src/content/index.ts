@@ -4,12 +4,12 @@ import ru from './locales/ru.json';
 import type { Locale, LocaleContent } from '../types';
 
 const content: Record<Locale, LocaleContent> = {
-  ru: ru as LocaleContent,
-  et: et as LocaleContent,
-  en: en as LocaleContent
+  ru: ru as unknown as LocaleContent,
+  et: et as unknown as LocaleContent,
+  en: en as unknown as LocaleContent
 };
 
-function withBaseUrl(path?: string): string | undefined {
+function withBaseUrl(path: string): string {
   if (!path) {
     return path;
   }
@@ -42,6 +42,20 @@ function normalizeLocaleContent(localeContent: LocaleContent): LocaleContent {
       readyWorks: (localeContent.gallery.readyWorks ?? []).map((item) => ({
         ...item,
         image: withBaseUrl(item.image)
+      }))
+    },
+    portfolio: {
+      ...localeContent.portfolio,
+      items: localeContent.portfolio.items.map((item) => ({
+        ...item,
+        image: withBaseUrl(item.image)
+      }))
+    },
+    process: {
+      ...localeContent.process,
+      steps: localeContent.process.steps.map((step) => ({
+        ...step,
+        image: withBaseUrl(step.image)
       }))
     }
   };

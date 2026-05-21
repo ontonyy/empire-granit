@@ -14,7 +14,9 @@ export function ContactBanner({ locale, sendInquiryLabel }: ContactBannerProps) 
       <div>
         <span className="section-kicker">{siteConfig.contacts.company}</span>
         <h2>{siteConfig.contacts.phoneDisplay}</h2>
-        <p>{siteConfig.contacts.address}</p>
+        <p>
+          {siteConfig.contacts.email} · {siteConfig.contacts.address}
+        </p>
       </div>
       <div className="home-contact-actions">
         <Link className="hero-primary" to={buildLocalizedPath(locale, 'contact')}>

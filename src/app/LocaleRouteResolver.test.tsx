@@ -51,7 +51,6 @@ describe('LocaleRouteResolver', () => {
       </HelmetProvider>
     );
 
-    // "About the Company" is the title for EN
-    expect(screen.getByText(/About the Company/i)).toBeDefined();
+    expect(screen.getByText(/Workshop and contact point in Narva/i)).toBeDefined();
   });
 });

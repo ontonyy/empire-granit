@@ -10,9 +10,10 @@ interface LanguageSwitcherProps {
 
 export function LanguageSwitcher({ currentLocale, routeKey }: LanguageSwitcherProps) {
   const location = useLocation();
+  const currentContent = getLocaleContent(currentLocale);
 
   return (
-    <div className="language-switcher" aria-label="Language switcher">
+    <div className="language-switcher" aria-label={currentContent.layout.languageSwitcher}>
       {LOCALES.map((locale) => {
         const label = getLocaleContent(locale).localeLabel;
         const to = `${buildLocalizedPath(locale, routeKey)}${location.search}${location.hash}`;

@@ -11,8 +11,8 @@ export function TrustBarSection({ label, metrics }: TrustBarSectionProps) {
       className={`trust-bar-section reveal-on-scroll${metrics.length === 2 ? ' trust-bar-section-compact' : ''}`}
       aria-label={label}
     >
-      {metrics.map((metric) => (
-        <article key={metric.label} className="trust-bar-item">
+      {metrics.map((metric, index) => (
+        <article key={metric.label} className="trust-bar-item" data-first={index === 0 ? 'true' : undefined}>
           <strong>{metric.value}</strong>
           <span>{metric.label}</span>
         </article>

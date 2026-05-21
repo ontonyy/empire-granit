@@ -43,11 +43,15 @@ export function ContactPage({ locale }: ContactPageProps) {
                 {siteConfig.contacts.email}
               </a>
             </div>
-            <div className="contact-method">
+            <div className="contact-method contact-method-primary">
               <p className="eyebrow">{assist.detailsPhone}</p>
               <a href={siteConfig.contacts.phoneLink} className="contact-link-premium phone-highlight">
                 {siteConfig.contacts.phoneDisplay}
               </a>
+            </div>
+            <div className="contact-method">
+              <p className="eyebrow">{content.layout.footerHours}</p>
+              <p className="contact-hours">{content.layout.footerHoursValue}</p>
             </div>
           </article>
 
@@ -70,7 +74,7 @@ export function ContactPage({ locale }: ContactPageProps) {
 
           <div id="map" className="map-frame-container">
             <iframe
-              title="Location Map"
+              title={content.layout.locationMap}
               src={siteConfig.contacts.mapEmbedUrl}
               width="100%"
               height="450"

@@ -44,13 +44,6 @@ export function SiteHeader({
     setMobileNavOpen(false);
   }, [routeKey]);
 
-  const mobileMenuLabel =
-    locale === 'ru' ? 'Открыть меню' : locale === 'et' ? 'Ava menüü' : 'Open menu';
-  const mobileCloseLabel =
-    locale === 'ru' ? 'Закрыть меню' : locale === 'et' ? 'Sulge menüü' : 'Close menu';
-  const callLabel =
-    locale === 'ru' ? 'Позвонить' : locale === 'et' ? 'Helista' : 'Call';
-
   return (
     <header className={isHeaderElevated ? 'site-header is-elevated' : 'site-header'}>
       <div className="brand-row">
@@ -75,7 +68,7 @@ export function SiteHeader({
           <a
             className="brand-emergency-link"
             href={siteConfig.contacts.phoneLink}
-            aria-label={`${callLabel} ${siteConfig.contacts.phoneDisplay}`}
+            aria-label={`${ui.call} ${siteConfig.contacts.phoneDisplay}`}
             onClick={() => trackEvent('phone_click', { locale, source: 'header-emergency' })}
           >
             <svg
@@ -101,7 +94,7 @@ export function SiteHeader({
             className={mobileNavOpen ? 'mobile-nav-toggle active' : 'mobile-nav-toggle'}
             aria-expanded={mobileNavOpen}
             aria-controls="main-nav"
-            aria-label={mobileNavOpen ? mobileCloseLabel : mobileMenuLabel}
+            aria-label={mobileNavOpen ? ui.mobileMenuClose : ui.mobileMenuOpen}
             onClick={() => setMobileNavOpen((current) => !current)}
           >
             <span />
@@ -114,7 +107,7 @@ export function SiteHeader({
       <nav
         id="main-nav"
         className={mobileNavOpen ? 'main-nav open' : 'main-nav'}
-        aria-label="Primary"
+        aria-label={ui.primaryNavigation}
       >
         {CORE_NAV_KEYS.map((navKey) => (
           <Link

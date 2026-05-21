@@ -55,6 +55,8 @@ export function PricingPage({ locale }: PricingPageProps) {
         ))}
       </div>
 
+      <p className="pricing-bottom-note">{section.bottomNote}</p>
+
       <PricingBenefits benefits={section.benefits} />
     </section>
   );

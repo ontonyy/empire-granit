@@ -62,7 +62,7 @@ export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps
       <div className="content-panel">
         <h1>404</h1>
         <p>Category not found.</p>
-        <Link to={buildLocalizedPath(locale, 'gallery')}>{labels.backToGallery}</Link>
+        <Link to={buildLocalizedPath(locale, 'memorials')}>{labels.backToGallery}</Link>
       </div>
     );
   }
@@ -75,7 +75,7 @@ export function GalleryDetailPage({ locale, categoryId }: GalleryDetailPageProps
     <article className="content-panel gallery-detail">
       <Breadcrumb
         items={[
-          { label: content.gallery.heading, to: buildLocalizedPath(locale, 'gallery') },
+          { label: content.gallery.heading, to: buildLocalizedPath(locale, 'memorials') },
           { label: category.title }
         ]}
       />
