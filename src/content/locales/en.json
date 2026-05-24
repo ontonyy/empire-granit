@@ -2,6 +2,7 @@
   "localeLabel": "English",
   "nav": {
     "home": "Home",
+    "works": "Works",
     "about": "About",
     "pricing": "Prices",
     "memorials": "Memorials",
@@ -918,6 +919,10 @@
     "home": {
       "title": "Empire Granit - granite monuments with installation",
       "description": "Monument production, engraving, borders, restoration, and installation across Estonia."
+    },
+    "works": {
+      "title": "Works | Empire Granit",
+      "description": "Selected completed monuments, borders, and gravesite arrangements across Estonia."
     },
     "about": {
       "title": "About Empire Granit",

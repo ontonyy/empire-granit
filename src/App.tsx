@@ -5,11 +5,11 @@ import { LocaleRouteResolver } from './app/LocaleRouteResolver';
 export function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/ru/" replace />} />
-      <Route path="/__empire-admin" element={<Navigate to="/ru/__empire-admin" replace />} />
+      <Route path="/" element={<Navigate to="/et/" replace />} />
+      <Route path="/__empire-admin" element={<Navigate to="/et/__empire-admin" replace />} />
       <Route path="/:locale/__empire-admin" element={<AdminRoute />} />
       <Route path="/:locale/*" element={<LocaleRouteResolver />} />
-      <Route path="*" element={<Navigate to="/ru/" replace />} />
+      <Route path="*" element={<Navigate to="/et/" replace />} />
     </Routes>
   );
 }
