@@ -32,7 +32,7 @@ export function HeroSection({
           <Link className="hero-primary" to={buildLocalizedPath(locale, 'contact')}>
             {primaryCta}
           </Link>
-          <Link className="hero-secondary" to={buildLocalizedPath(locale, 'memorials')}>
+          <Link className="hero-secondary" to={buildLocalizedPath(locale, 'works')}>
             {secondaryCta}
           </Link>
         </div>

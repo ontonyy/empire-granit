@@ -4,40 +4,15 @@
     "et": "",
     "en": ""
   },
-  "about": {
-    "ru": "o-kompanii",
-    "et": "meist",
-    "en": "about"
+  "works": {
+    "ru": "raboty",
+    "et": "tood",
+    "en": "works"
   },
   "pricing": {
     "ru": "ceny",
     "et": "hinnakiri",
     "en": "pricing"
-  },
-  "memorials": {
-    "ru": "pamyatniki",
-    "et": "hauakivid",
-    "en": "memorials"
-  },
-  "materials": {
-    "ru": "materialy",
-    "et": "materjalid",
-    "en": "materials"
-  },
-  "portfolio": {
-    "ru": "raboty",
-    "et": "portfoolio",
-    "en": "portfolio"
-  },
-  "faq": {
-    "ru": "voprosy",
-    "et": "kkk",
-    "en": "faq"
-  },
-  "playground": {
-    "ru": "konfigurator",
-    "et": "konfiguraator",
-    "en": "playground"
   },
   "contact": {
     "ru": "kontakty",
@@ -48,20 +23,5 @@
     "ru": "politika-konfidentsialnosti",
     "et": "privaatsuspoliitika",
     "en": "privacy-policy"
-  },
-  "process": {
-    "ru": "process",
-    "et": "protsess",
-    "en": "process"
-  },
-  "preview": {
-    "ru": "preview",
-    "et": "eelvaade",
-    "en": "preview"
-  },
-  "restorationInstallation": {
-    "ru": "uslugi/restavratsiya-ustanovka",
-    "et": "teenused/taastamine-paigaldus",
-    "en": "services/restoration-installation"
   }
 }

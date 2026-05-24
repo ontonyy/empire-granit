@@ -4,21 +4,7 @@ import type { Locale, RouteKey } from './types';
 const routeSegments = routeSegmentsRaw as Record<RouteKey, Record<Locale, string>>;
 
 export const LOCALES: Locale[] = ['ru', 'et', 'en'];
-export const ROUTE_KEYS: RouteKey[] = [
-  'home',
-  'about',
-  'pricing',
-  'memorials',
-  'materials',
-  'portfolio',
-  'process',
-  'preview',
-  'restorationInstallation',
-  'faq',
-  'playground',
-  'contact',
-  'privacy'
-];
+export const ROUTE_KEYS: RouteKey[] = ['home', 'works', 'pricing', 'contact', 'privacy'];
 
 export function buildLocalizedPath(locale: Locale, routeKey: RouteKey): string {
   const segment = routeSegments[routeKey][locale];
@@ -27,8 +13,4 @@ export function buildLocalizedPath(locale: Locale, routeKey: RouteKey): string {
 
 export function getRouteSegment(locale: Locale, routeKey: RouteKey): string {
   return routeSegments[routeKey][locale];
-}
-
-export function buildCatalogSubcategoryPath(locale: Locale, subcategoryId: string): string {
-  return `${buildLocalizedPath(locale, 'memorials')}/catalog/${subcategoryId}`;
 }

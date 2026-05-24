@@ -48,7 +48,6 @@ export function SiteFooter({ locale, ui, nav, logoSrc, mapLink, hidePhoneLink = 
                 {nav[navKey]}
               </Link>
             ))}
-            <Link to={buildLocalizedPath(locale, 'about')}>{nav.about}</Link>
             <Link to={buildLocalizedPath(locale, 'privacy')}>{nav.privacy}</Link>
           </div>
         </section>

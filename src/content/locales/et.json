@@ -2,6 +2,7 @@
   "localeLabel": "Eesti",
   "nav": {
     "home": "Avaleht",
+    "works": "Tööd",
     "about": "Ettevõttest",
     "pricing": "Hinnakiri",
     "memorials": "Hauakivid",
@@ -918,6 +919,10 @@
     "home": {
       "title": "Empire Granit - graniidist monumendid paigaldusega",
       "description": "Monumentide valmistamine, graveering, piirded, restaureerimine ja paigaldus üle Eesti."
+    },
+    "works": {
+      "title": "Tööd | Empire Granit",
+      "description": "Valik valminud monumente, piirdeid ja hauaplatsi korrastustöid Eestis."
     },
     "about": {
       "title": "Empire Granit Narvas - töökoda ja graniiditööd",

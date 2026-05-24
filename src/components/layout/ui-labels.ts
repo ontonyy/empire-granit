@@ -25,13 +25,7 @@ export function getLayoutUiLabels(locale: Locale): LayoutUiLabels {
 
 export const CORE_NAV_KEYS = [
   'home',
+  'works',
   'pricing',
-  'memorials',
-  'materials',
-  'portfolio',
-  'process',
-  'preview',
-  'restorationInstallation',
-  'faq',
   'contact'
 ] as const;

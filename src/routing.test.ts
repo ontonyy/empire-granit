@@ -9,44 +9,30 @@ describe('routing', () => {
   });
 
   it('should have core route keys', () => {
-    expect(ROUTE_KEYS).toContain('home');
-    expect(ROUTE_KEYS).toContain('contact');
-    expect(ROUTE_KEYS).toContain('memorials');
-    expect(ROUTE_KEYS).toContain('materials');
-    expect(ROUTE_KEYS).toContain('portfolio');
-    expect(ROUTE_KEYS).toContain('process');
-    expect(ROUTE_KEYS).toContain('preview');
-    expect(ROUTE_KEYS).toContain('restorationInstallation');
+    expect(ROUTE_KEYS).toEqual(['home', 'works', 'pricing', 'contact', 'privacy']);
   });
 
   it('should build localized paths correctly', () => {
-    // Russian
     expect(buildLocalizedPath('ru', 'home')).toBe('/ru/');
     expect(buildLocalizedPath('ru', 'contact')).toBe('/ru/kontakty');
-    
-    // Estonian
+    expect(buildLocalizedPath('ru', 'works')).toBe('/ru/raboty');
+
     expect(buildLocalizedPath('et', 'home')).toBe('/et/');
     expect(buildLocalizedPath('et', 'contact')).toBe('/et/kontakt');
+    expect(buildLocalizedPath('et', 'works')).toBe('/et/tood');
 
-    // English
     expect(buildLocalizedPath('en', 'home')).toBe('/en/');
     expect(buildLocalizedPath('en', 'contact')).toBe('/en/contact');
-    expect(buildLocalizedPath('en', 'memorials')).toBe('/en/memorials');
-    expect(buildLocalizedPath('en', 'materials')).toBe('/en/materials');
-    expect(buildLocalizedPath('en', 'portfolio')).toBe('/en/portfolio');
-    expect(buildLocalizedPath('en', 'process')).toBe('/en/process');
-    expect(buildLocalizedPath('en', 'preview')).toBe('/en/preview');
-    expect(buildLocalizedPath('en', 'restorationInstallation')).toBe('/en/services/restoration-installation');
+    expect(buildLocalizedPath('en', 'works')).toBe('/en/works');
+    expect(buildLocalizedPath('en', 'pricing')).toBe('/en/pricing');
+    expect(buildLocalizedPath('en', 'privacy')).toBe('/en/privacy-policy');
   });
 
   it('should get route segments', () => {
-    expect(getRouteSegment('ru', 'about')).toBe('o-kompanii');
-    expect(getRouteSegment('et', 'about')).toBe('meist');
-    expect(getRouteSegment('en', 'about')).toBe('about');
-    expect(getRouteSegment('ru', 'process')).toBe('process');
-    expect(getRouteSegment('et', 'process')).toBe('protsess');
-    expect(getRouteSegment('et', 'preview')).toBe('eelvaade');
-    expect(getRouteSegment('ru', 'restorationInstallation')).toBe('uslugi/restavratsiya-ustanovka');
-    expect(getRouteSegment('et', 'materials')).toBe('materjalid');
+    expect(getRouteSegment('ru', 'works')).toBe('raboty');
+    expect(getRouteSegment('et', 'works')).toBe('tood');
+    expect(getRouteSegment('en', 'works')).toBe('works');
+    expect(getRouteSegment('et', 'pricing')).toBe('hinnakiri');
+    expect(getRouteSegment('ru', 'privacy')).toBe('politika-konfidentsialnosti');
   });
 });

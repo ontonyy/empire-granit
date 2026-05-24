@@ -4,31 +4,30 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { LocaleRouteResolver } from './LocaleRouteResolver';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Mock analytics to avoid Firebase issues in tests
 vi.mock('../lib/analytics', () => ({
   trackEvent: vi.fn(),
 }));
 
 describe('LocaleRouteResolver', () => {
-  it('should redirect to /ru/ if locale is invalid', () => {
+  it('should redirect to /et/ if locale is invalid', () => {
     render(
       <HelmetProvider>
         <MemoryRouter initialEntries={['/invalid/path']}>
           <Routes>
             <Route path="/:locale/*" element={<LocaleRouteResolver />} />
-            <Route path="/ru/" element={<div>RU Home</div>} />
+            <Route path="/et/" element={<div>ET Home</div>} />
           </Routes>
         </MemoryRouter>
       </HelmetProvider>
     );
 
-    expect(screen.getByText('RU Home')).toBeDefined();
+    expect(screen.getByText('ET Home')).toBeDefined();
   });
 
-  it('should render HomePage for /ru/', () => {
+  it('should render WorksPage stub for /et/tood', () => {
     render(
       <HelmetProvider>
-        <MemoryRouter initialEntries={['/ru/']}>
+        <MemoryRouter initialEntries={['/et/tood']}>
           <Routes>
             <Route path="/:locale/*" element={<LocaleRouteResolver />} />
           </Routes>
@@ -36,21 +35,36 @@ describe('LocaleRouteResolver', () => {
       </HelmetProvider>
     );
 
-    // Use a unique string from HomePage to verify it rendered.
-    expect(screen.getByText(/Уверенность в трудную минуту/i)).toBeDefined();
+    expect(screen.getByRole('heading', { name: /Tööd/i })).toBeDefined();
   });
 
-  it('should render AboutPage for /en/about', () => {
+  it('should redirect legacy /en/about to home', () => {
     render(
       <HelmetProvider>
         <MemoryRouter initialEntries={['/en/about']}>
           <Routes>
             <Route path="/:locale/*" element={<LocaleRouteResolver />} />
+            <Route path="/en/" element={<div>EN Home</div>} />
           </Routes>
         </MemoryRouter>
       </HelmetProvider>
     );
 
-    expect(screen.getByText(/Workshop and contact point in Narva/i)).toBeDefined();
+    expect(screen.getByText('EN Home')).toBeDefined();
+  });
+
+  it('should redirect legacy /et/hauakivid to works', () => {
+    render(
+      <HelmetProvider>
+        <MemoryRouter initialEntries={['/et/hauakivid']}>
+          <Routes>
+            <Route path="/:locale/*" element={<LocaleRouteResolver />} />
+            <Route path="/et/tood" element={<div>ET Works</div>} />
+          </Routes>
+        </MemoryRouter>
+      </HelmetProvider>
+    );
+
+    expect(screen.getByText('ET Works')).toBeDefined();
   });
 });

@@ -33,6 +33,21 @@ async function run() {
 
   await rm(path.join(projectRoot, 'dist-ssr'), { recursive: true, force: true });
 
+  const rootIndex = path.join(distDir, 'index.html');
+  const fallback = `<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="refresh" content="0; url=/et/" />
+<link rel="canonical" href="/et/" />
+<title>Empire Granit</title>
+</head>
+<body><script>window.location.replace('/et/');</script></body>
+</html>
+`;
+  await writeFile(path.join(distDir, '404.html'), fallback);
+  await rm(rootIndex, { force: true });
+
   console.log(`Prerendered ${routes.length} routes.`);
 }
 

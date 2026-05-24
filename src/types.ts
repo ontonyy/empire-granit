@@ -2,16 +2,8 @@ export type Locale = 'ru' | 'et' | 'en';
 
 export type RouteKey =
   | 'home'
-  | 'about'
+  | 'works'
   | 'pricing'
-  | 'memorials'
-  | 'materials'
-  | 'portfolio'
-  | 'process'
-  | 'preview'
-  | 'restorationInstallation'
-  | 'faq'
-  | 'playground'
   | 'contact'
   | 'privacy';
 
