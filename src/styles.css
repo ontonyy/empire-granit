@@ -4020,3 +4020,216 @@ select:focus {
     white-space: normal;
   }
 }
+
+/* ============================================================
+ * Works page — Wave 6
+ * ============================================================ */
+
+.works-header {
+  padding: var(--space-7) 0 var(--space-5);
+  background: var(--surface-stone);
+}
+
+.works-title {
+  max-width: 18ch;
+  margin-top: var(--space-2);
+}
+
+.works-lead {
+  margin-top: var(--space-3);
+  max-width: 640px;
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+  color: var(--ink-body);
+}
+
+.works-filter {
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--rule-color);
+  border-bottom: 1px solid var(--rule-color);
+  background: var(--surface-stone);
+}
+
+.works-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.works-filter-label {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--weight-emphasis);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.works-filter-pills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.works-filter-pill {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 6px 4px 8px;
+  font: inherit;
+  font-size: var(--fs-body);
+  color: var(--ink-body);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color var(--motion-quiet), border-color var(--motion-quiet);
+}
+
+.works-filter-pill:hover {
+  color: var(--accent-wood);
+}
+
+.works-filter-pill.is-active {
+  color: var(--ink-near-black);
+  border-bottom-color: var(--accent-wood);
+}
+
+.works-filter-pill:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.works-gallery {
+  padding: var(--space-6) 0 var(--space-7);
+  background: var(--surface-stone);
+}
+
+.works-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 180px;
+  gap: var(--space-3);
+}
+
+.works-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--surface-stone-deep);
+  grid-column: span 12;
+  grid-row: span 2;
+}
+
+@media (min-width: 720px) {
+  .works-grid { grid-auto-rows: 220px; }
+  .works-tile-portrait { grid-column: span 4; grid-row: span 2; }
+  .works-tile-landscape { grid-column: span 8; grid-row: span 1; }
+  .works-tile-square { grid-column: span 4; grid-row: span 1; }
+}
+
+@media (min-width: 1024px) {
+  .works-grid { grid-auto-rows: 240px; }
+}
+
+.works-tile-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: var(--ink-on-dark);
+  text-decoration: none;
+}
+
+.works-tile-link:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.works-tile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--motion-quiet);
+}
+
+.works-tile-link:hover .works-tile-image {
+  transform: scale(1.03);
+}
+
+.works-tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(21,20,15,0) 45%, rgba(21,20,15,0.65) 100%);
+  pointer-events: none;
+}
+
+.works-tile-caption {
+  position: absolute;
+  left: var(--space-3);
+  right: var(--space-3);
+  bottom: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #FBF8F0;
+  font-size: var(--fs-body);
+}
+
+.works-tile-title {
+  font-weight: var(--weight-emphasis);
+  letter-spacing: -0.01em;
+}
+
+.works-tile-material {
+  font-size: 13px;
+  color: rgba(251,248,240,0.78);
+}
+
+.works-cta {
+  padding: var(--space-7) 0;
+  background: var(--surface-card);
+  border-top: 1px solid var(--rule-color);
+}
+
+.works-cta-inner {
+  max-width: 720px;
+}
+
+.works-cta-title {
+  margin-top: var(--space-2);
+}
+
+.works-cta-body {
+  margin-top: var(--space-3);
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+  color: var(--ink-body);
+}
+
+.works-cta-link {
+  display: inline-block;
+  margin-top: var(--space-4);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--weight-emphasis);
+  color: var(--accent-wood);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-wood);
+  padding-bottom: 2px;
+  transition: color var(--motion-quiet), border-color var(--motion-quiet);
+}
+
+.works-cta-link:hover {
+  color: var(--accent-wood-hover);
+  border-color: var(--accent-wood-hover);
+}
+
+.works-cta-link:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}

@@ -1111,15 +1111,36 @@
       "dates": "Dates"
     },
     "finishOptions": [
-      { "id": "polished", "label": "Polished" },
-      { "id": "honed", "label": "Honed" },
-      { "id": "flamed", "label": "Flamed" }
+      {
+        "id": "polished",
+        "label": "Polished"
+      },
+      {
+        "id": "honed",
+        "label": "Honed"
+      },
+      {
+        "id": "flamed",
+        "label": "Flamed"
+      }
     ],
     "letteringOptions": [
-      { "id": "serif", "label": "Serif" },
-      { "id": "sans", "label": "Simple" },
-      { "id": "script", "label": "Script" },
-      { "id": "caps", "label": "Small caps" }
+      {
+        "id": "serif",
+        "label": "Serif"
+      },
+      {
+        "id": "sans",
+        "label": "Simple"
+      },
+      {
+        "id": "script",
+        "label": "Script"
+      },
+      {
+        "id": "caps",
+        "label": "Small caps"
+      }
     ],
     "addonOptions": {
       "vase": "Vase",
@@ -1133,6 +1154,26 @@
       "body": "The current choices are stored in the page link and can be sent with a consultation request.",
       "action": "Save your concept",
       "consult": "Request a consultation with this design"
+    }
+  },
+  "works": {
+    "eyebrow": "Works · Empire Granit",
+    "title": "Completed work, in context.",
+    "pageLead": "A selection of monuments, fences and grave site restoration projects across Estonia. Each one is shaped to a specific memorial and family.",
+    "filterLabel": "Filter",
+    "filters": {
+      "all": "All",
+      "monuments": "Monuments",
+      "fences": "Fences",
+      "engravings": "Engravings",
+      "installation": "Installation"
+    },
+    "captionSeparator": "·",
+    "cta": {
+      "eyebrow": "Need a similar solution?",
+      "title": "Don’t see the right fit?",
+      "body": "Every project starts with a conversation. Call us — we will match material, dimensions and budget to your memorial.",
+      "link": "Talk by phone"
     }
   }
 }

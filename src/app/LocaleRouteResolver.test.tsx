@@ -24,7 +24,7 @@ describe('LocaleRouteResolver', () => {
     expect(screen.getByText('ET Home')).toBeDefined();
   });
 
-  it('should render WorksPage stub for /et/tood', () => {
+  it('should render WorksPage for /et/tood', () => {
     render(
       <HelmetProvider>
         <MemoryRouter initialEntries={['/et/tood']}>
@@ -35,7 +35,9 @@ describe('LocaleRouteResolver', () => {
       </HelmetProvider>
     );
 
-    expect(screen.getByRole('heading', { name: /Tööd/i })).toBeDefined();
+    expect(
+      screen.getByRole('heading', { name: /Näited valminud lahendustest/i })
+    ).toBeDefined();
   });
 
   it('should redirect legacy /en/about to home', () => {
