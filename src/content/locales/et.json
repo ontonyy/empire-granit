@@ -1111,15 +1111,36 @@
       "dates": "Kuupäevad"
     },
     "finishOptions": [
-      { "id": "polished", "label": "Poleeritud" },
-      { "id": "honed", "label": "Matt" },
-      { "id": "flamed", "label": "Põletatud" }
+      {
+        "id": "polished",
+        "label": "Poleeritud"
+      },
+      {
+        "id": "honed",
+        "label": "Matt"
+      },
+      {
+        "id": "flamed",
+        "label": "Põletatud"
+      }
     ],
     "letteringOptions": [
-      { "id": "serif", "label": "Seriif" },
-      { "id": "sans", "label": "Lihtne" },
-      { "id": "script", "label": "Kiri" },
-      { "id": "caps", "label": "Kapiteel" }
+      {
+        "id": "serif",
+        "label": "Seriif"
+      },
+      {
+        "id": "sans",
+        "label": "Lihtne"
+      },
+      {
+        "id": "script",
+        "label": "Kiri"
+      },
+      {
+        "id": "caps",
+        "label": "Kapiteel"
+      }
     ],
     "addonOptions": {
       "vase": "Vaas",
@@ -1133,6 +1154,26 @@
       "body": "Praegused valikud on lehe lingis ja neid saab saata konsultatsioonipäringuga.",
       "action": "Salvesta kavand",
       "consult": "Küsi konsultatsiooni selle kavandiga"
+    }
+  },
+  "works": {
+    "eyebrow": "Tööd · Empire Granit",
+    "title": "Näited valminud lahendustest",
+    "pageLead": "Allpool valik valminud monumente, piirdeid ja platside korrastustöid Eestis. Iga töö on kohandatud konkreetse mälestuspaiga ja perekonna vajadustele.",
+    "filterLabel": "Filtreeri",
+    "filters": {
+      "all": "Kõik",
+      "monuments": "Monumendid",
+      "fences": "Piirded",
+      "engravings": "Graveeringud",
+      "installation": "Paigaldus"
+    },
+    "captionSeparator": "·",
+    "cta": {
+      "eyebrow": "Vajad sarnast lahendust?",
+      "title": "Sobiv lahendus pole nimekirjas?",
+      "body": "Iga töö algab vestlusest. Räägime telefoni teel, sobitame materjali, mõõdud ja eelarve.",
+      "link": "Räägime telefoni teel"
     }
   }
 }

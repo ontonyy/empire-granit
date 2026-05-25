@@ -4,7 +4,7 @@ import { ContactPage } from '../pages/ContactPage';
 import { HomePage } from '../pages/HomePage';
 import { PricingPage } from '../pages/PricingPage';
 import { PrivacyPage } from '../pages/PrivacyPage';
-import { WorksPage } from '../pages/WorksPage';
+import { WorksPage } from '../pages/works/WorksPage';
 import { LOCALES, buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
 import { resolveLegacyRedirect } from './legacy-redirects';

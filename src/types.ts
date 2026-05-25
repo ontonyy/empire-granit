@@ -144,6 +144,26 @@ export interface LocaleContent {
       }>;
     };
   };
+  works: {
+    eyebrow: string;
+    title: string;
+    pageLead: string;
+    filterLabel: string;
+    filters: {
+      all: string;
+      monuments: string;
+      fences: string;
+      engravings: string;
+      installation: string;
+    };
+    captionSeparator: string;
+    cta: {
+      eyebrow: string;
+      title: string;
+      body: string;
+      link: string;
+    };
+  };
   gallery: {
     heading: string;
     intro: string;
