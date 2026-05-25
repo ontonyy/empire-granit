@@ -40,6 +40,18 @@ export interface LocaleContent {
     secondaryCta: string;
     trustLabel: string;
     trustMetrics: Array<{ value: string; label: string }>;
+    intro: string;
+    phoneEyebrow: string;
+    craftEyebrow: string;
+    craftTitle: string;
+    servicesShort: Array<{ title: string; body: string }>;
+    worksSectionEyebrow: string;
+    worksSectionTitle: string;
+    pricesEyebrow: string;
+    pricesTitle: string;
+    pricesTableLink: string;
+    finalEyebrow: string;
+    finalContactLink: string;
   };
   pricing: {
     heading: string;
@@ -47,6 +59,7 @@ export interface LocaleContent {
     bottomNote: string;
     includedLabel: string;
     affectsLabel: string;
+    factorsBody: string[];
     tiers: Array<{
       id: string;
       name: string;
@@ -62,6 +75,8 @@ export interface LocaleContent {
     title: string;
     pageLead: string;
     filterLabel: string;
+    homeFooterCounter: string;
+    viewAllLink: string;
     filters: {
       all: string;
       monuments: string;
