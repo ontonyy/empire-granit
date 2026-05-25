@@ -15,76 +15,59 @@ export function ContactPage({ locale }: ContactPageProps) {
   const assist = getContactAssistContent(locale);
   const formRef = useRef<HTMLDivElement>(null);
 
-  const labels = section.formLabels;
-  const inquiryTitle = section.inquiryTitle || assist.inquiryTitle;
-  const inquiryHint = assist.inquiryHint;
-
   return (
-    <section className="content-panel contact-overhaul reveal-on-scroll is-visible">
-      <div className="contact-hero">
+    <section className="content-panel contact-n3 reveal-on-scroll is-visible">
+      <header className="contact-n3__header">
         <h1 className="cinzel-font">{section.heading}</h1>
         <p className="intro-text">{section.intro}</p>
+      </header>
+
+      <div className="contact-n3__phone" aria-label={assist.detailsPhone}>
+        <p className="eyebrow contact-n3__phone-eyebrow">{assist.detailsPhone}</p>
+        <a href={siteConfig.contacts.phoneLink} className="contact-n3__phone-number">
+          {siteConfig.contacts.phoneDisplay}
+        </a>
+        <p className="contact-n3__phone-hours">{assist.hoursValue}</p>
       </div>
 
-      <div className="contact-main-grid">
-        <div className="contact-forms-column">
-          <article className="contact-card details-compact">
-            <div className="contact-method">
-              <p className="eyebrow">{assist.intentTitle}</p>
-              <ul className="contact-intent-list">
-                {section.intentItems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="contact-method">
-              <p className="eyebrow">{assist.detailsEmail}</p>
-              <a href={`mailto:${siteConfig.contacts.email}`} className="contact-link-premium">
-                {siteConfig.contacts.email}
-              </a>
-            </div>
-            <div className="contact-method contact-method-primary">
-              <p className="eyebrow">{assist.detailsPhone}</p>
-              <a href={siteConfig.contacts.phoneLink} className="contact-link-premium phone-highlight">
-                {siteConfig.contacts.phoneDisplay}
-              </a>
-            </div>
-            <div className="contact-method">
-              <p className="eyebrow">{content.layout.footerHours}</p>
-              <p className="contact-hours">{content.layout.footerHoursValue}</p>
-            </div>
-          </article>
+      <div className="contact-n3__separator" aria-hidden="true" />
 
-          <ContactForm
-            ref={formRef}
-            locale={locale}
-            labels={labels}
-            assist={assist}
-            title={inquiryTitle}
-            hint={inquiryHint}
-            privacyNotice={section.privacyNotice}
-          />
+      <ContactForm
+        ref={formRef}
+        locale={locale}
+        labels={section.formLabels}
+        assist={assist}
+        privacyNotice={section.privacyNotice}
+      />
+
+      <dl className="contact-n3__register">
+        <div className="contact-n3__register-row">
+          <dt>{assist.detailsEmail}</dt>
+          <dd>
+            <a href={`mailto:${siteConfig.contacts.email}`}>{siteConfig.contacts.email}</a>
+          </dd>
         </div>
+        <div className="contact-n3__register-row">
+          <dt>{assist.workshopLabel}</dt>
+          <dd>{siteConfig.contacts.address}</dd>
+        </div>
+        <div className="contact-n3__register-row">
+          <dt>{assist.hoursLabel}</dt>
+          <dd>{assist.hoursValue}</dd>
+        </div>
+      </dl>
 
-        <aside className="contact-location-column">
-          <article className="contact-card address-card">
-            <p className="eyebrow">{section.addressLabel}</p>
-            <h2 className="address-text">{siteConfig.contacts.address}</h2>
-          </article>
-
-          <div id="map" className="map-frame-container">
-            <iframe
-              title={content.layout.locationMap}
-              src={siteConfig.contacts.mapEmbedUrl}
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </aside>
+      <div id="map" className="contact-n3__map">
+        <iframe
+          title={content.layout.locationMap}
+          src={siteConfig.contacts.mapEmbedUrl}
+          width="100%"
+          height="480"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
   );

@@ -130,6 +130,10 @@ export interface LocaleContent {
       errorEmailInvalid: string;
       fileLabel: string;
       fileHelper: string;
+      callbackBestTime: string;
+      hoursLabel: string;
+      hoursValue: string;
+      workshopLabel: string;
     };
   };
   privacy: {
