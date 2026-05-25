@@ -205,7 +205,11 @@
       "errorPhoneInvalid": "Sisestage korrektne telefon.",
       "errorEmailInvalid": "Kontrollige e-posti aadressi.",
       "fileLabel": "Platsi fotod",
-      "fileHelper": "Võite valida platsi või näidise foto. Kui failide saatmine ei ole saadaval, lisage detailid sõnumisse või saatke foto e-postiga."
+      "fileHelper": "Võite valida platsi või näidise foto. Kui failide saatmine ei ole saadaval, lisage detailid sõnumisse või saatke foto e-postiga.",
+      "callbackBestTime": "Sobiv aeg helistamiseks",
+      "hoursLabel": "Lahti",
+      "hoursValue": "E–R 9:00–17:00 · L kokkuleppel",
+      "workshopLabel": "Töökoda"
     }
   },
   "privacy": {

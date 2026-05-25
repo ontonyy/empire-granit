@@ -205,7 +205,11 @@
       "errorPhoneInvalid": "Please enter a valid phone number.",
       "errorEmailInvalid": "Please check the email address.",
       "fileLabel": "Site photos",
-      "fileHelper": "You can choose site or reference photos. If file upload is unavailable, add details in the message or send photos by email."
+      "fileHelper": "You can choose site or reference photos. If file upload is unavailable, add details in the message or send photos by email.",
+      "callbackBestTime": "Best time to call",
+      "hoursLabel": "Open",
+      "hoursValue": "Mon–Fri 9:00–17:00 · Sat by appointment",
+      "workshopLabel": "Workshop"
     }
   },
   "privacy": {

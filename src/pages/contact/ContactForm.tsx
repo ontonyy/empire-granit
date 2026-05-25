@@ -11,20 +11,16 @@ interface ContactFormProps {
   locale: Locale;
   labels: FormLabels;
   assist: ContactAssistCopy;
-  title: string;
-  hint: string;
   privacyNotice: string;
 }
 
 const PHONE_PATTERN = /^[+0-9][0-9\s\-()]{5,}$/;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_FILE_BYTES = 5 * 1024 * 1024;
 type ContactMode = 'message' | 'callback';
 
 function decodeDesignConfig(value: string | null): string {
-  if (!value) {
-    return '';
-  }
-
+  if (!value) return '';
   try {
     return decodeURIComponent(escape(atob(value)));
   } catch {
@@ -33,20 +29,21 @@ function decodeDesignConfig(value: string | null): string {
 }
 
 export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function ContactForm(
-  { locale, labels, assist, title, hint, privacyNotice },
+  { locale, labels, assist, privacyNotice },
   ref
 ) {
   const location = useLocation();
+  const [mode, setMode] = useState<ContactMode>('message');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [bestTime, setBestTime] = useState('');
   const [files, setFiles] = useState<File[]>([]);
-  const [mode, setMode] = useState<ContactMode>('message');
   const [designConfig, setDesignConfig] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
-  const [fieldError, setFieldError] = useState<{ name?: string; phone?: string; email?: string }>({});
+  const [fieldError, setFieldError] = useState<{ name?: string; phone?: string; email?: string; files?: string }>({});
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -71,13 +68,18 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
         }
       }, 100);
     }
-  }, [location.search, assist.packageInterestTemplate, ref]);
+  }, [location.search, assist.packageInterestTemplate, assist.designInterestTemplate, ref]);
 
   function validate(): boolean {
     const errs: typeof fieldError = {};
     if (name.trim().length < 2) errs.name = assist.errorNameRequired;
     if (!PHONE_PATTERN.test(phone.trim())) errs.phone = assist.errorPhoneInvalid;
-    if (email.trim() && !EMAIL_PATTERN.test(email.trim())) errs.email = assist.errorEmailInvalid;
+    if (mode === 'message' && email.trim() && !EMAIL_PATTERN.test(email.trim())) {
+      errs.email = assist.errorEmailInvalid;
+    }
+    if (mode === 'message' && files.some((f) => f.size > MAX_FILE_BYTES)) {
+      errs.files = assist.fileHelper;
+    }
     setFieldError(errs);
     return Object.keys(errs).length === 0;
   }
@@ -98,13 +100,16 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
       locale,
       serviceType,
       formType: serviceType,
-      mode,
       name: name.trim(),
       phone: phone.trim(),
       email: mode === 'message' ? email.trim() : '',
       message: mode === 'message' ? message.trim() : '',
-      attachments,
-      designConfig
+      meta: {
+        kind: mode,
+        bestTime: mode === 'callback' ? bestTime.trim() : '',
+        attachments,
+        designConfig
+      }
     };
 
     try {
@@ -120,6 +125,7 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
         setPhone('');
         setEmail('');
         setMessage('');
+        setBestTime('');
         setFiles([]);
         setDesignConfig('');
         setFieldError({});
@@ -137,23 +143,8 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
     }
   }
 
-  if (status === 'success') {
-    return (
-      <article className="contact-card inquiry-full success-state" ref={ref}>
-        <div className="form-feedback success">
-          <h3>{assist.formSuccess}</h3>
-          <button type="button" className="btn-primary" onClick={() => setStatus('idle')}>
-            {assist.sendAnother}
-          </button>
-        </div>
-      </article>
-    );
-  }
-
   const loading = status === 'loading';
   const isMessageMode = mode === 'message';
-  const activeTitle = isMessageMode ? title : assist.callbackTitle;
-  const activeHint = isMessageMode ? hint : assist.callbackHint;
 
   function selectMode(nextMode: ContactMode) {
     setMode(nextMode);
@@ -164,92 +155,87 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
       setEmail('');
       setMessage('');
       setFiles([]);
+    } else {
+      setBestTime('');
     }
   }
 
-  return (
-    <article className="contact-card inquiry-full" ref={ref}>
-      <div className="contact-form-header">
-        <h3>{activeTitle}</h3>
-        <div className="contact-mode-toggle" role="group" aria-label={labels.serviceType}>
-          <button
-            type="button"
-            className={isMessageMode ? 'is-active' : ''}
-            aria-pressed={isMessageMode}
-            onClick={() => selectMode('message')}
-            disabled={loading}
-          >
-            {assist.modeMessage}
-          </button>
-          <button
-            type="button"
-            className={!isMessageMode ? 'is-active' : ''}
-            aria-pressed={!isMessageMode}
-            onClick={() => selectMode('callback')}
-            disabled={loading}
-          >
-            {assist.modeCallback}
+  if (status === 'success') {
+    return (
+      <div className="contact-n3__form-wrap" ref={ref}>
+        <div className="contact-n3__success" role="status" aria-live="polite">
+          <h3>{assist.formSuccess}</h3>
+          <button type="button" className="btn-primary contact-n3__submit" onClick={() => setStatus('idle')}>
+            {assist.sendAnother}
           </button>
         </div>
       </div>
-      <p className="hint-text">{activeHint}</p>
+    );
+  }
 
-      <form className="inquiry-form-premium" onSubmit={handleSubmit} noValidate>
-        <input type="hidden" name="locale" value={locale} />
-        <input type="hidden" name="serviceType" value={isMessageMode ? 'general_inquiry' : 'callback_request'} />
-        <input type="hidden" name="mode" value={mode} />
-        <input type="hidden" name="designConfig" value={designConfig} />
+  return (
+    <div className="contact-n3__form-wrap" ref={ref}>
+      <div className="contact-n3__segmented" role="tablist" aria-label={labels.serviceType}>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={isMessageMode}
+          className={isMessageMode ? 'is-active' : ''}
+          onClick={() => selectMode('message')}
+          disabled={loading}
+        >
+          {assist.modeMessage}
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={!isMessageMode}
+          className={!isMessageMode ? 'is-active' : ''}
+          onClick={() => selectMode('callback')}
+          disabled={loading}
+        >
+          {assist.modeCallback}
+        </button>
+      </div>
 
-        <div className="form-row">
-          <div className="field">
-            <label htmlFor="cf-name">{labels.name}</label>
-            <input
-              id="cf-name"
-              type="text"
-              name="name"
-              required
-              minLength={2}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              disabled={loading}
-              autoComplete="name"
-              aria-invalid={!!fieldError.name}
-            />
-            {fieldError.name && <p className="field-error">{fieldError.name}</p>}
-          </div>
-          <div className="field">
-            <label htmlFor="cf-phone">{labels.phone}</label>
-            <input
-              id="cf-phone"
-              type="tel"
-              name="phone"
-              required
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              disabled={loading}
-              autoComplete="tel"
-              aria-invalid={!!fieldError.phone}
-            />
-            {fieldError.phone && <p className="field-error">{fieldError.phone}</p>}
-          </div>
+      <form className="contact-n3__form" onSubmit={handleSubmit} noValidate>
+        <div className="field">
+          <label htmlFor="cf-name">{labels.name}</label>
+          <input
+            id="cf-name"
+            type="text"
+            name="name"
+            required
+            minLength={2}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            disabled={loading}
+            autoComplete="name"
+            aria-invalid={!!fieldError.name}
+            aria-describedby={fieldError.name ? 'cf-name-err' : undefined}
+          />
+          {fieldError.name && <p id="cf-name-err" className="field-error">{fieldError.name}</p>}
         </div>
 
-        {isMessageMode && (
-          <>
-            <div className="field">
-              <label htmlFor="cf-message">
-                {labels.message} <span className="optional-tag">{assist.optionalLabel}</span>
-              </label>
-              <textarea
-                id="cf-message"
-                name="message"
-                rows={4}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                disabled={loading}
-              />
-            </div>
+        <div className="field">
+          <label htmlFor="cf-phone">{labels.phone}</label>
+          <input
+            id="cf-phone"
+            type="tel"
+            name="phone"
+            required
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            disabled={loading}
+            autoComplete="tel"
+            aria-invalid={!!fieldError.phone}
+            aria-describedby={fieldError.phone ? 'cf-phone-err' : undefined}
+          />
+          {fieldError.phone && <p id="cf-phone-err" className="field-error">{fieldError.phone}</p>}
+        </div>
 
+        {isMessageMode ? (
+          <>
             <div className="field">
               <label htmlFor="cf-email">
                 {labels.email} <span className="optional-tag">{assist.optionalLabel}</span>
@@ -263,8 +249,22 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
                 disabled={loading}
                 autoComplete="email"
                 aria-invalid={!!fieldError.email}
+                aria-describedby={fieldError.email ? 'cf-email-err' : undefined}
               />
-              {fieldError.email && <p className="field-error">{fieldError.email}</p>}
+              {fieldError.email && <p id="cf-email-err" className="field-error">{fieldError.email}</p>}
+            </div>
+
+            <div className="field">
+              <label htmlFor="cf-message">{labels.message}</label>
+              <textarea
+                id="cf-message"
+                name="message"
+                rows={4}
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                disabled={loading}
+              />
             </div>
 
             <div className="field">
@@ -276,12 +276,13 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
                 type="file"
                 name="files"
                 accept="image/*"
-                multiple
                 className="file-input"
                 disabled={loading}
                 onChange={(e) => setFiles(e.target.files ? Array.from(e.target.files) : [])}
+                aria-describedby={fieldError.files ? 'cf-files-err' : 'cf-files-help'}
               />
-              <p className="field-help">{assist.fileHelper}</p>
+              <p id="cf-files-help" className="field-help">{assist.fileHelper}</p>
+              {fieldError.files && <p id="cf-files-err" className="field-error">{fieldError.files}</p>}
               {files.length > 0 && (
                 <ul className="file-list">
                   {files.map((f) => (
@@ -291,19 +292,31 @@ export const ContactForm = forwardRef<HTMLDivElement, ContactFormProps>(function
               )}
             </div>
           </>
+        ) : (
+          <div className="field">
+            <label htmlFor="cf-best-time">
+              {assist.callbackBestTime} <span className="optional-tag">{assist.optionalLabel}</span>
+            </label>
+            <input
+              id="cf-best-time"
+              type="text"
+              name="bestTime"
+              value={bestTime}
+              onChange={(e) => setBestTime(e.target.value)}
+              disabled={loading}
+            />
+          </div>
         )}
 
-        <button type="submit" className="btn-primary contact-submit" disabled={loading}>
+        <div className="contact-n3__live" role="status" aria-live="polite">
+          {status === 'error' && (errorMsg || assist.formError)}
+        </div>
+
+        <button type="submit" className="btn-primary contact-n3__submit" disabled={loading}>
           {loading ? assist.formLoading : labels.submit}
         </button>
-
-        {status === 'error' && (
-          <p className="form-error-text" role="alert">
-            {errorMsg || assist.formError}
-          </p>
-        )}
       </form>
       <p className="privacy-fine-print">{privacyNotice}</p>
-    </article>
+    </div>
   );
 });
