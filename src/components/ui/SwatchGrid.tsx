@@ -1,5 +1,5 @@
 import { GraniteSwatchTile } from '../GraniteSwatchTile';
-import type { GraniteSwatch } from '../../types';
+import type { GraniteSwatch } from '../../types/gallery';
 
 export interface SwatchGridProps {
   swatches: GraniteSwatch[];

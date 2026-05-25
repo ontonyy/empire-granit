@@ -18,10 +18,23 @@
   },
   "cta": {
     "callNow": "Võta ühendust",
-    "writeWhatsapp": "WhatsApp",
     "sendInquiry": "Küsi hinnangut"
   },
+  "layout": {
+    "aboutAndPrivacy": "Ettevõttest ja privaatsus",
+    "scrollTop": "Üles",
+    "primaryNavigation": "Peamine navigeerimine",
+    "call": "Helista",
+    "mobileMenuOpen": "Ava menüü",
+    "mobileMenuClose": "Sulge menüü",
+    "navServices": "Teenused",
+    "languageSwitcher": "Keelevalik",
+    "locationMap": "Asukoha kaart",
+    "footerHours": "Lahtiolekuajad",
+    "footerHoursValue": "E-R 09:00-18:00, L 10:00-15:00"
+  },
   "homepage": {
+    "heroLabel": "EMPIRE GRANIT · NARVA",
     "heroTitle": "Kindlustunne raskel hetkel.",
     "heroLead": "",
     "highlights": [
@@ -29,30 +42,7 @@
       "Paigaldus ja korrastus",
       "Graveering ja restaureerimine"
     ],
-    "heroLabel": "EMPIRE GRANIT · NARVA",
     "secondaryCta": "Vaata kataloogi",
-    "featureCards": [
-      {
-        "icon": "support",
-        "title": "Kiire klienditugi",
-        "body": "Tööajal saab meiega ühendust telefoni teel. Muul ajal jätke sõnum veebilehe vormi kaudu."
-      },
-      {
-        "icon": "range",
-        "title": "Lai tootevalik",
-        "body": "Monumendid ja piirded, vaasid, pingid, lillealad, fotoemail ja portreegraveeringud."
-      },
-      {
-        "icon": "estonia",
-        "title": "Teenindame kogu Eestis",
-        "body": "Nõustamine, valmistamine ja paigaldus sobivas vormis."
-      },
-      {
-        "icon": "variety",
-        "title": "Mitmekülgsed teenused",
-        "body": "Uute toodete valmistamine, olemasolevate uuendamine ja restaureerimine, mälestusplatside kujundamine. Paigaldus."
-      }
-    ],
     "trustLabel": "MIKS MEID VALITAKSE",
     "trustMetrics": [
       {
@@ -75,238 +65,12 @@
         "value": "Narva",
         "label": "töökoda ja näidised aadressil Pähklimäe 2"
       }
-    ],
-    "processLabel": "KUIDAS SEE TOIMIB",
-    "processTitle": "Rahulik ja selge protsess esimesest kõnest valmis tööni",
-    "processSteps": [
-      {
-        "title": "Esimene vestlus",
-        "body": "Kuulame soovid ära ning täpsustame kalmistu, tähtaja, platsi andmed ja vajaliku töö."
-      },
-      {
-        "title": "Kujunduse suund",
-        "body": "Valime rahulikus tempos monumendi kuju, graniidi, graveeringu, portree, piirde ja üldise lahenduse."
-      },
-      {
-        "title": "Selge kokkulepe",
-        "body": "Kinnitame tööde mahu, hinna ja eeldatava ajakava enne valmistamise alustamist."
-      },
-      {
-        "title": "Hoolikas valmistamine",
-        "body": "Kivi, graveering ja lisadetailid valmivad kinnitatud lahenduse järgi."
-      },
-      {
-        "title": "Paigaldus ja foto",
-        "body": "Valmistame koha ette, paigaldame mälestusmärgi ning saame saata foto, kui töö on valmis."
-      }
-    ],
-    "servicesLabel": "MIDA ME TEEME",
-    "servicesTitle": "Põhiteenused",
-    "services": [
-      {
-        "title": "Monumendid",
-        "body": "Graniitvormid ühele, kahele või pere erilahenduseks."
-      },
-      {
-        "title": "Piirded",
-        "body": "Korrektsed graniit- või betoonpiirded koos aluse ettevalmistusega."
-      },
-      {
-        "title": "Graveeringud ja portreed",
-        "body": "Nimed, kuupäevad, portreed, fotoemail, sümbolid ja väikesed detailid."
-      },
-      {
-        "title": "Monumentide paigaldus",
-        "body": "Monumendi ja elementide paigaldus ettevalmistatud alusele."
-      },
-      {
-        "title": "Platsi korrastamine",
-        "body": "Plaadid, killustik, liiv, kunstmuru ja korras lõpptulemus."
-      },
-      {
-        "title": "Restaureerimine",
-        "body": "Puhastus, kirjade ja portreede uuendamine ning värskem välimus."
-      },
-      {
-        "title": "Hauaplatsi hooldus",
-        "body": "Kate, lilleala, platsi puhastus."
-      }
-    ],
-    "testimonialsLabel": "TAGASISIDE",
-    "testimonialsTitle": "Hindame oma klientide tagasisidet",
-    "testimonials": [
-      {
-        "quote": "Kõik selgitati väga rahulikult, meile ei surutud midagi peale ning valik sai kiiresti tehtud.",
-        "author": "Irina S.",
-        "meta": "Narva"
-      },
-      {
-        "quote": "Tähtaegadest peeti kinni ja paigaldus tehti väga korrektselt. Tulemus vastas lubatule.",
-        "author": "Aleksandr P.",
-        "meta": "Jõhvi"
-      },
-      {
-        "quote": "Aitäh paindliku lähenemise eest. Leppisime kokku ainult valmistamises ja kohaletoimetamises ning otsustasime paigalduse ise teha. Kõik tehti kvaliteetselt ja õigeks ajaks.",
-        "author": "Marina K.",
-        "meta": "Haapsalu"
-      }
-    ],
-    "catalogLabel": "KATALOOG JA GALERII",
-    "catalogTitle": "Vaadake vorme, materjale ja tehtud töid",
-    "catalogLead": "Kataloog aitab kiiresti mõista monumendi stiili, piirete, platsi korrastuse ja dekoratiivdetailide võimalusi.",
-    "catalogItems": [
-      {
-        "title": "Monumendid",
-        "body": "Klassikalised ja kujundatud vormid, üksik- ja perelahendused, eri graniiditoonid."
-      },
-      {
-        "title": "Piirded ja korrastus",
-        "body": "Graniit- ja betoonpiirded, plaadid, killustik, liiv ja kunstmuru."
-      },
-      {
-        "title": "Pingid",
-        "body": "Graniidist pingid ja kompaktsed istumislahendused platsiga sobivas stiilis."
-      },
-      {
-        "title": "Mälestuslauad",
-        "body": "Väikesed graniidist lauad küünaldele, lilledele ja terviklikule rahulikule platsile."
-      },
-      {
-        "title": "Kujundusdetailid",
-        "body": "Portreed, fotoemail, vaasid, pingid, lauad, küünlahoidjad ja dekoratiivsed elemendid."
-      }
-    ],
-    "catalogCta": "Telli sarnane lahendus",
-    "optionsLabel": "MATERJALID JA VALIKUD",
-    "optionsTitle": "Rahulikud graniidivalikud ja vaoshoitud viimistlus",
-    "optionsLead": "Hall, must, valge ja soe pruun graniit katavad enamiku rahulikke mälestuslahendusi. Graveering ja detailid valitakse nii, et plats jääks tasakaalus.",
-    "options": [
-      {
-        "title": "Graniidi toon",
-        "body": "Võrdleme kataloogi rahulikke kivitoone ning valime tekstuuri, mis sobib monumendi kuju ja kalmistu ümbrusega."
-      },
-      {
-        "title": "Graveeringu tasakaal",
-        "body": "Tekst, kuupäevad, portree ja fotoemail kavandatakse nii, et esikülg jääks loetav ega muutuks liiga tihedaks."
-      },
-      {
-        "title": "Platsi detailid",
-        "body": "Vaasid, küünlahoidjad, piirded ja lillealad hoiame praktilised ning valitud graniidiga kooskõlas."
-      }
-    ],
-    "configuratorLabel": "KONFIGURAATOR",
-    "configuratorTitle": "Pange põhivalikud enne ühendust võtmist kokku",
-    "configuratorLead": "Lihtne tööriist aitab näha monumendi kuju, kivi, teksti ja lisadetailide koosmõju enne täpsemat nõustamist.",
-    "configuratorItems": [
-      {
-        "title": "Kuju ja mõõt",
-        "body": "Valige rahulik vorm ning vaadake, kuidas see sobib ühe- või kahekohalise lahendusega."
-      },
-      {
-        "title": "Kivi ja tekst",
-        "body": "Katsetage graniiditooni, nime, kuupäevade ja lihtsa graveeringu asetust."
-      },
-      {
-        "title": "Lisadetailid",
-        "body": "Lisage piire, vaas või muu praktiline detail, mida saab hiljem tellimuses täpsustada."
-      }
-    ],
-    "configuratorCta": "Ava konfiguraator",
-    "pricingLabel": "SELGE HINNAINFO",
-    "pricingTitle": "Hinnaorientiir enne täpset kalkulatsiooni",
-    "pricingLead": "Hind sõltub mõõdust, graniidist, graveeringu keerukusest, aluse ettevalmistusest ja kalmistu kaugusest. Hinnalehel on algpositsioonid.",
-    "pricingItems": [
-      {
-        "label": "Üksikmonument",
-        "value": "alates 400 €"
-      },
-      {
-        "label": "Kahekohaline piire",
-        "value": "alates 1200 €"
-      },
-      {
-        "label": "Paigaldustööd",
-        "value": "alates 100 €"
-      }
-    ],
-    "areaLabel": "TEENINDUSPIIRKOND",
-    "areaTitle": "Baas Narvas, tellimused üle Eesti",
-    "areaLead": "Kooskõlastame töö konkreetse kalmistu järgi: ligipääs, platsi ettevalmistus, transport, paigaldus ja kohapealsed nõuded.",
-    "areaItems": [
-      "Narva ja Ida-Virumaa",
-      "Tallinn, Tartu, Jõhvi ja teised linnad",
-      "Transport ja paigaldus kokkuleppel"
-    ],
-    "careLabel": "KVALITEET JA HOOLDUS",
-    "careTitle": "Korralik paigaldus ja selged hooldussoovitused",
-    "careLead": "Me ei anna liigseid lubadusi: selgitame, kuidas töö tehakse, millised materjalid sobivad ja kuidas monumendi välimust hoida.",
-    "careItems": [
-      {
-        "title": "Kokkulepe enne tööd",
-        "body": "Mõõdud, materjalid, graveering, paigaldus ja lisadetailid kinnitatakse enne tellimuse käivitamist."
-      },
-      {
-        "title": "Paigaldus koha järgi",
-        "body": "Arvestame kalmistu ligipääsu, platsi seisukorda, alust ja konkreetse koha nõudeid."
-      },
-      {
-        "title": "Hooldus pärast paigaldust",
-        "body": "Selgitame, kuidas monumenti puhastada ja millal tähti, portreed või platsi katet uuendada."
-      }
-    ],
-    "faqLabel": "KKK",
-    "faqTitle": "Mida enne tellimist tavaliselt küsitakse",
-    "faqItems": [
-      {
-        "question": "Kas saab alustada ligikaudsest hinnast?",
-        "answer": "Jah. Anname esmase orientiiri ning täpsustame hinna pärast mõõdu, graniidi, graveeringu ja paigalduse valikut."
-      },
-      {
-        "question": "Kas saab tellida monumendi ilma paigalduseta?",
-        "answer": "Jah. Võimalik on kokku leppida ainult valmistamine ja transport, kui plaanite paigalduse ise teha."
-      },
-      {
-        "question": "Kas restaureerite vanu monumente?",
-        "answer": "Jah. Puhastame, uuendame tähti ja portreesid ning taastame monumendi välimuse."
-      }
     ]
-  },
-  "about": {
-    "heading": "Kuidas me töötame",
-    "body": [
-      "Empire Granit teeb graniitmonumente, piirdeid, graveeringuid, paigaldust ja hauaplatside korrastust. Töö algab tavaliselt Narva kontoris või eemalt saadetud fotodest ja mõõtudest.",
-      "Enne valmistamist täpsustame platsi seisukorra, soovitud kuju, kivi, kirja, portree, lisaelemendid ja paigalduse. Nii on perele selge, milline töö läheb tootmisse ja millest hind sõltub.",
-      "Hoiame suhtluse lihtsa: räägime vene, eesti ja inglise keeles, vastame telefoni, emaili, WhatsAppi ja vormi kaudu ning paneme kokkulepped kirja enne töö alustamist."
-    ],
-    "kicker": "EMPIRE GRANIT",
-    "title": "Töökoda ja kontaktpunkt Narvas",
-    "lead": "Aitame peredel valida ja tellida graniidist monumendi, mis sobib platsi, eelarve ja hooldusvajadusega. Fookus on selgel nõustamisel, korrektsel valmistamisel ja rahulikul paigaldusel.",
-    "photoAlt": "Kivitöökoja töölaud ja tööriistad",
-    "points": [
-      "Tellimus algab mõõtudest, tekstist, graniidi valikust ja praktilisest hinnapiirist.",
-      "Materjal, graveering, portree, piire, transport ja paigaldus räägitakse eraldi läbi.",
-      "Vajadusel vaatame vana monumendi või platsi foto järgi, mida saab taastada või täiendada."
-    ],
-    "area": {
-      "kicker": "Tööpiirkond",
-      "title": "Narva kontor, tööd üle Eesti",
-      "body": "Meie kontaktpunkt asub aadressil Pähklimäe 2, Narva. Tellimusi võtame vastu ka eemalt, kui perel on olemas platsi foto, mõõdud, soovitud pealiskiri ja näide sobivast lahendusest.",
-      "points": [
-        "Narva ja Ida-Virumaa nõustamine ning mõõdistused kokkuleppel.",
-        "Valmistamine, transport ja paigaldus Eesti kalmistutel vastavalt töö mahule.",
-        "Restaureerimine, tähtede uuendamine ja platsi korrastus olemasolevate monumentide juures."
-      ]
-    },
-    "contact": {
-      "title": "Räägime tellimusest rahulikult läbi",
-      "body": "Kõige kiirem on saata foto platsist ja lühike kirjeldus. Vastame, millist infot on veel vaja ja milline lahendus on mõistlik.",
-      "primary": "Võta ühendust",
-      "secondary": "ms.pamyatnik@mail.ru"
-    }
   },
   "pricing": {
     "heading": "Hinnad",
     "intro": "Allpool on põhiteenuste hinnaorientiirid. Lõplik hind sõltub graniidist, mõõdust, graveeringust, platsi seisukorrast, kaugusest ja hooajast. Täpne arvutus valmib pärast lühikest nõustamist.",
+    "bottomNote": "Täpne hind kinnitatakse pärast mõõtude, materjali, graveeringu, ligipääsu ja paigalduse mahu täpsustamist.",
     "includedLabel": "Mis sisaldub",
     "affectsLabel": "Mis mõjutab hinda",
     "tiers": [
@@ -347,449 +111,51 @@
         "note": "Hinda mõjutavad ligipääs, vanade elementide demontaaž, aluse seisukord, kaugus ja hooajalised tingimused."
       }
     ],
-    "cta": "Küsi hinnangut",
-    "benefits": {
-      "heading": "Kuidas saada täpne hind",
-      "items": [
-        {
-          "title": "Fotod ja mõõdud",
-          "description": "Saatke platsi foto, ligikaudsed mõõdud ja soovitud töö liik."
-        },
-        {
-          "title": "Materjal ja kujundus",
-          "description": "Täpsustame graniidi, graveeringu, portree, piirde ja lisadetailid."
-        },
-        {
-          "title": "Kohapealsed tingimused",
-          "description": "Arvestame kalmistut, ligipääsu, aluse ettevalmistust, demontaaži ja hooaega."
-        },
-        {
-          "title": "Kirjalik orientiir",
-          "description": "Pärast täpsustusi anname rahuliku hinnangu ilma kinnitamata lubadusteta."
-        }
-      ]
-    },
-    "bottomNote": "Täpne hind kinnitatakse pärast mõõtude, materjali, graveeringu, ligipääsu ja paigalduse mahu täpsustamist."
+    "cta": "Küsi hinnangut"
   },
-  "gallery": {
-    "heading": "Kataloog",
-    "intro": "Kataloog aitab valida monumendi kuju, piirde, platsi korrastuse ja lisadetailid. Avage kategooria, vaadake variante ja saatke päring sarnase lahenduse kohta.",
-    "labels": {
-      "viewDetails": "Vaata kategooriat",
-      "learnMore": "Loe edasi",
-      "backToGallery": "Tagasi kataloogi",
-      "advantages": "Eelised",
-      "services": "Tööde variandid",
-      "ctaHeading": "Vajate toote kohta nõu?",
-      "ctaBody": "Jätke päring ja aitame valida materjali, vormi, tähtajad ning ligikaudse hinna.",
-      "ctaButton": "Jäta päring",
-      "electronicCatalogTitle": "Elektrooniline kataloog",
-      "electronicCatalogIntro": "Valmislahenduste, tootekategooriate ja ligikaudsete hindade jaotis.",
-      "electronicCatalogStatusTitle": "Elektrooniline kataloog on arenduses.",
-      "electronicCatalogStatusBody": "Varsti ilmuvad siia valmislahendused ja tootevariandid.",
-      "catalogCategoriesTitle": "Kataloogi kategooriad",
-      "openCatalog": "Ava kataloog",
-      "readyWorksTitle": "Valminud tööd",
-      "readyWorksBody": "Valik meie portfellist valminud projekte.",
-      "granitePaletteTitle": "Graniidi värvid ja tekstuurid",
-      "topCategoriesTitle": "Kategooriad",
-      "requestSimilar": "Telli sarnane lahendus"
+  "works": {
+    "eyebrow": "Tööd · Empire Granit",
+    "title": "Näited valminud lahendustest",
+    "pageLead": "Allpool valik valminud monumente, piirdeid ja platside korrastustöid Eestis. Iga töö on kohandatud konkreetse mälestuspaiga ja perekonna vajadustele.",
+    "filterLabel": "Filtreeri",
+    "filters": {
+      "all": "Kõik",
+      "monuments": "Monumendid",
+      "fences": "Piirded",
+      "engravings": "Graveeringud",
+      "installation": "Paigaldus"
     },
-    "categories": [
-      {
-        "id": "monuments",
-        "title": "Monumendid",
-        "image": "/images/examples/monument.png",
-        "summary": "Üksik-, topelt- ja erilahendused",
-        "description": "Monumendi vormid graniidi, graveeringu, portree ja lisadetailide valikuga eelarve ja platsi järgi.",
-        "previewMode": "granite",
-        "graniteSwatches": [
-          {
-            "id": "et-grey",
-            "name": "Hall graniit",
-            "textureKey": "grey-granite"
-          },
-          {
-            "id": "et-black",
-            "name": "Must graniit",
-            "textureKey": "black-granite"
-          },
-          {
-            "id": "et-red",
-            "name": "Punane graniit",
-            "textureKey": "red-granite"
-          },
-          {
-            "id": "et-green",
-            "name": "Roheline graniit",
-            "textureKey": "green-granite"
-          }
-        ],
-        "electronicCatalogFeaturedIds": [
-          "monuments",
-          "benches",
-          "decor"
-        ],
-        "advantages": [
-          "Erinevad vormid ja suurused",
-          "Teksti ja portree graveering",
-          "Graniidi valik eelarve järgi"
-        ],
-        "services": [
-          "Üksikmonumendid",
-          "Topeltmonumendid",
-          "Portreed ja fotoemail",
-          "Dekoratiivsed elemendid"
-        ]
-      },
-      {
-        "id": "framing",
-        "title": "Piirded",
-        "image": "/images/examples/framing.png",
-        "summary": "Graniit- ja betoonlahendused platsile",
-        "description": "Piirded aitavad platsi piirid korrektselt vormistada ja valmistada aluse edasiseks korrastuseks.",
-        "previewMode": "granite",
-        "graniteSwatches": [
-          {
-            "id": "et-frame-grey",
-            "name": "Hall graniit",
-            "textureKey": "grey-granite"
-          },
-          {
-            "id": "et-frame-black",
-            "name": "Must graniit",
-            "textureKey": "black-granite"
-          },
-          {
-            "id": "et-frame-white",
-            "name": "Hele graniit",
-            "textureKey": "white-granite"
-          },
-          {
-            "id": "et-frame-brown",
-            "name": "Pruun graniit",
-            "textureKey": "brown-granite"
-          }
-        ],
-        "electronicCatalogFeaturedIds": [
-          "framing",
-          "tables"
-        ],
-        "advantages": [
-          "Suurus vastavalt platsile",
-          "Graniidi ja betooni lahendused",
-          "Aluse ettevalmistus"
-        ],
-        "services": [
-          "Platsi piirded",
-          "Betoonaluse valamine",
-          "Paigaldus",
-          "Täiendav täitmine"
-        ]
-      },
-      {
-        "id": "exclusive",
-        "title": "Individuaalsed lahendused",
-        "image": "/images/examples/exclusive.png",
-        "summary": "Eritellimusel vormid ja kompleksid",
-        "description": "Individuaalsed projektid vormi, materjali, dekoori ja tööde mahu valikuga ilma liigsete lubadusteta.",
-        "electronicCatalogFeaturedIds": [
-          "decor",
-          "monuments",
-          "tables"
-        ],
-        "advantages": [
-          "Individuaalne projekt",
-          "Keerukad vormid",
-          "Materjalide kombinatsioonid"
-        ],
-        "services": [
-          "Projekteerimine",
-          "Valmistamine",
-          "Dekoor",
-          "Paigaldus"
-        ]
-      },
-      {
-        "id": "landscaping",
-        "title": "Platsi korrastus",
-        "image": "/images/examples/cemetry.png",
-        "summary": "Plaadid, killustik, lilleala ja hooldus",
-        "description": "Platsi kujundustööd: kate, täide, kunstmuru, pingid, lauad ja hoolduselemendid.",
-        "electronicCatalogFeaturedIds": [
-          "benches",
-          "tables"
-        ],
-        "advantages": [
-          "Terviklik platsi kujundus",
-          "Praktilised materjalid",
-          "Korralik paigaldus"
-        ],
-        "services": [
-          "Plaatide paigaldus",
-          "Piirded",
-          "Pingid ja lauad",
-          "Dekoratiivsed elemendid"
-        ]
-      }
-    ],
-    "catalogCategories": [
-      {
-        "id": "monuments",
-        "title": "Monumendid",
-        "summary": "Üksik- ja peremonumendid",
-        "description": "Monumentide variandid eri vormide, graniidi, graveeringu ja portreedega.",
-        "image": "/images/examples/monument.png",
-        "graniteSwatches": [
-          {
-            "id": "et-cat-grey",
-            "name": "Hall graniit",
-            "textureKey": "grey-granite"
-          },
-          {
-            "id": "et-cat-black",
-            "name": "Must graniit",
-            "textureKey": "black-granite"
-          },
-          {
-            "id": "et-cat-red",
-            "name": "Punane graniit",
-            "textureKey": "red-granite"
-          }
-        ],
-        "productCards": [
-          {
-            "id": "et-monument-1",
-            "title": "Klassikaline monument",
-            "image": "/images/examples/monument.png",
-            "price": "alates 400 €"
-          },
-          {
-            "id": "et-monument-2",
-            "title": "Vormitud monument",
-            "image": "/images/examples/tombstone.png",
-            "price": "alates 520 €"
-          },
-          {
-            "id": "et-monument-3",
-            "title": "Portreega monument",
-            "image": "/images/examples/gravestone.png",
-            "price": "alates 650 €"
-          }
-        ]
-      },
-      {
-        "id": "framing",
-        "title": "Piirded",
-        "summary": "Graniidist ja betoonist piirded",
-        "description": "Platsi piirded aluse ettevalmistuse ja paigaldusega.",
-        "image": "/images/examples/framing.png",
-        "productCards": [
-          {
-            "id": "et-framing-1",
-            "title": "Graniidist piire",
-            "image": "/images/examples/framing.png",
-            "price": "alates 700 €"
-          },
-          {
-            "id": "et-framing-2",
-            "title": "Kahekohaline piire",
-            "image": "/images/examples/fence_with_entrance.png",
-            "price": "alates 1200 €"
-          },
-          {
-            "id": "et-framing-3",
-            "title": "Komplekt sissepääsuga",
-            "image": "/images/examples/cemetry.png",
-            "price": "päringu alusel"
-          }
-        ]
-      },
-      {
-        "id": "benches",
-        "title": "Pingid",
-        "summary": "Pingid mälestusalale",
-        "description": "Kivist ja kombineeritud materjalidest pingid platsi kujundamiseks.",
-        "image": "/images/examples/granite_bench.png",
-        "productCards": [
-          {
-            "id": "et-bench-1",
-            "title": "Graniidist pink",
-            "image": "/images/examples/granite_bench.png",
-            "price": "alates 180 €"
-          },
-          {
-            "id": "et-bench-2",
-            "title": "Tugedega pink",
-            "image": "/images/examples/bench.png",
-            "price": "alates 240 €"
-          }
-        ]
-      },
-      {
-        "id": "tables",
-        "title": "Lauad",
-        "summary": "Lauad ja kiviplaadid",
-        "description": "Lauad ja täiendavad kivielemendid mälestusala jaoks.",
-        "image": "/images/examples/memorial_table.png",
-        "productCards": [
-          {
-            "id": "et-table-1",
-            "title": "Mälestuslaud",
-            "image": "/images/examples/memorial_table.png",
-            "price": "alates 160 €"
-          },
-          {
-            "id": "et-table-2",
-            "title": "Kiviplaat",
-            "image": "/images/examples/stone_plate.png",
-            "price": "alates 120 €"
-          }
-        ]
-      },
-      {
-        "id": "decor",
-        "title": "Dekoratiivsed elemendid",
-        "summary": "Vaasid, küünlahoidjad ja dekoor",
-        "description": "Dekoratiivsed elemendid mälestusplatsi terviklikuks kujunduseks.",
-        "image": "/images/examples/candles.png",
-        "productCards": [
-          {
-            "id": "et-decor-1",
-            "title": "Graniidist vaas",
-            "image": "/images/examples/candles.png",
-            "price": "alates 90 €"
-          },
-          {
-            "id": "et-decor-2",
-            "title": "Küünlahoidja",
-            "image": "/images/examples/candles.png",
-            "price": "alates 45 €"
-          }
-        ]
-      }
-    ],
-    "readyWorks": [
-      {
-        "id": "et-work-1",
-        "title": "Valmis mälestusala",
-        "image": "/images/examples/cemetry.png"
-      },
-      {
-        "id": "et-work-2",
-        "title": "Monument piirdega",
-        "image": "/images/examples/gravestone.png"
-      },
-      {
-        "id": "et-work-3",
-        "title": "Graniidist piire",
-        "image": "/images/examples/fence_with_entrance.png"
-      },
-      {
-        "id": "et-work-4",
-        "title": "Platsi aed",
-        "image": "/images/examples/fence_with_entrance.png"
-      }
-    ]
-  },
-  "playground": {
-    "heading": "Eelvaated",
-    "intro": "Katseta materjalide ja vormide kombinatsioone.",
-    "options": [
-      {
-        "id": "shape",
-        "label": "Vorm",
-        "values": [
-          "Sirge",
-          "Kaar",
-          "Laine"
-        ]
-      },
-      {
-        "id": "material",
-        "label": "Materjal",
-        "values": [
-          "Must Graniit",
-          "Hall Graniit",
-          "Marmor"
-        ]
-      },
-      {
-        "id": "finish",
-        "label": "Viimistlus",
-        "values": [
-          "Poleeritud",
-          "Matt",
-          "Kombineeritud"
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "id": "p1",
-        "name": "Klassika",
-        "values": {
-          "shape": "Sirge",
-          "material": "Must Graniit",
-          "finish": "Poleeritud"
-        },
-        "note": "Ajatu ja soliidne."
-      },
-      {
-        "id": "p2",
-        "name": "Pehme Mälestus",
-        "values": {
-          "shape": "Kaar",
-          "material": "Hall Graniit",
-          "finish": "Kombineeritud"
-        },
-        "note": "Tasakaalustatud ja pehme."
-      },
-      {
-        "id": "p3",
-        "name": "Moodne",
-        "values": {
-          "shape": "Laine",
-          "material": "Marmor",
-          "finish": "Matt"
-        },
-        "note": "Puhas kaasaegne disain."
-      }
-    ],
-    "previewTitle": "Eelvaade",
-    "interactionLabel": "Konfiguratsioon"
+    "captionSeparator": "·",
+    "cta": {
+      "eyebrow": "Vajad sarnast lahendust?",
+      "title": "Sobiv lahendus pole nimekirjas?",
+      "body": "Iga töö algab vestlusest. Räägime telefoni teel, sobitame materjali, mõõdud ja eelarve.",
+      "link": "Räägime telefoni teel"
+    }
   },
   "contact": {
     "heading": "Küsi hinnangut või nõu",
     "intro": "Meiega saab ühendust võtta telefoni teel tööajal, jätta päring veebilehel või saata e-kiri.",
-    "intentTitle": "Mida saab saata",
     "inquiryTitle": "Saada foto, idee või küsimus",
-    "inquiryHint": "Kirjeldage monumenti, platsi, linna, soovitud töid ja graveeringu infot sõnumis.",
-    "consentText": "Nõustun andmetöötlusega.",
-    "privacyNotice": "Vormi saatmisega nõustute meie privaatsuspoliitikaga.",
+    "intentItems": [
+      "Monumendi, paigalduse või piirde mõõdud",
+      "Platsi foto ja soovitud lahenduse näide",
+      "Pealiskirja tekst, portree või graveeringu küsimus"
+    ],
     "addressLabel": "Meie asukoht",
-    "directionsTitle": "Kuidas meid leida",
-    "directionsBody": "Asume Narvas, Pähklimäe 2. Meid on lihtne leida kesklinna lähedal, mugav ligipääs nii auto kui ka ühistranspordiga. Külastajatele tasuta parkimine.",
+    "privacyNotice": "Vormi saatmisega nõustute meie privaatsuspoliitikaga.",
     "formLabels": {
       "name": "Nimi",
       "phone": "Telefon",
       "email": "E-post",
       "serviceType": "Teenus",
       "message": "Sõnum / Küsimus",
-      "consent": "Nõusolek",
       "submit": "Jäta päring"
     },
-    "intentItems": [
-      "Monumendi, paigalduse või piirde mõõdud",
-      "Platsi foto ja soovitud lahenduse näide",
-      "Pealiskirja tekst, portree või graveeringu küsimus"
-    ],
     "assist": {
-      "detailsTitle": "Võta ühendust",
       "intentTitle": "Mida saab saata",
       "detailsPhone": "Telefon",
       "detailsEmail": "E-post",
-      "whatsappLabel": "Kirjuta WhatsAppis",
       "inquiryTitle": "Jäta päring",
       "inquiryHint": "Piisab nimest ja telefoninumbrist. Soovi korral lisa e-post ja sõnum.",
       "packageInterestTemplate": "Tere! Olen huvitatud \"{name}\" paketist. Palun saata täpsemat infot.",
@@ -812,30 +178,8 @@
     }
   },
   "privacy": {
-    "heading": "Privaatsuspoliitika",
-    "sections": [
-      {
-        "title": "Mida me kogume",
-        "body": "Tagasihelistamise vorm: nimi ja telefoninumber. Päringuvorm: nimi, e-posti aadress ja sõnumi tekst. Mõlemad vormid salvestavad ka valitud lehekeele ja vormi tüübi. Muid isikuandmeid me ei küsi."
-      },
-      {
-        "title": "Kuhu teie andmed liiguvad",
-        "body": "Vormi sisu jõuab meie meeskonnani teenuse Formspree (formspree.io) kaudu — see on kolmandast osapoolest töötleja, kes edastab sõnumid meile. Anonüümsed kasutussündmused (lehekülastused, vormide saatmised) salvestatakse Google Firebase'i (Firestore), et saaksime saiti parendada. Külastusstatistikat mõõdame teenusega Plausible Analytics, mis ei kasuta küpsiseid ega kogu isikuandmeid."
-      },
-      {
-        "title": "Miks me andmeid kasutame",
-        "body": "Ainult selleks, et vastata teie päringule, koostada pakkumine, leppida kokku paigaldus ja parendada veebisaiti. Me ei loo reklaamiprofiile ega müü andmeid kolmandatele osapooltele."
-      },
-      {
-        "title": "Säilitamine",
-        "body": "Vormi andmeid ja analüütika sündmusi säilitame 12 kuud ning seejärel kustutame, välja arvatud juhul, kui aktiivne tellimus või seadusest tulenev kohustus nõuab pikemat säilitamist."
-      },
-      {
-        "title": "Teie õigused ja kontakt",
-        "body": "Teil on igal ajal õigus oma andmetega tutvuda, neid parandada või kustutada lasta või nõusolek tagasi võtta — selleks kirjutage aadressile ms.pamyatnik@mail.ru. Vastame 30 päeva jooksul."
-      }
-    ],
     "kicker": "PRIVAATSUSPOLIITIKA",
+    "heading": "Privaatsuspoliitika",
     "intro": "Kogume ainult neid andmeid, mis on vajalikud teie päringule vastamiseks ja pakkumise koostamiseks. Allpool on täpselt kirjas, mida salvestame, kuhu andmed liiguvad, kui kaua neid hoiame ja kuidas meiega andmete asjus ühendust võtta.",
     "cards": [
       {
@@ -860,61 +204,6 @@
       }
     ]
   },
-  "faq": {
-    "heading": "Korduma kippuvad küsimused",
-    "intro": "Praktilised vastused enne monumendi, paigalduse, graveeringu või platsi korrastuse tellimist.",
-    "contactCta": "Ei leidnud vastust? Küsi hinnangut",
-    "items": [
-      {
-        "question": "Millal saab monumendi pärast matust paigaldada?",
-        "answer": "Aeg sõltub kalmistu reeglitest, pinnase seisukorrast ja hooajast. Sageli oodatakse pinnase vajumist; täpne aeg tuleks vaadata konkreetse koha järgi."
-      },
-      {
-        "question": "Kui kaua valmistamine aega võtab?",
-        "answer": "Tavaliselt 2 kuni 6 nädalat, sõltuvalt materjalist, vormi keerukusest, graveeringust, portreest ja hooaja koormusest."
-      },
-      {
-        "question": "Millest hind sõltub?",
-        "answer": "Mõõdust, paksusest, graniidi värvist, vormi keerukusest, graveeringust, portreest, piirdest, aluse ettevalmistusest, kaugusest ja kalmistu tingimustest."
-      },
-      {
-        "question": "Mis kuulub paigalduse sisse?",
-        "answer": "Sisu sõltub tellimusest. Tavaliselt arutame koha ettevalmistust, alust, toote paigaldust ja vajadusel lisatöid."
-      },
-      {
-        "question": "Kas saab tellida eemalt?",
-        "answer": "Jah. Saatke platsi foto, mõõdud, soovid, pealiskirja tekst ja portreefoto. Detailid lepime kokku telefoni või kirja teel."
-      },
-      {
-        "question": "Milliseid materjale valida?",
-        "answer": "Monumentidele valitakse sageli graniit selle vastupidavuse ja rahuliku välimuse tõttu. Toon, paksus ja tekstuur valitakse eelarve, stiili ja platsi järgi."
-      },
-      {
-        "question": "Kas kalmistul on vaja luba?",
-        "answer": "Mõnel kalmistul on oma reeglid paigalduse, mõõtude ja tööaja kohta. Aitame täpsustada, mida konkreetse koha jaoks vaja on."
-      },
-      {
-        "question": "Kas töötate üle Eesti?",
-        "answer": "Jah, tellimused, transport ja paigaldus on Eestis võimalikud kokkuleppel. Tingimused sõltuvad kaugusest ja ligipääsust."
-      },
-      {
-        "question": "Kas vana monumenti saab taastada?",
-        "answer": "Jah. Võimalik on puhastus, tähtede, portree, üksikute elementide ja üldise välimuse uuendamine. Esmalt hindame seisukorda foto või koha järgi."
-      },
-      {
-        "question": "Kas paigaldusele või töödele on garantii?",
-        "answer": "Vastutame kokkulepitud tööde mahu eest ja selgitame tingimused enne tellimust. Konkreetsed tingimused sõltuvad töö liigist, materjalist ja aluse seisukorrast."
-      },
-      {
-        "question": "Kuidas monumenti hooldada?",
-        "answer": "Soovitame pehmet puhastust ilma tugeva keemiata. Tähtede, portree või katte uuendamiseks saab küsida eraldi nõu."
-      },
-      {
-        "question": "Kuidas saata foto või kiri graveeringuks?",
-        "answer": "Foto ja teksti saab saata vormi, emaili või sõnumirakenduse kaudu. Enne valmistamist kinnitame õigekirja, fondi ja paigutuse."
-      }
-    ]
-  },
   "seo": {
     "home": {
       "title": "Empire Granit - graniidist monumendid paigaldusega",
@@ -924,33 +213,9 @@
       "title": "Tööd | Empire Granit",
       "description": "Valik valminud monumente, piirdeid ja hauaplatsi korrastustöid Eestis."
     },
-    "about": {
-      "title": "Empire Granit Narvas - töökoda ja graniiditööd",
-      "description": "Empire Granit valmistab monumente, piirdeid, graveeringuid ja teeb paigaldust Narvast üle Eesti."
-    },
     "pricing": {
       "title": "Monumentide, piirete ja paigalduse hinnad - Empire Granit",
       "description": "Hinnaorientiirid graniitmonumentidele, piiretele ja paigaldusele Eestis."
-    },
-    "memorials": {
-      "title": "Hauakivid ja memoriaalid - Empire Granit",
-      "description": "Kuus hauakivide ja memoriaalsete lahenduste kategooriat koos rahuliku valikuabiga."
-    },
-    "materials": {
-      "title": "Graniidi materjalid ja viimistlus - Empire Granit",
-      "description": "Võrrelge graniidi värve, viimistlust, graveeringuid ja materjalivalikuid mälestusmärgi jaoks."
-    },
-    "portfolio": {
-      "title": "Tehtud tööd - Empire Granit",
-      "description": "Valik valminud monumente, piirdeid ja hauaplatsi korrastustöid Eestis."
-    },
-    "faq": {
-      "title": "KKK - Empire Granit",
-      "description": "Korduma kippuvad küsimused tähtaegade ja teenuste kohta."
-    },
-    "playground": {
-      "title": "Konfiguraator - Empire Granit",
-      "description": "Vali monumendi vorm, materjal ja viimistlus."
     },
     "contact": {
       "title": "Kontakt - Empire Granit",
@@ -959,223 +224,6 @@
     "privacy": {
       "title": "Privaatsuspoliitika - Empire Granit",
       "description": "Andmekaitse ja privaatsuse põhimõtted."
-    },
-    "process": {
-      "title": "Mälestusmärgi tellimise protsess | Empire Granit",
-      "description": "Vaadake, kuidas Empire Granit juhib pere esimesest konsultatsioonist kujunduse, kokkuleppe, valmistamise ja paigalduseni."
-    },
-    "restorationInstallation": {
-      "title": "Taastamine ja paigaldus | Empire Granit",
-      "description": "Mälestusmärkide paigaldus, taastamine, puhastus, kirjade uuendamine ja hauaplatsi korrastus üle Eesti."
-    },
-    "preview": {
-      "title": "Monumendi eelvaade | Empire Granit",
-      "description": "Vali monumendi vorm ja graniit ning vaata esmast memoriaali eelvaadet."
-    }
-  },
-  "layout": {
-    "emergencyPrefix": "",
-    "footerIntro": "Monumendid, paigaldus ja rahulik nõustamine üle Eesti.",
-    "footerNavigation": "Lehed",
-    "footerContacts": "Kontakt",
-    "footerAddress": "Aadress",
-    "footerHours": "Lahtiolekuajad",
-    "footerHoursValue": "E-R 09:00-18:00, L 10:00-15:00",
-    "footerSupport": "Kiire kontakt",
-    "aboutAndPrivacy": "Ettevõttest ja privaatsus",
-    "mobileMenuOpen": "Ava menüü",
-    "mobileMenuClose": "Sulge menüü",
-    "call": "Helista",
-    "primaryNavigation": "Peamine navigeerimine",
-    "languageSwitcher": "Keelevalik",
-    "locationMap": "Asukoha kaart",
-    "navServices": "Teenused",
-    "scrollTop": "Üles"
-  },
-  "portfolio": {
-    "heading": "Tehtud tööd",
-    "intro": "Valik valminud monumente, piirdeid ja hauaplatsi korrastusi. Iga töö juures saab küsida sarnast lahendust.",
-    "labels": {
-      "eyebrow": "PORTFOOLIO",
-      "cta": "Küsi sarnast tööd"
-    },
-    "items": [
-      {
-        "id": "et-work-1",
-        "title": "Valmis mälestusala",
-        "summary": "Graniidist töö kokkulepitud vormi, materjali ja paigaldusega.",
-        "location": "Eesti",
-        "image": "/images/examples/cemetry.png"
-      },
-      {
-        "id": "et-work-2",
-        "title": "Monument piirdega",
-        "summary": "Graniidist töö kokkulepitud vormi, materjali ja paigaldusega.",
-        "location": "Eesti",
-        "image": "/images/examples/gravestone.png"
-      },
-      {
-        "id": "et-work-3",
-        "title": "Graniidist piire",
-        "summary": "Graniidist töö kokkulepitud vormi, materjali ja paigaldusega.",
-        "location": "Eesti",
-        "image": "/images/examples/fence_with_entrance.png"
-      },
-      {
-        "id": "et-work-4",
-        "title": "Platsi aed",
-        "summary": "Graniidist töö kokkulepitud vormi, materjali ja paigaldusega.",
-        "location": "Eesti",
-        "image": "/images/examples/fence_with_entrance.png"
-      }
-    ]
-  },
-  "process": {
-    "eyebrow": "ERILAHENDUSE PROTSESS",
-    "heading": "Kuidas valmib perekonnale sobiv mälestusmärk",
-    "intro": "Viime pere läbi iga sammu rahulikus tempos: esimesest vestlusest kujunduse, hinna, valmistamise ja paigalduseni.",
-    "ctaTitle": "Alustame rahulikust vestlusest",
-    "ctaBody": "Saatke foto olemasolevast platsist, soovitud mõõdud või lihtsalt küsimus. Vastame, mida tasub järgmisena täpsustada ja milline lahendus oleks realistlik.",
-    "ctaLabel": "Küsi konsultatsiooni",
-    "steps": [
-      {
-        "title": "Esimene vestlus",
-        "paragraphs": [
-          "Alustame telefonis, e-kirjas või töökojas rahuliku vestlusega. Selgitame välja, kellele mälestusmärk on mõeldud, millisel kalmistul plats asub ning kas töö peab valmima kindlaks kuupäevaks.",
-          "Pere võib kaasa võtta platsi foto, kalmistu reeglid, olemasoleva monumendi mõõdud või lihtsalt nimekirja soovidest. Kui infot on vähe, aitame küsida õiged küsimused ja täpsustame puuduvad andmed järjekorras.",
-          "Selle sammu lõpuks on selge lähteülesanne: platsi tüüp, töö ulatus, tähtajad ja järgmine valik, mida pere peab otsustama."
-        ],
-        "image": "/images/examples/cemetry.png"
-      },
-      {
-        "title": "Kujunduse suund",
-        "paragraphs": [
-          "Vaatame koos monumendi kuju, graniidi tooni, graveeringu paigutust, portreed, sümboleid ja piirde vajadust. Eesmärk ei ole kiirustada, vaid leida väärikas proportsioon ja materjal, mis sobib kalmistu keskkonda.",
-          "Pere võib tuua näidispilte, vana kujunduse, soovitud teksti, sünni- ja surmakuupäevad ning info portree või fotoemaili kohta. Vajadusel pakume mitu realistlikku suunda erineva eelarve ja töömahuga.",
-          "Selle sammu tulemus on valitud kujundussuund koos põhimaterjalide, pealiskirja ja lisadetailide nimekirjaga."
-        ],
-        "image": "/images/examples/monument.png"
-      },
-      {
-        "title": "Selge kokkulepe",
-        "paragraphs": [
-          "Kui kujunduse suund on paigas, paneme kirja tööde mahu, hinna, maksetingimused ja eeldatava ajakava. Eraldi märgime paigalduse, vana kivi eemaldamise, platsi ettevalmistuse ja lisatööd.",
-          "Pere kinnitab nimed, kuupäevad, graveeringu teksti, mõõdud ja valitud materjalid. Kontrollime selle osa hoolikalt, sest pärast valmistamise algust on muudatused piiratud.",
-          "Selle sammu lõpuks on pere käes selge kokkulepe: mida valmistame, millal liigume järgmisse etappi ja mis on lõplik hind."
-        ],
-        "image": "/images/examples/gravestone.png"
-      },
-      {
-        "title": "Hoolikas valmistamine",
-        "paragraphs": [
-          "Töökojas valmistame kivi, graveeringu ja lisadetailid kinnitatud lahenduse järgi. Jälgime mõõte, servade viimistlust, teksti loetavust ja seda, et iga detail sobiks tervikuga.",
-          "Kui pere peab enne lõppviimistlust midagi üle kinnitama, saadame vajaliku vaate või täpsustuse. Portree, fotoemaili või keerukama graveeringu puhul lepime kontrollpunktid kokku eraldi.",
-          "Selle sammu tulemus on paigalduseks valmis mälestusmärk koos kokkulepitud detailidega."
-        ],
-        "image": "/images/examples/framing.png"
-      },
-      {
-        "title": "Paigaldus ja foto",
-        "paragraphs": [
-          "Paigalduse päeval valmistame koha ette, seame aluse, paigaldame monumendi ning kontrollime joondust ja stabiilsust. Vajadusel korrastame katte, piirde või lähiala kokkulepitud ulatuses.",
-          "Pere ei pea alati kohapeal olema. Kui nii on kokku lepitud, saadame valmis tööst foto ja anname teada, kas kalmistul on veel midagi, mida tasub hiljem hooldada.",
-          "Lõpuks saab pere valmis platsi ning selge info hoolduse, puhastuse ja võimalike tulevaste lisatööde kohta."
-        ],
-        "image": "/images/examples/stone_plate.png"
-      }
-    ]
-  },
-  "preview": {
-    "eyebrow": "KONFIGURAATOR",
-    "heading": "Monumendi eelvaade",
-    "intro": "Vali vorm ja graniit, et näha rahulikku esmast visuaali enne detailide lisamist.",
-    "sampleName": "MÄLESTUS",
-    "sampleDates": "1948-2024",
-    "stepper": [
-      "Vorm",
-      "Graniit",
-      "Viimistlus",
-      "Tekst",
-      "Lisad"
-    ],
-    "groups": {
-      "shape": "Vorm",
-      "stone": "Graniit",
-      "finish": "Viimistlus",
-      "engraving": "Graveering",
-      "addons": "Lisad"
-    },
-    "labels": {
-      "preview": "Monumendi eelvaade",
-      "selected": "Valitud valikud",
-      "polished": "Poleeritud pind",
-      "name": "Nimi või pühendus",
-      "dates": "Kuupäevad"
-    },
-    "finishOptions": [
-      {
-        "id": "polished",
-        "label": "Poleeritud"
-      },
-      {
-        "id": "honed",
-        "label": "Matt"
-      },
-      {
-        "id": "flamed",
-        "label": "Põletatud"
-      }
-    ],
-    "letteringOptions": [
-      {
-        "id": "serif",
-        "label": "Seriif"
-      },
-      {
-        "id": "sans",
-        "label": "Lihtne"
-      },
-      {
-        "id": "script",
-        "label": "Kiri"
-      },
-      {
-        "id": "caps",
-        "label": "Kapiteel"
-      }
-    ],
-    "addonOptions": {
-      "vase": "Vaas",
-      "photo": "Fotoemail",
-      "ornament": "Ornament",
-      "candle": "Küünlaalus",
-      "border": "Raam"
-    },
-    "save": {
-      "title": "Salvestatud kavand",
-      "body": "Praegused valikud on lehe lingis ja neid saab saata konsultatsioonipäringuga.",
-      "action": "Salvesta kavand",
-      "consult": "Küsi konsultatsiooni selle kavandiga"
-    }
-  },
-  "works": {
-    "eyebrow": "Tööd · Empire Granit",
-    "title": "Näited valminud lahendustest",
-    "pageLead": "Allpool valik valminud monumente, piirdeid ja platside korrastustöid Eestis. Iga töö on kohandatud konkreetse mälestuspaiga ja perekonna vajadustele.",
-    "filterLabel": "Filtreeri",
-    "filters": {
-      "all": "Kõik",
-      "monuments": "Monumendid",
-      "fences": "Piirded",
-      "engravings": "Graveeringud",
-      "installation": "Paigaldus"
-    },
-    "captionSeparator": "·",
-    "cta": {
-      "eyebrow": "Vajad sarnast lahendust?",
-      "title": "Sobiv lahendus pole nimekirjas?",
-      "body": "Iga töö algab vestlusest. Räägime telefoni teel, sobitame materjali, mõõdud ja eelarve.",
-      "link": "Räägime telefoni teel"
     }
   }
 }

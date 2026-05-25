@@ -1,4 +1,4 @@
-import type { GraniteSwatch } from '../types';
+import type { GraniteSwatch } from '../types/gallery';
 
 const GRANITE_TEXTURE_IMAGE_BY_KEY: Record<string, string> = {
   'grey-granite': '/images/granite-textures/grey.png',
