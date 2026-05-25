@@ -4,7 +4,7 @@
     "home": "Home",
     "works": "Works",
     "about": "About",
-    "pricing": "Prices",
+    "pricing": "Pricing",
     "memorials": "Memorials",
     "materials": "Materials",
     "portfolio": "Portfolio",
@@ -988,7 +988,9 @@
     "call": "Call",
     "primaryNavigation": "Primary",
     "languageSwitcher": "Language switcher",
-    "locationMap": "Location Map"
+    "locationMap": "Location Map",
+    "navServices": "Services",
+    "scrollTop": "Top"
   },
   "portfolio": {
     "heading": "Completed work",

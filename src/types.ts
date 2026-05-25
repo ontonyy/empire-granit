@@ -50,6 +50,8 @@ export interface LocaleContent {
     primaryNavigation: string;
     languageSwitcher: string;
     locationMap: string;
+    navServices: string;
+    scrollTop: string;
   };
   homepage: {
     heroTitle: string;

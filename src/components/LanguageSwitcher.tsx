@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getLocaleContent } from '../content';
 import { LOCALES, buildLocalizedPath } from '../routing';
@@ -13,23 +14,27 @@ export function LanguageSwitcher({ currentLocale, routeKey }: LanguageSwitcherPr
   const currentContent = getLocaleContent(currentLocale);
 
   return (
-    <div className="language-switcher" aria-label={currentContent.layout.languageSwitcher}>
-      {LOCALES.map((locale) => {
+    <nav className="language-switcher" aria-label={currentContent.layout.languageSwitcher}>
+      {LOCALES.map((locale, idx) => {
         const label = getLocaleContent(locale).localeLabel;
         const to = `${buildLocalizedPath(locale, routeKey)}${location.search}${location.hash}`;
+        const isActive = locale === currentLocale;
 
         return (
-          <Link
-            key={locale}
-            className={locale === currentLocale ? 'lang-link active' : 'lang-link'}
-            to={to}
-            lang={locale}
-            hrefLang={locale}
-          >
-            {label}
-          </Link>
+          <Fragment key={locale}>
+            {idx > 0 ? <span className="lang-sep" aria-hidden="true">·</span> : null}
+            <Link
+              className={isActive ? 'lang-link is-active' : 'lang-link'}
+              to={to}
+              lang={locale}
+              hrefLang={locale}
+              aria-current={isActive ? 'true' : undefined}
+            >
+              {label}
+            </Link>
+          </Fragment>
         );
       })}
-    </div>
+    </nav>
   );
 }

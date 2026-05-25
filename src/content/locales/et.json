@@ -988,7 +988,9 @@
     "call": "Helista",
     "primaryNavigation": "Peamine navigeerimine",
     "languageSwitcher": "Keelevalik",
-    "locationMap": "Asukoha kaart"
+    "locationMap": "Asukoha kaart",
+    "navServices": "Teenused",
+    "scrollTop": "Üles"
   },
   "portfolio": {
     "heading": "Tehtud tööd",

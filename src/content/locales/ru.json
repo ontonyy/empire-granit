@@ -988,7 +988,9 @@
     "call": "Позвонить",
     "primaryNavigation": "Основная навигация",
     "languageSwitcher": "Переключатель языка",
-    "locationMap": "Карта расположения"
+    "locationMap": "Карта расположения",
+    "navServices": "Услуги",
+    "scrollTop": "Наверх"
   },
   "portfolio": {
     "heading": "Выполненные работы",
