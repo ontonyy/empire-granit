@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { siteConfig } from '../../config/site';
 import { trackEvent } from '../../lib/analytics';
 import { buildLocalizedPath } from '../../routing';
 import type { Locale, RouteKey } from '../../types';
 import { LanguageSwitcher } from '../LanguageSwitcher';
-import { CORE_NAV_KEYS, type LayoutUiLabels } from './ui-labels';
+import type { LayoutUiLabels } from './ui-labels';
 
 interface SiteHeaderProps {
   locale: Locale;
@@ -16,6 +16,11 @@ interface SiteHeaderProps {
   logoFallbackSrc: string;
 }
 
+interface AnchorDef {
+  hash: string;
+  label: string;
+}
+
 export function SiteHeader({
   locale,
   routeKey,
@@ -24,78 +29,103 @@ export function SiteHeader({
   logoPrimarySrc,
   logoFallbackSrc
 }: SiteHeaderProps) {
-  const [isHeaderElevated, setIsHeaderElevated] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsHeaderElevated(window.scrollY > 18);
-    };
-
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const location = useLocation();
+  const homePath = buildLocalizedPath(locale, 'home');
+  const pricingPath = buildLocalizedPath(locale, 'pricing');
+  const isHome = routeKey === 'home';
 
   useEffect(() => {
     setMobileNavOpen(false);
-  }, [routeKey]);
+  }, [routeKey, location.pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileNavOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileNavOpen]);
+
+  const anchors: AnchorDef[] = [
+    { hash: 'services', label: ui.navServices },
+    { hash: 'works', label: nav.works },
+    { hash: 'contact', label: nav.contact }
+  ];
+
+  const anchorHref = (hash: string) => (isHome ? `#${hash}` : `${homePath}#${hash}`);
+
+  const renderAnchors = (onClick?: () => void) =>
+    anchors.map((a) => (
+      <a key={a.hash} className="n3-nav-anchor" href={anchorHref(a.hash)} onClick={onClick}>
+        {a.label}
+      </a>
+    ));
+
+  const phoneLink = (
+    <a
+      className="n3-phone"
+      href={siteConfig.contacts.phoneLink}
+      aria-label={`${ui.call} ${siteConfig.contacts.phoneDisplay}`}
+      onClick={() => trackEvent('phone_click', { locale, source: 'header' })}
+    >
+      <svg
+        className="n3-phone-icon"
+        viewBox="0 0 24 24"
+        width="12"
+        height="12"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" />
+      </svg>
+      <span>{siteConfig.contacts.phoneDisplay}</span>
+    </a>
+  );
 
   return (
-    <header className={isHeaderElevated ? 'site-header is-elevated' : 'site-header'}>
-      <div className="brand-row">
-        <div className="brand-main">
-          <Link className="brand" to={buildLocalizedPath(locale, 'home')}>
-            <img
-              className="brand-logo"
-              src={logoPrimarySrc}
-              alt={`${siteConfig.siteName} logo`}
-              onError={(event) => {
-                const img = event.currentTarget;
-                if (!img.dataset.fallback) {
-                  img.dataset.fallback = '1';
-                  img.src = logoFallbackSrc;
-                }
-              }}
-            />
-            <span>
-              <strong className="sr-only">{siteConfig.siteName}</strong>
-            </span>
-          </Link>
-          <a
-            className="brand-emergency-link"
-            href={siteConfig.contacts.phoneLink}
-            aria-label={`${ui.call} ${siteConfig.contacts.phoneDisplay}`}
-            onClick={() => trackEvent('phone_click', { locale, source: 'header-emergency' })}
+    <header className="n3-header">
+      <div className="n3-header-inner">
+        <Link className="n3-brand" to={homePath} aria-label={siteConfig.siteName}>
+          <img
+            className="n3-brand-logo"
+            src={logoPrimarySrc}
+            alt=""
+            onError={(event) => {
+              const img = event.currentTarget;
+              if (!img.dataset.fallback) {
+                img.dataset.fallback = '1';
+                img.src = logoFallbackSrc;
+              }
+            }}
+          />
+          <span className="n3-wordmark">EMPIRE GRANIT</span>
+        </Link>
+
+        <nav className="n3-nav" aria-label={ui.primaryNavigation}>
+          {renderAnchors()}
+          <Link
+            className={routeKey === 'pricing' ? 'n3-nav-anchor is-active' : 'n3-nav-anchor'}
+            to={pricingPath}
+            aria-current={routeKey === 'pricing' ? 'page' : undefined}
           >
-            <svg
-              className="brand-emergency-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" />
-            </svg>
-            {ui.emergencyPrefix ? <span className="brand-emergency-prefix">{ui.emergencyPrefix}</span> : null}
-            <span className="brand-emergency-value">{siteConfig.contacts.phoneDisplay}</span>
-          </a>
-        </div>
-        <div className="header-controls">
+            {nav.pricing}
+          </Link>
+        </nav>
+
+        <div className="n3-header-right">
           <LanguageSwitcher currentLocale={locale} routeKey={routeKey} />
+          {phoneLink}
           <button
             type="button"
-            className={mobileNavOpen ? 'mobile-nav-toggle active' : 'mobile-nav-toggle'}
+            className="n3-burger"
             aria-expanded={mobileNavOpen}
-            aria-controls="main-nav"
+            aria-controls="n3-mobile-nav"
             aria-label={mobileNavOpen ? ui.mobileMenuClose : ui.mobileMenuOpen}
-            onClick={() => setMobileNavOpen((current) => !current)}
+            onClick={() => setMobileNavOpen((v) => !v)}
           >
             <span />
             <span />
@@ -104,21 +134,25 @@ export function SiteHeader({
         </div>
       </div>
 
-      <nav
-        id="main-nav"
-        className={mobileNavOpen ? 'main-nav open' : 'main-nav'}
+      <div
+        id="n3-mobile-nav"
+        className={mobileNavOpen ? 'n3-mobile-overlay is-open' : 'n3-mobile-overlay'}
+        role="dialog"
+        aria-modal="true"
         aria-label={ui.primaryNavigation}
+        hidden={!mobileNavOpen}
       >
-        {CORE_NAV_KEYS.map((navKey) => (
+        <nav className="n3-mobile-nav">
+          {renderAnchors(() => setMobileNavOpen(false))}
           <Link
-            key={navKey}
-            className={navKey === routeKey ? 'nav-link active' : 'nav-link'}
-            to={buildLocalizedPath(locale, navKey)}
+            className="n3-nav-anchor"
+            to={pricingPath}
+            onClick={() => setMobileNavOpen(false)}
           >
-            {nav[navKey]}
+            {nav.pricing}
           </Link>
-        ))}
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }

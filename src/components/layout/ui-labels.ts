@@ -17,6 +17,8 @@ export interface LayoutUiLabels {
   primaryNavigation: string;
   languageSwitcher: string;
   locationMap: string;
+  navServices: string;
+  scrollTop: string;
 }
 
 export function getLayoutUiLabels(locale: Locale): LayoutUiLabels {
