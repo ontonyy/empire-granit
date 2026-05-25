@@ -65,7 +65,32 @@
         "value": "Narva",
         "label": "workshop and samples at Pähklimäe 2"
       }
-    ]
+    ],
+    "intro": "Empire Granit is a granite workshop in Narva. We make monuments, borders and install completed work at the cemetery. Every project begins with a conversation with the family.",
+    "phoneEyebrow": "Call directly",
+    "craftEyebrow": "Craft",
+    "craftTitle": "Workshop in Narva — granite, engraving, finishing.",
+    "servicesShort": [
+      {
+        "title": "Monuments",
+        "body": "Single, double and custom granite monuments shaped to your chosen form, size and engraving."
+      },
+      {
+        "title": "Borders",
+        "body": "Granite and concrete borders for single and family plots. Sized to the site."
+      },
+      {
+        "title": "Engravings",
+        "body": "Inscription, portrait and decorative engraving on the monument or on a separate slab."
+      }
+    ],
+    "worksSectionEyebrow": "Completed work",
+    "worksSectionTitle": "A few examples in context.",
+    "pricesEyebrow": "Price",
+    "pricesTitle": "What affects the final price",
+    "pricesTableLink": "Full pricing →",
+    "finalEyebrow": "Let's talk",
+    "finalContactLink": "Send a message →"
   },
   "pricing": {
     "heading": "Prices",
@@ -73,6 +98,10 @@
     "bottomNote": "Exact price is confirmed after dimensions, material, engraving, site access, and installation scope are clarified.",
     "includedLabel": "Included",
     "affectsLabel": "Affects final cost",
+    "factorsBody": [
+      "Final cost is shaped by granite color and thickness, monument size and shape complexity, the amount of engraving and whether a portrait is included.",
+      "It is also affected by site access, removal of an old monument, foundation condition and delivery to the cemetery."
+    ],
     "tiers": [
       {
         "id": "monuments",
@@ -118,6 +147,8 @@
     "title": "Completed work, in context.",
     "pageLead": "A selection of monuments, fences and grave site restoration projects across Estonia. Each one is shaped to a specific memorial and family.",
     "filterLabel": "Filter",
+    "homeFooterCounter": "05 examples — 30+ more in the catalog",
+    "viewAllLink": "View all work →",
     "filters": {
       "all": "All",
       "monuments": "Monuments",

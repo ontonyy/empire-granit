@@ -65,7 +65,32 @@
         "value": "Narva",
         "label": "töökoda ja näidised aadressil Pähklimäe 2"
       }
-    ]
+    ],
+    "intro": "Empire Granit on Narva graniidi töökoda. Valmistame monumente, piirdeid ja paigaldame valminud lahendused kalmistule. Iga töö algab vestlusest perekonnaga.",
+    "phoneEyebrow": "Helistage otse",
+    "craftEyebrow": "Käsitöö",
+    "craftTitle": "Töökoda Narvas — graniit, gravüür, viimistlus.",
+    "servicesShort": [
+      {
+        "title": "Monumendid",
+        "body": "Üksik-, topelt- ja eritellimusel graniitmonumendid kuju, mõõdu ja graveeringuga teie valikul."
+      },
+      {
+        "title": "Piirded",
+        "body": "Graniit- ja betoonpiirded üksikutele ja pereplatsidele. Mõõdud platsi järgi."
+      },
+      {
+        "title": "Graveeringud",
+        "body": "Kirja, portree ja dekoori graveering otse monumendile või eraldi plaadile."
+      }
+    ],
+    "worksSectionEyebrow": "Tehtud tööd",
+    "worksSectionTitle": "Näiteid valminud lahendustest.",
+    "pricesEyebrow": "Hind",
+    "pricesTitle": "Mis mõjutab lõpphinda",
+    "pricesTableLink": "Täielik hinnakiri →",
+    "finalEyebrow": "Räägime",
+    "finalContactLink": "Saada sõnum →"
   },
   "pricing": {
     "heading": "Hinnad",
@@ -73,6 +98,10 @@
     "bottomNote": "Täpne hind kinnitatakse pärast mõõtude, materjali, graveeringu, ligipääsu ja paigalduse mahu täpsustamist.",
     "includedLabel": "Mis sisaldub",
     "affectsLabel": "Mis mõjutab hinda",
+    "factorsBody": [
+      "Lõpphinna kujundavad graniidi toon ja paksus, monumendi mõõt ja kuju keerukus, graveeringu maht ning portree olemasolu.",
+      "Lisaks mõjutavad hinda platsi ligipääs, vana monumendi demontaaž, aluse seisukord ja transport kalmistule."
+    ],
     "tiers": [
       {
         "id": "monuments",
@@ -118,6 +147,8 @@
     "title": "Näited valminud lahendustest",
     "pageLead": "Allpool valik valminud monumente, piirdeid ja platside korrastustöid Eestis. Iga töö on kohandatud konkreetse mälestuspaiga ja perekonna vajadustele.",
     "filterLabel": "Filtreeri",
+    "homeFooterCounter": "05 näidet — veel 30+ kataloogis",
+    "viewAllLink": "Vaata kõiki töid →",
     "filters": {
       "all": "Kõik",
       "monuments": "Monumendid",

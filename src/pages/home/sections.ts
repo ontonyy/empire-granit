@@ -1,25 +1,6 @@
-export interface TrustMetric {
-  value: string;
-  label: string;
-}
-
-export interface StepItem {
-  title: string;
-  body: string;
-}
-
-export interface OptionItem {
-  title: string;
-  body: string;
-  meta?: string;
-}
-
-export interface CareItem {
-  title: string;
-  body: string;
-}
-
-export interface ConfiguratorItem {
-  title: string;
-  body: string;
-}
+export { OpeningTableau } from './OpeningTableau';
+export { IntroRow } from './IntroRow';
+export { CraftTableau } from './CraftTableau';
+export { WorksEssay } from './WorksEssay';
+export { PricesBlock } from './PricesBlock';
+export { FinalTableau } from './FinalTableau';
