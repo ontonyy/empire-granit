@@ -11,7 +11,9 @@ export interface WorkItem {
   title: string;
   material: string;
   category: WorkCategory;
-  image: string;
+  imageBase: string;
+  width: number;
+  height: number;
   ratio: WorkRatio;
 }
 
@@ -28,7 +30,9 @@ export const WORKS: WorkItem[] = [
     title: 'Tamm — perekonnamonument',
     material: 'Karelia Red',
     category: 'monuments',
-    image: '/images/works/placeholder-01.jpg',
+    imageBase: 'gravestone',
+    width: 408,
+    height: 612,
     ratio: 'portrait'
   },
   {
@@ -36,7 +40,9 @@ export const WORKS: WorkItem[] = [
     title: 'Kask — graniidist piire',
     material: 'Lithuanian Black',
     category: 'fences',
-    image: '/images/works/placeholder-02.jpg',
+    imageBase: 'granite_fence',
+    width: 750,
+    height: 588,
     ratio: 'landscape'
   },
   {
@@ -44,7 +50,9 @@ export const WORKS: WorkItem[] = [
     title: 'Lepik — portreegraveering',
     material: 'Karelian Black',
     category: 'engravings',
-    image: '/images/works/placeholder-03.jpg',
+    imageBase: 'memorial_table',
+    width: 600,
+    height: 451,
     ratio: 'landscape'
   },
   {
@@ -52,7 +60,9 @@ export const WORKS: WorkItem[] = [
     title: 'Saar — paigaldus Tallinnas',
     material: 'Volga Blue',
     category: 'installation',
-    image: '/images/works/placeholder-04.jpg',
+    imageBase: 'exclusive',
+    width: 1024,
+    height: 1024,
     ratio: 'square'
   },
   {
@@ -60,7 +70,9 @@ export const WORKS: WorkItem[] = [
     title: 'Mets — kahekohaline monument',
     material: 'Indian Aurora',
     category: 'monuments',
-    image: '/images/works/placeholder-05.jpg',
+    imageBase: 'monument',
+    width: 1400,
+    height: 933,
     ratio: 'square'
   },
   {
@@ -68,7 +80,9 @@ export const WORKS: WorkItem[] = [
     title: 'Kuusk — madalpiire ja vaas',
     material: 'Karelia Red',
     category: 'fences',
-    image: '/images/works/placeholder-06.jpg',
+    imageBase: 'stone_plate',
+    width: 561,
+    height: 679,
     ratio: 'portrait'
   },
   {
@@ -76,7 +90,9 @@ export const WORKS: WorkItem[] = [
     title: 'Rebane — fotoemail',
     material: 'Karelian Black',
     category: 'engravings',
-    image: '/images/works/placeholder-07.jpg',
+    imageBase: 'tombstone',
+    width: 612,
+    height: 408,
     ratio: 'landscape'
   },
   {
@@ -84,7 +100,9 @@ export const WORKS: WorkItem[] = [
     title: 'Oja — vana platsi taastamine',
     material: 'Mixed granite',
     category: 'installation',
-    image: '/images/works/placeholder-08.jpg',
+    imageBase: 'fence_with_entrance',
+    width: 900,
+    height: 600,
     ratio: 'landscape'
   },
   {
@@ -92,7 +110,9 @@ export const WORKS: WorkItem[] = [
     title: 'Kallas — soolomonument',
     material: 'Aurora Red',
     category: 'monuments',
-    image: '/images/works/placeholder-09.jpg',
+    imageBase: 'fence',
+    width: 1024,
+    height: 1024,
     ratio: 'square'
   },
   {
@@ -100,7 +120,9 @@ export const WORKS: WorkItem[] = [
     title: 'Lill — kõrgpiire ja lillealus',
     material: 'Lithuanian Black',
     category: 'fences',
-    image: '/images/works/placeholder-10.jpg',
+    imageBase: 'framing',
+    width: 1400,
+    height: 933,
     ratio: 'square'
   },
   {
@@ -108,7 +130,9 @@ export const WORKS: WorkItem[] = [
     title: 'Kuld — kuldgraveering',
     material: 'Karelian Black',
     category: 'engravings',
-    image: '/images/works/placeholder-11.jpg',
+    imageBase: 'granite_bench',
+    width: 700,
+    height: 800,
     ratio: 'portrait'
   },
   {
@@ -116,7 +140,9 @@ export const WORKS: WorkItem[] = [
     title: 'Paju — paigaldus Narva-Jõesuus',
     material: 'Indian Aurora',
     category: 'installation',
-    image: '/images/works/placeholder-12.jpg',
+    imageBase: 'bench',
+    width: 800,
+    height: 600,
     ratio: 'landscape'
   }
 ];

@@ -1,6 +1,3 @@
-import { addDoc, collection } from 'firebase/firestore';
-import { firestore } from './firebase';
-
 declare global {
   interface Window {
     plausible?: (eventName: string, payload?: { props?: Record<string, string> }) => void;
@@ -18,6 +15,20 @@ interface AnalyticsEvent {
   timestamp: string;
 }
 
+async function writeToFirestore(event: AnalyticsEvent) {
+  try {
+    const [{ addDoc, collection }, { firestore }] = await Promise.all([
+      import('firebase/firestore'),
+      import('./firebase')
+    ]);
+    await addDoc(collection(firestore, ANALYTICS_COLLECTION), event);
+  } catch (error) {
+    if (import.meta.env.DEV) {
+      console.warn('[analytics][firestore-write-failed]', error);
+    }
+  }
+}
+
 export async function trackEvent(eventName: string, props?: Record<string, string>) {
   if (typeof window === 'undefined') {
     return;
@@ -30,13 +41,7 @@ export async function trackEvent(eventName: string, props?: Record<string, strin
     timestamp: new Date().toISOString()
   };
 
-  try {
-    await addDoc(collection(firestore, ANALYTICS_COLLECTION), event);
-  } catch (error) {
-    if (import.meta.env.DEV) {
-      console.warn('[analytics][firestore-write-failed]', error);
-    }
-  }
+  void writeToFirestore(event);
 
   if (typeof window.plausible === 'function') {
     window.plausible(eventName, safeProps ? { props: safeProps } : undefined);
@@ -52,10 +57,3 @@ export async function trackEvent(eventName: string, props?: Record<string, strin
     console.info('[analytics]', eventName, safeProps);
   }
 }
-
-export {
-  getAnalyticsSummary,
-  type AdminEventFilter,
-  type AdminRecentEvent,
-  type AnalyticsSummary
-} from './analytics-summary';

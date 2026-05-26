@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { buildLocalizedPath } from '../../routing';
 import type { Locale } from '../../types';
-import { HOME_WORKS_EXAMPLES } from './works-examples';
+import { HOME_WORKS_EXAMPLES, type HomeWorkExample } from './works-examples';
 
 interface WorksEssayProps {
   locale: Locale;
@@ -9,6 +9,17 @@ interface WorksEssayProps {
   title: string;
   footerCounter: string;
   viewAllLink: string;
+}
+
+function ExamplePicture({ example }: { example: HomeWorkExample }) {
+  const base = `/images/n3/works/${example.imageBase}`;
+  return (
+    <picture>
+      <source type="image/avif" srcSet={`${base}.avif`} />
+      <source type="image/webp" srcSet={`${base}.webp`} />
+      <img src={`${base}.jpg`} alt="" loading="lazy" decoding="async" />
+    </picture>
+  );
 }
 
 export function WorksEssay({ locale, eyebrow, title, footerCounter, viewAllLink }: WorksEssayProps) {
@@ -22,7 +33,7 @@ export function WorksEssay({ locale, eyebrow, title, footerCounter, viewAllLink 
         </header>
         <div className="home-works__grid">
           <figure className="home-works__cell home-works__cell--a">
-            <img src={examples[0].image} alt="" loading="lazy" />
+            <ExamplePicture example={examples[0]} />
             <figcaption>{examples[0].title}</figcaption>
           </figure>
           <div className="home-works__side home-works__side--b">
@@ -30,19 +41,19 @@ export function WorksEssay({ locale, eyebrow, title, footerCounter, viewAllLink 
             <span>{examples[1].material}</span>
           </div>
           <figure className="home-works__cell home-works__cell--c">
-            <img src={examples[1].image} alt="" loading="lazy" />
+            <ExamplePicture example={examples[1]} />
             <figcaption>{examples[1].title}</figcaption>
           </figure>
           <figure className="home-works__cell home-works__cell--d">
-            <img src={examples[2].image} alt="" loading="lazy" />
+            <ExamplePicture example={examples[2]} />
             <figcaption>{examples[2].title}</figcaption>
           </figure>
           <figure className="home-works__cell home-works__cell--e">
-            <img src={examples[3].image} alt="" loading="lazy" />
+            <ExamplePicture example={examples[3]} />
             <figcaption>{examples[3].title}</figcaption>
           </figure>
           <figure className="home-works__cell home-works__cell--f">
-            <img src={examples[4].image} alt="" loading="lazy" />
+            <ExamplePicture example={examples[4]} />
             <figcaption>{examples[4].title}</figcaption>
           </figure>
           <div className="home-works__side home-works__side--g">

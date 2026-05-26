@@ -1,23 +1,58 @@
-# Responsive Notes
-
-Repo uses CSS breakpoints and fluid values in `src/styles.css` and `src/styles/tokens.css`; React components mostly expose class hooks, with `SiteHeader` owning mobile nav state.
+# Responsive Notes — N3
 
 ## Breakpoints
+Tokens in `src/styles/tokens.css`. Vite mobile-first; media queries scale up.
 
-- `640px` min: tokenized `.ui-container` padding grows from `--container-pad-mobile` to `--container-pad-tablet`; `.catalog-grid` moves from 1 to 2 columns. `640px` max: catalog grids collapse to 1 column and reduce gaps/padding.
-- `760px` max: preview stepper changes from 5 columns to 3 columns; preview stage min-height drops from 520px to 420px and padding tightens.
-- `767px` max: header emergency phone link becomes an icon-only circle by hiding prefix/value text and showing `.brand-emergency-icon`.
-- `768px` min: token UI grids expand, e.g. `.ui-icon-grid` becomes 2 columns and feature/media grids use `40% 1fr`.
-- `860px` max: process story/consultation grids collapse to 1 column; even story media order resets; consultation CTA allows wrapping.
-- `900px` max: main mobile breakpoint. Header padding tightens, hamburger appears, `.main-nav` becomes hidden vertical drawer until `.open`; many page grids collapse to 1 column; admin stats become 2 columns; floating call button moves inward with smaller padding.
-- `1000px` max: contact/map style grids collapse to 1 column.
-- `1024px` min: tokenized `.ui-container` padding grows to `--container-pad-desktop`; catalog grid becomes 3 columns; preview workspace becomes two columns (`1fr` + `380px`) and preview controls become sticky.
+| Breakpoint | Width | Used for |
+|---|---|---|
+| (default) | < 640px | Phone portrait |
+| `min-width: 640px` | 640+ | Phone landscape, small tablet |
+| `min-width: 960px` | 960+ | Tablet, small laptop — multi-column unlock |
+| `min-width: 1280px` | 1280+ | Desktop — full editorial grid |
+| `min-width: 1600px` | 1600+ | Wide desktop — gutter widens |
 
-## Layout Shifts
+## Hero (OpeningTableau)
+- `<picture>` with srcset 1200w / 2400w + `sizes="100vw"`
+- 14 MB hero PNG retired; AVIF 2x = 282 KB, AVIF 1x = 112 KB
+- `loading="eager"`, `fetchpriority="high"`, head preload for AVIF
+- Title centered + bottom-anchored at all sizes
 
-- Global shell is capped at `1200px` with `1.5rem` padding; newer `.ui-container` is capped by `--container-max: 1280px` with 24/48/64px responsive side padding.
-- Typography and section spacing are partly fluid: tokens define `--fs-h1`, `--fs-h2`, `--fs-h3`, and `--section-pad` with `clamp()`, while legacy CSS also uses `clamp()` on hero and page headings.
-- Navigation is desktop horizontal scrollable pills by default; at `max-width: 900px` it becomes a full-width stacked menu controlled by `mobileNavOpen` in `SiteHeader`.
-- Home/about/privacy/gallery/catalog/contact/admin layouts use desktop multi-column grids, then collapse mainly at `900px`; catalog has extra `640px` and `900px` rules for product/granite grids.
-- Preview page is mobile-first: single-column workspace by default, 5-step grid unless under `760px`, and desktop two-column editor at `1024px` with sticky controls.
-- Reusable UI primitives in `tokens.css` are mobile-first; cards/sections keep fixed token spacing, while grids progressively add columns at `640px`, `768px`, and `1024px`.
+## Craft tableau (3-photo grid)
+| Width | Layout |
+|---|---|
+| < 640px | Stacked single column, big photo first |
+| 640–959px | 2-col: big spans both, small two below |
+| 960+ | 3-col asymmetric: big = 2 cols, fence + plate = 1 col each |
+
+## Works essay (home asymmetric 7-cell grid)
+The most opinionated layout. Cells `--a` through `--g` use named CSS-grid `grid-template-areas`.
+
+| Width | Grid |
+|---|---|
+| < 640px | Linear vertical reading; type-only cells (`--b`, `--g`) collapse to inline labels |
+| 640–959px | 2-col with reflowed areas: `a a / b c / d e / f g` |
+| 960+ | Full 4-col editorial — see `styles.css` `.home-works__grid` |
+
+Type-only cells (`--b`, `--g`) always sit beside their photo's cell for caption-pairing.
+
+## Works gallery (`/et/tood/`)
+- CSS grid `repeat(auto-fill, minmax(220px, 1fr))` mobile -> `minmax(280px, 1fr)` desktop
+- Tile aspect via `.works-tile-{portrait,landscape,square}` modifier
+- Filter pills horizontal scroll on < 640px
+
+## Pricing
+- Tiers: stacked on mobile -> 3-col equal at 960+
+- Process steps: vertical numbered list mobile -> horizontal connector at 960+
+- FAQ: stacked everywhere; `<details>` native disclosure
+
+## Contact
+- Phone (LCP) — single large element, clamp(3.5rem, 11vw, 6rem)
+- Form full-width to 640px, then constrained to ~560px column
+- Map iframe deferred via `IntersectionObserver` (300px rootMargin) — does not load on initial paint
+- System font stack used on phone number to avoid LCP wait for Inter 500
+
+## Global
+- `<html>` font-size 100% (browser default), all sizing in rem / clamp
+- `.ui-container` max-width 1280px, gutters via `--space-6` mobile -> `--space-12` desktop
+- `.skip-link` always present, visible on focus
+- `prefers-reduced-motion: reduce` collapses reveal-on-scroll to immediate
