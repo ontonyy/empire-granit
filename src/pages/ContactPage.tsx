@@ -4,6 +4,7 @@ import { siteConfig } from '../config/site';
 import type { Locale } from '../types';
 import { ContactForm } from './contact/ContactForm';
 import { getContactAssistContent } from './contact/copy';
+import { WorkshopMap } from './contact/WorkshopMap';
 
 interface ContactPageProps {
   locale: Locale;
@@ -58,16 +59,7 @@ export function ContactPage({ locale }: ContactPageProps) {
       </dl>
 
       <div id="map" className="contact-n3__map">
-        <iframe
-          title={content.layout.locationMap}
-          src={siteConfig.contacts.mapEmbedUrl}
-          width="100%"
-          height="480"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <WorkshopMap src={siteConfig.contacts.mapEmbedUrl} title={content.layout.locationMap} />
       </div>
     </section>
   );

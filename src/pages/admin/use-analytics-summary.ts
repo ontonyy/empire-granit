@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { getAnalyticsSummary, type AnalyticsSummary } from '../../lib/analytics';
+import { getAnalyticsSummary, type AnalyticsSummary } from '../../lib/analytics-summary';
 import { EMPTY_SUMMARY } from './copy';
 
 export function useAnalyticsSummary() {

@@ -34,6 +34,19 @@ export function SeoHead({ locale, routeKey }: SeoHeadProps) {
       <meta property="og:locale" content={locale} />
       <meta name="twitter:card" content="summary_large_image" />
       <link rel="canonical" href={canonical} />
+      {routeKey === 'home' ? (
+        <link
+          rel="preload"
+          as="image"
+          type="image/avif"
+          href={`${basePath}/images/n3/hero-1x.avif`}
+          {...{
+            imagesrcset: `${basePath}/images/n3/hero-1x.avif 1200w, ${basePath}/images/n3/hero-2x.avif 2400w`,
+            imagesizes: '100vw',
+            fetchpriority: 'high'
+          }}
+        />
+      ) : null}
       {LOCALES.map((altLocale) => {
         const href = `${siteUrl}${basePath}${buildLocalizedPath(altLocale, routeKey)}`;
         return <link key={altLocale} rel="alternate" hrefLang={altLocale} href={href} />;

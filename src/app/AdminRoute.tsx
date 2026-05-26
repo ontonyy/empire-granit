@@ -1,7 +1,11 @@
+import { Suspense, lazy } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { AdminPage } from '../pages/AdminPage';
 import { LOCALES } from '../routing';
 import type { Locale } from '../types';
+
+const AdminPage = lazy(() =>
+  import('../pages/AdminPage').then((m) => ({ default: m.AdminPage }))
+);
 
 export function AdminRoute() {
   const params = useParams();
@@ -11,5 +15,9 @@ export function AdminRoute() {
     return <Navigate to="/ru/" replace />;
   }
 
-  return <AdminPage locale={locale} />;
+  return (
+    <Suspense fallback={null}>
+      <AdminPage locale={locale} />
+    </Suspense>
+  );
 }

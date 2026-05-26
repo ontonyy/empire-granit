@@ -90,18 +90,24 @@ export function SiteHeader({
     <header className="n3-header">
       <div className="n3-header-inner">
         <Link className="n3-brand" to={homePath} aria-label={siteConfig.siteName}>
-          <img
-            className="n3-brand-logo"
-            src={logoPrimarySrc}
-            alt=""
-            onError={(event) => {
-              const img = event.currentTarget;
-              if (!img.dataset.fallback) {
-                img.dataset.fallback = '1';
-                img.src = logoFallbackSrc;
-              }
-            }}
-          />
+          <picture>
+            <source type="image/webp" srcSet={logoPrimarySrc.replace(/logo\.png$/, 'logo.webp')} />
+            <img
+              className="n3-brand-logo"
+              src={logoPrimarySrc}
+              alt=""
+              width={400}
+              height={267}
+              decoding="async"
+              onError={(event) => {
+                const img = event.currentTarget;
+                if (!img.dataset.fallback) {
+                  img.dataset.fallback = '1';
+                  img.src = logoFallbackSrc;
+                }
+              }}
+            />
+          </picture>
           <span className="n3-wordmark">EMPIRE GRANIT</span>
         </Link>
 

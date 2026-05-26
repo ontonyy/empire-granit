@@ -1,4 +1,4 @@
-import type { AdminEventFilter, AnalyticsSummary } from '../../lib/analytics';
+import type { AdminEventFilter, AnalyticsSummary } from '../../lib/analytics-summary';
 
 export const EMPTY_SUMMARY: AnalyticsSummary = {
   totalPageViews: 0,

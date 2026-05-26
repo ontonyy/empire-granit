@@ -68,12 +68,19 @@ export function WorksPage({ locale }: WorksPageProps) {
                 data-category={item.category}
               >
                 <a className="works-tile-link" href={`#${item.id}`} id={item.id}>
-                  <img
-                    className="works-tile-image"
-                    src={item.image}
-                    alt={item.title}
-                    loading="lazy"
-                  />
+                  <picture className="works-tile-picture">
+                    <source type="image/avif" srcSet={`/images/n3/works/${item.imageBase}.avif`} />
+                    <source type="image/webp" srcSet={`/images/n3/works/${item.imageBase}.webp`} />
+                    <img
+                      className="works-tile-image"
+                      src={`/images/n3/works/${item.imageBase}.jpg`}
+                      width={item.width}
+                      height={item.height}
+                      alt={item.title}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                   <span className="works-tile-overlay" aria-hidden="true" />
                   <span className="works-tile-caption">
                     <span className="works-tile-title">{item.title}</span>

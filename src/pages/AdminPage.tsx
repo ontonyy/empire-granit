@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AdminGuard, clearAdminSession } from '../components/AdminGuard';
-import type { AdminEventFilter } from '../lib/analytics';
+import type { AdminEventFilter } from '../lib/analytics-summary';
 import type { Locale } from '../types';
 import { FILTER_LABELS, getEventLabel } from './admin/copy';
 import { useAnalyticsSummary } from './admin/use-analytics-summary';

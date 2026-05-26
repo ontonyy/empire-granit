@@ -1,14 +1,14 @@
 export interface HomeWorkExample {
   id: string;
-  image: string;
+  imageBase: string;
   title: string;
   material: string;
 }
 
 export const HOME_WORKS_EXAMPLES: HomeWorkExample[] = [
-  { id: 'tamm', image: '/images/examples/monument.png', title: 'Tamm', material: 'Karelia Red' },
-  { id: 'kask', image: '/images/examples/fence_with_entrance.png', title: 'Kask', material: 'Lithuanian Black' },
-  { id: 'lepik', image: '/images/examples/gravestone.png', title: 'Lepik', material: 'Karelian Black' },
-  { id: 'saar', image: '/images/examples/granite_bench.png', title: 'Saar', material: 'Volga Blue' },
-  { id: 'mets', image: '/images/examples/exclusive.png', title: 'Mets', material: 'Indian Aurora' }
+  { id: 'tamm', imageBase: 'monument', title: 'Tamm', material: 'Karelia Red' },
+  { id: 'kask', imageBase: 'fence_with_entrance', title: 'Kask', material: 'Lithuanian Black' },
+  { id: 'lepik', imageBase: 'gravestone', title: 'Lepik', material: 'Karelian Black' },
+  { id: 'saar', imageBase: 'granite_bench', title: 'Saar', material: 'Volga Blue' },
+  { id: 'mets', imageBase: 'exclusive', title: 'Mets', material: 'Indian Aurora' }
 ];
