@@ -9,7 +9,7 @@ interface ServicesPageProps {
   locale: Locale;
 }
 
-const PHOTOS = ['craft-framing', 'craft-fence', 'craft-plate'];
+const PHOTOS = ['service-framing', 'service-fence', 'service-plate'];
 
 export function ServicesPage({ locale }: ServicesPageProps) {
   const content = getLocaleContent(locale);

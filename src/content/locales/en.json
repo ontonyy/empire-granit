@@ -96,7 +96,7 @@
     "pricesLeadLine": "Guide prices below. Final cost depends on material, size, and site access.",
     "pricesTableLink": "Full pricing →",
     "pricesLearnMore": "Full pricing →",
-    "finalEyebrow": "Let's talk",
+    "finalEyebrow": "Contact",
     "finalContactLink": "Send a message →"
   },
   "services": {
@@ -134,7 +134,7 @@
   },
   "pricing": {
     "title": "Pricing",
-    "intro": "Below are guide prices for core services. Final cost depends on granite, size, engraving, site condition, distance, and season. Exact calculation follows a short consultation.",
+    "intro": "These are starting prices for our most common services. The final price depends on the granite, size, engraving, and site conditions. We confirm it after a short consultation.",
     "bottomNote": "Exact price is confirmed after dimensions, material, engraving, site access, and installation scope are clarified.",
     "includedLabel": "Included",
     "affectsLabel": "Affects final cost",
@@ -200,13 +200,13 @@
     "cta": {
       "eyebrow": "Need a similar solution?",
       "title": "Don’t see the right fit?",
-      "body": "Every project starts with a conversation. Call us — we will match material, dimensions and budget to your memorial.",
-      "link": "Talk by phone"
+      "body": "Every project starts with a conversation. Call us, and we will match material, dimensions, and budget to your memorial.",
+      "link": "Call {phone}"
     }
   },
   "contact": {
-    "heading": "Request an estimate or consultation",
-    "intro": "You can contact us by phone during working hours, leave a request on the site, or send an email.",
+    "heading": "Get in touch",
+    "intro": "Reach us by phone during working hours, send a message through the form, or write to our email.",
     "inquiryTitle": "Send a photo, idea, or question",
     "intentItems": [
       "Sizes for monument, installation, or border",
