@@ -2,6 +2,7 @@
   "localeLabel": "Eesti",
   "nav": {
     "home": "Avaleht",
+    "services": "Teenused",
     "works": "Tööd",
     "about": "Ettevõttest",
     "pricing": "Hinnakiri",
@@ -68,8 +69,11 @@
     ],
     "intro": "Empire Granit on Narva graniidi töökoda. Valmistame monumente, piirdeid ja paigaldame valminud lahendused kalmistule. Iga töö algab vestlusest perekonnaga.",
     "phoneEyebrow": "Helistage otse",
-    "craftEyebrow": "Käsitöö",
-    "craftTitle": "Töökoda Narvas — graniit, gravüür, viimistlus.",
+    "heroBodyLine": "Graniitmonumendid ja piirded. Töökoda Narvas, vedu üle Eesti.",
+    "heroLocation": "NARVA · EESTI",
+    "servicesEyebrow": "Teenused",
+    "servicesShortTitle": "Monumendid, piirded ja graveering.",
+    "servicesLearnMore": "Vaata kõiki teenuseid →",
     "servicesShort": [
       {
         "title": "Monumendid",
@@ -86,14 +90,50 @@
     ],
     "worksSectionEyebrow": "Tehtud tööd",
     "worksSectionTitle": "Näiteid valminud lahendustest.",
+    "worksLearnMore": "Vaata kõiki töid →",
     "pricesEyebrow": "Hind",
     "pricesTitle": "Mis mõjutab lõpphinda",
+    "pricesLeadLine": "Allpool on orienteeruvad hinnad. Lõplik hind sõltub materjalist, mõõdust ja platsi ligipääsust.",
     "pricesTableLink": "Täielik hinnakiri →",
+    "pricesLearnMore": "Täielik hinnakiri →",
     "finalEyebrow": "Räägime",
     "finalContactLink": "Saada sõnum →"
   },
+  "services": {
+    "title": "Mida me teeme",
+    "lead": "Kolm teenust, mis katavad kogu mälestusmärgi, monumendist paigalduseni.",
+    "items": [
+      {
+        "title": "Monumendid",
+        "body": "Üksik-, topelt- ja eritellimusel graniitmonumendid kuju, mõõdu ja graveeringuga teie valikul.",
+        "deliverables": [
+          "Üksik-, topelt- ja eritellimusel kujud",
+          "Graniidi tooni ja viimistluse valik",
+          "Kiri ja portree graveering"
+        ]
+      },
+      {
+        "title": "Piirded",
+        "body": "Graniit- ja betoonpiirded üksikutele ja pereplatsidele. Mõõdud platsi järgi.",
+        "deliverables": [
+          "Graniit- ja betoonelemendid",
+          "Mõõdud platsi järgi",
+          "Aluse ettevalmistus ja paigaldus"
+        ]
+      },
+      {
+        "title": "Graveeringud",
+        "body": "Kirja, portree ja dekoori graveering otse monumendile või eraldi plaadile.",
+        "deliverables": [
+          "Kirjad ja kuupäevad",
+          "Portreed ja foto-graveering",
+          "Dekoratiivsed motiivid"
+        ]
+      }
+    ]
+  },
   "pricing": {
-    "heading": "Hinnad",
+    "title": "Hinnakiri",
     "intro": "Allpool on põhiteenuste hinnaorientiirid. Lõplik hind sõltub graniidist, mõõdust, graveeringust, platsi seisukorrast, kaugusest ja hooajast. Täpne arvutus valmib pärast lühikest nõustamist.",
     "bottomNote": "Täpne hind kinnitatakse pärast mõõtude, materjali, graveeringu, ligipääsu ja paigalduse mahu täpsustamist.",
     "includedLabel": "Mis sisaldub",
@@ -243,6 +283,10 @@
     "home": {
       "title": "Empire Granit - graniidist monumendid paigaldusega",
       "description": "Monumentide valmistamine, graveering, piirded, restaureerimine ja paigaldus üle Eesti."
+    },
+    "services": {
+      "title": "Teenused - Empire Granit",
+      "description": "Monumendid, piirded ja graveering. Töökoda Narvas, paigaldus üle Eesti."
     },
     "works": {
       "title": "Tööd | Empire Granit",

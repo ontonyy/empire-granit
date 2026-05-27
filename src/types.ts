@@ -2,6 +2,7 @@ export type Locale = 'ru' | 'et' | 'en';
 
 export type RouteKey =
   | 'home'
+  | 'services'
   | 'works'
   | 'pricing'
   | 'contact'
@@ -42,19 +43,30 @@ export interface LocaleContent {
     trustMetrics: Array<{ value: string; label: string }>;
     intro: string;
     phoneEyebrow: string;
-    craftEyebrow: string;
-    craftTitle: string;
+    heroBodyLine: string;
+    heroLocation: string;
+    servicesEyebrow: string;
+    servicesShortTitle: string;
+    servicesLearnMore: string;
     servicesShort: Array<{ title: string; body: string }>;
     worksSectionEyebrow: string;
     worksSectionTitle: string;
+    worksLearnMore: string;
     pricesEyebrow: string;
     pricesTitle: string;
+    pricesLeadLine: string;
     pricesTableLink: string;
+    pricesLearnMore: string;
     finalEyebrow: string;
     finalContactLink: string;
   };
+  services: {
+    title: string;
+    lead: string;
+    items: Array<{ title: string; body: string; deliverables: string[] }>;
+  };
   pricing: {
-    heading: string;
+    title: string;
     intro: string;
     bottomNote: string;
     includedLabel: string;

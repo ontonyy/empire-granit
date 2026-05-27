@@ -2,6 +2,7 @@
   "localeLabel": "English",
   "nav": {
     "home": "Home",
+    "services": "Services",
     "works": "Works",
     "about": "About",
     "pricing": "Pricing",
@@ -68,8 +69,11 @@
     ],
     "intro": "Empire Granit is a granite workshop in Narva. We make monuments, borders and install completed work at the cemetery. Every project begins with a conversation with the family.",
     "phoneEyebrow": "Call directly",
-    "craftEyebrow": "Craft",
-    "craftTitle": "Workshop in Narva — granite, engraving, finishing.",
+    "heroBodyLine": "Granite monuments and borders. Workshop in Narva, delivery across Estonia.",
+    "heroLocation": "NARVA · EESTI",
+    "servicesEyebrow": "Services",
+    "servicesShortTitle": "Monuments, borders, and engraving.",
+    "servicesLearnMore": "See all services →",
     "servicesShort": [
       {
         "title": "Monuments",
@@ -86,14 +90,50 @@
     ],
     "worksSectionEyebrow": "Completed work",
     "worksSectionTitle": "A few examples in context.",
+    "worksLearnMore": "See all works →",
     "pricesEyebrow": "Price",
     "pricesTitle": "What affects the final price",
+    "pricesLeadLine": "Guide prices below. Final cost depends on material, size, and site access.",
     "pricesTableLink": "Full pricing →",
+    "pricesLearnMore": "Full pricing →",
     "finalEyebrow": "Let's talk",
     "finalContactLink": "Send a message →"
   },
+  "services": {
+    "title": "Our work",
+    "lead": "Three services covering the full memorial, from monument to installation.",
+    "items": [
+      {
+        "title": "Monuments",
+        "body": "Single, double and custom granite monuments shaped to your chosen form, size and engraving.",
+        "deliverables": [
+          "Single, double, custom shapes",
+          "Granite color and finish selection",
+          "Inscription and portrait engraving"
+        ]
+      },
+      {
+        "title": "Borders",
+        "body": "Granite and concrete borders for single and family plots. Sized to the site.",
+        "deliverables": [
+          "Granite and concrete elements",
+          "Sizing for the plot",
+          "Foundation prep and installation"
+        ]
+      },
+      {
+        "title": "Engravings",
+        "body": "Inscription, portrait and decorative engraving on the monument or on a separate slab.",
+        "deliverables": [
+          "Inscriptions and dates",
+          "Portraits and photo etching",
+          "Decorative motifs"
+        ]
+      }
+    ]
+  },
   "pricing": {
-    "heading": "Prices",
+    "title": "Pricing",
     "intro": "Below are guide prices for core services. Final cost depends on granite, size, engraving, site condition, distance, and season. Exact calculation follows a short consultation.",
     "bottomNote": "Exact price is confirmed after dimensions, material, engraving, site access, and installation scope are clarified.",
     "includedLabel": "Included",
@@ -243,6 +283,10 @@
     "home": {
       "title": "Empire Granit - granite monuments with installation",
       "description": "Monument production, engraving, borders, restoration, and installation across Estonia."
+    },
+    "services": {
+      "title": "Services - Empire Granit",
+      "description": "Granite monuments, borders, and engraving. Workshop in Narva, installation across Estonia."
     },
     "works": {
       "title": "Works | Empire Granit",

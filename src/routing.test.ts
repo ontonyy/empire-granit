@@ -9,7 +9,7 @@ describe('routing', () => {
   });
 
   it('should have core route keys', () => {
-    expect(ROUTE_KEYS).toEqual(['home', 'works', 'pricing', 'contact', 'privacy']);
+    expect(ROUTE_KEYS).toEqual(['home', 'services', 'works', 'pricing', 'contact', 'privacy']);
   });
 
   it('should build localized paths correctly', () => {
