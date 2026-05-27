@@ -30,21 +30,22 @@ const PHOTOS: ServicePhoto[] = [
 
 function ServicePicture({ photo }: { photo: ServicePhoto }) {
   const { name, width, height, sizes } = photo;
+  const b = `${import.meta.env.BASE_URL}images/n3/${name}`;
   return (
     <picture>
       <source
         type="image/avif"
-        srcSet={`/images/n3/${name}-1x.avif ${width / 2}w, /images/n3/${name}-2x.avif ${width}w`}
+        srcSet={`${b}-1x.avif ${width / 2}w, ${b}-2x.avif ${width}w`}
         sizes={sizes}
       />
       <source
         type="image/webp"
-        srcSet={`/images/n3/${name}-1x.webp ${width / 2}w, /images/n3/${name}-2x.webp ${width}w`}
+        srcSet={`${b}-1x.webp ${width / 2}w, ${b}-2x.webp ${width}w`}
         sizes={sizes}
       />
       <img
-        src={`/images/n3/${name}-2x.jpg`}
-        srcSet={`/images/n3/${name}-1x.jpg ${width / 2}w, /images/n3/${name}-2x.jpg ${width}w`}
+        src={`${b}-2x.jpg`}
+        srcSet={`${b}-1x.jpg ${width / 2}w, ${b}-2x.jpg ${width}w`}
         sizes={sizes}
         width={width}
         height={height}

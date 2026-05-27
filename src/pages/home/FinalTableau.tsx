@@ -14,8 +14,8 @@ export function FinalTableau({ locale, assist }: FinalTableauProps) {
       <picture className="home-final__picture">
         <img
           className="home-final__image"
-          src="/images/n3/contact-placeholder.jpg"
-          srcSet="/images/n3/contact-placeholder.jpg 1024w"
+          src={`${import.meta.env.BASE_URL}images/n3/contact-placeholder.jpg`}
+          srcSet={`${import.meta.env.BASE_URL}images/n3/contact-placeholder.jpg 1024w`}
           sizes="100vw"
           width={1024}
           height={1024}
