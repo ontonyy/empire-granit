@@ -33,20 +33,22 @@ async function run() {
 
   await rm(path.join(projectRoot, 'dist-ssr'), { recursive: true, force: true });
 
-  const rootIndex = path.join(distDir, 'index.html');
+  const rawBase = process.env.BASE_PATH || '/';
+  const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+  const defaultLocaleUrl = `${base}et/`;
   const fallback = `<!doctype html>
 <html lang="et">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="refresh" content="0; url=/et/" />
-<link rel="canonical" href="/et/" />
+<meta http-equiv="refresh" content="0; url=${defaultLocaleUrl}" />
+<link rel="canonical" href="${defaultLocaleUrl}" />
 <title>Empire Granit</title>
 </head>
-<body><script>window.location.replace('/et/');</script></body>
+<body><script>window.location.replace(${JSON.stringify(defaultLocaleUrl)});</script></body>
 </html>
 `;
   await writeFile(path.join(distDir, '404.html'), fallback);
-  await rm(rootIndex, { force: true });
+  await writeFile(path.join(distDir, 'index.html'), fallback);
 
   console.log(`Prerendered ${routes.length} routes.`);
 }
