@@ -24,7 +24,7 @@ export function PricingPage({ locale }: PricingPageProps) {
     <>
       <section className="pricing-header">
         <div className="ui-container pricing-header-inner">
-          <span className="ui-eyebrow">{content.nav.pricing}</span>
+          <span className="ui-eyebrow">{content.nav.pricing} / Empire Granit / Narva</span>
           <h1 className="ui-display ui-display-1 pricing-title">{section.title}</h1>
           <p className="pricing-intro">{section.intro}</p>
         </div>
