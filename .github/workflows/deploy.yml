@@ -57,7 +57,7 @@ jobs:
         run: npm run build
 
       - name: Show built index header
-        run: sed -n '1,40p' dist/index.html
+        run: sed -n '1,40p' dist/404.html || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
