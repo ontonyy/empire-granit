@@ -31,10 +31,10 @@
 
   --radius-sm: 4px; --radius-md: 8px;
 
-  --container-max: 1280px;
-  --container-pad-mobile: 24px;
-  --container-pad-tablet: 32px;
-  --container-pad-desktop: 48px;
+  --container-max: 100%;
+  --container-pad-mobile: clamp(16px, 4vw, 64px);
+  --container-pad-tablet: clamp(16px, 4vw, 64px);
+  --container-pad-desktop: clamp(16px, 4vw, 64px);
 
   --section-pad: clamp(64px, 9vw, 112px);
 

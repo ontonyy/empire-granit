@@ -18,10 +18,9 @@ interface SiteHeaderProps {
   revealOnScroll?: boolean;
 }
 
-interface AnchorDef {
-  hash: string;
-  label: string;
-}
+type NavRoute = Extract<RouteKey, 'services' | 'works' | 'pricing' | 'contact'>;
+
+const NAV_ROUTES: NavRoute[] = ['services', 'works', 'pricing', 'contact'];
 
 function useResponsiveThreshold(): number {
   const [threshold, setThreshold] = useState(80);
@@ -51,8 +50,6 @@ export function SiteHeader({
   const [forcedReveal, setForcedReveal] = useState(false);
   const location = useLocation();
   const homePath = buildLocalizedPath(locale, 'home');
-  const pricingPath = buildLocalizedPath(locale, 'pricing');
-  const isHome = routeKey === 'home';
   const headerRef = useRef<HTMLElement | null>(null);
 
   const threshold = useResponsiveThreshold();
@@ -79,20 +76,21 @@ export function SiteHeader({
     return () => el.removeEventListener('focusin', handler);
   }, [revealOnScroll]);
 
-  const anchors: AnchorDef[] = [
-    { hash: 'services', label: ui.navServices },
-    { hash: 'works', label: nav.works },
-    { hash: 'contact', label: nav.contact }
-  ];
-
-  const anchorHref = (hash: string) => (isHome ? `#${hash}` : `${homePath}#${hash}`);
-
-  const renderAnchors = (onClick?: () => void) =>
-    anchors.map((a) => (
-      <a key={a.hash} className="n3-nav-anchor" href={anchorHref(a.hash)} onClick={onClick}>
-        {a.label}
-      </a>
-    ));
+  const renderNavLinks = (onClick?: () => void) =>
+    NAV_ROUTES.map((key) => {
+      const active = routeKey === key;
+      return (
+        <Link
+          key={key}
+          className={active ? 'n3-nav-link is-active' : 'n3-nav-link'}
+          to={buildLocalizedPath(locale, key)}
+          aria-current={active ? 'page' : undefined}
+          onClick={onClick}
+        >
+          {nav[key]}
+        </Link>
+      );
+    });
 
   const phoneLink = (
     <a
@@ -148,18 +146,10 @@ export function SiteHeader({
               }}
             />
           </picture>
-          <span className="n3-wordmark">EMPIRE GRANIT</span>
         </Link>
 
         <nav className="n3-nav" aria-label={ui.primaryNavigation}>
-          {renderAnchors()}
-          <Link
-            className={routeKey === 'pricing' ? 'n3-nav-anchor is-active' : 'n3-nav-anchor'}
-            to={pricingPath}
-            aria-current={routeKey === 'pricing' ? 'page' : undefined}
-          >
-            {nav.pricing}
-          </Link>
+          {renderNavLinks()}
         </nav>
 
         <div className="n3-header-right">
@@ -191,14 +181,7 @@ export function SiteHeader({
         hidden={!mobileNavOpen}
       >
         <nav className="n3-mobile-nav">
-          {renderAnchors(() => setMobileNavOpen(false))}
-          <Link
-            className="n3-nav-anchor"
-            to={pricingPath}
-            onClick={() => setMobileNavOpen(false)}
-          >
-            {nav.pricing}
-          </Link>
+          {renderNavLinks(() => setMobileNavOpen(false))}
         </nav>
       </div>
     </header>
