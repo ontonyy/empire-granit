@@ -111,9 +111,9 @@ h5,
 
 /* Layout */
 .site-shell {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.5rem clamp(16px, 4vw, 64px);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -4530,14 +4530,6 @@ select:focus {
   mix-blend-mode: multiply;
 }
 
-.n3-wordmark {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.12em;
-  color: var(--ink-near-black);
-}
-
 .n3-nav {
   display: flex;
   justify-content: center;
@@ -4545,7 +4537,7 @@ select:focus {
   gap: var(--space-3);
 }
 
-.n3-nav-anchor {
+.n3-nav-link {
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 500;
@@ -4556,17 +4548,17 @@ select:focus {
   transition: color var(--motion-quiet), border-color var(--motion-quiet);
 }
 
-.n3-nav-anchor:hover {
+.n3-nav-link:hover {
   color: var(--ink-near-black);
   border-bottom-color: var(--rule-color-strong);
 }
 
-.n3-nav-anchor.is-active {
+.n3-nav-link.is-active {
   color: var(--ink-near-black);
   border-bottom-color: var(--accent-wood);
 }
 
-.n3-nav-anchor:focus-visible {
+.n3-nav-link:focus-visible {
   outline: var(--focus-ring);
   outline-offset: var(--focus-offset);
 }
@@ -4721,7 +4713,7 @@ select:focus {
   gap: var(--space-3);
 }
 
-.n3-mobile-nav .n3-nav-anchor {
+.n3-mobile-nav .n3-nav-link {
   font-size: 24px;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -4738,7 +4730,6 @@ select:focus {
   .n3-nav { display: none; }
   .n3-burger { display: inline-flex; }
   .language-switcher { display: none; }
-  .n3-wordmark { display: none; }
 }
 
 @media (min-width: 1024px) {
