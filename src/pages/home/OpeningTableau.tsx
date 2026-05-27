@@ -58,7 +58,6 @@ export function OpeningTableau({
           height={64}
           decoding="async"
         />
-        <span className="home-opening__wordmark">EMPIRE GRANIT</span>
         <span className="home-opening__location">{heroLocation}</span>
       </div>
 

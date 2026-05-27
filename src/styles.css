@@ -5762,11 +5762,24 @@ select:focus {
   opacity: 1;
 }
 
+/* Wave 10 Block 3 — full-bleed main on home */
+.main-content.is-home {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow-x: clip;
+}
+
 /* Wave 10 Block 3 — full-bleed hero */
 .home-opening {
   height: auto;
   min-height: 100vh;
   min-height: 100svh;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: none;
 }
 .home-opening__brand {
   position: absolute;
@@ -5785,13 +5798,6 @@ select:focus {
   width: auto;
   display: block;
   filter: brightness(0) invert(1);
-}
-.home-opening__wordmark {
-  font-family: var(--font-body);
-  font-weight: var(--weight-emphasis);
-  font-size: 14px;
-  letter-spacing: 0.18em;
-  color: #fff;
 }
 .home-opening__location {
   font-family: var(--font-body);
@@ -5825,6 +5831,19 @@ select:focus {
   text-underline-offset: 4px;
 }
 .home-opening__phone:hover { color: var(--ink-on-dark); }
+@media (max-width: 767px) {
+  .home-opening__copy {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    max-width: none;
+  }
+  .home-opening__title { font-size: clamp(32px, 9vw, 44px); }
+  .home-opening__phone {
+    min-height: 44px;
+    padding: 10px 0;
+  }
+}
 @media (min-width: 768px) {
   .home-opening__brand {
     top: var(--space-5);
