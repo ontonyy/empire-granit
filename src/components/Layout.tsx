@@ -49,7 +49,7 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
         revealOnScroll={isHomePage}
       />
 
-      <main id="main-content" className="main-content">
+      <main id="main-content" className={isHomePage ? 'main-content is-home' : 'main-content'}>
         {children}
       </main>
 
