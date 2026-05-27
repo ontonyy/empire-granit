@@ -4,6 +4,11 @@
     "et": "",
     "en": ""
   },
+  "services": {
+    "ru": "uslugi",
+    "et": "teenused",
+    "en": "services"
+  },
   "works": {
     "ru": "raboty",
     "et": "tood",

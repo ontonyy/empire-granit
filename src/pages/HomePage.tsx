@@ -1,12 +1,12 @@
 import { getLocaleContent } from '../content';
 import type { Locale } from '../types';
 import {
-  CraftTableau,
   FinalTableau,
   IntroRow,
   OpeningTableau,
   PricesBlock,
-  WorksEssay
+  ServicesTeaser,
+  WorksTeaser
 } from './home/sections';
 
 interface HomePageProps {
@@ -31,24 +31,28 @@ export function HomePage({ locale }: HomePageProps) {
         phoneEyebrow={home.phoneEyebrow}
         trustMetrics={home.trustMetrics}
       />
-      <CraftTableau
-        eyebrow={home.craftEyebrow}
-        title={home.craftTitle}
+      <ServicesTeaser
+        locale={locale}
+        eyebrow={home.servicesEyebrow}
+        title={home.servicesShortTitle}
         services={home.servicesShort}
+        learnMore={home.servicesLearnMore}
       />
-      <WorksEssay
+      <WorksTeaser
         locale={locale}
         eyebrow={home.worksSectionEyebrow}
         title={home.worksSectionTitle}
         footerCounter={works.homeFooterCounter}
         viewAllLink={works.viewAllLink}
+        learnMore={home.worksLearnMore}
       />
       <PricesBlock
         locale={locale}
         eyebrow={home.pricesEyebrow}
         title={home.pricesTitle}
-        factorsBody={content.pricing.factorsBody}
+        leadLine={home.pricesLeadLine}
         tableLink={home.pricesTableLink}
+        learnMore={home.pricesLearnMore}
         tiers={tiers}
       />
       <FinalTableau

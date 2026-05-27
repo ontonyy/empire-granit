@@ -4,6 +4,7 @@ import { ContactPage } from '../pages/ContactPage';
 import { HomePage } from '../pages/HomePage';
 import { PricingPage } from '../pages/PricingPage';
 import { PrivacyPage } from '../pages/PrivacyPage';
+import { ServicesPage } from '../pages/ServicesPage';
 import { WorksPage } from '../pages/works/WorksPage';
 import { LOCALES, buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
@@ -33,6 +34,7 @@ export function LocaleRouteResolver() {
   return (
     <Layout locale={locale} routeKey={routeKey}>
       {routeKey === 'home' ? <HomePage locale={locale} /> : null}
+      {routeKey === 'services' ? <ServicesPage locale={locale} /> : null}
       {routeKey === 'works' ? <WorksPage locale={locale} /> : null}
       {routeKey === 'pricing' ? <PricingPage locale={locale} /> : null}
       {routeKey === 'contact' ? <ContactPage locale={locale} /> : null}
