@@ -96,7 +96,7 @@
     "pricesLeadLine": "Allpool on orienteeruvad hinnad. Lõplik hind sõltub materjalist, mõõdust ja platsi ligipääsust.",
     "pricesTableLink": "Täielik hinnakiri →",
     "pricesLearnMore": "Täielik hinnakiri →",
-    "finalEyebrow": "Räägime",
+    "finalEyebrow": "Kontakt",
     "finalContactLink": "Saada sõnum →"
   },
   "services": {
@@ -134,7 +134,7 @@
   },
   "pricing": {
     "title": "Hinnakiri",
-    "intro": "Allpool on põhiteenuste hinnaorientiirid. Lõplik hind sõltub graniidist, mõõdust, graveeringust, platsi seisukorrast, kaugusest ja hooajast. Täpne arvutus valmib pärast lühikest nõustamist.",
+    "intro": "Allpool on lähtehinnad meie tavapärastele töödele. Lõplik hind sõltub graniidist, mõõdust, graveeringust ja platsi tingimustest. Kinnitame selle pärast lühikest nõustamist.",
     "bottomNote": "Täpne hind kinnitatakse pärast mõõtude, materjali, graveeringu, ligipääsu ja paigalduse mahu täpsustamist.",
     "includedLabel": "Mis sisaldub",
     "affectsLabel": "Mis mõjutab hinda",
@@ -200,13 +200,13 @@
     "cta": {
       "eyebrow": "Vajad sarnast lahendust?",
       "title": "Sobiv lahendus pole nimekirjas?",
-      "body": "Iga töö algab vestlusest. Räägime telefoni teel, sobitame materjali, mõõdud ja eelarve.",
-      "link": "Räägime telefoni teel"
+      "body": "Iga töö algab vestlusest. Helista, ja sobitame materjali, mõõdud ja eelarve teie monumendile.",
+      "link": "Helista {phone}"
     }
   },
   "contact": {
-    "heading": "Küsi hinnangut või nõu",
-    "intro": "Meiega saab ühendust võtta telefoni teel tööajal, jätta päring veebilehel või saata e-kiri.",
+    "heading": "Võtke ühendust",
+    "intro": "Helistage tööajal, saatke sõnum vormi kaudu või kirjutage e-posti aadressile.",
     "inquiryTitle": "Saada foto, idee või küsimus",
     "intentItems": [
       "Monumendi, paigalduse või piirde mõõdud",
@@ -263,7 +263,7 @@
       },
       {
         "title": "Kuhu teie andmed liiguvad",
-        "body": "Vormi sisu jõuab meie meeskonnani teenuse Formspree (formspree.io) kaudu — see on kolmandast osapoolest töötleja, kes edastab sõnumid meile. Anonüümsed kasutussündmused (lehekülastused, vormide saatmised) salvestatakse Google Firebase'i (Firestore), et saaksime saiti parendada. Külastusstatistikat mõõdame teenusega Plausible Analytics, mis ei kasuta küpsiseid ega kogu isikuandmeid."
+        "body": "Vormi sisu jõuab meie meeskonnani teenuse Formspree (formspree.io) kaudu. See on kolmandast osapoolest töötleja, kes edastab sõnumid meile. Anonüümsed kasutussündmused (lehekülastused, vormide saatmised) salvestatakse Google Firebase'i (Firestore), et saaksime saiti parendada. Külastusstatistikat mõõdame teenusega Plausible Analytics, mis ei kasuta küpsiseid ega kogu isikuandmeid."
       },
       {
         "title": "Miks me andmeid kasutame",
@@ -275,7 +275,7 @@
       },
       {
         "title": "Teie õigused ja kontakt",
-        "body": "Teil on igal ajal õigus oma andmetega tutvuda, neid parandada või kustutada lasta või nõusolek tagasi võtta — selleks kirjutage aadressile ms.pamyatnik@mail.ru. Vastame 30 päeva jooksul."
+        "body": "Teil on igal ajal õigus oma andmetega tutvuda, neid parandada või kustutada lasta või nõusolek tagasi võtta. Selleks kirjutage aadressile ms.pamyatnik@mail.ru. Vastame 30 päeva jooksul."
       }
     ]
   },

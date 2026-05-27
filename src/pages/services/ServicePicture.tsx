@@ -3,7 +3,7 @@ interface ServicePictureProps {
   alt: string;
 }
 
-const KNOWN = ['craft-framing', 'craft-fence', 'craft-plate'];
+const KNOWN = ['service-framing', 'service-fence', 'service-plate'];
 
 export function ServicePicture({ name, alt }: ServicePictureProps) {
   let actual = name;

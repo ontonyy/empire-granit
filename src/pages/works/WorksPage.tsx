@@ -61,36 +61,41 @@ export function WorksPage({ locale }: WorksPageProps) {
       <section className="works-gallery reveal-on-scroll">
         <div className="ui-container">
           <ul className="works-grid" role="list">
-            {visible.map((item) => (
-              <li
-                key={item.id}
-                className={`works-tile works-tile-${item.ratio}`}
-                data-category={item.category}
-              >
-                <a className="works-tile-link" href={`#${item.id}`} id={item.id}>
-                  <picture className="works-tile-picture">
-                    <source type="image/avif" srcSet={`/images/n3/works/${item.imageBase}.avif`} />
-                    <source type="image/webp" srcSet={`/images/n3/works/${item.imageBase}.webp`} />
-                    <img
-                      className="works-tile-image"
-                      src={`/images/n3/works/${item.imageBase}.jpg`}
-                      width={item.width}
-                      height={item.height}
-                      alt={item.title}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </picture>
-                  <span className="works-tile-overlay" aria-hidden="true" />
+            {visible.map((item, idx) => {
+              const ordinal = String(idx + 1).padStart(2, '0');
+              const altText = `${item.title} — ${item.material}`;
+              return (
+                <li
+                  key={item.id}
+                  className={`works-tile works-tile-${item.ratio}`}
+                  data-category={item.category}
+                >
+                  <a className="works-tile-link" href={`#${item.id}`} id={item.id}>
+                    <picture className="works-tile-picture">
+                      <source type="image/avif" srcSet={`/images/n3/works/${item.imageBase}.avif`} />
+                      <source type="image/webp" srcSet={`/images/n3/works/${item.imageBase}.webp`} />
+                      <img
+                        className="works-tile-image"
+                        src={`/images/n3/works/${item.imageBase}.jpg`}
+                        width={item.width}
+                        height={item.height}
+                        alt={altText}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </picture>
+                    <span className="works-tile-overlay" aria-hidden="true" />
+                    <span className="works-tile-ordinal" aria-hidden="true">{ordinal}</span>
+                  </a>
                   <span className="works-tile-caption">
                     <span className="works-tile-title">{item.title}</span>
                     <span className="works-tile-material">
                       {works.captionSeparator} {item.material}
                     </span>
                   </span>
-                </a>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>
@@ -101,8 +106,7 @@ export function WorksPage({ locale }: WorksPageProps) {
           <h2 className="ui-display ui-display-2 works-cta-title">{works.cta.title}</h2>
           <p className="works-cta-body">{works.cta.body}</p>
           <a className="works-cta-link" href={siteConfig.contacts.phoneLink}>
-            {works.cta.link}
-            <span aria-hidden="true"> — {siteConfig.contacts.phoneDisplay}</span>
+            {works.cta.link.replace('{phone}', siteConfig.contacts.phoneDisplay)}
           </a>
         </div>
       </section>

@@ -16,16 +16,16 @@ interface ServicesTeaserProps {
 }
 
 interface ServicePhoto {
-  name: 'craft-framing' | 'craft-fence' | 'craft-plate';
+  name: 'service-framing' | 'service-fence' | 'service-plate';
   width: number;
   height: number;
   sizes: string;
 }
 
 const PHOTOS: ServicePhoto[] = [
-  { name: 'craft-framing', width: 1400, height: 1750, sizes: '(min-width: 1024px) 50vw, 100vw' },
-  { name: 'craft-fence', width: 900, height: 900, sizes: '(min-width: 1024px) 25vw, 50vw' },
-  { name: 'craft-plate', width: 900, height: 900, sizes: '(min-width: 1024px) 25vw, 50vw' }
+  { name: 'service-framing', width: 1400, height: 1750, sizes: '(min-width: 1024px) 50vw, 100vw' },
+  { name: 'service-fence', width: 900, height: 900, sizes: '(min-width: 1024px) 25vw, 50vw' },
+  { name: 'service-plate', width: 900, height: 900, sizes: '(min-width: 1024px) 25vw, 50vw' }
 ];
 
 function ServicePicture({ photo }: { photo: ServicePhoto }) {
