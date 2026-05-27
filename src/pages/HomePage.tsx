@@ -30,8 +30,6 @@ export function HomePage({ locale }: HomePageProps) {
         eyebrow={home.heroLabel}
         title={home.heroTitle}
         heroBodyLine={home.heroBodyLine}
-        heroLocation={home.heroLocation}
-        logoSrc={`${import.meta.env.BASE_URL}images/logo.png`}
       />
       <IntroRow
         intro={home.intro}
@@ -51,7 +49,6 @@ export function HomePage({ locale }: HomePageProps) {
         title={home.worksSectionTitle}
         footerCounter={works.homeFooterCounter}
         viewAllLink={works.viewAllLink}
-        learnMore={home.worksLearnMore}
       />
       <PricesBlock
         locale={locale}
@@ -59,7 +56,6 @@ export function HomePage({ locale }: HomePageProps) {
         title={home.pricesTitle}
         leadLine={home.pricesLeadLine}
         tableLink={home.pricesTableLink}
-        learnMore={home.pricesLearnMore}
         tiers={tiers}
       />
       <FinalTableau

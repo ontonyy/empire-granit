@@ -1,3 +1,5 @@
+import type { Locale } from '../../types';
+
 export type WorkCategory =
   | 'monuments'
   | 'fences'
@@ -6,15 +8,18 @@ export type WorkCategory =
 
 export type WorkRatio = 'portrait' | 'landscape' | 'square';
 
+export type LocalizedTitle = Record<Locale, string>;
+
 export interface WorkItem {
   id: string;
-  title: string;
+  title: LocalizedTitle;
   material: string;
   category: WorkCategory;
   imageBase: string;
   width: number;
   height: number;
   ratio: WorkRatio;
+  captionKey: string;
 }
 
 export const WORK_CATEGORIES: WorkCategory[] = [
@@ -27,122 +32,134 @@ export const WORK_CATEGORIES: WorkCategory[] = [
 export const WORKS: WorkItem[] = [
   {
     id: 'tamm-monument',
-    title: 'Tamm — perekonnamonument',
+    title: { en: 'Monument', et: 'Mälestusmärk', ru: 'Памятник' },
     material: 'Karelia Red',
     category: 'monuments',
     imageBase: 'gravestone',
     width: 408,
     height: 612,
-    ratio: 'portrait'
+    ratio: 'portrait',
+    captionKey: 'familyMonument'
   },
   {
     id: 'kask-piire',
-    title: 'Kask — graniidist piire',
+    title: { en: 'Border', et: 'Piire', ru: 'Ограда' },
     material: 'Lithuanian Black',
     category: 'fences',
     imageBase: 'granite_fence',
     width: 750,
     height: 588,
-    ratio: 'landscape'
+    ratio: 'landscape',
+    captionKey: 'graniteBorder'
   },
   {
     id: 'lepik-graveering',
-    title: 'Lepik — portreegraveering',
+    title: { en: 'Portrait', et: 'Portree', ru: 'Портрет' },
     material: 'Karelian Black',
     category: 'engravings',
     imageBase: 'memorial_table',
     width: 600,
     height: 451,
-    ratio: 'landscape'
+    ratio: 'landscape',
+    captionKey: 'portrait'
   },
   {
     id: 'saar-paigaldus',
-    title: 'Saar — paigaldus Tallinnas',
+    title: { en: 'Installation', et: 'Paigaldus', ru: 'Установка' },
     material: 'Volga Blue',
     category: 'installation',
     imageBase: 'exclusive',
     width: 1024,
     height: 1024,
-    ratio: 'square'
+    ratio: 'square',
+    captionKey: 'installation'
   },
   {
     id: 'mets-duo',
-    title: 'Mets — kahekohaline monument',
+    title: { en: 'Duo', et: 'Topelt', ru: 'Двойной' },
     material: 'Indian Aurora',
     category: 'monuments',
     imageBase: 'monument',
     width: 1400,
     height: 933,
-    ratio: 'square'
+    ratio: 'square',
+    captionKey: 'doubleMonument'
   },
   {
     id: 'kuusk-piire',
-    title: 'Kuusk — madalpiire ja vaas',
+    title: { en: 'Low border', et: 'Madalpiire', ru: 'Низкая' },
     material: 'Karelia Red',
     category: 'fences',
     imageBase: 'stone_plate',
     width: 561,
     height: 679,
-    ratio: 'portrait'
+    ratio: 'portrait',
+    captionKey: 'lowBorder'
   },
   {
     id: 'rebane-pilt',
-    title: 'Rebane — fotoemail',
+    title: { en: 'Enamel', et: 'Email', ru: 'Эмаль' },
     material: 'Karelian Black',
     category: 'engravings',
     imageBase: 'tombstone',
     width: 612,
     height: 408,
-    ratio: 'landscape'
+    ratio: 'landscape',
+    captionKey: 'photoEnamel'
   },
   {
     id: 'oja-restaureerimine',
-    title: 'Oja — vana platsi taastamine',
+    title: { en: 'Restoration', et: 'Taastamine', ru: 'Реставрация' },
     material: 'Mixed granite',
     category: 'installation',
     imageBase: 'fence_with_entrance',
     width: 900,
     height: 600,
-    ratio: 'landscape'
+    ratio: 'landscape',
+    captionKey: 'restoration'
   },
   {
     id: 'kallas-solo',
-    title: 'Kallas — soolomonument',
+    title: { en: 'Solo', et: 'Soolo', ru: 'Соло' },
     material: 'Aurora Red',
     category: 'monuments',
     imageBase: 'fence',
     width: 1024,
     height: 1024,
-    ratio: 'square'
+    ratio: 'square',
+    captionKey: 'soloMonument'
   },
   {
     id: 'lill-piire',
-    title: 'Lill — kõrgpiire ja lillealus',
+    title: { en: 'Tall border', et: 'Kõrgpiire', ru: 'Высокая' },
     material: 'Lithuanian Black',
     category: 'fences',
     imageBase: 'framing',
     width: 1400,
     height: 933,
-    ratio: 'square'
+    ratio: 'square',
+    captionKey: 'tallBorder'
   },
   {
     id: 'kuld-ornament',
-    title: 'Kuld — kuldgraveering',
+    title: { en: 'Engraving', et: 'Graveering', ru: 'Гравировка' },
     material: 'Karelian Black',
     category: 'engravings',
     imageBase: 'granite_bench',
     width: 700,
     height: 800,
-    ratio: 'portrait'
+    ratio: 'portrait',
+    captionKey: 'goldEngraving'
   },
   {
     id: 'paju-paigaldus',
-    title: 'Paju — paigaldus Narva-Jõesuus',
+    title: { en: 'Installation', et: 'Paigaldus', ru: 'Установка' },
     material: 'Indian Aurora',
     category: 'installation',
     imageBase: 'bench',
     width: 800,
     height: 600,
-    ratio: 'landscape'
+    ratio: 'landscape',
+    captionKey: 'installation'
   }
 ];

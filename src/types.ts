@@ -44,7 +44,6 @@ export interface LocaleContent {
     intro: string;
     phoneEyebrow: string;
     heroBodyLine: string;
-    heroLocation: string;
     servicesEyebrow: string;
     servicesShortTitle: string;
     servicesLearnMore: string;
@@ -97,6 +96,7 @@ export interface LocaleContent {
       installation: string;
     };
     captionSeparator: string;
+    captionWords: Record<string, string>;
     cta: {
       eyebrow: string;
       title: string;

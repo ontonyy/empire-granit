@@ -9,12 +9,11 @@ interface WorksTeaserProps {
   title: string;
   footerCounter: string;
   viewAllLink: string;
-  learnMore: string;
 }
 
-function ExamplePicture({ example }: { example: HomeWorkExample }) {
+function ExamplePicture({ example, locale }: { example: HomeWorkExample; locale: Locale }) {
   const base = `/images/n3/works/${example.imageBase}`;
-  const alt = `${example.title} — ${example.material}`;
+  const alt = `${example.title[locale]} — ${example.material}`;
   return (
     <picture>
       <source type="image/avif" srcSet={`${base}.avif`} />
@@ -24,11 +23,7 @@ function ExamplePicture({ example }: { example: HomeWorkExample }) {
   );
 }
 
-function ordinal(i: number): string {
-  return String(i + 1).padStart(2, '0');
-}
-
-export function WorksTeaser({ locale, eyebrow, title, footerCounter, viewAllLink, learnMore }: WorksTeaserProps) {
+export function WorksTeaser({ locale, eyebrow, title, footerCounter, viewAllLink }: WorksTeaserProps) {
   const examples = HOME_WORKS_EXAMPLES.slice(0, 4);
   return (
     <section id="works" className="home-works">
@@ -43,8 +38,8 @@ export function WorksTeaser({ locale, eyebrow, title, footerCounter, viewAllLink
               key={ex.id}
               className={`home-works__cell home-works__cell--${'abcd'[i]}`}
             >
-              <ExamplePicture example={ex} />
-              <figcaption>{ordinal(i)}</figcaption>
+              <ExamplePicture example={ex} locale={locale} />
+              <figcaption>{ex.title[locale]}</figcaption>
             </figure>
           ))}
         </div>
@@ -54,9 +49,6 @@ export function WorksTeaser({ locale, eyebrow, title, footerCounter, viewAllLink
             {viewAllLink}
           </Link>
         </footer>
-        <Link className="home-works__learn-more" to={buildLocalizedPath(locale, 'works')}>
-          {learnMore}
-        </Link>
       </div>
     </section>
   );

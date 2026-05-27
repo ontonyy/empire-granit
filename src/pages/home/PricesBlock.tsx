@@ -14,11 +14,10 @@ interface PricesBlockProps {
   title: string;
   leadLine: string;
   tableLink: string;
-  learnMore: string;
   tiers: TierRow[];
 }
 
-export function PricesBlock({ locale, eyebrow, title, leadLine, tableLink, learnMore, tiers }: PricesBlockProps) {
+export function PricesBlock({ locale, eyebrow, title, leadLine, tableLink, tiers }: PricesBlockProps) {
   const pricingPath = buildLocalizedPath(locale, 'pricing');
   return (
     <section className="home-prices">
@@ -39,9 +38,6 @@ export function PricesBlock({ locale, eyebrow, title, leadLine, tableLink, learn
         <div className="home-prices__actions">
           <Link className="home-prices__link" to={pricingPath}>
             {tableLink}
-          </Link>
-          <Link className="home-prices__learn-more" to={pricingPath}>
-            {learnMore}
           </Link>
         </div>
       </div>
