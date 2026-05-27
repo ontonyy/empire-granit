@@ -5755,3 +5755,112 @@ select:focus {
   font-weight: 500;
 }
 .services-contact-link:hover { color: var(--accent-wood-hover); }
+
+/* Wave 10 Block 3 — scroll-reveal header */
+.n3-header {
+  transition: transform 280ms ease, opacity 280ms ease;
+  will-change: transform, opacity;
+}
+.n3-header.is-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+.n3-header.is-revealed {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Wave 10 Block 3 — full-bleed hero */
+.home-opening {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+.home-opening__brand {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--container-pad-mobile);
+  right: var(--container-pad-mobile);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  color: #fff;
+  z-index: 2;
+}
+.home-opening__brand-logo {
+  height: 56px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+.home-opening__wordmark {
+  font-family: var(--font-body);
+  font-weight: var(--weight-emphasis);
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  color: #fff;
+}
+.home-opening__location {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.78);
+}
+.home-opening__body {
+  margin: var(--space-3) 0 0;
+  max-width: 480px;
+  color: rgba(255,255,255,0.92);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.home-opening__phone {
+  position: absolute;
+  right: var(--container-pad-mobile);
+  bottom: var(--space-5);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 2;
+}
+.home-opening__phone-number {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-wood);
+  text-underline-offset: 4px;
+}
+.home-opening__phone:hover { color: var(--ink-on-dark); }
+@media (min-width: 768px) {
+  .home-opening__brand {
+    top: var(--space-5);
+    left: var(--container-pad-tablet);
+  }
+  .home-opening__brand-logo { height: 64px; }
+  .home-opening__phone {
+    right: var(--container-pad-tablet);
+    bottom: var(--space-6);
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .home-opening__brand {
+    left: var(--container-pad-desktop);
+  }
+  .home-opening__phone {
+    right: var(--container-pad-desktop);
+    bottom: var(--space-7);
+  }
+}
+
+/* Wave 10 Block 3 — contact placeholder treatment */
+.home-final.is-placeholder .home-final__overlay { opacity: 0; }
+.home-final.is-placeholder .home-final__phone { color: var(--ink-near-black); }
+.home-final.is-placeholder .home-final__eyebrow { color: var(--ink-near-black); }
+.home-final.is-placeholder .home-final__meta { color: var(--ink-secondary, rgba(21,20,15,0.7)); }
+.home-final.is-placeholder .home-final__meta-line { color: var(--ink-near-black); }
+.home-final.is-placeholder .home-final__link { color: var(--ink-near-black); }
+
