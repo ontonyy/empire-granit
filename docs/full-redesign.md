@@ -2,6 +2,7 @@
 
 > Paste the **wave prompts** below (one wave at a time) into a fresh Claude Code session opened at the root of the `empire-granit/` repo. Run the verification commands after each wave. Do not jump ahead — every wave assumes the previous one passed.
 
+
 ---
 
 ## 0. Decisions locked in this round
