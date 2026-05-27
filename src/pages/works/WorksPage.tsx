@@ -29,7 +29,7 @@ export function WorksPage({ locale }: WorksPageProps) {
     <>
       <section className="works-header reveal-on-scroll is-visible">
         <div className="ui-container">
-          <span className="ui-eyebrow">{works.eyebrow}</span>
+          <span className="ui-eyebrow">{content.nav.works} / Empire Granit / Narva</span>
           <h1 className="ui-display ui-display-1 works-title">{works.title}</h1>
           <p className="works-lead">{works.pageLead}</p>
         </div>

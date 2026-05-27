@@ -20,7 +20,7 @@ export function ServicesPage({ locale }: ServicesPageProps) {
     <>
       <section className="services-header">
         <div className="ui-container services-header-inner">
-          <span className="ui-eyebrow">Empire Granit · Narva</span>
+          <span className="ui-eyebrow">{content.nav.services} / Empire Granit / Narva</span>
           <h1 className="ui-display ui-display-1 services-title">{section.title}</h1>
           <p className="services-lead">{section.lead}</p>
         </div>

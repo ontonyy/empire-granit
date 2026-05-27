@@ -1,7 +1,6 @@
 import { getLocaleContent } from '../content';
 import type { Locale } from '../types';
 import {
-  FinalTableau,
   IntroRow,
   OpeningTableau,
   PricesBlock,
@@ -58,7 +57,6 @@ export function HomePage({ locale }: HomePageProps) {
         tableLink={home.pricesTableLink}
         tiers={tiers}
       />
-      <FinalTableau locale={locale} assist={content.assist} />
     </>
   );
 }

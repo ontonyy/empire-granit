@@ -4220,6 +4220,8 @@ select:focus {
 
 .works-cta-inner {
   max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .works-cta-title {
@@ -4265,9 +4267,9 @@ select:focus {
 }
 
 .pricing-header-inner {
-  max-width: 720px;
-  margin-inline: auto;
-  text-align: center;
+  max-width: none;
+  margin-inline: 0;
+  text-align: left;
 }
 
 .pricing-title {
@@ -4817,8 +4819,11 @@ select:focus {
 }
 
 .n3-footer-logo {
-  height: 40px;
+  height: auto;
   width: auto;
+  max-height: 72px;
+  max-width: 220px;
+  object-fit: contain;
   display: block;
 }
 
@@ -5441,14 +5446,52 @@ select:focus {
 
 /* Wave 8 — Contact N3 */
 .contact-n3 {
-  max-width: 960px;
-  margin: 0 auto;
-  padding-top: var(--space-5);
-  padding-bottom: var(--space-6);
+  max-width: none;
+  margin: 0;
+  padding: 0 0 var(--space-6);
+}
+
+.contact-header {
+  padding: var(--space-7) 0 var(--space-5);
+  background: var(--surface-stone);
+}
+.contact-header-inner { max-width: none; text-align: left; }
+.contact-title { margin-top: var(--space-2); }
+.contact-intro {
+  margin-top: var(--space-3);
+  max-width: 640px;
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+}
+
+.contact-n3__phone,
+.contact-n3__separator,
+.contact-n3__form-wrap,
+.contact-n3__register,
+.contact-n3__map {
+  padding-inline: var(--container-pad-mobile, 24px);
+}
+@media (min-width: 768px) {
+  .contact-n3__phone,
+  .contact-n3__separator,
+  .contact-n3__form-wrap,
+  .contact-n3__register,
+  .contact-n3__map {
+    padding-inline: var(--container-pad-tablet, 32px);
+  }
+}
+@media (min-width: 1024px) {
+  .contact-n3__phone,
+  .contact-n3__separator,
+  .contact-n3__form-wrap,
+  .contact-n3__register,
+  .contact-n3__map {
+    padding-inline: var(--container-pad-desktop, 48px);
+  }
 }
 
 .contact-n3__header {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--space-6);
 }
 
@@ -5457,7 +5500,7 @@ select:focus {
 }
 
 .contact-n3__phone {
-  text-align: center;
+  text-align: left;
   margin: var(--space-6) 0;
 }
 
@@ -5747,10 +5790,10 @@ select:focus {
 
 /* ServicesPage */
 .services-header {
-  padding-block: var(--space-6) var(--space-5);
-  border-bottom: 1px solid var(--rule-color);
+  padding: var(--space-7) 0 var(--space-5);
+  background: var(--surface-stone);
 }
-.services-header-inner { max-width: 760px; }
+.services-header-inner { max-width: none; }
 .services-title {
   margin: var(--space-2) 0 var(--space-3);
 }
@@ -5857,11 +5900,22 @@ select:focus {
   background: var(--surface-stone);
   border-top: 1px solid var(--rule-color);
 }
-.services-contact-inner {
+.services-contact-inner,
+.contact-assist-inner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: var(--space-3);
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.contact-assist-band {
+  padding-block: var(--space-6);
+  background: var(--surface-stone);
+  border-top: 1px solid var(--rule-color);
+  margin-top: var(--space-6);
 }
 .services-contact-phone {
   font-family: var(--font-body);
