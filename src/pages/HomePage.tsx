@@ -25,7 +25,14 @@ export function HomePage({ locale }: HomePageProps) {
 
   return (
     <>
-      <OpeningTableau eyebrow={home.heroLabel} title={home.heroTitle} />
+      <OpeningTableau
+        locale={locale}
+        eyebrow={home.heroLabel}
+        title={home.heroTitle}
+        heroBodyLine={home.heroBodyLine}
+        heroLocation={home.heroLocation}
+        logoSrc={`${import.meta.env.BASE_URL}images/logo.png`}
+      />
       <IntroRow
         intro={home.intro}
         phoneEyebrow={home.phoneEyebrow}

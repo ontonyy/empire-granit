@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { siteConfig } from '../../config/site';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { trackEvent } from '../../lib/analytics';
 import { buildLocalizedPath } from '../../routing';
 import type { Locale, RouteKey } from '../../types';
@@ -14,11 +15,27 @@ interface SiteHeaderProps {
   nav: Record<RouteKey, string>;
   logoPrimarySrc: string;
   logoFallbackSrc: string;
+  revealOnScroll?: boolean;
 }
 
 interface AnchorDef {
   hash: string;
   label: string;
+}
+
+function useResponsiveThreshold(): number {
+  const [threshold, setThreshold] = useState(80);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return;
+    }
+    const mq = window.matchMedia('(max-width: 767px)');
+    const apply = () => setThreshold(mq.matches ? 40 : 80);
+    apply();
+    mq.addEventListener('change', apply);
+    return () => mq.removeEventListener('change', apply);
+  }, []);
+  return threshold;
 }
 
 export function SiteHeader({
@@ -27,13 +44,20 @@ export function SiteHeader({
   ui,
   nav,
   logoPrimarySrc,
-  logoFallbackSrc
+  logoFallbackSrc,
+  revealOnScroll = false
 }: SiteHeaderProps) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [forcedReveal, setForcedReveal] = useState(false);
   const location = useLocation();
   const homePath = buildLocalizedPath(locale, 'home');
   const pricingPath = buildLocalizedPath(locale, 'pricing');
   const isHome = routeKey === 'home';
+  const headerRef = useRef<HTMLElement | null>(null);
+
+  const threshold = useResponsiveThreshold();
+  const { revealed: scrollRevealed } = useScrollReveal(threshold);
+  const revealed = !revealOnScroll || scrollRevealed || forcedReveal;
 
   useEffect(() => {
     setMobileNavOpen(false);
@@ -45,6 +69,15 @@ export function SiteHeader({
       document.body.style.overflow = '';
     };
   }, [mobileNavOpen]);
+
+  useEffect(() => {
+    if (!revealOnScroll) return;
+    const el = headerRef.current;
+    if (!el) return;
+    const handler = () => setForcedReveal(true);
+    el.addEventListener('focusin', handler);
+    return () => el.removeEventListener('focusin', handler);
+  }, [revealOnScroll]);
 
   const anchors: AnchorDef[] = [
     { hash: 'services', label: ui.navServices },
@@ -86,8 +119,15 @@ export function SiteHeader({
     </a>
   );
 
+  const headerClass = [
+    'n3-header',
+    revealOnScroll ? (revealed ? 'is-revealed' : 'is-hidden') : ''
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <header className="n3-header">
+    <header ref={headerRef} className={headerClass}>
       <div className="n3-header-inner">
         <Link className="n3-brand" to={homePath} aria-label={siteConfig.siteName}>
           <picture>
@@ -123,7 +163,9 @@ export function SiteHeader({
         </nav>
 
         <div className="n3-header-right">
-          <LanguageSwitcher currentLocale={locale} routeKey={routeKey} />
+          <span onClick={() => setForcedReveal(true)}>
+            <LanguageSwitcher currentLocale={locale} routeKey={routeKey} />
+          </span>
           {phoneLink}
           <button
             type="button"

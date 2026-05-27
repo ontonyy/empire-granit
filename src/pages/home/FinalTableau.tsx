@@ -12,22 +12,13 @@ interface FinalTableauProps {
 
 export function FinalTableau({ locale, eyebrow, hours, contactLink }: FinalTableauProps) {
   return (
-    <section id="contact" className="home-final">
+    <section id="contact" className="home-final is-placeholder">
+      {/* TODO(owner-image): replace with workshop exterior or installation site photograph (landscape, cool desaturated palette). */}
       <picture className="home-final__picture">
-        <source
-          type="image/avif"
-          srcSet="/images/n3/final-workshop-1x.avif 512w, /images/n3/final-workshop-2x.avif 1024w"
-          sizes="100vw"
-        />
-        <source
-          type="image/webp"
-          srcSet="/images/n3/final-workshop-1x.webp 512w, /images/n3/final-workshop-2x.webp 1024w"
-          sizes="100vw"
-        />
         <img
           className="home-final__image"
-          src="/images/n3/final-workshop-2x.jpg"
-          srcSet="/images/n3/final-workshop-1x.jpg 512w, /images/n3/final-workshop-2x.jpg 1024w"
+          src="/images/n3/contact-placeholder.jpg"
+          srcSet="/images/n3/contact-placeholder.jpg 1024w"
           sizes="100vw"
           width={1024}
           height={1024}

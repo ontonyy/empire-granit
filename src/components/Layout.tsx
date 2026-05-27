@@ -46,6 +46,7 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
         nav={content.nav}
         logoPrimarySrc={logoPrimarySrc}
         logoFallbackSrc={logoFallbackSrc}
+        revealOnScroll={isHomePage}
       />
 
       <main id="main-content" className="main-content">
