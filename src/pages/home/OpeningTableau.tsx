@@ -18,7 +18,7 @@ export function OpeningTableau({
       <picture className="home-opening__picture">
         <img
           className="home-opening__image"
-          src="/images/background.png"
+          src={`${import.meta.env.BASE_URL}images/background.png`}
           sizes="100vw"
           alt=""
           aria-hidden="true"

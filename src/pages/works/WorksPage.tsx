@@ -73,11 +73,11 @@ export function WorksPage({ locale }: WorksPageProps) {
                 >
                   <a className="works-tile-link" href={`#${item.id}`} id={item.id}>
                     <picture className="works-tile-picture">
-                      <source type="image/avif" srcSet={`/images/n3/works/${item.imageBase}.avif`} />
-                      <source type="image/webp" srcSet={`/images/n3/works/${item.imageBase}.webp`} />
+                      <source type="image/avif" srcSet={`${import.meta.env.BASE_URL}images/n3/works/${item.imageBase}.avif`} />
+                      <source type="image/webp" srcSet={`${import.meta.env.BASE_URL}images/n3/works/${item.imageBase}.webp`} />
                       <img
                         className="works-tile-image"
-                        src={`/images/n3/works/${item.imageBase}.jpg`}
+                        src={`${import.meta.env.BASE_URL}images/n3/works/${item.imageBase}.jpg`}
                         width={item.width}
                         height={item.height}
                         alt={altText}

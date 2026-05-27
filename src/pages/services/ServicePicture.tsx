@@ -24,7 +24,7 @@ export function ServicePicture({ name, alt }: ServicePictureProps) {
     actual = 'service-framing';
   }
   const { w1, w2, h2 } = ASSETS[actual];
-  const base = `/images/n3/${actual}`;
+  const base = `${import.meta.env.BASE_URL}images/n3/${actual}`;
   const sizes = '(min-width: 1024px) 40vw, 100vw';
   return (
     <picture>

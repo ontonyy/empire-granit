@@ -12,7 +12,7 @@ interface WorksTeaserProps {
 }
 
 function ExamplePicture({ example, locale }: { example: HomeWorkExample; locale: Locale }) {
-  const base = `/images/n3/works/${example.imageBase}`;
+  const base = `${import.meta.env.BASE_URL}images/n3/works/${example.imageBase}`;
   const alt = `${example.title[locale]} — ${example.material}`;
   return (
     <picture>
