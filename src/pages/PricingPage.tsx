@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { siteConfig } from '../config/site';
 import { getLocaleContent } from '../content';
 import { trackEvent } from '../lib/analytics';
 import { buildLocalizedPath } from '../routing';
@@ -14,6 +13,7 @@ interface PricingPageProps {
 export function PricingPage({ locale }: PricingPageProps) {
   const content = getLocaleContent(locale);
   const section = content.pricing;
+  const assist = content.assist;
   const contactPath = buildLocalizedPath(locale, 'contact');
 
   useEffect(() => {
@@ -38,17 +38,8 @@ export function PricingPage({ locale }: PricingPageProps) {
                 key={tier.id}
                 tier={tier}
                 index={idx + 1}
-                ctaLabel={section.cta}
                 includedLabel={section.includedLabel}
                 affectsLabel={section.affectsLabel}
-                contactHref={`${contactPath}?tier=${tier.id}`}
-                onCtaClick={() =>
-                  trackEvent('pricing_package_select', {
-                    locale,
-                    package: tier.name,
-                    packageId: tier.id
-                  })
-                }
               />
             ))}
           </div>
@@ -57,17 +48,13 @@ export function PricingPage({ locale }: PricingPageProps) {
         </div>
       </section>
 
-      <section className="pricing-contact-band">
+      <section className="pricing-contact-band assist-band">
         <div className="ui-container pricing-contact-inner">
-          <a
-            className="pricing-contact-phone"
-            href={siteConfig.contacts.phoneLink}
-            onClick={() => trackEvent('phone_click', { locale, source: 'pricing-band' })}
-          >
-            {siteConfig.contacts.phoneDisplay}
-          </a>
+          <span className="ui-eyebrow">{assist.eyebrow}</span>
+          <h2 className="assist-band__title">{assist.title}</h2>
+          <p className="assist-band__body">{assist.body}</p>
           <Link className="pricing-contact-link" to={contactPath}>
-            {section.cta}
+            {assist.link}
           </Link>
         </div>
       </section>

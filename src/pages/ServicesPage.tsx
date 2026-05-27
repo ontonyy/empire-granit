@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { siteConfig } from '../config/site';
 import { getLocaleContent } from '../content';
 import { buildLocalizedPath } from '../routing';
 import type { Locale } from '../types';
@@ -14,8 +13,8 @@ const PHOTOS = ['service-framing', 'service-fence', 'service-plate'];
 export function ServicesPage({ locale }: ServicesPageProps) {
   const content = getLocaleContent(locale);
   const section = content.services;
+  const assist = content.assist;
   const contactPath = buildLocalizedPath(locale, 'contact');
-  const ctaLabel = content.pricing.cta;
 
   return (
     <>
@@ -47,9 +46,6 @@ export function ServicesPage({ locale }: ServicesPageProps) {
                       <li key={d}>{d}</li>
                     ))}
                   </ul>
-                  <Link className="services-block__link" to={contactPath}>
-                    {ctaLabel} →
-                  </Link>
                 </div>
                 <div className="services-block__photo">
                   <ServicePicture name={photo} alt={item.title} />
@@ -60,14 +56,13 @@ export function ServicesPage({ locale }: ServicesPageProps) {
         </div>
       </section>
 
-      <section className="services-contact-band">
+      <section className="services-contact-band assist-band">
         <div className="ui-container services-contact-inner">
-          <span className="ui-eyebrow">{content.homepage.finalEyebrow}</span>
-          <a className="services-contact-phone" href={siteConfig.contacts.phoneLink}>
-            {siteConfig.contacts.phoneDisplay}
-          </a>
+          <span className="ui-eyebrow">{assist.eyebrow}</span>
+          <h2 className="assist-band__title">{assist.title}</h2>
+          <p className="assist-band__body">{assist.body}</p>
           <Link className="services-contact-link" to={contactPath}>
-            {content.homepage.finalContactLink}
+            {assist.link}
           </Link>
         </div>
       </section>

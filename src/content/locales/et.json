@@ -18,8 +18,13 @@
     "preview": "Eelvaade"
   },
   "cta": {
-    "callNow": "Võta ühendust",
     "sendInquiry": "Küsi hinnangut"
+  },
+  "assist": {
+    "eyebrow": "Vajad sarnast lahendust?",
+    "title": "Sobiv lahendus pole nimekirjas?",
+    "body": "Iga töö algab vestlusest — võta meiega ühendust ja sobitame materjali, mõõdud ja eelarve teie monumendile.",
+    "link": "Võta ühendust →"
   },
   "layout": {
     "aboutAndPrivacy": "Ettevõttest ja privaatsus",
@@ -33,6 +38,22 @@
     "locationMap": "Asukoha kaart",
     "footerHours": "Lahtiolekuajad",
     "footerHoursValue": "E-R 09:00-18:00, L 10:00-15:00"
+  },
+  "footer": {
+    "tagline": [
+      "Graniidist mälestusmärgid Narvast",
+      "Mälestusmärgid · Piirded · Graveerimine",
+      "Üle Eesti"
+    ],
+    "navTitle": "Menüü",
+    "contactTitle": "Kontakt",
+    "openingHoursTitle": "Lahtiolekuajad",
+    "openingHoursLines": [
+      "E–R 09:00–18:00",
+      "L 10:00–15:00",
+      "P suletud"
+    ],
+    "bookCta": "Küsi pakkumist →"
   },
   "homepage": {
     "heroLabel": "MÄLESTUSMÄRGID · GRANIIT",
@@ -71,7 +92,7 @@
     "phoneEyebrow": "Helistage otse",
     "heroBodyLine": "Graniidist mälestusmärgid Narva töökojast — vedu üle Eesti.",
     "servicesEyebrow": "Teenused",
-    "servicesShortTitle": "Monumendid, piirded ja graveering.",
+    "servicesShortTitle": "Monumendid, piirded ja graveering",
     "servicesLearnMore": "Vaata kõiki teenuseid →",
     "servicesShort": [
       {
@@ -88,15 +109,13 @@
       }
     ],
     "worksSectionEyebrow": "Tehtud tööd",
-    "worksSectionTitle": "Näiteid valminud lahendustest.",
+    "worksSectionTitle": "Näiteid valminud lahendustest",
     "worksLearnMore": "Vaata kõiki töid →",
     "pricesEyebrow": "Hind",
     "pricesTitle": "Mis mõjutab lõpphinda",
     "pricesLeadLine": "Allpool on orienteeruvad hinnad. Lõplik hind sõltub materjalist, mõõdust ja platsi ligipääsust.",
     "pricesTableLink": "Täielik hinnakiri →",
-    "pricesLearnMore": "Täielik hinnakiri →",
-    "finalEyebrow": "Kontakt",
-    "finalContactLink": "Saada sõnum →"
+    "pricesLearnMore": "Täielik hinnakiri →"
   },
   "services": {
     "title": "Mida me teeme",
@@ -214,13 +233,7 @@
       "engravings": "Graveeringud",
       "installation": "Paigaldus"
     },
-    "captionSeparator": "·",
-    "cta": {
-      "eyebrow": "Vajad sarnast lahendust?",
-      "title": "Sobiv lahendus pole nimekirjas?",
-      "body": "Iga töö algab vestlusest — võta meiega ühendust ja sobitame materjali, mõõdud ja eelarve teie monumendile.",
-      "link": "Võta ühendust →"
-    }
+    "captionSeparator": "·"
   },
   "contact": {
     "heading": "Võtke ühendust",

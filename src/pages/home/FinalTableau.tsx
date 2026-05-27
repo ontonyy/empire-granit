@@ -1,16 +1,13 @@
 import { Link } from 'react-router-dom';
-import { siteConfig } from '../../config/site';
 import { buildLocalizedPath } from '../../routing';
-import type { Locale } from '../../types';
+import type { Locale, LocaleContent } from '../../types';
 
 interface FinalTableauProps {
   locale: Locale;
-  eyebrow: string;
-  hours: string;
-  contactLink: string;
+  assist: LocaleContent['assist'];
 }
 
-export function FinalTableau({ locale, eyebrow, hours, contactLink }: FinalTableauProps) {
+export function FinalTableau({ locale, assist }: FinalTableauProps) {
   return (
     <section id="contact" className="home-final is-placeholder">
       {/* TODO(owner-image): replace with workshop exterior or installation site photograph (landscape, cool desaturated palette). */}
@@ -30,17 +27,12 @@ export function FinalTableau({ locale, eyebrow, hours, contactLink }: FinalTable
       </picture>
       <div className="home-final__overlay" aria-hidden="true" />
       <div className="home-final__copy">
-        <span className="home-final__eyebrow">{eyebrow}</span>
-        <a className="home-final__phone" href={siteConfig.contacts.phoneLink}>
-          {siteConfig.contacts.phoneDisplay}
-        </a>
-        <div className="home-final__meta home-final__meta--stacked">
-          <span className="home-final__meta-line">{siteConfig.contacts.address}</span>
-          <span className="home-final__meta-line">{hours}</span>
-          <Link className="home-final__link" to={buildLocalizedPath(locale, 'contact')}>
-            {contactLink}
-          </Link>
-        </div>
+        <span className="home-final__eyebrow">{assist.eyebrow}</span>
+        <h2 className="home-final__title">{assist.title}</h2>
+        <p className="home-final__body">{assist.body}</p>
+        <Link className="home-final__link" to={buildLocalizedPath(locale, 'contact')}>
+          {assist.link}
+        </Link>
       </div>
     </section>
   );

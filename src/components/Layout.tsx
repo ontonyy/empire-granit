@@ -1,8 +1,6 @@
 import type { PropsWithChildren } from 'react';
 import { useLocation } from 'react-router-dom';
-import { siteConfig } from '../config/site';
 import { getLocaleContent } from '../content';
-import { trackEvent } from '../lib/analytics';
 import { buildLocalizedPath } from '../routing';
 import type { Locale, RouteKey } from '../types';
 import { AnalyticsLoader } from './AnalyticsLoader';
@@ -61,16 +59,6 @@ export function Layout({ locale, routeKey, children }: LayoutProps) {
         mapLink={mapLink}
         hidePhoneLink={isHomePage}
       />
-
-      {!isHomePage ? (
-        <a
-          className="floating-call"
-          href={siteConfig.contacts.phoneLink}
-          onClick={() => trackEvent('phone_click', { locale, source: 'floating' })}
-        >
-          {content.cta.callNow}
-        </a>
-      ) : null}
     </div>
   );
 }

@@ -18,8 +18,13 @@
     "preview": "Preview"
   },
   "cta": {
-    "callNow": "Contact Us",
     "sendInquiry": "Get an Estimate"
+  },
+  "assist": {
+    "eyebrow": "Need a similar solution?",
+    "title": "Don’t see the right fit?",
+    "body": "Every project starts with a conversation — contact us here and we will match material, dimensions, and budget to your memorial.",
+    "link": "Contact us →"
   },
   "layout": {
     "aboutAndPrivacy": "About and privacy",
@@ -33,6 +38,22 @@
     "locationMap": "Location Map",
     "footerHours": "Working hours",
     "footerHoursValue": "Mon-Fri 09:00-18:00, Sat 10:00-15:00"
+  },
+  "footer": {
+    "tagline": [
+      "Granite memorials from Narva",
+      "Monuments · Borders · Engraving",
+      "Across Estonia"
+    ],
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "openingHoursTitle": "Opening hours",
+    "openingHoursLines": [
+      "Mon–Fri 09:00–18:00",
+      "Sat 10:00–15:00",
+      "Sun closed"
+    ],
+    "bookCta": "Request a quote →"
   },
   "homepage": {
     "heroLabel": "MEMORIALS · GRANITE",
@@ -71,7 +92,7 @@
     "phoneEyebrow": "Call directly",
     "heroBodyLine": "Granite memorials from our Narva workshop — delivered across Estonia.",
     "servicesEyebrow": "Services",
-    "servicesShortTitle": "Monuments, borders, and engraving.",
+    "servicesShortTitle": "Monuments, borders, and engraving",
     "servicesLearnMore": "See all services →",
     "servicesShort": [
       {
@@ -88,15 +109,13 @@
       }
     ],
     "worksSectionEyebrow": "Completed work",
-    "worksSectionTitle": "A few examples in context.",
+    "worksSectionTitle": "A few examples in context",
     "worksLearnMore": "See all works →",
     "pricesEyebrow": "Price",
     "pricesTitle": "What affects the final price",
     "pricesLeadLine": "Guide prices below. Final cost depends on material, size, and site access.",
     "pricesTableLink": "Full pricing →",
-    "pricesLearnMore": "Full pricing →",
-    "finalEyebrow": "Contact",
-    "finalContactLink": "Send a message →"
+    "pricesLearnMore": "Full pricing →"
   },
   "services": {
     "title": "Our work",
@@ -189,7 +208,7 @@
   },
   "works": {
     "eyebrow": "Works · Empire Granit",
-    "title": "Completed work, in context.",
+    "title": "Completed work, in context",
     "pageLead": "A selection of monuments, fences and grave site restoration projects across Estonia. Each one is shaped to a specific memorial and family.",
     "filterLabel": "Filter",
     "homeFooterCounter": "05 examples, 30+ more in the catalog",
@@ -214,13 +233,7 @@
       "engravings": "Engravings",
       "installation": "Installation"
     },
-    "captionSeparator": "·",
-    "cta": {
-      "eyebrow": "Need a similar solution?",
-      "title": "Don’t see the right fit?",
-      "body": "Every project starts with a conversation — contact us here and we will match material, dimensions, and budget to your memorial.",
-      "link": "Contact us →"
-    }
+    "captionSeparator": "·"
   },
   "contact": {
     "heading": "Get in touch",

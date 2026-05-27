@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import type { LocaleContent } from '../../types';
 
 type Tier = LocaleContent['pricing']['tiers'][number];
@@ -6,21 +5,15 @@ type Tier = LocaleContent['pricing']['tiers'][number];
 interface PricingTierCardProps {
   tier: Tier;
   index: number;
-  ctaLabel: string;
   includedLabel: string;
   affectsLabel: string;
-  contactHref: string;
-  onCtaClick: () => void;
 }
 
 export function PricingTierCard({
   tier,
   index,
-  ctaLabel,
   includedLabel,
-  affectsLabel,
-  contactHref,
-  onCtaClick
+  affectsLabel
 }: PricingTierCardProps) {
   const tierLabel = `Tier ${String(index).padStart(2, '0')}`;
   const priceText = typeof tier.price === 'number' ? `${tier.price}€` : tier.price;
@@ -49,10 +42,6 @@ export function PricingTierCard({
           <span className="pricing-tier-affects-label">{affectsLabel}.</span> {tier.note}
         </p>
       )}
-
-      <Link className="pricing-tier-cta" to={contactHref} onClick={onCtaClick}>
-        {ctaLabel} →
-      </Link>
     </article>
   );
 }
