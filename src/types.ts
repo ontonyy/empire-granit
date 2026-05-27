@@ -63,7 +63,7 @@ export interface LocaleContent {
   services: {
     title: string;
     lead: string;
-    items: Array<{ title: string; body: string; deliverables: string[] }>;
+    items: Array<{ key: string; title: string; body: string; deliverables: string[]; captionWord: string }>;
   };
   pricing: {
     title: string;

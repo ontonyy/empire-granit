@@ -104,31 +104,37 @@
     "lead": "Kolm teenust, mis katavad kogu mälestusmärgi, monumendist paigalduseni.",
     "items": [
       {
+        "key": "monuments",
         "title": "Monumendid",
         "body": "Üksik-, topelt- ja eritellimusel graniitmonumendid kuju, mõõdu ja graveeringuga teie valikul.",
         "deliverables": [
           "Üksik-, topelt- ja eritellimusel kujud",
           "Graniidi tooni ja viimistluse valik",
           "Kiri ja portree graveering"
-        ]
+        ],
+        "captionWord": "Monument"
       },
       {
+        "key": "borders",
         "title": "Piirded",
         "body": "Graniit- ja betoonpiirded üksikutele ja pereplatsidele. Mõõdud platsi järgi.",
         "deliverables": [
           "Graniit- ja betoonelemendid",
           "Mõõdud platsi järgi",
           "Aluse ettevalmistus ja paigaldus"
-        ]
+        ],
+        "captionWord": "Piire"
       },
       {
+        "key": "engravings",
         "title": "Graveeringud",
         "body": "Kirja, portree ja dekoori graveering otse monumendile või eraldi plaadile.",
         "deliverables": [
           "Kirjad ja kuupäevad",
           "Portreed ja foto-graveering",
           "Dekoratiivsed motiivid"
-        ]
+        ],
+        "captionWord": "Graveering"
       }
     ]
   },
