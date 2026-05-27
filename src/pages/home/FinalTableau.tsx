@@ -43,9 +43,9 @@ export function FinalTableau({ locale, eyebrow, hours, contactLink }: FinalTable
         <a className="home-final__phone" href={siteConfig.contacts.phoneLink}>
           {siteConfig.contacts.phoneDisplay}
         </a>
-        <div className="home-final__meta">
-          <span>{siteConfig.contacts.address}</span>
-          <span>{hours}</span>
+        <div className="home-final__meta home-final__meta--stacked">
+          <span className="home-final__meta-line">{siteConfig.contacts.address}</span>
+          <span className="home-final__meta-line">{hours}</span>
           <Link className="home-final__link" to={buildLocalizedPath(locale, 'contact')}>
             {contactLink}
           </Link>

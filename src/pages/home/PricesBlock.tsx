@@ -12,35 +12,38 @@ interface PricesBlockProps {
   locale: Locale;
   eyebrow: string;
   title: string;
-  factorsBody: string[];
+  leadLine: string;
   tableLink: string;
+  learnMore: string;
   tiers: TierRow[];
 }
 
-export function PricesBlock({ locale, eyebrow, title, factorsBody, tableLink, tiers }: PricesBlockProps) {
+export function PricesBlock({ locale, eyebrow, title, leadLine, tableLink, learnMore, tiers }: PricesBlockProps) {
+  const pricingPath = buildLocalizedPath(locale, 'pricing');
   return (
     <section className="home-prices">
-      <div className="ui-container home-prices__grid">
-        <div className="home-prices__copy">
+      <div className="ui-container">
+        <header className="home-prices__header">
           <span className="ui-eyebrow">{eyebrow}</span>
           <h2 className="home-prices__title">{title}</h2>
-          {factorsBody.map((p, i) => (
-            <p key={i} className="home-prices__body">{p}</p>
+          <p className="home-prices__lead">{leadLine}</p>
+        </header>
+        <ul className="home-prices__table" role="list">
+          {tiers.map((t) => (
+            <li key={t.id} className="home-prices__row">
+              <span>{t.name}</span>
+              <span>{t.price}</span>
+            </li>
           ))}
-        </div>
-        <aside className="home-prices__card">
-          <ul className="home-prices__table" role="list">
-            {tiers.map((t) => (
-              <li key={t.id} className="home-prices__row">
-                <span>{t.name}</span>
-                <span>{t.price}</span>
-              </li>
-            ))}
-          </ul>
-          <Link className="home-prices__link" to={buildLocalizedPath(locale, 'pricing')}>
+        </ul>
+        <div className="home-prices__actions">
+          <Link className="home-prices__link" to={pricingPath}>
             {tableLink}
           </Link>
-        </aside>
+          <Link className="home-prices__learn-more" to={pricingPath}>
+            {learnMore}
+          </Link>
+        </div>
       </div>
     </section>
   );
