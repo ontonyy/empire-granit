@@ -1,6 +1,6 @@
 export { OpeningTableau } from './OpeningTableau';
 export { IntroRow } from './IntroRow';
-export { CraftTableau } from './CraftTableau';
-export { WorksEssay } from './WorksEssay';
+export { ServicesTeaser } from './ServicesTeaser';
+export { WorksTeaser } from './WorksTeaser';
 export { PricesBlock } from './PricesBlock';
 export { FinalTableau } from './FinalTableau';
