@@ -17,8 +17,13 @@ export interface LocaleContent {
   localeLabel: string;
   nav: Record<RouteKey, string>;
   cta: {
-    callNow: string;
     sendInquiry: string;
+  };
+  assist: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    link: string;
   };
   layout: {
     aboutAndPrivacy: string;
@@ -32,6 +37,14 @@ export interface LocaleContent {
     scrollTop: string;
     footerHours: string;
     footerHoursValue: string;
+  };
+  footer: {
+    tagline: string[];
+    navTitle: string;
+    contactTitle: string;
+    openingHoursTitle: string;
+    openingHoursLines: string[];
+    bookCta: string;
   };
   homepage: {
     heroLabel: string;
@@ -56,8 +69,6 @@ export interface LocaleContent {
     pricesLeadLine: string;
     pricesTableLink: string;
     pricesLearnMore: string;
-    finalEyebrow: string;
-    finalContactLink: string;
   };
   services: {
     title: string;
@@ -97,12 +108,6 @@ export interface LocaleContent {
     };
     captionSeparator: string;
     captionWords: Record<string, string>;
-    cta: {
-      eyebrow: string;
-      title: string;
-      body: string;
-      link: string;
-    };
   };
   contact: {
     heading: string;

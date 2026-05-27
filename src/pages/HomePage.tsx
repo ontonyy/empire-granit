@@ -58,12 +58,7 @@ export function HomePage({ locale }: HomePageProps) {
         tableLink={home.pricesTableLink}
         tiers={tiers}
       />
-      <FinalTableau
-        locale={locale}
-        eyebrow={home.finalEyebrow}
-        hours={content.layout.footerHoursValue}
-        contactLink={home.finalContactLink}
-      />
+      <FinalTableau locale={locale} assist={content.assist} />
     </>
   );
 }
