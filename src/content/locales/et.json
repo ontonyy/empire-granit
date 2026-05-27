@@ -35,7 +35,7 @@
     "footerHoursValue": "E-R 09:00-18:00, L 10:00-15:00"
   },
   "homepage": {
-    "heroLabel": "EMPIRE GRANIT · NARVA",
+    "heroLabel": "MÄLESTUSMÄRGID · GRANIIT",
     "heroTitle": "Kindlustunne raskel hetkel.",
     "heroLead": "",
     "highlights": [
@@ -69,8 +69,7 @@
     ],
     "intro": "Empire Granit on Narva graniidi töökoda. Valmistame monumente, piirdeid ja paigaldame valminud lahendused kalmistule. Iga töö algab vestlusest perekonnaga.",
     "phoneEyebrow": "Helistage otse",
-    "heroBodyLine": "Graniitmonumendid ja piirded. Töökoda Narvas, vedu üle Eesti.",
-    "heroLocation": "NARVA · EESTI",
+    "heroBodyLine": "Graniidist mälestusmärgid Narva töökojast — vedu üle Eesti.",
     "servicesEyebrow": "Teenused",
     "servicesShortTitle": "Monumendid, piirded ja graveering.",
     "servicesLearnMore": "Vaata kõiki teenuseid →",
@@ -193,7 +192,20 @@
     "title": "Näited valminud lahendustest",
     "pageLead": "Allpool valik valminud monumente, piirdeid ja platside korrastustöid Eestis. Iga töö on kohandatud konkreetse mälestuspaiga ja perekonna vajadustele.",
     "filterLabel": "Filtreeri",
-    "homeFooterCounter": "05 näidet — veel 30+ kataloogis",
+    "homeFooterCounter": "05 näidet, veel 30+ kataloogis",
+    "captionWords": {
+      "familyMonument": "Perekonnamonument",
+      "graniteBorder": "Graniidist piire",
+      "portrait": "Portree",
+      "installation": "Paigaldus",
+      "doubleMonument": "Topeltmonument",
+      "lowBorder": "Madalpiire",
+      "photoEnamel": "Fotoemail",
+      "restoration": "Taastamine",
+      "soloMonument": "Soolomonument",
+      "tallBorder": "Kõrgpiire",
+      "goldEngraving": "Kuldgraveering"
+    },
     "viewAllLink": "Vaata kõiki töid →",
     "filters": {
       "all": "Kõik",
@@ -206,8 +218,8 @@
     "cta": {
       "eyebrow": "Vajad sarnast lahendust?",
       "title": "Sobiv lahendus pole nimekirjas?",
-      "body": "Iga töö algab vestlusest. Helista, ja sobitame materjali, mõõdud ja eelarve teie monumendile.",
-      "link": "Helista {phone}"
+      "body": "Iga töö algab vestlusest — võta meiega ühendust ja sobitame materjali, mõõdud ja eelarve teie monumendile.",
+      "link": "Võta ühendust →"
     }
   },
   "contact": {

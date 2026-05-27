@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
-import { siteConfig } from '../../config/site';
+import { Link } from 'react-router-dom';
 import { getLocaleContent } from '../../content';
+import { buildLocalizedPath } from '../../routing';
 import type { Locale } from '../../types';
 import { WORKS, WORK_CATEGORIES, type WorkCategory, type WorkItem } from './works-data';
 
@@ -61,9 +62,9 @@ export function WorksPage({ locale }: WorksPageProps) {
       <section className="works-gallery reveal-on-scroll">
         <div className="ui-container">
           <ul className="works-grid" role="list">
-            {visible.map((item, idx) => {
-              const ordinal = String(idx + 1).padStart(2, '0');
-              const altText = `${item.title} — ${item.material}`;
+            {visible.map((item) => {
+              const localizedTitle = item.title[locale];
+              const altText = `${localizedTitle} — ${item.material}`;
               return (
                 <li
                   key={item.id}
@@ -85,13 +86,9 @@ export function WorksPage({ locale }: WorksPageProps) {
                       />
                     </picture>
                     <span className="works-tile-overlay" aria-hidden="true" />
-                    <span className="works-tile-ordinal" aria-hidden="true">{ordinal}</span>
                   </a>
                   <span className="works-tile-caption">
-                    <span className="works-tile-title">{item.title}</span>
-                    <span className="works-tile-material">
-                      {works.captionSeparator} {item.material}
-                    </span>
+                    <span className="works-tile-title">{localizedTitle}</span>
                   </span>
                 </li>
               );
@@ -105,9 +102,9 @@ export function WorksPage({ locale }: WorksPageProps) {
           <span className="ui-eyebrow">{works.cta.eyebrow}</span>
           <h2 className="ui-display ui-display-2 works-cta-title">{works.cta.title}</h2>
           <p className="works-cta-body">{works.cta.body}</p>
-          <a className="works-cta-link" href={siteConfig.contacts.phoneLink}>
-            {works.cta.link.replace('{phone}', siteConfig.contacts.phoneDisplay)}
-          </a>
+          <Link className="works-cta-link" to={buildLocalizedPath(locale, 'contact')}>
+            {works.cta.link}
+          </Link>
         </div>
       </section>
     </>

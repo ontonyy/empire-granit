@@ -25,14 +25,11 @@ const NAV_ROUTES: NavRoute[] = ['services', 'works', 'pricing', 'contact'];
 function useResponsiveThreshold(): number {
   const [threshold, setThreshold] = useState(80);
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) {
-      return;
-    }
-    const mq = window.matchMedia('(max-width: 767px)');
-    const apply = () => setThreshold(mq.matches ? 40 : 80);
+    if (typeof window === 'undefined') return;
+    const apply = () => setThreshold(Math.max(120, Math.round(window.innerHeight * 0.7)));
     apply();
-    mq.addEventListener('change', apply);
-    return () => mq.removeEventListener('change', apply);
+    window.addEventListener('resize', apply);
+    return () => window.removeEventListener('resize', apply);
   }, []);
   return threshold;
 }
@@ -119,7 +116,8 @@ export function SiteHeader({
 
   const headerClass = [
     'n3-header',
-    revealOnScroll ? (revealed ? 'is-revealed' : 'is-hidden') : ''
+    revealOnScroll ? (revealed ? 'is-revealed' : 'is-hidden') : '',
+    scrollRevealed ? 'is-solid' : ''
   ]
     .filter(Boolean)
     .join(' ');

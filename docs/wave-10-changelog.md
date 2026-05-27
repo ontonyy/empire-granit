@@ -39,7 +39,8 @@
 - `src/pages/home/CraftTableau.tsx` → `src/pages/home/ServicesTeaser.tsx` (renamed in earlier block)
 - `src/pages/home/WorksEssay.tsx` → `src/pages/home/WorksTeaser.tsx` (renamed in earlier block)
 - `src/pages/ServicesPage.tsx` + `src/pages/services/ServicePicture.tsx` added (Wave 10 B2)
-- `src/pages/works/WorksPage.tsx`: image overlay now shows ordinal only (`01`, `02`, …); title + material moved into caption text below the picture. Alt text remains `"{title} — {material}"` for accessibility. CTA link consumes the new `{phone}` template.
+- `src/pages/works/WorksPage.tsx` + `src/pages/home/WorksTeaser.tsx`: image overlay shows a **descriptive one-word caption** (e.g. "Restoration", "Granite border", "Portrait") sourced from `works.captionWords[captionKey]` per locale — supersedes the ordinal rule in the original Wave 10 doc. Title + material stay in caption text outside the image. Alt text remains `"{title} — {material}"` for accessibility. CTA link consumes the `{phone}` template.
+- `WorkItem` + `HomeWorkExample` types gained `captionKey: string`; new dictionary `works.captionWords` added to all three locales.
 - `src/pages/home/FinalTableau.tsx`: meta line stacked (address / hours / "Send a message →") — done in earlier block, confirmed in this pass.
 
 ## Image assets
@@ -55,7 +56,7 @@
 ## Verification
 
 - `npm run lint`, `npm run test`, `npm run build`, `node scripts/validate-content.mjs`, `node scripts/check-links.mjs` — see commit log for green/red status.
-- `grep -E " — " src/content/locales/en.json` → 1 hit (ornamental counter), within the ≤2-3 budget.
+- `grep -E " — " src/content/locales/{en,et,ru}.json` → 0 hits (footer counter em-dash also stripped in Block 4).
 - `grep -RE "Craft|craft" src/ --include="*.tsx" --include="*.ts" --include="*.css"` → 0 hits.
 
 ## Lighthouse delta
