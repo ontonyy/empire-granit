@@ -119,7 +119,15 @@ export function SiteHeader({
   return (
     <header ref={headerRef} className={headerClass}>
       <div className="n3-header-inner">
-        <Link className="n3-brand" to={homePath} aria-label={siteConfig.siteName}>
+        <Link
+          className="n3-brand"
+          to={homePath}
+          aria-label={siteConfig.siteName}
+          onClick={() => {
+            setMobileNavOpen(false);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        >
           <picture>
             <source type="image/webp" srcSet={logoPrimarySrc.replace(/logo\.png$/, 'logo.webp')} />
             <img
