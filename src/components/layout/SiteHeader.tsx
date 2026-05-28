@@ -57,12 +57,6 @@ export function SiteHeader({
     setMobileNavOpen(false);
   }, [routeKey, location.pathname]);
 
-  useEffect(() => {
-    document.body.style.overflow = mobileNavOpen ? 'hidden' : '';
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [mobileNavOpen]);
 
   useEffect(() => {
     if (!revealOnScroll) return;
@@ -151,40 +145,36 @@ export function SiteHeader({
         </nav>
 
         <div className="n3-header-right">
-          <span onClick={() => setForcedReveal(true)}>
+          <span className="n3-lang-wrap" onClick={() => setForcedReveal(true)}>
             <LanguageSwitcher currentLocale={locale} routeKey={routeKey} />
           </span>
           {phoneLink}
-          <button
-            type="button"
-            className={mobileNavOpen ? 'n3-burger is-open' : 'n3-burger'}
-            aria-expanded={mobileNavOpen}
-            aria-controls="n3-mobile-nav"
-            aria-label={mobileNavOpen ? ui.mobileMenuClose : ui.mobileMenuOpen}
-            onClick={() => setMobileNavOpen((v) => !v)}
-          >
-            {mobileNavOpen ? (
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-                <path d="M6 6 L18 18 M18 6 L6 18" />
-              </svg>
-            ) : (
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-                <path d="M4 7 H20 M4 12 H20 M4 17 H20" />
-              </svg>
-            )}
-          </button>
         </div>
+
+        <button
+          type="button"
+          className={mobileNavOpen ? 'n3-burger is-open' : 'n3-burger'}
+          aria-expanded={mobileNavOpen}
+          aria-controls="n3-mobile-nav"
+          aria-label={mobileNavOpen ? ui.mobileMenuClose : ui.mobileMenuOpen}
+          onClick={() => setMobileNavOpen((v) => !v)}
+        >
+          {mobileNavOpen ? (
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d="M6 6 L18 18 M18 6 L6 18" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d="M4 7 H20 M4 12 H20 M4 17 H20" />
+            </svg>
+          )}
+        </button>
       </div>
 
       <div
         id="n3-mobile-nav"
-        className={mobileNavOpen ? 'n3-mobile-overlay is-open' : 'n3-mobile-overlay'}
-        role="dialog"
-        aria-modal="true"
+        className={mobileNavOpen ? 'n3-mobile-dropdown is-open' : 'n3-mobile-dropdown'}
         aria-label={ui.primaryNavigation}
-        onClick={(e) => {
-          if (e.target === e.currentTarget) setMobileNavOpen(false);
-        }}
       >
         <nav className="n3-mobile-nav">
           {renderNavLinks(() => setMobileNavOpen(false))}
