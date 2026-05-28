@@ -1,4 +1,6 @@
-import type { LocaleContent } from '../../types';
+import { Link } from 'react-router-dom';
+import { trackEvent } from '../../lib/analytics';
+import type { Locale, LocaleContent } from '../../types';
 
 type Tier = LocaleContent['pricing']['tiers'][number];
 
@@ -7,13 +9,19 @@ interface PricingTierCardProps {
   index: number;
   includedLabel: string;
   affectsLabel: string;
+  ctaLabel: string;
+  contactPath: string;
+  locale: Locale;
 }
 
 export function PricingTierCard({
   tier,
   index,
   includedLabel,
-  affectsLabel
+  affectsLabel,
+  ctaLabel,
+  contactPath,
+  locale
 }: PricingTierCardProps) {
   const tierLabel = `Tier ${String(index).padStart(2, '0')}`;
   const priceText = typeof tier.price === 'number' ? `${tier.price}€` : tier.price;
@@ -42,6 +50,14 @@ export function PricingTierCard({
           <span className="pricing-tier-affects-label">{affectsLabel}.</span> {tier.note}
         </p>
       )}
+
+      <Link
+        className="pricing-tier-cta"
+        to={`${contactPath}?package=${encodeURIComponent(tier.name)}#contact-form`}
+        onClick={() => trackEvent('pricing_tier_cta_click', { locale, tier: tier.id })}
+      >
+        {ctaLabel} →
+      </Link>
     </article>
   );
 }
