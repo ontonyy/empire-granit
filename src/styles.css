@@ -2419,7 +2419,8 @@ select:focus {
   }
 
   .main-content {
-    padding: 0;
+    padding-inline: 0;
+    padding-bottom: 0;
   }
 
   .site-header {
