@@ -25,6 +25,12 @@ export interface LocaleContent {
     body: string;
     link: string;
   };
+  assistAlt: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    link: string;
+  };
   layout: {
     aboutAndPrivacy: string;
     mobileMenuOpen: string;

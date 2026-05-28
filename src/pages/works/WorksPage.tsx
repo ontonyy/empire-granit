@@ -99,11 +99,11 @@ export function WorksPage({ locale }: WorksPageProps) {
 
       <section className="works-cta reveal-on-scroll">
         <div className="ui-container works-cta-inner">
-          <span className="ui-eyebrow">{content.assist.eyebrow}</span>
-          <h2 className="ui-display ui-display-2 works-cta-title">{content.assist.title}</h2>
-          <p className="works-cta-body">{content.assist.body}</p>
+          <span className="ui-eyebrow">{content.assistAlt.eyebrow}</span>
+          <h2 className="ui-display ui-display-2 works-cta-title">{content.assistAlt.title}</h2>
+          <p className="works-cta-body">{content.assistAlt.body}</p>
           <Link className="works-cta-link" to={buildLocalizedPath(locale, 'contact')}>
-            {content.assist.link}
+            {content.assistAlt.link}
           </Link>
         </div>
       </section>

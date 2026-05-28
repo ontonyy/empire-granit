@@ -178,6 +178,16 @@ export function SiteHeader({
         aria-label={ui.primaryNavigation}
         hidden={!mobileNavOpen}
       >
+        <button
+          type="button"
+          className="n3-mobile-close"
+          aria-label={ui.mobileMenuClose}
+          onClick={() => setMobileNavOpen(false)}
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+            <path d="M6 6 L18 18 M18 6 L6 18" />
+          </svg>
+        </button>
         <nav className="n3-mobile-nav">
           {renderNavLinks(() => setMobileNavOpen(false))}
         </nav>

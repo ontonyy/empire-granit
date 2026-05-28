@@ -23,7 +23,13 @@
   "assist": {
     "eyebrow": "Need a similar solution?",
     "title": "Don’t see the right fit?",
-    "body": "Every project starts with a conversation — contact us here and we will match material, dimensions, and budget to your memorial.",
+    "body": "Every project starts with a conversation. Contact us and we will match material, dimensions, and budget to your memorial.",
+    "link": "Contact us →"
+  },
+  "assistAlt": {
+    "eyebrow": "Have a project in mind?",
+    "title": "Tell us what you need",
+    "body": "Share a photo, a sketch, or a few measurements. We will suggest granite, dimensions, and engraving that suit the family and the site.",
     "link": "Contact us →"
   },
   "layout": {
@@ -88,9 +94,9 @@
         "label": "workshop and samples at Pähklimäe 2"
       }
     ],
-    "intro": "Empire Granit is a granite workshop in Narva. We make monuments, borders and install completed work at the cemetery. Every project begins with a conversation with the family.",
+    "intro": "Empire Granit is a granite workshop in Narva. We make monuments, borders, and install completed work at the cemetery. Every project begins with a conversation with the family.",
     "phoneEyebrow": "Call directly",
-    "heroBodyLine": "Granite memorials from our Narva workshop — delivered across Estonia.",
+    "heroBodyLine": "Granite memorials from our Narva workshop, delivered across Estonia.",
     "servicesEyebrow": "Services",
     "servicesShortTitle": "Monuments, borders, and engraving",
     "servicesLearnMore": "See all services →",

@@ -13,7 +13,7 @@ const PHOTOS = ['service-framing', 'service-fence', 'service-plate'];
 export function ServicesPage({ locale }: ServicesPageProps) {
   const content = getLocaleContent(locale);
   const section = content.services;
-  const assist = content.assist;
+  const assist = content.assistAlt;
   const contactPath = buildLocalizedPath(locale, 'contact');
 
   return (
