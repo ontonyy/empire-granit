@@ -59,6 +59,9 @@
 :root {
   --header-h: clamp(80px, 11vh, 128px);
 }
+@media (max-width: 767px) {
+  :root { --header-h: 110px; }
+}
 html,
 body,
 #root {
@@ -442,9 +445,6 @@ button:hover,
   padding-top: var(--header-h, 80px);
   box-shadow: none;
   min-height: 100vh;
-}
-@media (max-width: 767px) {
-  .main-content:not(.is-home) { padding-top: 132px; }
 }
 
 .reveal-on-scroll {
@@ -4762,12 +4762,12 @@ select:focus {
     grid-template-areas:
       "brand    .       burger"
       "info     info    info";
-    gap: var(--space-2) var(--space-2);
-    row-gap: var(--space-2);
-    padding-block: var(--space-2);
+    gap: 4px var(--space-2);
+    row-gap: 6px;
+    padding-block: 8px;
   }
   .n3-brand { grid-area: brand; }
-  .n3-burger { grid-area: burger; display: inline-flex; }
+  .n3-burger { grid-area: burger; display: inline-flex; width: 40px; height: 40px; }
   .n3-nav { display: none; }
   .n3-header-right {
     grid-area: info;
@@ -4782,7 +4782,7 @@ select:focus {
     padding-bottom: 1px;
   }
   .n3-phone-icon { width: 14px; height: 14px; }
-  .n3-brand-logo { height: clamp(40px, 9vw, 56px); }
+  .n3-brand-logo { height: 40px; max-width: 140px; object-fit: contain; }
 }
 
 @media (min-width: 1024px) {
