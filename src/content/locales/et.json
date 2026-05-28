@@ -23,7 +23,13 @@
   "assist": {
     "eyebrow": "Vajad sarnast lahendust?",
     "title": "Sobiv lahendus pole nimekirjas?",
-    "body": "Iga töö algab vestlusest — võta meiega ühendust ja sobitame materjali, mõõdud ja eelarve teie monumendile.",
+    "body": "Iga töö algab vestlusest. Võta meiega ühendust ja sobitame materjali, mõõdud ja eelarve teie monumendile.",
+    "link": "Võta ühendust →"
+  },
+  "assistAlt": {
+    "eyebrow": "On mõttes oma projekt?",
+    "title": "Räägi, mida vajad",
+    "body": "Saada foto, joonis või mõõdud. Pakume välja graniidi, mõõdud ja graveeringu, mis sobivad perekonnale ja platsile.",
     "link": "Võta ühendust →"
   },
   "layout": {
@@ -90,7 +96,7 @@
     ],
     "intro": "Empire Granit on Narva graniidi töökoda. Valmistame monumente, piirdeid ja paigaldame valminud lahendused kalmistule. Iga töö algab vestlusest perekonnaga.",
     "phoneEyebrow": "Helistage otse",
-    "heroBodyLine": "Graniidist mälestusmärgid Narva töökojast — vedu üle Eesti.",
+    "heroBodyLine": "Graniidist mälestusmärgid Narva töökojast, vedu üle Eesti.",
     "servicesEyebrow": "Teenused",
     "servicesShortTitle": "Monumendid, piirded ja graveering",
     "servicesLearnMore": "Vaata kõiki teenuseid →",

@@ -64,17 +64,6 @@ export function ContactPage({ locale }: ContactPageProps) {
       <div id="map" className="contact-n3__map">
         <WorkshopMap src={siteConfig.contacts.mapEmbedUrl} title={content.layout.locationMap} />
       </div>
-
-      <section className="contact-assist-band assist-band">
-        <div className="ui-container contact-assist-inner">
-          <span className="ui-eyebrow">{content.assist.eyebrow}</span>
-          <h2 className="assist-band__title">{content.assist.title}</h2>
-          <p className="assist-band__body">{content.assist.body}</p>
-          <a className="services-contact-link" href={`mailto:${siteConfig.contacts.email}`}>
-            {content.assist.link}
-          </a>
-        </div>
-      </section>
     </section>
   );
 }
