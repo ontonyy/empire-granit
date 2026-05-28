@@ -157,15 +157,21 @@ export function SiteHeader({
           {phoneLink}
           <button
             type="button"
-            className="n3-burger"
+            className={mobileNavOpen ? 'n3-burger is-open' : 'n3-burger'}
             aria-expanded={mobileNavOpen}
             aria-controls="n3-mobile-nav"
             aria-label={mobileNavOpen ? ui.mobileMenuClose : ui.mobileMenuOpen}
             onClick={() => setMobileNavOpen((v) => !v)}
           >
-            <span />
-            <span />
-            <span />
+            {mobileNavOpen ? (
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M6 6 L18 18 M18 6 L6 18" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M4 7 H20 M4 12 H20 M4 17 H20" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
@@ -176,18 +182,10 @@ export function SiteHeader({
         role="dialog"
         aria-modal="true"
         aria-label={ui.primaryNavigation}
-        hidden={!mobileNavOpen}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setMobileNavOpen(false);
+        }}
       >
-        <button
-          type="button"
-          className="n3-mobile-close"
-          aria-label={ui.mobileMenuClose}
-          onClick={() => setMobileNavOpen(false)}
-        >
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-            <path d="M6 6 L18 18 M18 6 L6 18" />
-          </svg>
-        </button>
         <nav className="n3-mobile-nav">
           {renderNavLinks(() => setMobileNavOpen(false))}
         </nav>

@@ -4683,18 +4683,24 @@ select:focus {
 /* Burger (mobile only) */
 .n3-burger {
   display: none;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   background: transparent;
   border: 1px solid var(--rule-color);
   border-radius: var(--radius-sm);
   box-shadow: none;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
   cursor: pointer;
+  color: var(--ink-near-black);
+  position: relative;
+  z-index: 220;
+}
+.n3-burger.is-open {
+  background: var(--surface-stone);
+  border-color: var(--rule-color-strong);
+  color: var(--ink-near-black);
 }
 
 .n3-burger:hover {
@@ -4710,12 +4716,7 @@ select:focus {
   outline-offset: var(--focus-offset);
 }
 
-.n3-burger span {
-  display: block;
-  width: 16px;
-  height: 1px;
-  background: var(--ink-near-black);
-}
+.n3-burger svg { display: block; }
 
 /* Mobile overlay */
 .n3-mobile-overlay {
@@ -4726,29 +4727,11 @@ select:focus {
   display: flex;
   position: fixed;
   inset: 0;
-  z-index: 200;
+  z-index: 210;
   background: var(--surface-stone);
-  padding: calc(56px + var(--space-4)) var(--container-pad-mobile) var(--space-5);
+  padding: calc(64px + var(--space-4)) var(--container-pad-mobile) var(--space-5);
   flex-direction: column;
-}
-.n3-mobile-close {
-  position: absolute;
-  top: var(--space-3);
-  right: var(--space-3);
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid var(--rule-color);
-  border-radius: var(--radius-sm);
-  color: var(--ink-near-black);
-  cursor: pointer;
-}
-.n3-mobile-close:focus-visible {
-  outline: var(--focus-ring);
-  outline-offset: var(--focus-offset);
+  overflow-y: auto;
 }
 
 .n3-mobile-nav {
@@ -5992,7 +5975,8 @@ select:focus {
 .site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .n3-nav-link,
 .site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .n3-phone,
 .site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .lang-link { color: #fff; }
-.site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .n3-burger span { background: #fff; }
+.site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .n3-burger { color: #fff; border-color: rgba(255,255,255,0.5); }
+.site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .n3-burger.is-open { color: var(--ink-near-black); border-color: var(--rule-color-strong); }
 /* Solid (scrolled) state — opaque white with dark text, visible on light content below hero */
 .n3-header.is-solid {
   background: rgba(255, 255, 255, 0.96);
@@ -6088,3 +6072,44 @@ select:focus {
 .home-final.is-placeholder .home-final__meta-line { color: var(--ink-near-black); }
 .home-final.is-placeholder .home-final__link { color: var(--ink-near-black); }
 
+
+/* ============================================================
+ * Wave 14 — mobile compatibility pass
+ * ============================================================ */
+@media (max-width: 639px) {
+  .works-header,
+  .pricing-header,
+  .services-header,
+  .contact-header {
+    padding: var(--space-5) 0 var(--space-3);
+  }
+  .pricing-tier-card { padding: var(--space-4); }
+  .pricing-tier-grid { gap: var(--space-3); }
+  .services-block { padding-block: var(--space-4); gap: var(--space-3); }
+  .services-block__title,
+  .home-services-teaser__title,
+  .home-works__title,
+  .home-prices__title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+  .contact-n3__phone { margin: var(--space-4) 0; }
+  .contact-n3__separator { margin: var(--space-4) 0; }
+  .home-opening__copy {
+    bottom: var(--space-4);
+    left: var(--container-pad-mobile);
+    right: var(--container-pad-mobile);
+  }
+  .home-intro { padding-block: var(--space-5); }
+  .home-services-teaser,
+  .home-works,
+  .home-prices { padding-block: var(--space-5); }
+  .works-cta,
+  .pricing-tiers,
+  .services-contact-band { padding-block: var(--space-5); }
+  .home-intro__trust-item {
+    flex-basis: 100%;
+    border-right: 0;
+    padding-right: 0;
+  }
+  .works-grid { gap: var(--space-3); }
+}
