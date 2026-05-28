@@ -40,6 +40,9 @@ export function PricingPage({ locale }: PricingPageProps) {
                 index={idx + 1}
                 includedLabel={section.includedLabel}
                 affectsLabel={section.affectsLabel}
+                ctaLabel={section.cta}
+                contactPath={contactPath}
+                locale={locale}
               />
             ))}
           </div>
