@@ -239,7 +239,20 @@
       "engravings": "Engravings",
       "installation": "Installation"
     },
-    "captionSeparator": "·"
+    "captionSeparator": "·",
+    "swatches": {
+      "title": "Granite we work with",
+      "lead": "A range of imported and Baltic granites, each with its own grain and tone.",
+      "items": {
+        "karelia-red": "Karelia Red",
+        "lithuanian-black": "Lithuanian Black",
+        "karelian-black": "Karelian Black",
+        "volga-blue": "Volga Blue",
+        "indian-aurora": "Indian Aurora",
+        "aurora-red": "Aurora Red",
+        "mixed-granite": "Mixed granite"
+      }
+    }
   },
   "contact": {
     "heading": "Get in touch",

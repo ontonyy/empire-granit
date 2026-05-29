@@ -4258,6 +4258,50 @@ select:focus {
 }
 
 /* ============================================================
+ * Works — granite swatch band (Wave 15)
+ * ============================================================ */
+
+.works-swatches {
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--rule-color);
+}
+
+.works-swatches-lead {
+  margin-top: var(--space-2);
+  max-width: 640px;
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+  color: var(--ink-body);
+}
+
+.works-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.works-swatch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.works-swatch-chip {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--rule-color);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.18);
+}
+
+.works-swatch-name {
+  font-size: var(--fs-body);
+  color: var(--ink-strong);
+}
+
+/* ============================================================
  * Pricing page — Wave 7
  * ============================================================ */
 

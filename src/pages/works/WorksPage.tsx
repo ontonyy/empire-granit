@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getLocaleContent } from '../../content';
 import { buildLocalizedPath } from '../../routing';
 import type { Locale } from '../../types';
-import { WORKS, WORK_CATEGORIES, type WorkCategory, type WorkItem } from './works-data';
+import { WORKS, WORK_CATEGORIES, WORK_SWATCHES, type WorkCategory, type WorkItem } from './works-data';
 
 interface WorksPageProps {
   locale: Locale;
@@ -93,6 +93,25 @@ export function WorksPage({ locale }: WorksPageProps) {
                 </li>
               );
             })}
+          </ul>
+        </div>
+      </section>
+
+      <section className="works-swatches reveal-on-scroll">
+        <div className="ui-container">
+          <h2 className="ui-display ui-display-3 works-swatches-title">{works.swatches.title}</h2>
+          <p className="works-swatches-lead">{works.swatches.lead}</p>
+          <ul className="works-swatch-grid" role="list">
+            {WORK_SWATCHES.map((swatch) => (
+              <li key={swatch.id} className="works-swatch">
+                <span
+                  className="works-swatch-chip"
+                  style={{ backgroundColor: swatch.hex }}
+                  aria-hidden="true"
+                />
+                <span className="works-swatch-name">{works.swatches.items[swatch.id]}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </section>

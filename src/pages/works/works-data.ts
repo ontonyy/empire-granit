@@ -29,6 +29,24 @@ export const WORK_CATEGORIES: WorkCategory[] = [
   'installation'
 ];
 
+export interface WorkSwatch {
+  /** Stable id, also the locale key under works.swatches.items. */
+  id: string;
+  /** Approximate granite tone for the swatch chip. */
+  hex: string;
+}
+
+/** Granite materials shown in the works-tab swatch band (Wave 15). */
+export const WORK_SWATCHES: WorkSwatch[] = [
+  { id: 'karelia-red', hex: '#7a2e2a' },
+  { id: 'lithuanian-black', hex: '#1b1b1d' },
+  { id: 'karelian-black', hex: '#2b2b2e' },
+  { id: 'volga-blue', hex: '#2f4a5c' },
+  { id: 'indian-aurora', hex: '#3a2f33' },
+  { id: 'aurora-red', hex: '#6b2b30' },
+  { id: 'mixed-granite', hex: '#8a8076' }
+];
+
 export const WORKS: WorkItem[] = [
   {
     id: 'tamm-monument',

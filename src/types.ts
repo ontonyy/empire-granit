@@ -114,6 +114,11 @@ export interface LocaleContent {
     };
     captionSeparator: string;
     captionWords: Record<string, string>;
+    swatches: {
+      title: string;
+      lead: string;
+      items: Record<string, string>;
+    };
   };
   contact: {
     heading: string;

@@ -239,7 +239,20 @@
       "engravings": "Гравировка",
       "installation": "Установка"
     },
-    "captionSeparator": "·"
+    "captionSeparator": "·",
+    "swatches": {
+      "title": "Гранит, с которым мы работаем",
+      "lead": "Импортные и балтийские граниты — каждый со своим рисунком и оттенком.",
+      "items": {
+        "karelia-red": "Карелия Ред",
+        "lithuanian-black": "Литовский чёрный",
+        "karelian-black": "Карельский чёрный",
+        "volga-blue": "Волга Блю",
+        "indian-aurora": "Индиан Аврора",
+        "aurora-red": "Аврора Ред",
+        "mixed-granite": "Смешанный гранит"
+      }
+    }
   },
   "contact": {
     "heading": "Свяжитесь с нами",
