@@ -43,7 +43,7 @@
     "languageSwitcher": "Keelevalik",
     "locationMap": "Asukoha kaart",
     "footerHours": "Lahtiolekuajad",
-    "footerHoursValue": "E-R 09:00-18:00, L 10:00-15:00"
+    "footerHoursValue": "E-R 10:00–18:00, L 10:00–15:00"
   },
   "footer": {
     "tagline": [
@@ -55,7 +55,7 @@
     "contactTitle": "Kontakt",
     "openingHoursTitle": "Lahtiolekuajad",
     "openingHoursLines": [
-      "E–R 09:00–18:00",
+      "E–R 10:00–18:00",
       "L 10:00–15:00",
       "P suletud"
     ],
@@ -64,7 +64,7 @@
   "homepage": {
     "heroLabel": "MÄLESTUSMÄRGID · GRANIIT",
     "heroTitle": "Kindlustunne raskel hetkel",
-    "heroLead": "",
+    "heroLead": "Graniittoodete valmistamine ja paigaldus koos veoga üle Eesti.",
     "highlights": [
       "Monumendid ja piirded",
       "Paigaldus ja korrastus",
@@ -82,8 +82,8 @@
         "label": "valminud hauakivid, plaadid ja taastamistööd"
       },
       {
-        "value": "3 keelt",
-        "label": "nõustamine eesti, vene ja inglise keeles"
+        "value": "Materjal",
+        "label": "mitmekesine materjalide valik"
       },
       {
         "value": "Üle Eesti",
@@ -91,10 +91,10 @@
       },
       {
         "value": "Narva",
-        "label": "töökoda ja näidised aadressil Pähklimäe 2"
+        "label": "töökoda ja näidised aadressil Pähklimäe 6"
       }
     ],
-    "intro": "Empire Granit on Narva graniidi töökoda. Valmistame monumente, piirdeid ja paigaldame valminud lahendused kalmistule. Iga töö algab vestlusest perekonnaga.",
+    "intro": "Empire Granitis loome mälestuslahendusi tähelepanuga detailidele ja austusega mälestuse vastu.",
     "phoneEyebrow": "Helistage otse",
     "heroBodyLine": "Graniidist mälestusmärgid Narva töökojast, vedu üle Eesti.",
     "servicesEyebrow": "Teenused",
@@ -125,46 +125,68 @@
   },
   "services": {
     "title": "Mida me teeme",
-    "lead": "Kolm teenust, mis katavad kogu mälestusmärgi, monumendist paigalduseni.",
+    "lead": "Viis suunda, mis katavad kogu mälestusmärgi, valmistamisest hoolduseni.",
     "items": [
       {
-        "key": "monuments",
-        "title": "Monumendid",
-        "body": "Üksik-, topelt- ja eritellimusel graniitmonumendid kuju, mõõdu ja graveeringuga teie valikul.",
+        "key": "manufacturing",
+        "title": "Graniittoodete valmistamine",
+        "body": "Mälestusmärgid, hauakivid, piirded, lillealused, vaasid ja muud graniittooted eritellimusel.",
         "deliverables": [
-          "Üksik-, topelt- ja eritellimusel kujud",
-          "Graniidi tooni ja viimistluse valik",
-          "Kiri ja portree graveering"
+          "Mälestusmärgid, hauakivid ja piirded",
+          "Lillealused, vaasid ja lisatooted",
+          "Eritellimus kavandi järgi"
         ],
-        "captionWord": "Monument"
+        "captionWord": "Valmistamine"
       },
       {
-        "key": "borders",
-        "title": "Piirded",
-        "body": "Graniit- ja betoonpiirded üksikutele ja pereplatsidele. Mõõdud platsi järgi.",
+        "key": "installation",
+        "title": "Graniittoodete paigaldus üle Eesti",
+        "body": "Mälestusmärkide, piirete ja muude graniitkonstruktsioonide paigaldus väljasõiduga üle kogu Eesti.",
         "deliverables": [
-          "Graniit- ja betoonelemendid",
-          "Mõõdud platsi järgi",
+          "Mälestusmärgid, piirded ja konstruktsioonid",
+          "Väljasõit üle Eesti",
           "Aluse ettevalmistus ja paigaldus"
         ],
-        "captionWord": "Piire"
+        "captionWord": "Paigaldus"
       },
       {
         "key": "engravings",
-        "title": "Graveeringud",
-        "body": "Kirja, portree ja dekoori graveering otse monumendile või eraldi plaadile.",
+        "title": "Graveerimine ja fotoemaili valmistamine",
+        "body": "Kirjade, portreede ja dekoratiivsete elementide kandmine, fotoemaili valmistamine mälestusmärkidele.",
         "deliverables": [
-          "Kirjad ja kuupäevad",
-          "Portreed ja foto-graveering",
-          "Dekoratiivsed motiivid"
+          "Kirjad ja portreed",
+          "Dekoratiivsed elemendid",
+          "Fotoemaili valmistamine"
         ],
         "captionWord": "Graveering"
+      },
+      {
+        "key": "landscaping",
+        "title": "Mälestusplatside korrastamine",
+        "body": "Liiva vahetus ja lisamine, kunstmuru, vaaside, pinkide ja muude haljastuselementide paigaldus.",
+        "deliverables": [
+          "Liiva vahetus ja lisamine",
+          "Kunstmuru",
+          "Vaasid, pingid ja haljastuselemendid"
+        ],
+        "captionWord": "Korrastus"
+      },
+      {
+        "key": "restoration",
+        "title": "Mälestusmärkide restaureerimine ja hooldus",
+        "body": "Vanade mälestusmärkide puhastamine, kirjade ja portreede uuendamine.",
+        "deliverables": [
+          "Vanade mälestusmärkide puhastamine",
+          "Kirjade uuendamine",
+          "Portreede uuendamine"
+        ],
+        "captionWord": "Restaureerimine"
       }
     ]
   },
   "pricing": {
     "title": "Hinnakiri",
-    "intro": "Allpool on lähtehinnad meie tavapärastele töödele. Lõplik hind sõltub graniidist, mõõdust, graveeringust ja platsi tingimustest. Kinnitame selle pärast lühikest nõustamist.",
+    "intro": "Allpool on lähtehinnad meie tavapärastele töödele. Lõplik hind sõltub graniidist, mõõdust, graveeringust ja platsi tingimustest.",
     "bottomNote": "Täpne hind kinnitatakse pärast mõõtude, materjali, graveeringu, ligipääsu ja paigalduse mahu täpsustamist.",
     "includedLabel": "Mis sisaldub",
     "affectsLabel": "Mis mõjutab hinda",
@@ -298,7 +320,7 @@
       "fileHelper": "Võite valida platsi või näidise foto. Kui failide saatmine ei ole saadaval, lisage detailid sõnumisse või saatke foto e-postiga.",
       "callbackBestTime": "Sobiv aeg helistamiseks",
       "hoursLabel": "Lahti",
-      "hoursValue": "E–R 9:00–17:00 · L kokkuleppel",
+      "hoursValue": "E-R 10:00–18:00, L 10:00–15:00",
       "workshopLabel": "Töökoda"
     }
   },

@@ -43,7 +43,7 @@
     "languageSwitcher": "Language switcher",
     "locationMap": "Location Map",
     "footerHours": "Working hours",
-    "footerHoursValue": "Mon-Fri 09:00-18:00, Sat 10:00-15:00"
+    "footerHoursValue": "Mon-Fri 10:00–18:00, Sat 10:00–15:00"
   },
   "footer": {
     "tagline": [
@@ -55,7 +55,7 @@
     "contactTitle": "Contact",
     "openingHoursTitle": "Opening hours",
     "openingHoursLines": [
-      "Mon–Fri 09:00–18:00",
+      "Mon–Fri 10:00–18:00",
       "Sat 10:00–15:00",
       "Sun closed"
     ],
@@ -64,7 +64,7 @@
   "homepage": {
     "heroLabel": "MEMORIALS · GRANITE",
     "heroTitle": "Confidence in Difficult Times",
-    "heroLead": "",
+    "heroLead": "Manufacturing and installation of granite products with delivery across Estonia.",
     "highlights": [
       "Monuments and borders",
       "Installation and site work",
@@ -82,8 +82,8 @@
         "label": "completed memorials, slabs and restorations"
       },
       {
-        "value": "3 languages",
-        "label": "consultations in Estonian, Russian and English"
+        "value": "Material",
+        "label": "a varied choice of materials"
       },
       {
         "value": "Across Estonia",
@@ -91,10 +91,10 @@
       },
       {
         "value": "Narva",
-        "label": "workshop and samples at Pähklimäe 2"
+        "label": "workshop and samples at Pähklimäe 6"
       }
     ],
-    "intro": "Empire Granit is a granite workshop in Narva. We make monuments, borders, and install completed work at the cemetery. Every project begins with a conversation with the family.",
+    "intro": "At Empire Granit we create memorial solutions with attention to detail and respect for memory.",
     "phoneEyebrow": "Call directly",
     "heroBodyLine": "Granite memorials from our Narva workshop, delivered across Estonia.",
     "servicesEyebrow": "Services",
@@ -125,46 +125,68 @@
   },
   "services": {
     "title": "Our work",
-    "lead": "Three services covering the full memorial, from monument to installation.",
+    "lead": "Five areas covering the full memorial, from manufacturing to upkeep.",
     "items": [
       {
-        "key": "monuments",
-        "title": "Monuments",
-        "body": "Single, double and custom granite monuments shaped to your chosen form, size and engraving.",
+        "key": "manufacturing",
+        "title": "Manufacturing of granite products",
+        "body": "Monuments, headstones, borders, flower beds, vases and other granite products made to order.",
         "deliverables": [
-          "Single, double, custom shapes",
-          "Granite color and finish selection",
-          "Inscription and portrait engraving"
+          "Monuments, headstones and borders",
+          "Flower beds, vases and related products",
+          "Custom orders from a sketch"
         ],
-        "captionWord": "Monument"
+        "captionWord": "Manufacturing"
       },
       {
-        "key": "borders",
-        "title": "Borders",
-        "body": "Granite and concrete borders for single and family plots. Sized to the site.",
+        "key": "installation",
+        "title": "Installation of granite products across Estonia",
+        "body": "Installation of monuments, fences and other granite structures with on-site visits across Estonia.",
         "deliverables": [
-          "Granite and concrete elements",
-          "Sizing for the plot",
+          "Monuments, fences and structures",
+          "On-site visits across Estonia",
           "Foundation prep and installation"
         ],
-        "captionWord": "Border"
+        "captionWord": "Installation"
       },
       {
         "key": "engravings",
-        "title": "Engravings",
-        "body": "Inscription, portrait and decorative engraving on the monument or on a separate slab.",
+        "title": "Engraving and photo enamel production",
+        "body": "Inscriptions, portraits and decorative elements, plus photo enamel production for monuments.",
         "deliverables": [
-          "Inscriptions and dates",
-          "Portraits and photo etching",
-          "Decorative motifs"
+          "Inscriptions and portraits",
+          "Decorative elements",
+          "Photo enamel production"
         ],
         "captionWord": "Engraving"
+      },
+      {
+        "key": "landscaping",
+        "title": "Improvement of memorial plots",
+        "body": "Sand replacement and topping up, artificial grass, installation of vases, benches and other landscaping elements.",
+        "deliverables": [
+          "Sand replacement and topping up",
+          "Artificial grass",
+          "Vases, benches and landscaping elements"
+        ],
+        "captionWord": "Landscaping"
+      },
+      {
+        "key": "restoration",
+        "title": "Restoration and care of monuments",
+        "body": "Cleaning of old monuments, refreshing of inscriptions and portraits.",
+        "deliverables": [
+          "Cleaning of old monuments",
+          "Refreshing inscriptions",
+          "Refreshing portraits"
+        ],
+        "captionWord": "Restoration"
       }
     ]
   },
   "pricing": {
     "title": "Pricing",
-    "intro": "These are starting prices for our most common services. The final price depends on the granite, size, engraving, and site conditions. We confirm it after a short consultation.",
+    "intro": "These are starting prices for our most common services. The final price depends on the granite, size, engraving, and site conditions.",
     "bottomNote": "Exact price is confirmed after dimensions, material, engraving, site access, and installation scope are clarified.",
     "includedLabel": "Included",
     "affectsLabel": "Affects final cost",
@@ -298,7 +320,7 @@
       "fileHelper": "You can choose site or reference photos. If file upload is unavailable, add details in the message or send photos by email.",
       "callbackBestTime": "Best time to call",
       "hoursLabel": "Open",
-      "hoursValue": "Mon–Fri 9:00–17:00 · Sat by appointment",
+      "hoursValue": "Mon-Fri 10:00–18:00, Sat 10:00–15:00",
       "workshopLabel": "Workshop"
     }
   },
