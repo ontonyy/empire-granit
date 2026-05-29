@@ -103,6 +103,8 @@ export interface LocaleContent {
     title: string;
     pageLead: string;
     filterLabel: string;
+    colorsLabel: string;
+    colors: Record<string, string>;
     homeFooterCounter: string;
     viewAllLink: string;
     filters: {
