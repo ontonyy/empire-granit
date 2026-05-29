@@ -239,6 +239,19 @@
     "title": "Näited valminud lahendustest",
     "pageLead": "Allpool valik valminud monumente, piirdeid ja platside korrastustöid Eestis. Iga töö on kohandatud konkreetse mälestuspaiga ja perekonna vajadustele.",
     "filterLabel": "Filtreeri",
+    "colorsLabel": "Graniidi värvid",
+    "colors": {
+      "bege": "Beež",
+      "black": "Must",
+      "blue": "Sinine",
+      "green": "Roheline",
+      "grey": "Hall",
+      "light-blue": "Helesinine",
+      "orange": "Oranž",
+      "purple": "Lilla",
+      "red": "Punane",
+      "white": "Valge"
+    },
     "homeFooterCounter": "4 näidet, veel 15+ kataloogis",
     "captionWords": {
       "familyMonument": "Perekonnamonument",

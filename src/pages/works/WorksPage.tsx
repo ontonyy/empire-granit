@@ -25,6 +25,8 @@ export function WorksPage({ locale }: WorksPageProps) {
 
   const filterKeys: FilterKey[] = ['all', ...WORK_CATEGORIES];
 
+  const colorIds = ['bege', 'black', 'blue', 'green', 'grey', 'light-blue', 'orange', 'purple', 'red', 'white'];
+
   return (
     <>
       <section className="works-header reveal-on-scroll is-visible">
@@ -32,6 +34,28 @@ export function WorksPage({ locale }: WorksPageProps) {
           <span className="ui-eyebrow">{content.nav.works} / Empire Granit / Narva</span>
           <h1 className="ui-display ui-display-1 works-title">{works.title}</h1>
           <p className="works-lead">{works.pageLead}</p>
+        </div>
+      </section>
+
+      <section className="works-colors reveal-on-scroll">
+        <div className="ui-container">
+          <h2 className="works-colors-label">{works.colorsLabel}</h2>
+          <ul className="works-colors-grid" role="list">
+            {colorIds.map((id) => (
+              <li key={id} className="works-colors-item">
+                <img
+                  className="works-colors-tile"
+                  src={`${import.meta.env.BASE_URL}images/granite-textures/${id}.png`}
+                  width={96}
+                  height={96}
+                  alt={works.colors[id]}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="works-colors-name">{works.colors[id]}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

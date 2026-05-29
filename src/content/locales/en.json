@@ -239,6 +239,19 @@
     "title": "Completed work, in context",
     "pageLead": "A selection of monuments, fences and grave site restoration projects across Estonia. Each one is shaped to a specific memorial and family.",
     "filterLabel": "Filter",
+    "colorsLabel": "Granite colours",
+    "colors": {
+      "bege": "Beige",
+      "black": "Black",
+      "blue": "Blue",
+      "green": "Green",
+      "grey": "Grey",
+      "light-blue": "Light blue",
+      "orange": "Orange",
+      "purple": "Purple",
+      "red": "Red",
+      "white": "White"
+    },
     "homeFooterCounter": "4 examples, 15+ more in the catalog",
     "captionWords": {
       "familyMonument": "Family monument",
