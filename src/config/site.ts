@@ -9,9 +9,9 @@ export const siteConfig = {
     phoneLink: 'tel:+37258116373',
     email: 'ms.pamyatnik@mail.ru',
     whatsapp: 'https://wa.me/37258116373',
-    address: 'Pähklimäe 2, Narva',
+    address: 'Pähklimäe 6, Narva',
     mapEmbedUrl:
-      'https://www.google.com/maps?q=Empire+Granit%2C+P%C3%A4hklim%C3%A4e+2%2C+Narva&output=embed&z=17'
+      'https://www.google.com/maps?q=Empire+Granit%2C+P%C3%A4hklim%C3%A4e+6%2C+Narva&output=embed&z=17'
   } satisfies ContactInfo,
   localBusiness: {
     '@context': 'https://schema.org',
@@ -22,7 +22,7 @@ export const siteConfig = {
     email: 'ms.pamyatnik@mail.ru',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Pähklimäe 2',
+      streetAddress: 'Pähklimäe 6',
       addressLocality: 'Narva',
       addressCountry: 'EE'
     }
