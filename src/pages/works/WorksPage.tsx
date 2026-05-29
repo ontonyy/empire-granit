@@ -15,6 +15,8 @@ export function WorksPage({ locale }: WorksPageProps) {
   const content = getLocaleContent(locale);
   const works = content.works;
   const [filter, setFilter] = useState<FilterKey>('all');
+  const colorIds = ['bege', 'black', 'blue', 'green', 'grey', 'light-blue', 'orange', 'purple', 'red', 'white'];
+  const [activeColor, setActiveColor] = useState<string>(colorIds[0]);
 
   const visible = useMemo<WorkItem[]>(() => {
     if (filter === 'all') {
@@ -24,8 +26,6 @@ export function WorksPage({ locale }: WorksPageProps) {
   }, [filter]);
 
   const filterKeys: FilterKey[] = ['all', ...WORK_CATEGORIES];
-
-  const colorIds = ['bege', 'black', 'blue', 'green', 'grey', 'light-blue', 'orange', 'purple', 'red', 'white'];
 
   return (
     <>
@@ -40,22 +40,46 @@ export function WorksPage({ locale }: WorksPageProps) {
       <section className="works-colors reveal-on-scroll">
         <div className="ui-container">
           <h2 className="works-colors-label">{works.colorsLabel}</h2>
-          <ul className="works-colors-grid" role="list">
-            {colorIds.map((id) => (
-              <li key={id} className="works-colors-item">
-                <img
-                  className="works-colors-tile"
-                  src={`${import.meta.env.BASE_URL}images/granite-textures/${id}.png`}
-                  width={96}
-                  height={96}
-                  alt={works.colors[id]}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <span className="works-colors-name">{works.colors[id]}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="works-colors-layout">
+            <figure className="works-colors-preview">
+              <img
+                className="works-colors-preview-img"
+                src={`${import.meta.env.BASE_URL}images/granite-textures/${activeColor}.png`}
+                width={480}
+                height={480}
+                alt={works.colors[activeColor]}
+                decoding="async"
+              />
+              <figcaption className="works-colors-preview-name">{works.colors[activeColor]}</figcaption>
+            </figure>
+            <ul className="works-colors-grid" role="list">
+              {colorIds.map((id) => {
+                const isActive = id === activeColor;
+                return (
+                  <li key={id} className="works-colors-item">
+                    <button
+                      type="button"
+                      className={`works-colors-swatch${isActive ? ' is-active' : ''}`}
+                      onClick={() => setActiveColor(id)}
+                      aria-pressed={isActive}
+                      title={works.colors[id]}
+                    >
+                      <img
+                        className="works-colors-tile"
+                        src={`${import.meta.env.BASE_URL}images/granite-textures/${id}.png`}
+                        width={96}
+                        height={96}
+                        alt={works.colors[id]}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span className="works-colors-name">{works.colors[id]}</span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </section>
 

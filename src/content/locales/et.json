@@ -75,28 +75,28 @@
     "trustMetrics": [
       {
         "value": "10+ aastat",
-        "label": "praktilist kogemust graniiditöödega"
+        "label": "Praktilist kogemust graniiditöödega"
       },
       {
         "value": "500+ tööd",
-        "label": "valminud hauakivid, plaadid ja taastamistööd"
+        "label": "Valminud hauakivid, plaadid ja taastamistööd"
       },
       {
         "value": "Materjal",
-        "label": "mitmekesine materjalide valik"
+        "label": "Mitmekesine materjalide valik"
       },
       {
         "value": "Üle Eesti",
-        "label": "transport ja paigaldus kokkulepitud kalmistule"
+        "label": "Transport ja paigaldus kokkulepitud kalmistule"
       },
       {
         "value": "Narva",
-        "label": "töökoda ja näidised aadressil Pähklimäe 6"
+        "label": "Kontor ja näidised aadressil Pähklimäe 6"
       }
     ],
     "intro": "Empire Granitis loome mälestuslahendusi tähelepanuga detailidele ja austusega mälestuse vastu.",
     "phoneEyebrow": "Helistage otse",
-    "heroBodyLine": "Graniidist mälestusmärgid Narva töökojast, vedu üle Eesti.",
+    "heroBodyLine": "Graniittoodete valmistamine ja paigaldus koos veoga üle Eesti.",
     "servicesEyebrow": "Teenused",
     "servicesShortTitle": "Monumendid, piirded ja graveering",
     "servicesLearnMore": "Vaata kõiki teenuseid →",
@@ -252,7 +252,7 @@
       "red": "Punane",
       "white": "Valge"
     },
-    "homeFooterCounter": "4 näidet, veel 15+ kataloogis",
+    "homeFooterCounter": "Näidatud 4 tööd. Kataloogis veel 15+: monumendid, piirded, graveering, korrastus",
     "captionWords": {
       "familyMonument": "Perekonnamonument",
       "graniteBorder": "Graniidist piire",
@@ -334,7 +334,7 @@
       "callbackBestTime": "Sobiv aeg helistamiseks",
       "hoursLabel": "Lahti",
       "hoursValue": "E-R 10:00–18:00, L 10:00–15:00",
-      "workshopLabel": "Töökoda"
+      "workshopLabel": "Kontor"
     }
   },
   "privacy": {
@@ -371,7 +371,7 @@
     },
     "services": {
       "title": "Teenused - Empire Granit",
-      "description": "Monumendid, piirded ja graveering. Töökoda Narvas, paigaldus üle Eesti."
+      "description": "Monumendid, piirded ja graveering. Kontor Narvas, paigaldus üle Eesti."
     },
     "works": {
       "title": "Tööd | Empire Granit",

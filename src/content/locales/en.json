@@ -75,28 +75,28 @@
     "trustMetrics": [
       {
         "value": "10+ years",
-        "label": "practical experience with granite work"
+        "label": "Practical experience with granite work"
       },
       {
         "value": "500+ works",
-        "label": "completed memorials, slabs and restorations"
+        "label": "Completed memorials, slabs and restorations"
       },
       {
         "value": "Material",
-        "label": "a varied choice of materials"
+        "label": "A varied choice of materials"
       },
       {
         "value": "Across Estonia",
-        "label": "delivery and installation at the agreed cemetery"
+        "label": "Delivery and installation at the agreed cemetery"
       },
       {
         "value": "Narva",
-        "label": "workshop and samples at Pähklimäe 6"
+        "label": "Office and samples at Pähklimäe 6"
       }
     ],
     "intro": "At Empire Granit we create memorial solutions with attention to detail and respect for memory.",
     "phoneEyebrow": "Call directly",
-    "heroBodyLine": "Granite memorials from our Narva workshop, delivered across Estonia.",
+    "heroBodyLine": "Crafting and installation of granite products with delivery across Estonia.",
     "servicesEyebrow": "Services",
     "servicesShortTitle": "Monuments, borders, and engraving",
     "servicesLearnMore": "See all services →",
@@ -252,7 +252,7 @@
       "red": "Red",
       "white": "White"
     },
-    "homeFooterCounter": "4 examples, 15+ more in the catalog",
+    "homeFooterCounter": "Showing 4 works. 15+ more in the catalog: monuments, fences, engraving, landscaping",
     "captionWords": {
       "familyMonument": "Family monument",
       "graniteBorder": "Granite border",
@@ -334,7 +334,7 @@
       "callbackBestTime": "Best time to call",
       "hoursLabel": "Open",
       "hoursValue": "Mon-Fri 10:00–18:00, Sat 10:00–15:00",
-      "workshopLabel": "Workshop"
+      "workshopLabel": "Office"
     }
   },
   "privacy": {
@@ -371,7 +371,7 @@
     },
     "services": {
       "title": "Services - Empire Granit",
-      "description": "Granite monuments, borders, and engraving. Workshop in Narva, installation across Estonia."
+      "description": "Granite monuments, borders, and engraving. Office in Narva, installation across Estonia."
     },
     "works": {
       "title": "Works | Empire Granit",
