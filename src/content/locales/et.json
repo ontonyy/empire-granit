@@ -239,7 +239,20 @@
       "engravings": "Graveeringud",
       "installation": "Paigaldus"
     },
-    "captionSeparator": "·"
+    "captionSeparator": "·",
+    "swatches": {
+      "title": "Graniit, millega töötame",
+      "lead": "Imporditud ja Balti graniidid — igaühel oma muster ja toon.",
+      "items": {
+        "karelia-red": "Karjala punane",
+        "lithuanian-black": "Leedu must",
+        "karelian-black": "Karjala must",
+        "volga-blue": "Volga sinine",
+        "indian-aurora": "India Aurora",
+        "aurora-red": "Aurora punane",
+        "mixed-granite": "Segagraniit"
+      }
+    }
   },
   "contact": {
     "heading": "Võtke ühendust",
