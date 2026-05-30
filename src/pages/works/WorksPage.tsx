@@ -16,7 +16,9 @@ export function WorksPage({ locale }: WorksPageProps) {
   const works = content.works;
   const [filter, setFilter] = useState<FilterKey>('all');
   const colorIds = ['bege', 'black', 'blue', 'green', 'grey', 'light-blue', 'orange', 'purple', 'red', 'white'];
-  const [activeColor, setActiveColor] = useState<string>(colorIds[0]);
+  const [activeColor, setActiveColor] = useState<string>(colorIds[1]);
+  const monumentSrc = `${import.meta.env.BASE_URL}images/granite_monument_cut.png`;
+  const textureSrc = (id: string) => `${import.meta.env.BASE_URL}images/granite-textures/${id}.png`;
 
   const visible = useMemo<WorkItem[]>(() => {
     if (filter === 'all') {
@@ -41,16 +43,18 @@ export function WorksPage({ locale }: WorksPageProps) {
         <div className="ui-container">
           <h2 className="works-colors-label">{works.colorsLabel}</h2>
           <div className="works-colors-layout">
-            <figure className="works-colors-preview">
-              <img
-                className="works-colors-preview-img"
-                src={`${import.meta.env.BASE_URL}images/granite-textures/${activeColor}.png`}
-                width={480}
-                height={480}
-                alt={works.colors[activeColor]}
-                decoding="async"
+            <figure className="monument-preview">
+              <span
+                className="monument-stage"
+                role="img"
+                aria-label={works.colors[activeColor]}
+                style={{
+                  backgroundImage: `url(${textureSrc(activeColor)})`,
+                  WebkitMaskImage: `url(${monumentSrc})`,
+                  maskImage: `url(${monumentSrc})`,
+                }}
               />
-              <figcaption className="works-colors-preview-name">{works.colors[activeColor]}</figcaption>
+              <figcaption className="monument-name">{works.colors[activeColor]}</figcaption>
             </figure>
             <ul className="works-colors-grid" role="list">
               {colorIds.map((id) => {
@@ -64,14 +68,10 @@ export function WorksPage({ locale }: WorksPageProps) {
                       aria-pressed={isActive}
                       title={works.colors[id]}
                     >
-                      <img
+                      <span
                         className="works-colors-tile"
-                        src={`${import.meta.env.BASE_URL}images/granite-textures/${id}.png`}
-                        width={96}
-                        height={96}
-                        alt={works.colors[id]}
-                        loading="lazy"
-                        decoding="async"
+                        style={{ backgroundImage: `url(${textureSrc(id)})` }}
+                        aria-hidden="true"
                       />
                       <span className="works-colors-name">{works.colors[id]}</span>
                     </button>
