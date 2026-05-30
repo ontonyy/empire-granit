@@ -39,50 +39,6 @@ export function WorksPage({ locale }: WorksPageProps) {
         </div>
       </section>
 
-      <section className="works-colors reveal-on-scroll">
-        <div className="ui-container">
-          <h2 className="works-colors-label">{works.colorsLabel}</h2>
-          <div className="works-colors-layout">
-            <figure className="monument-preview">
-              <span
-                className="monument-stage"
-                role="img"
-                aria-label={works.colors[activeColor]}
-                style={{
-                  backgroundImage: `url(${textureSrc(activeColor)})`,
-                  WebkitMaskImage: `url(${monumentSrc})`,
-                  maskImage: `url(${monumentSrc})`,
-                }}
-              />
-              <figcaption className="monument-name">{works.colors[activeColor]}</figcaption>
-            </figure>
-            <ul className="works-colors-grid" role="list">
-              {colorIds.map((id) => {
-                const isActive = id === activeColor;
-                return (
-                  <li key={id} className="works-colors-item">
-                    <button
-                      type="button"
-                      className={`works-colors-swatch${isActive ? ' is-active' : ''}`}
-                      onClick={() => setActiveColor(id)}
-                      aria-pressed={isActive}
-                      title={works.colors[id]}
-                    >
-                      <span
-                        className="works-colors-tile"
-                        style={{ backgroundImage: `url(${textureSrc(id)})` }}
-                        aria-hidden="true"
-                      />
-                      <span className="works-colors-name">{works.colors[id]}</span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <section className="works-filter reveal-on-scroll">
         <div className="ui-container works-filter-row">
           <span className="works-filter-label">{works.filterLabel}</span>
@@ -142,6 +98,50 @@ export function WorksPage({ locale }: WorksPageProps) {
               );
             })}
           </ul>
+        </div>
+      </section>
+
+      <section className="works-colors reveal-on-scroll">
+        <div className="ui-container">
+          <h2 className="works-colors-label">{works.colorsLabel}</h2>
+          <div className="works-colors-layout">
+            <figure className="monument-preview">
+              <span
+                className="monument-stage"
+                role="img"
+                aria-label={works.colors[activeColor]}
+                style={{
+                  backgroundImage: `url(${textureSrc(activeColor)})`,
+                  WebkitMaskImage: `url(${monumentSrc})`,
+                  maskImage: `url(${monumentSrc})`,
+                }}
+              />
+              <figcaption className="monument-name">{works.colors[activeColor]}</figcaption>
+            </figure>
+            <ul className="works-colors-grid" role="list">
+              {colorIds.map((id) => {
+                const isActive = id === activeColor;
+                return (
+                  <li key={id} className="works-colors-item">
+                    <button
+                      type="button"
+                      className={`works-colors-swatch${isActive ? ' is-active' : ''}`}
+                      onClick={() => setActiveColor(id)}
+                      aria-pressed={isActive}
+                      title={works.colors[id]}
+                    >
+                      <span
+                        className="works-colors-tile"
+                        style={{ backgroundImage: `url(${textureSrc(id)})` }}
+                        aria-hidden="true"
+                      />
+                      <span className="works-colors-name">{works.colors[id]}</span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </section>
 
