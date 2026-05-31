@@ -4,7 +4,7 @@ export type WorkCategory =
   | 'monuments'
   | 'fences'
   | 'engravings'
-  | 'installation';
+  | 'landscaping';
 
 export type WorkRatio = 'portrait' | 'landscape' | 'square';
 
@@ -26,7 +26,7 @@ export const WORK_CATEGORIES: WorkCategory[] = [
   'monuments',
   'fences',
   'engravings',
-  'installation'
+  'landscaping'
 ];
 
 export interface WorkSwatch {
@@ -85,7 +85,7 @@ export const WORKS: WorkItem[] = [
     id: 'saar-paigaldus',
     title: { en: 'Installation', et: 'Paigaldus', ru: 'Установка' },
     material: 'Volga Blue',
-    category: 'installation',
+    category: 'landscaping',
     imageBase: 'exclusive',
     width: 1024,
     height: 1024,
@@ -129,7 +129,7 @@ export const WORKS: WorkItem[] = [
     id: 'oja-restaureerimine',
     title: { en: 'Restoration', et: 'Taastamine', ru: 'Реставрация' },
     material: 'Mixed granite',
-    category: 'installation',
+    category: 'landscaping',
     imageBase: 'fence_with_entrance',
     width: 900,
     height: 600,
@@ -173,7 +173,7 @@ export const WORKS: WorkItem[] = [
     id: 'paju-paigaldus',
     title: { en: 'Installation', et: 'Paigaldus', ru: 'Установка' },
     material: 'Indian Aurora',
-    category: 'installation',
+    category: 'landscaping',
     imageBase: 'bench',
     width: 800,
     height: 600,

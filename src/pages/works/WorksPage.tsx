@@ -36,6 +36,8 @@ export function WorksPage({ locale }: WorksPageProps) {
           <span className="ui-eyebrow">{content.nav.works} / Empire Granit / Narva</span>
           <h1 className="ui-display ui-display-1 works-title">{works.title}</h1>
           <p className="works-lead">{works.pageLead}</p>
+          <p className="works-catalog-note">{works.catalogNote}</p>
+          <a className="works-colors-jump" href="#works-colors">{works.colorsLink}</a>
         </div>
       </section>
 
@@ -101,7 +103,7 @@ export function WorksPage({ locale }: WorksPageProps) {
         </div>
       </section>
 
-      <section className="works-colors reveal-on-scroll">
+      <section id="works-colors" className="works-colors reveal-on-scroll">
         <div className="ui-container">
           <h2 className="works-colors-label">{works.colorsLabel}</h2>
           <div className="works-colors-layout">
