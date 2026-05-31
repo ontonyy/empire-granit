@@ -41,11 +41,6 @@ export function ServicesPage({ locale }: ServicesPageProps) {
                   <span className="services-block__numeral">{numeral}.</span>
                   <h2 className="services-block__title">{item.title}</h2>
                   <p className="services-block__body">{item.body}</p>
-                  <ul className="services-block__deliverables" role="list">
-                    {item.deliverables.map((d) => (
-                      <li key={d}>{d}</li>
-                    ))}
-                  </ul>
                 </div>
                 <div className="services-block__photo">
                   <ServicePicture name={photo} alt={item.title} />

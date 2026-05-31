@@ -238,6 +238,8 @@
     "eyebrow": "Tööd · Empire Granit",
     "title": "Näited valminud lahendustest",
     "pageLead": "Allpool valik valminud monumente, piirdeid ja platside korrastustöid Eestis. Iga töö on kohandatud konkreetse mälestuspaiga ja perekonna vajadustele.",
+    "catalogNote": "E-kataloog on praegu arendamisel. Vorme saab vaadata meie kontoris aadressil Pähklimäe 6.",
+    "colorsLink": "Vaata graniidi värve ↓",
     "filterLabel": "Filtreeri",
     "colorsLabel": "Graniidi värvid",
     "colors": {
@@ -271,8 +273,8 @@
       "all": "Kõik",
       "monuments": "Monumendid",
       "fences": "Piirded",
-      "engravings": "Graveeringud",
-      "installation": "Paigaldus"
+      "engravings": "Graveeringud / Fotoemail",
+      "landscaping": "Korrastustööd"
     },
     "captionSeparator": "·",
     "swatches": {

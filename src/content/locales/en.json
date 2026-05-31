@@ -238,6 +238,8 @@
     "eyebrow": "Works · Empire Granit",
     "title": "Completed work, in context",
     "pageLead": "A selection of monuments, fences and grave site restoration projects across Estonia. Each one is shaped to a specific memorial and family.",
+    "catalogNote": "The online catalogue is currently in development. You can view the available shapes at our office at Pähklimäe 6.",
+    "colorsLink": "View granite colours ↓",
     "filterLabel": "Filter",
     "colorsLabel": "Granite colours",
     "colors": {
@@ -271,8 +273,8 @@
       "all": "All",
       "monuments": "Monuments",
       "fences": "Fences",
-      "engravings": "Engravings",
-      "installation": "Installation"
+      "engravings": "Engravings / Photo enamel",
+      "landscaping": "Landscaping"
     },
     "captionSeparator": "·",
     "swatches": {

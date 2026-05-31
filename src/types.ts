@@ -102,6 +102,8 @@ export interface LocaleContent {
     eyebrow: string;
     title: string;
     pageLead: string;
+    catalogNote: string;
+    colorsLink: string;
     filterLabel: string;
     colorsLabel: string;
     colors: Record<string, string>;
@@ -112,7 +114,7 @@ export interface LocaleContent {
       monuments: string;
       fences: string;
       engravings: string;
-      installation: string;
+      landscaping: string;
     };
     captionSeparator: string;
     captionWords: Record<string, string>;

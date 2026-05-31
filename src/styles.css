@@ -4059,6 +4059,28 @@ select:focus {
   color: var(--ink-body);
 }
 
+.works-catalog-note {
+  margin-top: var(--space-3);
+  max-width: 640px;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+.works-colors-jump {
+  display: inline-block;
+  margin-top: var(--space-3);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--ink-strong);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.works-colors-jump:hover {
+  color: var(--accent, var(--ink-strong));
+}
+
 .works-filter {
   padding: var(--space-4) 0;
   border-top: 1px solid var(--rule-color);
