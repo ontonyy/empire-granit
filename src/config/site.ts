@@ -11,7 +11,7 @@ export const siteConfig = {
     whatsapp: 'https://wa.me/37258116373',
     address: 'Pähklimäe 6, Narva',
     mapEmbedUrl:
-      'https://www.google.com/maps?q=Empire+Granit%2C+P%C3%A4hklim%C3%A4e+6%2C+Narva&output=embed&z=17'
+      'https://www.google.com/maps?q=P%C3%A4hklim%C3%A4e+6%2C+Narva%2C+Estonia&output=embed&z=17'
   } satisfies ContactInfo,
   localBusiness: {
     '@context': 'https://schema.org',
