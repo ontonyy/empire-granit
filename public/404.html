@@ -13,7 +13,7 @@
 
         // Extract the repo name (first segment) if it's there
         var parts = path.split('/').filter(Boolean);
-        var repo = parts.length > 0 && parts[0] === 'empire-granit' ? '/empire-granit' : '';
+        var repo = (location.hostname.endsWith('github.io') && parts[0] === 'empire-granit') ? '/empire-granit' : '';
 
         // Redirect to the root with the path as a query parameter 'p'
         var newPath = repo + '/?p=' + encodeURIComponent(path.replace(repo, '')) + search + hash;
