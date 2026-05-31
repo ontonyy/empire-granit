@@ -4759,13 +4759,13 @@ select:focus {
 }
 
 .n3-brand-logo {
-  height: clamp(64px, 9vh, 104px);
+  height: clamp(84px, 12vh, 136px);
   width: auto;
   display: block;
   mix-blend-mode: multiply;
 }
 @media (max-width: 767px) {
-  .n3-brand-logo { height: clamp(52px, 11vw, 72px); }
+  .n3-brand-logo { height: clamp(68px, 18vw, 96px); }
 }
 
 .n3-nav {
@@ -4992,7 +4992,7 @@ select:focus {
     padding-bottom: 1px;
   }
   .n3-phone-icon { width: 14px; height: 14px; }
-  .n3-brand-logo { height: 40px; max-width: 140px; object-fit: contain; }
+  .n3-brand-logo { height: clamp(68px, 18vw, 96px); max-width: 220px; object-fit: contain; }
 }
 
 @media (min-width: 1024px) {
@@ -6207,8 +6207,8 @@ select:focus {
   border-bottom: 0;
 }
 .site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .n3-brand-logo {
-  filter: brightness(0) invert(1);
-  mix-blend-mode: normal;
+  filter: none;
+  mix-blend-mode: multiply;
 }
 .site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .n3-nav-link,
 .site-shell:has(.main-content.is-home) .n3-header:not(.is-solid) .n3-phone,
