@@ -1,0 +1,709 @@
+[
+  {
+    "id": "comp-001",
+    "imageBase": "comp001",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-002",
+    "imageBase": "comp002",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-003",
+    "imageBase": "comp003",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-004",
+    "imageBase": "comp004",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-005",
+    "imageBase": "comp005",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-006",
+    "imageBase": "comp006",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-007",
+    "imageBase": "comp007",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-008",
+    "imageBase": "comp008",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape"
+  },
+  {
+    "id": "comp-009",
+    "imageBase": "comp009",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape"
+  },
+  {
+    "id": "comp-010",
+    "imageBase": "comp010",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-011",
+    "imageBase": "comp011",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-012",
+    "imageBase": "comp012",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-013",
+    "imageBase": "comp013",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-014",
+    "imageBase": "comp014",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-015",
+    "imageBase": "comp015",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-016",
+    "imageBase": "comp016",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-017",
+    "imageBase": "comp017",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-018",
+    "imageBase": "comp018",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-019",
+    "imageBase": "comp019",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-020",
+    "imageBase": "comp020",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-021",
+    "imageBase": "comp021",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-022",
+    "imageBase": "comp022",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-023",
+    "imageBase": "comp023",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-024",
+    "imageBase": "comp024",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-025",
+    "imageBase": "comp025",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-026",
+    "imageBase": "comp026",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-027",
+    "imageBase": "comp027",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-028",
+    "imageBase": "comp028",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-029",
+    "imageBase": "comp029",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-030",
+    "imageBase": "comp030",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-031",
+    "imageBase": "comp031",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-032",
+    "imageBase": "comp032",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-033",
+    "imageBase": "comp033",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-034",
+    "imageBase": "comp034",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-035",
+    "imageBase": "comp035",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-036",
+    "imageBase": "comp036",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-037",
+    "imageBase": "comp037",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-038",
+    "imageBase": "comp038",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-039",
+    "imageBase": "comp039",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-040",
+    "imageBase": "comp040",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-041",
+    "imageBase": "comp041",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-042",
+    "imageBase": "comp042",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-043",
+    "imageBase": "comp043",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-044",
+    "imageBase": "comp044",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-045",
+    "imageBase": "comp045",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-046",
+    "imageBase": "comp046",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-047",
+    "imageBase": "comp047",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-048",
+    "imageBase": "comp048",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-049",
+    "imageBase": "comp049",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-050",
+    "imageBase": "comp050",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-051",
+    "imageBase": "comp051",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-052",
+    "imageBase": "comp052",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-053",
+    "imageBase": "comp053",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-054",
+    "imageBase": "comp054",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-055",
+    "imageBase": "comp055",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-056",
+    "imageBase": "comp056",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-057",
+    "imageBase": "comp057",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-058",
+    "imageBase": "comp058",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-059",
+    "imageBase": "comp059",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-060",
+    "imageBase": "comp060",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-061",
+    "imageBase": "comp061",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-062",
+    "imageBase": "comp062",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape"
+  },
+  {
+    "id": "comp-063",
+    "imageBase": "comp063",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-064",
+    "imageBase": "comp064",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-065",
+    "imageBase": "comp065",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-066",
+    "imageBase": "comp066",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-067",
+    "imageBase": "comp067",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-068",
+    "imageBase": "comp068",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-069",
+    "imageBase": "comp069",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-070",
+    "imageBase": "comp070",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-071",
+    "imageBase": "comp071",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-072",
+    "imageBase": "comp072",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape"
+  },
+  {
+    "id": "comp-073",
+    "imageBase": "comp073",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-074",
+    "imageBase": "comp074",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-075",
+    "imageBase": "comp075",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-076",
+    "imageBase": "comp076",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-077",
+    "imageBase": "comp077",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-078",
+    "imageBase": "comp078",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-079",
+    "imageBase": "comp079",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-080",
+    "imageBase": "comp080",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-081",
+    "imageBase": "comp081",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-082",
+    "imageBase": "comp082",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-083",
+    "imageBase": "comp083",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-084",
+    "imageBase": "comp084",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-085",
+    "imageBase": "comp085",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-086",
+    "imageBase": "comp086",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-087",
+    "imageBase": "comp087",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-088",
+    "imageBase": "comp088",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-089",
+    "imageBase": "comp089",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-090",
+    "imageBase": "comp090",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-091",
+    "imageBase": "comp091",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-092",
+    "imageBase": "comp092",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-093",
+    "imageBase": "comp093",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-094",
+    "imageBase": "comp094",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-095",
+    "imageBase": "comp095",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-096",
+    "imageBase": "comp096",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-097",
+    "imageBase": "comp097",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape"
+  },
+  {
+    "id": "comp-098",
+    "imageBase": "comp098",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-099",
+    "imageBase": "comp099",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-100",
+    "imageBase": "comp100",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  },
+  {
+    "id": "comp-101",
+    "imageBase": "comp101",
+    "width": 800,
+    "height": 1200,
+    "ratio": "portrait"
+  }
+]

@@ -15,10 +15,62 @@ export function WorksPage({ locale }: WorksPageProps) {
   const content = getLocaleContent(locale);
   const works = content.works;
   const [filter, setFilter] = useState<FilterKey>('all');
+  const [flippedId, setFlippedId] = useState<string | null>(null);
+  const [detailItem, setDetailItem] = useState<WorkItem | null>(null);
+  const [loadedImageIds, setLoadedImageIds] = useState<Set<string>>(() => new Set());
+  const detailsLabel = { en: 'Details', et: 'Vaata', ru: 'Подробнее' }[locale];
+  const closeLabel = { en: 'Close', et: 'Sulge', ru: 'Закрыть' }[locale];
   const colorIds = ['bege', 'black', 'blue', 'green', 'grey', 'light-blue', 'orange', 'purple', 'red', 'white'];
   const [activeColor, setActiveColor] = useState<string>(colorIds[1]);
   const monumentSrc = `${import.meta.env.BASE_URL}images/granite_monument_cut.png`;
   const textureSrc = (id: string) => `${import.meta.env.BASE_URL}images/granite-textures/${id}.png`;
+
+  // Monument photos under n3/monuments, fences under n3/fences, engravings under
+  // n3/engravings, landscaping benches under n3/environment, placeholders under n3/works.
+  const assetDir = (base: string) =>
+    base.startsWith('pam')
+      ? 'n3/monuments'
+      : base.startsWith('og')
+        ? 'n3/fences'
+        : base.startsWith('comp')
+          ? 'n3/engravings'
+          : base.startsWith('blag')
+            ? 'n3/environment'
+            : 'n3/works';
+  const markImageLoaded = (id: string) => {
+    setLoadedImageIds((loaded) => {
+      if (loaded.has(id)) return loaded;
+      return new Set(loaded).add(id);
+    });
+  };
+  const renderPicture = (
+    base: string,
+    className: string,
+    alt: string,
+    item: WorkItem,
+    hidden = false,
+    onLoad?: () => void,
+    eager = false
+  ) => {
+    const url = (ext: string) => `${import.meta.env.BASE_URL}images/${assetDir(base)}/${base}.${ext}`;
+    return (
+      <picture className={className} aria-hidden={hidden || undefined}>
+        <source type="image/avif" srcSet={url('avif')} />
+        <source type="image/webp" srcSet={url('webp')} />
+        <img
+          className="works-tile-image"
+          src={url('jpg')}
+          width={item.width}
+          height={item.height}
+          alt={alt}
+          loading={eager ? 'eager' : 'lazy'}
+          decoding="async"
+          fetchPriority={eager ? 'high' : 'auto'}
+          onLoad={onLoad}
+        />
+      </picture>
+    );
+  };
 
   const visible = useMemo<WorkItem[]>(() => {
     if (filter === 'all') {
@@ -65,36 +117,61 @@ export function WorksPage({ locale }: WorksPageProps) {
         </div>
       </section>
 
-      <section className="works-gallery reveal-on-scroll">
+      <section className="works-gallery">
         <div className="ui-container">
           <ul className="works-grid" role="list">
-            {visible.map((item) => {
+            {visible.map((item, index) => {
               const localizedTitle = item.title[locale];
-              const altText = `${localizedTitle} — ${item.material}`;
+              const altText = item.material ? `${localizedTitle} — ${item.material}` : localizedTitle;
+              const hoverBase = item.hoverImageBase;
+              const flipped = flippedId === item.id;
+              const imageLoaded = loadedImageIds.has(item.id);
+              const eager = index < 9;
+              const tileClass = `works-tile works-tile-${item.ratio}`
+                + (hoverBase ? ' has-hover-swap' : '')
+                + (flipped ? ' is-flipped' : '')
+                + (imageLoaded ? ' is-image-loaded' : '');
               return (
                 <li
                   key={item.id}
-                  className={`works-tile works-tile-${item.ratio}`}
+                  className={tileClass}
                   data-category={item.category}
+                  style={{ aspectRatio: `${item.width} / ${item.height}` }}
                 >
-                  <a className="works-tile-link" href={`#${item.id}`} id={item.id}>
-                    <picture className="works-tile-picture">
-                      <source type="image/avif" srcSet={`${import.meta.env.BASE_URL}images/n3/works/${item.imageBase}.avif`} />
-                      <source type="image/webp" srcSet={`${import.meta.env.BASE_URL}images/n3/works/${item.imageBase}.webp`} />
-                      <img
-                        className="works-tile-image"
-                        src={`${import.meta.env.BASE_URL}images/n3/works/${item.imageBase}.jpg`}
-                        width={item.width}
-                        height={item.height}
-                        alt={altText}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </picture>
+                  <div className="works-tile-link" id={item.id}>
+                    {hoverBase ? (
+                      <span className="works-tile-media">
+                        {renderPicture(item.imageBase, 'works-tile-picture works-tile-picture-main', altText, item, false, () => markImageLoaded(item.id), eager)}
+                        {renderPicture(hoverBase, 'works-tile-picture works-tile-picture-hover', '', item, true)}
+                      </span>
+                    ) : (
+                      renderPicture(item.imageBase, 'works-tile-picture', altText, item, false, () => markImageLoaded(item.id), eager)
+                    )}
                     <span className="works-tile-overlay" aria-hidden="true" />
-                  </a>
+                  </div>
+                  <span className="works-tile-loader" aria-hidden="true">
+                    <span className="works-tile-loader-bar" />
+                  </span>
+                  {hoverBase ? (
+                    <button
+                      type="button"
+                      className="works-tile-flip"
+                      aria-pressed={flipped}
+                      aria-label={localizedTitle}
+                      onClick={() => setFlippedId((current) => (current === item.id ? null : item.id))}
+                    />
+                  ) : null}
                   <span className="works-tile-caption">
                     <span className="works-tile-title">{localizedTitle}</span>
+                    {item.description ? (
+                      <button
+                        type="button"
+                        className="works-tile-details"
+                        onClick={() => setDetailItem(item)}
+                      >
+                        {detailsLabel}
+                      </button>
+                    ) : null}
                   </span>
                 </li>
               );
@@ -176,6 +253,29 @@ export function WorksPage({ locale }: WorksPageProps) {
           </Link>
         </div>
       </section>
+
+      {detailItem ? (
+        <div
+          className="works-detail-backdrop"
+          role="dialog"
+          aria-modal="true"
+          aria-label={detailItem.title[locale]}
+          onClick={() => setDetailItem(null)}
+        >
+          <div className="works-detail-panel" onClick={(event) => event.stopPropagation()}>
+            <button
+              type="button"
+              className="works-detail-close"
+              aria-label={closeLabel}
+              onClick={() => setDetailItem(null)}
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <h3 className="works-detail-title">{detailItem.title[locale]}</h3>
+            <p className="works-detail-text">{detailItem.description?.[locale]}</p>
+          </div>
+        </div>
+      ) : null}
     </>
   );
 }

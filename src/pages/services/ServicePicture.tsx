@@ -12,7 +12,12 @@ interface ServiceAsset {
 const ASSETS: Record<string, ServiceAsset> = {
   'service-framing': { w1: 700, w2: 1400, h2: 934 },
   'service-fence': { w1: 450, w2: 900, h2: 706 },
-  'service-plate': { w1: 450, w2: 900, h2: 1090 }
+  'service-plate': { w1: 450, w2: 900, h2: 1090 },
+  services_1: { w1: 700, w2: 1400, h2: 933 },
+  services_2: { w1: 700, w2: 1400, h2: 933 },
+  services_3: { w1: 700, w2: 1400, h2: 1050 },
+  services_4: { w1: 700, w2: 1400, h2: 1050 },
+  services_5: { w1: 700, w2: 1400, h2: 1050 }
 };
 
 export function ServicePicture({ name, alt }: ServicePictureProps) {

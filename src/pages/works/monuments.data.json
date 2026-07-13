@@ -1,0 +1,237 @@
+[
+  {
+    "id": "pam-001",
+    "photo": {
+      "main": "n3/works/monuments/PAM_001"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-002",
+    "photo": {
+      "main": "n3/works/monuments/PAM_002"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-003",
+    "photo": {
+      "main": "n3/works/monuments/PAM_003"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-004",
+    "photo": {
+      "main": "n3/works/monuments/PAM_004"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-005",
+    "photo": {
+      "main": "n3/works/monuments/PAM_005_2",
+      "detail": "n3/works/monuments/PAM_005_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-006",
+    "photo": {
+      "main": "n3/works/monuments/PAM_006"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-007",
+    "photo": {
+      "main": "n3/works/monuments/PAM_007_2",
+      "detail": "n3/works/monuments/PAM_007_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-008",
+    "photo": {
+      "main": "n3/works/monuments/PAM_008"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-009",
+    "photo": {
+      "main": "n3/works/monuments/PAM_009_2",
+      "detail": "n3/works/monuments/PAM_009_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-010",
+    "photo": {
+      "main": "n3/works/monuments/PAM_010_2",
+      "detail": "n3/works/monuments/PAM_010_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-011",
+    "photo": {
+      "main": "n3/works/monuments/PAM_011"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-012",
+    "photo": {
+      "main": "n3/works/monuments/PAM_012_2",
+      "detail": "n3/works/monuments/PAM_012_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-013",
+    "photo": {
+      "main": "n3/works/monuments/PAM_013_2",
+      "detail": "n3/works/monuments/PAM_013_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-014",
+    "photo": {
+      "main": "n3/works/monuments/PAM_014_2",
+      "detail": "n3/works/monuments/PAM_014_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-015",
+    "photo": {
+      "main": "n3/works/monuments/PAM_015_2",
+      "detail": "n3/works/monuments/PAM_015_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-016",
+    "photo": {
+      "main": "n3/works/monuments/PAM_016_2",
+      "detail": "n3/works/monuments/PAM_016_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-017",
+    "photo": {
+      "main": "n3/works/monuments/PAM_017_2",
+      "detail": "n3/works/monuments/PAM_017_1"
+    },
+    "width": 1000,
+    "height": 666,
+    "ratio": "landscape"
+  },
+  {
+    "id": "pam-018",
+    "photo": {
+      "main": "n3/works/monuments/PAM_018"
+    },
+    "width": 1000,
+    "height": 1333,
+    "ratio": "portrait"
+  },
+  {
+    "id": "pam-019",
+    "photo": {
+      "main": "n3/works/monuments/PAM_019"
+    },
+    "width": 1000,
+    "height": 1333,
+    "ratio": "portrait"
+  },
+  {
+    "id": "pam-020",
+    "photo": {
+      "main": "n3/works/monuments/PAM_020"
+    },
+    "width": 1000,
+    "height": 1333,
+    "ratio": "portrait"
+  },
+  {
+    "id": "pam-021",
+    "photo": {
+      "main": "n3/works/monuments/PAM_021"
+    },
+    "width": 1000,
+    "height": 1333,
+    "ratio": "portrait"
+  },
+  {
+    "id": "pam-022",
+    "photo": {
+      "main": "n3/works/monuments/PAM_022"
+    },
+    "width": 1000,
+    "height": 1333,
+    "ratio": "portrait"
+  },
+  {
+    "id": "pam-023",
+    "photo": {
+      "main": "n3/works/monuments/PAM_023"
+    },
+    "width": 1000,
+    "height": 1333,
+    "ratio": "portrait"
+  },
+  {
+    "id": "pam-024",
+    "photo": {
+      "main": "n3/works/monuments/PAM_024"
+    },
+    "width": 1000,
+    "height": 1777,
+    "ratio": "portrait"
+  },
+  {
+    "id": "pam-025",
+    "photo": {
+      "main": "n3/works/monuments/PAM_025"
+    },
+    "width": 1000,
+    "height": 1777,
+    "ratio": "portrait"
+  }
+]

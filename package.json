@@ -7,11 +7,16 @@
     "dev": "vite",
     "build": "npm run validate:content && npm run generate:seo && vite build && vite build --ssr src/ssr/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
+    "optimize:services": "node scripts/optimize-services.mjs",
     "generate:seo": "node scripts/generate-seo-assets.mjs",
+    "optimize:monuments": "node scripts/optimize-monuments.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "lint": "tsc --noEmit",
     "lint:links": "node scripts/check-links.mjs",
-    "test": "vitest run"
+    "test": "vitest run",
+    "optimize:fences": "node scripts/optimize-fences.mjs",
+    "optimize:engravings": "node scripts/optimize-engravings.mjs",
+    "optimize:environment": "node scripts/optimize-environment.mjs"
   },
   "dependencies": {
     "firebase": "^12.10.0",
