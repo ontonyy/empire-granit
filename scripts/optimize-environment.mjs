@@ -36,7 +36,7 @@ const WEBP_QUALITY = 80;
 const AVIF_QUALITY = 55;
 
 const LOCALES = { ru: 'description-ru.md', en: 'description-en.md', et: 'description-et.md' };
-const HEADER = /^BLAG\s*(\d+)\s*\([^)]*\)/i;
+const HEADER = /^BLAG\s*(\d+)(?:\s*\([^)]*\))?/i;
 
 function ratioOf(w, h) {
   if (h > w * 1.1) return 'portrait';
