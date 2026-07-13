@@ -274,7 +274,11 @@
       "monuments": "Monumendid",
       "fences": "Piirded",
       "engravings": "Graveeringud / Fotoemail",
-      "landscaping": "Korrastustööd"
+      "complexes": "Kompleksid",
+      "landscaping": "Pingid"
+    },
+    "emptyState": {
+      "engravings": "Graveeringud lisanduvad peagi."
     },
     "captionSeparator": "·",
     "swatches": {
