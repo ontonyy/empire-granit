@@ -1,4 +1,6 @@
 import type { Locale } from '../../types';
+import engravingSpecs from './engravings.data.json';
+import environmentSpecs from './environment.data.json';
 
 export type WorkCategory =
   | 'monuments'
@@ -16,10 +18,14 @@ export interface WorkItem {
   material: string;
   category: WorkCategory;
   imageBase: string;
+  /** Optional second image (hover-swap): shown on hover, focus, or touch flip. */
+  hoverImageBase?: string;
   width: number;
   height: number;
   ratio: WorkRatio;
   captionKey: string;
+  /** Optional localized details (dimensions text) shown in a click-to-open panel. */
+  description?: Record<Locale, string>;
 }
 
 export const WORK_CATEGORIES: WorkCategory[] = [
@@ -47,137 +53,124 @@ export const WORK_SWATCHES: WorkSwatch[] = [
   { id: 'mixed-granite', hex: '#8a8076' }
 ];
 
+interface MonumentSpec {
+  /** Numeric part of the base id, e.g. '005'. */
+  n: string;
+  /** True when a two-variant hover (_alt) asset exists. */
+  hover: boolean;
+  width: number;
+  height: number;
+  ratio: WorkRatio;
+}
+
+/** Optimized monument photos (public/images/n3/monuments/pamNNN[_alt]). */
+const MONUMENT_SPECS: MonumentSpec[] = [
+  { n: '001', hover: false, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '002', hover: false, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '003', hover: false, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '004', hover: false, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '005', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '006', hover: false, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '007', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '008', hover: false, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '009', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '010', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '011', hover: false, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '012', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '013', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '014', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '015', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '016', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '017', hover: true, width: 1200, height: 800, ratio: 'landscape' },
+  { n: '018', hover: false, width: 900, height: 1200, ratio: 'portrait' },
+  { n: '019', hover: false, width: 900, height: 1200, ratio: 'portrait' },
+  { n: '020', hover: false, width: 900, height: 1200, ratio: 'portrait' },
+  { n: '021', hover: false, width: 900, height: 1200, ratio: 'portrait' },
+  { n: '022', hover: false, width: 900, height: 1200, ratio: 'portrait' },
+  { n: '023', hover: false, width: 900, height: 1200, ratio: 'portrait' },
+  { n: '024', hover: false, width: 675, height: 1200, ratio: 'portrait' },
+  { n: '025', hover: false, width: 675, height: 1200, ratio: 'portrait' }
+];
+
+const galleryTitle = (number: string, type: 'bench' | 'engraving' | 'monument'): LocalizedTitle => {
+  const labels = {
+    bench: { en: 'Bench', et: 'Pink', ru: 'Скамейка' },
+    engraving: { en: 'Engraving', et: 'Graveering', ru: 'Гравировка' },
+    monument: { en: 'Monument', et: 'Mälestusmärk', ru: 'Памятник' }
+  } as const;
+  const label = labels[type];
+  return { en: `${label.en} ${number}`, et: `${label.et} ${number}`, ru: `${label.ru} ${number}` };
+};
+
+const MONUMENT_WORKS: WorkItem[] = MONUMENT_SPECS.map((spec) => ({
+  id: `pam${spec.n}`,
+  title: galleryTitle(spec.n, 'monument'),
+  material: '',
+  category: 'monuments',
+  imageBase: `pam${spec.n}`,
+  ...(spec.hover ? { hoverImageBase: `pam${spec.n}_alt` } : {}),
+  width: spec.width,
+  height: spec.height,
+  ratio: spec.ratio,
+  captionKey: 'familyMonument'
+}));
+
+/** Optimized fence photos (public/images/n3/fences/ogNNN[_alt]). */
+const FENCE_WORKS: WorkItem[] = Array.from({ length: 20 }, (_, index) => {
+    const number = String(index + 1).padStart(3, '0');
+    const isDualVariant = index >= 5 && index <= 15;
+    const dimensions = [
+      [1200, 800], [1200, 800], [1200, 800], [1200, 800], [1200, 800],
+      [1200, 800], [1200, 800], [1200, 800], [1200, 800], [1200, 800],
+      [1200, 800], [1200, 800], [1200, 800], [1200, 800], [1200, 800],
+      [1200, 800], [1200, 901], [1200, 540], [1200, 675], [1200, 900]
+    ][index];
+
+    return {
+      id: `og-${number}`,
+      title: { en: `Fence ${number}`, et: `Piire ${number}`, ru: `Ограда ${number}` },
+      material: 'Granite',
+      category: 'fences' as const,
+      imageBase: `og${number}`,
+      ...(isDualVariant ? { hoverImageBase: `og${number}_alt` } : {}),
+      width: dimensions[0],
+      height: dimensions[1],
+      ratio: 'landscape' as const,
+      captionKey: 'graniteBorder'
+    };
+});
+
+/** Optimized engraving photos (public/images/n3/engravings/compNNN). */
+const ENGRAVING_WORKS: WorkItem[] = engravingSpecs.map((spec, index) => ({
+  id: spec.id,
+  title: galleryTitle(String(index + 1).padStart(3, '0'), 'engraving'),
+  material: '',
+  category: 'engravings',
+  imageBase: spec.imageBase,
+  width: spec.width,
+  height: spec.height,
+  ratio: spec.ratio as WorkRatio,
+  captionKey: 'goldEngraving'
+}));
+
+/** Optimized landscaping bench photos (public/images/n3/environment/blagNNN[_alt]). */
+const LANDSCAPING_WORKS: WorkItem[] = environmentSpecs.map((spec, index) => ({
+  id: spec.id,
+  title: galleryTitle(String(index + 1).padStart(3, '0'), 'bench'),
+  material: '',
+  category: 'landscaping',
+  imageBase: spec.imageBase,
+  ...(spec.hoverImageBase ? { hoverImageBase: spec.hoverImageBase } : {}),
+  width: spec.width,
+  height: spec.height,
+  ratio: spec.ratio as WorkRatio,
+  captionKey: 'installation',
+  description: spec.description as Record<Locale, string>
+}));
+
 export const WORKS: WorkItem[] = [
-  {
-    id: 'tamm-monument',
-    title: { en: 'Monument', et: 'Mälestusmärk', ru: 'Памятник' },
-    material: 'Karelia Red',
-    category: 'monuments',
-    imageBase: 'gravestone',
-    width: 408,
-    height: 612,
-    ratio: 'portrait',
-    captionKey: 'familyMonument'
-  },
-  {
-    id: 'kask-piire',
-    title: { en: 'Border', et: 'Piire', ru: 'Ограда' },
-    material: 'Lithuanian Black',
-    category: 'fences',
-    imageBase: 'granite_fence',
-    width: 750,
-    height: 588,
-    ratio: 'landscape',
-    captionKey: 'graniteBorder'
-  },
-  {
-    id: 'lepik-graveering',
-    title: { en: 'Portrait', et: 'Portree', ru: 'Портрет' },
-    material: 'Karelian Black',
-    category: 'engravings',
-    imageBase: 'memorial_table',
-    width: 600,
-    height: 451,
-    ratio: 'landscape',
-    captionKey: 'portrait'
-  },
-  {
-    id: 'saar-paigaldus',
-    title: { en: 'Installation', et: 'Paigaldus', ru: 'Установка' },
-    material: 'Volga Blue',
-    category: 'landscaping',
-    imageBase: 'exclusive',
-    width: 1024,
-    height: 1024,
-    ratio: 'square',
-    captionKey: 'installation'
-  },
-  {
-    id: 'mets-duo',
-    title: { en: 'Duo', et: 'Topelt', ru: 'Двойной' },
-    material: 'Indian Aurora',
-    category: 'monuments',
-    imageBase: 'monument',
-    width: 1400,
-    height: 933,
-    ratio: 'square',
-    captionKey: 'doubleMonument'
-  },
-  {
-    id: 'kuusk-piire',
-    title: { en: 'Low border', et: 'Madalpiire', ru: 'Низкая' },
-    material: 'Karelia Red',
-    category: 'fences',
-    imageBase: 'stone_plate',
-    width: 561,
-    height: 679,
-    ratio: 'portrait',
-    captionKey: 'lowBorder'
-  },
-  {
-    id: 'rebane-pilt',
-    title: { en: 'Enamel', et: 'Email', ru: 'Эмаль' },
-    material: 'Karelian Black',
-    category: 'engravings',
-    imageBase: 'tombstone',
-    width: 612,
-    height: 408,
-    ratio: 'landscape',
-    captionKey: 'photoEnamel'
-  },
-  {
-    id: 'oja-restaureerimine',
-    title: { en: 'Restoration', et: 'Taastamine', ru: 'Реставрация' },
-    material: 'Mixed granite',
-    category: 'landscaping',
-    imageBase: 'fence_with_entrance',
-    width: 900,
-    height: 600,
-    ratio: 'landscape',
-    captionKey: 'restoration'
-  },
-  {
-    id: 'kallas-solo',
-    title: { en: 'Solo', et: 'Soolo', ru: 'Соло' },
-    material: 'Aurora Red',
-    category: 'monuments',
-    imageBase: 'fence',
-    width: 1024,
-    height: 1024,
-    ratio: 'square',
-    captionKey: 'soloMonument'
-  },
-  {
-    id: 'lill-piire',
-    title: { en: 'Tall border', et: 'Kõrgpiire', ru: 'Высокая' },
-    material: 'Lithuanian Black',
-    category: 'fences',
-    imageBase: 'framing',
-    width: 1400,
-    height: 933,
-    ratio: 'square',
-    captionKey: 'tallBorder'
-  },
-  {
-    id: 'kuld-ornament',
-    title: { en: 'Engraving', et: 'Graveering', ru: 'Гравировка' },
-    material: 'Karelian Black',
-    category: 'engravings',
-    imageBase: 'granite_bench',
-    width: 700,
-    height: 800,
-    ratio: 'portrait',
-    captionKey: 'goldEngraving'
-  },
-  {
-    id: 'paju-paigaldus',
-    title: { en: 'Installation', et: 'Paigaldus', ru: 'Установка' },
-    material: 'Indian Aurora',
-    category: 'landscaping',
-    imageBase: 'bench',
-    width: 800,
-    height: 600,
-    ratio: 'landscape',
-    captionKey: 'installation'
-  }
+  ...MONUMENT_WORKS,
+  ...FENCE_WORKS,
+  ...ENGRAVING_WORKS,
+  ...LANDSCAPING_WORKS
 ];

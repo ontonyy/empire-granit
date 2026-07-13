@@ -1,0 +1,266 @@
+[
+  {
+    "id": "blag-001",
+    "imageBase": "blag001",
+    "hoverImageBase": "blag001_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Single cemetery bench.\nDimensions:\nWidth: 50 cm\nOverall height when folded: 50 cm\nSeat length: 25 cm",
+      "et": "Ühekohaline hauapingike.\nMõõtmed:\nLaius: 50 cm\nKogukõrgus kokkupanduna: 50 cm\nIstme pikkus: 25 cm",
+      "ru": "Одноместная кладбищенская скамья.\nРазмеры\nШирина: 50 см\nОбщая высота в сложенном виде: 50 см\nДлина сиденья: 25 см"
+    }
+  },
+  {
+    "id": "blag-002",
+    "imageBase": "blag002",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Dimensions:\nSeat height: 45 cm\nWidth: 82 cm\nSeat length: 25 cm\nBox dimensions:\nWidth: 39.5 cm\nHeight: 25 cm\nDepth: 12 cm",
+      "et": "Mõõtmed:\nIstme kõrgus: 45 cm\nLaius: 82 cm\nIstme pikkus: 25 cm\nKasti mõõtmed:\nLaius: 39,5 cm\nKõrgus: 25 cm\nSügavus: 12 cm",
+      "ru": "Размеры:\nВысота сиденья: 45 см\nШирина: 82 см\nДлина сиденья: 25 см.\n\nРазмеры ящика:\nширина: 39,5 см\nвысота: 25 см\nглубина: 12 см"
+    }
+  },
+  {
+    "id": "blag-003",
+    "imageBase": "blag003",
+    "hoverImageBase": "blag003_alt",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 85 cm\nOverall height when folded: 50 cm\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nLaius: 85 cm\nKogukõrgus kokkupanduna: 50 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамейки:\n- ширина: 85 см\n- общая высота в сложенном виде: 50 см\n- Длина сиденья: 25 см"
+    }
+  },
+  {
+    "id": "blag-004",
+    "imageBase": "blag004",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nHeight: 75 cm\nWidth: 65 cm\nSeat length: 25 cm\nThe metal box beneath the seat is also coated with black powder paint. It is lockable and supplied with a set of spare keys.\nBox dimensions:\nWidth: 39.5 cm\nHeight: 25 cm\nDepth: 12 cm",
+      "et": "Pingi mõõtmed:\nKõrgus: 75 cm\nLaius: 65 cm\nIstme pikkus: 25 cm\nIstme all asuv metallkast on samuti kaetud musta pulbervärviga. Kast on lukustatav ning sellega on kaasas varuvõtmete komplekt.\nKasti mõõtmed:\nLaius: 39,5 cm\nKõrgus: 25 cm\nSügavus: 12 cm",
+      "ru": "Размеры скамейки:\n- высота 75 см\n- ширина 65 см\n- Длина сиденья 25 см\n\nМеталлический ящик под сиденьем также покрыт черной порошковой краской. Он запирается на замок и поставляется с комплектом дополнительных ключей.\n\nРазмеры ящика:\n- ширина 39,5 см\n- высота 25 см\n- глубина 12 см"
+    }
+  },
+  {
+    "id": "blag-005",
+    "imageBase": "blag005",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 80 cm\nHeight: 45 cm\nSeat length: 25 cm\nThe metal box beneath the seat is also coated with black powder paint. It is lockable and supplied with a set of spare keys.\nBox dimensions:\nWidth: 65 cm\nHeight: 25 cm\nDepth: 25 cm",
+      "et": "Pingi mõõtmed:\nLaius: 80 cm\nKõrgus: 45 cm\nIstme pikkus: 25 cm\nIstme all asuv metallkast on samuti kaetud musta pulbervärviga. Kast on lukustatav ning sellega on kaasas varuvõtmete komplekt.\nKasti mõõtmed:\nLaius: 65 cm\nKõrgus: 25 cm\nSügavus: 25 cm",
+      "ru": "Размеры скамейки:\n- ширина: 80 см\n- высота: 45 см\n- Длина сиденья: 25 см\n\nМеталлический ящик, расположенный под сиденьем, также покрыт черной порошковой краской. Он запирается на замок и поставляется с комплектом дополнительных ключей.\n\nРазмеры ящика:\n- ширина: 65 см\n- высота: 25 см\n- глубина: 25 см"
+    }
+  },
+  {
+    "id": "blag-006",
+    "imageBase": "blag006",
+    "width": 1200,
+    "height": 800,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 80 cm\nHeight: 45 cm\nSeat length: 25 cm\nThe metal box beneath the seat is also coated with black powder paint. It is lockable and supplied with a set of spare keys.\nBox dimensions:\nWidth: 39 cm\nHeight: 24 cm\nDepth: 11 cm",
+      "et": "Pingi mõõtmed:\nLaius: 80 cm\nKõrgus: 45 cm\nIstme pikkus: 25 cm\nIstme all asuv metallkast on samuti kaetud musta pulbervärviga. Kast on lukustatav ning sellega on kaasas varuvõtmete komplekt.\nKasti mõõtmed:\nLaius: 39 cm\nKõrgus: 24 cm\nSügavus: 11 cm",
+      "ru": "Размеры скамейки:\n- ширина: 80 см\n- высота: 45 см\n- Длина сиденья: 25 см\n\nМеталлический ящик под сиденьем также покрыт черной порошковой краской. Он запирается на замок и поставляется с комплектом дополнительных ключей.\n\nРазмеры ящика:\n- ширина: 39 см\n- высота: 24 см\n- глубина: 11 см"
+    }
+  },
+  {
+    "id": "blag-007",
+    "imageBase": "blag007",
+    "hoverImageBase": "blag007_alt",
+    "width": 580,
+    "height": 604,
+    "ratio": "square",
+    "description": {
+      "en": "Dimensions:\nHeight: 75 cm\nWidth: 50 cm\nSeat length: 25 cm",
+      "et": "Mõõtmed:\nKõrgus: 75 cm\nLaius: 50 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры:\nВысота: 75 см\nШирина: 50 см\nДлина сиденья: 25 см"
+    }
+  },
+  {
+    "id": "blag-008",
+    "imageBase": "blag008",
+    "hoverImageBase": "blag008_alt",
+    "width": 607,
+    "height": 607,
+    "ratio": "square",
+    "description": {
+      "en": "Bench dimensions:\nHeight: 80 cm\nWidth: 50 cm (7 bars)\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nKõrgus: 80 cm\nLaius: 50 cm (7 põiklatti)\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамейки:\n- высота 80 см\n- ширина 50 см (7 перекладин)\n- Длина сиденья 25 см"
+    }
+  },
+  {
+    "id": "blag-009",
+    "imageBase": "blag009",
+    "width": 637,
+    "height": 613,
+    "ratio": "square",
+    "description": {
+      "en": "Dimensions:\nOverall height: 76 cm\nSeat height: 45 cm\nWidth: 82 cm\nSeat length: 25 cm\nBox dimensions:\nWidth: 65 cm\nHeight: 25 cm\nDepth: 25 cm\nThe box is coated with black powder paint. Includes 2 sets of keys.",
+      "et": "Mõõtmed:\nKogukõrgus: 76 cm\nIstme kõrgus: 45 cm\nLaius: 82 cm\nIstme pikkus: 25 cm\nKasti mõõtmed:\nLaius: 65 cm\nKõrgus: 25 cm\nSügavus: 25 cm\nKast on kaetud musta pulbervärviga. Kaasas on 2 võtmekomplekti.",
+      "ru": "Размеры:\n- общая высота: 76 см\n- высота сиденья: 45 см\n- ширина: 82 см\n- Длина сиденья: 25 см.\n\nРазмеры ящика:\n- ширина: 65 см\n- высота: 25 см\n- глубина: 25 см\n\nЯщик покрыт черной порошковой краской. 2 комплекта ключей."
+    }
+  },
+  {
+    "id": "blag-010",
+    "imageBase": "blag010",
+    "width": 1200,
+    "height": 869,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 80 cm\nHeight: 60 cm\nSeat length: 25 cm\nBox dimensions:\nWidth: 65 cm\nHeight: 25 cm\nDepth: 25 cm",
+      "et": "Pingi mõõtmed:\nLaius: 80 cm\nKõrgus: 60 cm\nIstme pikkus: 25 cm\nKasti mõõtmed:\nLaius: 65 cm\nKõrgus: 25 cm\nSügavus: 25 cm",
+      "ru": "Размеры скамейки:\n-Ширина: 80 см\n-Высота: 60 ​​см\n-Длина сиденья: 25 см\n\nРазмеры ящика:\n-Ширина: 65 см\n-Высота: 25 см\n-Глубина: 25 см"
+    }
+  },
+  {
+    "id": "blag-011",
+    "imageBase": "blag011",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 80 cm\nHeight: 80 cm\nSeat length: 25 cm\nThe metal box beneath the seat is also coated with black powder paint. It is lockable and supplied with a set of spare keys.\nBox dimensions:\nWidth: 65 cm\nHeight: 25 cm\nDepth: 25 cm",
+      "et": "Pingi mõõtmed:\nLaius: 80 cm\nKõrgus: 80 cm\nIstme pikkus: 25 cm\nIstme all asuv metallkast on samuti kaetud musta pulbervärviga. Kast on lukustatav ning sellega on kaasas varuvõtmete komplekt.\nKasti mõõtmed:\nLaius: 65 cm\nKõrgus: 25 cm\nSügavus: 25 cm",
+      "ru": "Размеры скамейки:\n- ширина 80 см\n- высота 80 см\n- Длина сиденья 25 см\n\nМеталлический ящик под сиденьем также покрыт черной порошковой краской. Он запирается на замок и поставляется с комплектом дополнительных ключей.\n\nРазмеры ящика:\n- ширина 65 см\n- высота 25 см\n- глубина 25 см"
+    }
+  },
+  {
+    "id": "blag-012",
+    "imageBase": "blag012",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nOverall height: approximately 120 cm\nSeat height: 75 cm\nWidth: 82 cm\nSeat length: 25 cm\nBox dimensions:\nWidth: 65 cm\nHeight: 25 cm\nDepth: 25 cm\nThe box is coated with black powder paint and is lockable (2 keys included).",
+      "et": "Pingi mõõtmed:\nKogukõrgus: umbes 120 cm\nIstme kõrgus: 75 cm\nLaius: 82 cm\nIstme pikkus: 25 cm\nKasti mõõtmed:\nLaius: 65 cm\nKõrgus: 25 cm\nSügavus: 25 cm\nKast on kaetud musta pulbervärviga ja lukustatav. Kaasas on 2 võtit.",
+      "ru": "Размеры скамейки:\n- общая высота около 120 см\n- высота сиденья 75 см\n- ширина 82 см\n- Длина сиденья 25 см.\n\nРазмеры ящика:\n- ширина 65 см\n- высота 25 см\n- глубина 25 см\n\nЯщик покрыт черной порошковой краской и запирается (2 ключа)."
+    }
+  },
+  {
+    "id": "blag-013",
+    "imageBase": "blag013",
+    "hoverImageBase": "blag013_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 75 cm\nOverall height when folded: 50 cm\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nLaius: 75 cm\nKogukõrgus kokkupanduna: 50 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамейки:\n- ширина: 75 см\n- общая высота в сложенном виде: 50 см\n- Длина сиденья: 25 см"
+    }
+  },
+  {
+    "id": "blag-014",
+    "imageBase": "blag014",
+    "hoverImageBase": "blag014_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Dimensions:\nWidth: 50 cm\nHeight: 60 cm\nSeat length: 25 cm",
+      "et": "Mõõtmed:\nLaius: 50 cm\nKõrgus: 60 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры:\n- Ширина - 50 см\n- Высота - 60 см\n- Длина сиденья - 25 см"
+    }
+  },
+  {
+    "id": "blag-015",
+    "imageBase": "blag015",
+    "hoverImageBase": "blag015_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nHeight: 45 cm\nWidth: 65 cm\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nKõrgus: 45 cm\nLaius: 65 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамейки:\nВысота: 45 см\nШирина: 65 см\nДлина сиденья: 25 см"
+    }
+  },
+  {
+    "id": "blag-016",
+    "imageBase": "blag016",
+    "hoverImageBase": "blag016_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 85 cm\nOverall height when folded: 55 cm\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nLaius: 85 cm\nKogukõrgus kokkupanduna: 55 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамейки:\nширина: 85 см\nобщая высота в сложенном виде: 55 см\nДлина сиденья: 25 см"
+    }
+  },
+  {
+    "id": "blag-017",
+    "imageBase": "blag017",
+    "hoverImageBase": "blag017_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nHeight: 80 cm\nWidth: 75 cm\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nKõrgus: 80 cm\nLaius: 75 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамейки:\n- высота 80 см\n- ширина 75 см\n- Длина сиденья 25 см"
+    }
+  },
+  {
+    "id": "blag-018",
+    "imageBase": "blag018",
+    "hoverImageBase": "blag018_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nHeight: 80 cm\nWidth: 85 cm\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nKõrgus: 80 cm\nLaius: 85 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамьи:\nвысота 80 см\nширина 85 см\nДлина сиденья 25 см"
+    }
+  },
+  {
+    "id": "blag-019",
+    "imageBase": "blag019",
+    "hoverImageBase": "blag019_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Dimensions:\nHeight: 75 cm\nWidth: 65 cm\nSeat length: 25 cm",
+      "et": "Mõõtmed:\nKõrgus: 75 cm\nLaius: 65 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры:\nВысота 75 см.\nШирина 65 см.\nДлина сиденья 25 см."
+    }
+  },
+  {
+    "id": "blag-020",
+    "imageBase": "blag020",
+    "hoverImageBase": "blag020_alt",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 80 cm\nOverall height when folded: 90 cm\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nLaius: 80 cm\nKogukõrgus kokkupanduna: 90 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамейки:\n- ширина 80 см.\n- общая высота в сложенном виде 90 см.\n- Длина сиденья 25 см."
+    }
+  },
+  {
+    "id": "blag-021",
+    "imageBase": "blag021",
+    "width": 1200,
+    "height": 806,
+    "ratio": "landscape",
+    "description": {
+      "en": "Bench dimensions:\nWidth: 80 cm\nOverall height when folded: 90 cm\nSeat length: 25 cm",
+      "et": "Pingi mõõtmed:\nLaius: 80 cm\nKogukõrgus kokkupanduna: 90 cm\nIstme pikkus: 25 cm",
+      "ru": "Размеры скамьи:\n- ширина 80 см\n- общая высота в сложенном виде 90 см\n- Длина сиденья 25 см"
+    }
+  }
+]
