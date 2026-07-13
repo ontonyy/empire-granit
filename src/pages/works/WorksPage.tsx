@@ -18,8 +18,12 @@ export function WorksPage({ locale }: WorksPageProps) {
   const [flippedId, setFlippedId] = useState<string | null>(null);
   const [detailItem, setDetailItem] = useState<WorkItem | null>(null);
   const [loadedImageIds, setLoadedImageIds] = useState<Set<string>>(() => new Set());
+  const [loadedHoverImageIds, setLoadedHoverImageIds] = useState<Set<string>>(() => new Set());
   const detailsLabel = { en: 'Details', et: 'Vaata', ru: 'Подробнее' }[locale];
   const closeLabel = { en: 'Close', et: 'Sulge', ru: 'Закрыть' }[locale];
+  const firstImageLabel = { en: 'Show first image', et: 'Näita esimest pilti', ru: 'Показать первое фото' }[locale];
+  const secondImageLabel = { en: 'Show second image', et: 'Näita teist pilti', ru: 'Показать второе фото' }[locale];
+  const engravingsEmptyLabel = { en: 'Engravings are coming soon.', et: 'Graveeringud lisanduvad peagi.', ru: 'Гравировки скоро появятся.' }[locale];
   const colorIds = ['bege', 'black', 'blue', 'green', 'grey', 'light-blue', 'orange', 'purple', 'red', 'white'];
   const [activeColor, setActiveColor] = useState<string>(colorIds[1]);
   const monumentSrc = `${import.meta.env.BASE_URL}images/granite_monument_cut.png`;
@@ -39,6 +43,12 @@ export function WorksPage({ locale }: WorksPageProps) {
             : 'n3/works';
   const markImageLoaded = (id: string) => {
     setLoadedImageIds((loaded) => {
+      if (loaded.has(id)) return loaded;
+      return new Set(loaded).add(id);
+    });
+  };
+  const markHoverImageLoaded = (id: string) => {
+    setLoadedHoverImageIds((loaded) => {
       if (loaded.has(id)) return loaded;
       return new Set(loaded).add(id);
     });
@@ -65,7 +75,6 @@ export function WorksPage({ locale }: WorksPageProps) {
           alt={alt}
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
-          fetchPriority={eager ? 'high' : 'auto'}
           onLoad={onLoad}
         />
       </picture>
@@ -98,7 +107,7 @@ export function WorksPage({ locale }: WorksPageProps) {
           <span className="works-filter-label">{works.filterLabel}</span>
           <ul className="works-filter-pills" role="list">
             {filterKeys.map((key) => {
-              const label = key === 'all' ? works.filters.all : works.filters[key];
+              const label = (works.filters as Record<FilterKey, string>)[key];
               const isActive = filter === key;
               return (
                 <li key={key}>
@@ -119,13 +128,17 @@ export function WorksPage({ locale }: WorksPageProps) {
 
       <section className="works-gallery">
         <div className="ui-container">
+          {visible.length === 0 ? (
+            <p className="works-gallery-empty" role="status">{engravingsEmptyLabel}</p>
+          ) : (
           <ul className="works-grid" role="list">
             {visible.map((item, index) => {
               const localizedTitle = item.title[locale];
               const altText = item.material ? `${localizedTitle} — ${item.material}` : localizedTitle;
               const hoverBase = item.hoverImageBase;
               const flipped = flippedId === item.id;
-              const imageLoaded = loadedImageIds.has(item.id);
+              const imageLoaded = loadedImageIds.has(item.id)
+                && (!flipped || !hoverBase || loadedHoverImageIds.has(item.id));
               const eager = index < 9;
               const tileClass = `works-tile works-tile-${item.ratio}`
                 + (hoverBase ? ' has-hover-swap' : '')
@@ -142,7 +155,35 @@ export function WorksPage({ locale }: WorksPageProps) {
                     {hoverBase ? (
                       <span className="works-tile-media">
                         {renderPicture(item.imageBase, 'works-tile-picture works-tile-picture-main', altText, item, false, () => markImageLoaded(item.id), eager)}
-                        {renderPicture(hoverBase, 'works-tile-picture works-tile-picture-hover', '', item, true)}
+                        {renderPicture(
+                          hoverBase,
+                          'works-tile-picture works-tile-picture-hover',
+                          '',
+                          item,
+                          true,
+                          () => markHoverImageLoaded(item.id),
+                          flipped
+                        )}
+                        <span className="works-tile-arrows" role="group" aria-label={localizedTitle}>
+                          <button
+                            type="button"
+                            className="works-tile-arrow works-tile-arrow-prev"
+                            aria-label={firstImageLabel}
+                            aria-pressed={!flipped}
+                            onClick={() => setFlippedId(null)}
+                          >
+                            <span aria-hidden="true">←</span>
+                          </button>
+                          <button
+                            type="button"
+                            className="works-tile-arrow works-tile-arrow-next"
+                            aria-label={secondImageLabel}
+                            aria-pressed={flipped}
+                            onClick={() => setFlippedId(item.id)}
+                          >
+                            <span aria-hidden="true">→</span>
+                          </button>
+                        </span>
                       </span>
                     ) : (
                       renderPicture(item.imageBase, 'works-tile-picture', altText, item, false, () => markImageLoaded(item.id), eager)
@@ -152,15 +193,6 @@ export function WorksPage({ locale }: WorksPageProps) {
                   <span className="works-tile-loader" aria-hidden="true">
                     <span className="works-tile-loader-bar" />
                   </span>
-                  {hoverBase ? (
-                    <button
-                      type="button"
-                      className="works-tile-flip"
-                      aria-pressed={flipped}
-                      aria-label={localizedTitle}
-                      onClick={() => setFlippedId((current) => (current === item.id ? null : item.id))}
-                    />
-                  ) : null}
                   <span className="works-tile-caption">
                     <span className="works-tile-title">{localizedTitle}</span>
                     {item.description ? (
@@ -177,6 +209,7 @@ export function WorksPage({ locale }: WorksPageProps) {
               );
             })}
           </ul>
+          )}
         </div>
       </section>
 

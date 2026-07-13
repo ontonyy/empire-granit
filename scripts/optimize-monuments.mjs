@@ -3,7 +3,7 @@
  * optimize-monuments.mjs — build shipped gallery derivatives for monument photos.
  *
  * Input:  public/images/monuments/PAM_NNN[_1|_2].{jpg,jpeg}  (raw originals, source)
- *   - PAM_NNN_1 + PAM_NNN_2 present -> two-variant: main = _2, hover(alt) = _1
+ *   - PAM_NNN_1 + PAM_NNN_2 present -> first/main = _1, second/alt = _2
  *   - PAM_NNN alone                 -> single: main only
  * Output: public/images/n3/monuments/pamNNN.{avif,webp,jpg}         (idle / main)
  *         public/images/n3/monuments/pamNNN_alt.{avif,webp,jpg}     (hover, dual only)
@@ -41,8 +41,8 @@ for (const file of files) {
   const id = `pam${num}`;
   if (!groups.has(id)) groups.set(id, {});
   const g = groups.get(id);
-  if (variant === '1') g.alt = file;
-  else if (variant === '2') g.main = file;
+  if (variant === '1') g.main = file;
+  else if (variant === '2') g.alt = file;
   else g.main = file; // single-photo
 }
 

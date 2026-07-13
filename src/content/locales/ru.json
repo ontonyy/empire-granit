@@ -274,7 +274,11 @@
       "monuments": "Памятники",
       "fences": "Ограды",
       "engravings": "Гравировка / Фотоэмаль",
-      "landscaping": "Благоустройство"
+      "complexes": "Комплексы",
+      "landscaping": "Скамейки"
+    },
+    "emptyState": {
+      "engravings": "Гравировки скоро появятся."
     },
     "captionSeparator": "·",
     "swatches": {
