@@ -274,7 +274,11 @@
       "monuments": "Monuments",
       "fences": "Fences",
       "engravings": "Engravings / Photo enamel",
-      "landscaping": "Landscaping"
+      "complexes": "Complexes",
+      "landscaping": "Benches"
+    },
+    "emptyState": {
+      "engravings": "Engravings are coming soon."
     },
     "captionSeparator": "·",
     "swatches": {

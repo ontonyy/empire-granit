@@ -4245,7 +4245,7 @@ select:focus {
   transform: scale(1.03);
 }
 
-/* Variant hover-swap: idle shows main (_2); hover/focus/tap reveals hover (_1). */
+/* Variant switch: main is first image; arrows select second image. */
 .works-tile-media {
   position: relative;
   display: block;
@@ -4269,28 +4269,86 @@ select:focus {
   object-fit: cover;
 }
 
-.has-hover-swap .works-tile-link:hover .works-tile-picture-hover,
-.has-hover-swap .works-tile-link:focus-within .works-tile-picture-hover,
 .has-hover-swap.is-flipped .works-tile-picture-hover {
   opacity: 1;
 }
 
-/* Flip toggle: coarse pointers only (touch). Fine pointers use hover/focus. */
-.works-tile-flip {
-  display: none;
+.works-tile-arrows {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
 }
 
-@media (hover: none), (pointer: coarse) {
-  .works-tile-flip {
-    display: block;
-    position: absolute;
-    inset: 0;
-    padding: 0;
-    margin: 0;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-  }
+.works-tile-arrow {
+  position: absolute;
+  top: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(251,248,240,0.55);
+  border-radius: 999px;
+  background: rgba(21,20,15,0.48);
+  box-shadow: 0 4px 16px rgba(21,20,15,0.2);
+  color: transparent;
+  font-size: 0;
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  transition: background var(--motion-quiet), border-color var(--motion-quiet), transform var(--motion-quiet);
+  backdrop-filter: blur(8px);
+}
+
+.works-tile-arrow::before {
+  content: '';
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 1.5px solid #FBF8F0;
+  border-bottom: 1.5px solid #FBF8F0;
+  transform: rotate(-45deg);
+}
+
+.works-tile-arrow-prev {
+  left: var(--space-3);
+}
+
+.works-tile-arrow-prev::before {
+  transform: rotate(135deg);
+}
+
+.works-tile-arrow-next {
+  right: var(--space-3);
+}
+
+.works-tile-arrow:hover,
+.works-tile-arrow:active {
+  transform: translateY(-50%);
+  color: transparent;
+  box-shadow: 0 4px 16px rgba(21,20,15,0.2);
+}
+
+.works-tile-arrow:hover[aria-pressed='true'],
+.works-tile-arrow:active[aria-pressed='true'] {
+  background: rgba(21,20,15,0.48);
+  border-color: rgba(251,248,240,0.55);
+}
+
+.works-tile-arrow[aria-pressed='false'] {
+  background: rgba(166,138,100,0.9);
+  border-color: rgba(251,248,240,0.72);
+}
+
+.works-tile-arrow:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.works-gallery-empty {
+  padding: var(--space-6) 0;
+  color: var(--ink-body);
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: reduce) {

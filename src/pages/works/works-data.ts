@@ -6,6 +6,7 @@ export type WorkCategory =
   | 'monuments'
   | 'fences'
   | 'engravings'
+  | 'complexes'
   | 'landscaping';
 
 export type WorkRatio = 'portrait' | 'landscape' | 'square';
@@ -32,6 +33,7 @@ export const WORK_CATEGORIES: WorkCategory[] = [
   'monuments',
   'fences',
   'engravings',
+  'complexes',
   'landscaping'
 ];
 
@@ -92,19 +94,12 @@ const MONUMENT_SPECS: MonumentSpec[] = [
   { n: '025', hover: false, width: 675, height: 1200, ratio: 'portrait' }
 ];
 
-const galleryTitle = (number: string, type: 'bench' | 'engraving' | 'monument'): LocalizedTitle => {
-  const labels = {
-    bench: { en: 'Bench', et: 'Pink', ru: 'Скамейка' },
-    engraving: { en: 'Engraving', et: 'Graveering', ru: 'Гравировка' },
-    monument: { en: 'Monument', et: 'Mälestusmärk', ru: 'Памятник' }
-  } as const;
-  const label = labels[type];
-  return { en: `${label.en} ${number}`, et: `${label.et} ${number}`, ru: `${label.ru} ${number}` };
-};
+const galleryTitle = (prefix: 'M' | 'F' | 'C' | 'B', number: string): LocalizedTitle =>
+  ({ en: `${prefix}-${number}`, et: `${prefix}-${number}`, ru: `${prefix}-${number}` });
 
 const MONUMENT_WORKS: WorkItem[] = MONUMENT_SPECS.map((spec) => ({
   id: `pam${spec.n}`,
-  title: galleryTitle(spec.n, 'monument'),
+  title: galleryTitle('M', spec.n),
   material: '',
   category: 'monuments',
   imageBase: `pam${spec.n}`,
@@ -128,7 +123,7 @@ const FENCE_WORKS: WorkItem[] = Array.from({ length: 20 }, (_, index) => {
 
     return {
       id: `og-${number}`,
-      title: { en: `Fence ${number}`, et: `Piire ${number}`, ru: `Ограда ${number}` },
+      title: galleryTitle('F', number),
       material: 'Granite',
       category: 'fences' as const,
       imageBase: `og${number}`,
@@ -141,11 +136,11 @@ const FENCE_WORKS: WorkItem[] = Array.from({ length: 20 }, (_, index) => {
 });
 
 /** Optimized engraving photos (public/images/n3/engravings/compNNN). */
-const ENGRAVING_WORKS: WorkItem[] = engravingSpecs.map((spec, index) => ({
+const COMPLEX_WORKS: WorkItem[] = engravingSpecs.map((spec, index) => ({
   id: spec.id,
-  title: galleryTitle(String(index + 1).padStart(3, '0'), 'engraving'),
+  title: galleryTitle('C', String(index + 1).padStart(3, '0')),
   material: '',
-  category: 'engravings',
+  category: 'complexes',
   imageBase: spec.imageBase,
   width: spec.width,
   height: spec.height,
@@ -156,7 +151,7 @@ const ENGRAVING_WORKS: WorkItem[] = engravingSpecs.map((spec, index) => ({
 /** Optimized landscaping bench photos (public/images/n3/environment/blagNNN[_alt]). */
 const LANDSCAPING_WORKS: WorkItem[] = environmentSpecs.map((spec, index) => ({
   id: spec.id,
-  title: galleryTitle(String(index + 1).padStart(3, '0'), 'bench'),
+  title: galleryTitle('B', String(index + 1).padStart(3, '0')),
   material: '',
   category: 'landscaping',
   imageBase: spec.imageBase,
@@ -171,6 +166,6 @@ const LANDSCAPING_WORKS: WorkItem[] = environmentSpecs.map((spec, index) => ({
 export const WORKS: WorkItem[] = [
   ...MONUMENT_WORKS,
   ...FENCE_WORKS,
-  ...ENGRAVING_WORKS,
+  ...COMPLEX_WORKS,
   ...LANDSCAPING_WORKS
 ];
